@@ -1,19 +1,19 @@
 <template>
-   <div class="mainLayout">
-     <header>
+  <div class="mainLayout">
+    <header>
       <my-header />
-       </header>
-     
-       <main>
+    </header>
+
+    <main>
       <main-area />
       <about-us />
       <contact-us />
-       </main>
-     
-       <footer>
+    </main>
+
+    <footer>
       <my-footer />
-       </footer>
-   </div>
+    </footer>
+  </div>
 </template>
 <script>
 import ContactUs from './components/contactUs.vue'
@@ -23,42 +23,41 @@ import MyHeader from "./components/myHeader.vue";
 import MyFooter from "./components/myFooter.vue";
 
 export default {
-    name: "App",
-    components: { MyHeader, MyFooter, MainArea, AboutUs, ContactUs }
+  name: "App",
+  components: { MyHeader, MyFooter, MainArea, AboutUs, ContactUs }
 }
 </script>
 <style lang="scss">
-  @import './assets/base.css';
+@import "./assets/base.css";
 
-  .mainLayout {
-    display: grid;
-    grid-template-rows: 5rem 2fr 2fr 2fr 5rem;
-    grid-template-areas: 
+.mainLayout {
+  display: grid;
+  grid-template-rows: 5rem 2fr 2fr 2fr 5rem;
+  grid-template-areas:
     "header"
     "main"
     "aboutUs"
     "contactUs"
-    "footer"
-    ;
-  }
-  
-  my-header {
-    grid-area: header
-  }
+    "footer";
+}
 
-  main-area {
-    grid-area: main
-  }
+my-header {
+  grid-area: header;
+}
 
-  about-us {
-    grid-area: aboutUs
-  }
+main-area {
+  grid-area: main;
+}
 
-  contact-us {
-    grid-area: contactUs
-  }
+about-us {
+  grid-area: aboutUs;
+}
 
-  my-footer {
-    grid-area: footer
-  }
+contact-us {
+  grid-area: contactUs;
+}
+
+my-footer {
+  grid-area: footer;
+}
 </style>

@@ -1,13 +1,11 @@
 <template>
-    <div>
-        Contact us area
-    </div>
+  <div>Contact us area</div>
 </template>
 <script>
 export default {
-   name: "ContactUs" 
+  name: "ContactUs"
 }
 </script>
 <style lang="sass">
-    
+
 </style>

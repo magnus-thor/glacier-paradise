@@ -1,13 +1,11 @@
 <template>
-    <div>
-        My Header goes here
-    </div>
+  <div>My Header goes here</div>
 </template>
 <script>
 export default {
-    name: "MyHeader"
+  name: "MyHeader"
 }
 </script>
 <style lang="sass">
-    
+
 </style>

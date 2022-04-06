@@ -1,13 +1,11 @@
 <template>
-    <div>
-        My footer goes here
-    </div>
+  <div>My footer goes here</div>
 </template>
 <script>
 export default {
-    name: "MyFooter"
+  name: "MyFooter"
 }
 </script>
 <style lang="sass">
-    
+
 </style>

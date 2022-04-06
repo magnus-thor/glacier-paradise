@@ -20,5 +20,8 @@ module.exports = {
         "plugin:cypress/recommended"
       ]
     }
-  ]
+  ],
+  "rules": {
+    "indent": ["error", 2]
+  },
 }
