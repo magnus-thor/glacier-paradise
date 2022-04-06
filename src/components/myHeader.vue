@@ -3,9 +3,7 @@
 </template>
 <script>
 export default {
-  name: "MyHeader"
-}
+  name: "MyHeader",
+};
 </script>
-<style lang="sass">
-
-</style>
+<style lang="sass"></style>

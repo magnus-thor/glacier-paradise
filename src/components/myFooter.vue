@@ -3,8 +3,8 @@
 </template>
 <script>
 export default {
-  name: "MyFooter"
-}
+  name: "MyFooter",
+};
 </script>
 <style lang="sass">
 

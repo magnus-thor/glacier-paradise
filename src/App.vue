@@ -16,16 +16,16 @@
   </div>
 </template>
 <script>
-import ContactUs from './components/contactUs.vue'
-import AboutUs from './components/aboutUs.vue'
-import MainArea from './components/mainArea.vue'
+import ContactUs from "./components/contactUs.vue";
+import AboutUs from "./components/aboutUs.vue";
+import MainArea from "./components/mainArea.vue";
 import MyHeader from "./components/myHeader.vue";
 import MyFooter from "./components/myFooter.vue";
 
 export default {
   name: "App",
-  components: { MyHeader, MyFooter, MainArea, AboutUs, ContactUs }
-}
+  components: { MyHeader, MyFooter, MainArea, AboutUs, ContactUs },
+};
 </script>
 <style lang="scss">
 @import "./assets/base.css";

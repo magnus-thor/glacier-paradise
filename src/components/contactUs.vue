@@ -3,9 +3,7 @@
 </template>
 <script>
 export default {
-  name: "ContactUs"
-}
+  name: "ContactUs",
+};
 </script>
-<style lang="sass">
-
-</style>
+<style lang="sass"></style>
