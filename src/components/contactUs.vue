@@ -1,7 +1,7 @@
 <template>
   <div>Contact us area</div>
   <div class="form">
-    <form name="contact" method="POST" data-netlify="true">
+    <form name="contact" method="POST" netlify>
       <p>
         <label>
           Your Name:
@@ -39,6 +39,11 @@ export default {
 
   p {
     margin: 1rem;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 0.2em;
   }
 }
 </style>
