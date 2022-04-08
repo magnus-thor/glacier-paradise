@@ -1,3 +1,6 @@
 {
-  "message": "TESTING I18N"
+  "message": "TESTING I18N",
+  "aboutUs": {
+    "text": "english text"
+  }
 }

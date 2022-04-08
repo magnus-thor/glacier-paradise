@@ -1,3 +1,6 @@
 {
-  "message": "PRUFA I18N"
+  "message": "PRUFA I18N",
+  "aboutUs": {
+    "text": "íslenskur texti"
+  }
 }
