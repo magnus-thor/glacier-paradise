@@ -1,0 +1,11 @@
+{
+  "files.autoSave": "onWindowChange",
+  "workbench.sideBar.location": "right",
+  "editor.formatOnSave": true,
+  "editor.tabSize": 2,
+  "editor.bracketPairColorization.enabled": true,
+  "editor.cursorBlinking": "smooth",
+  "vuejsAutoImport.importWithSemicolon": true,
+  "editor.gotoLocation.multipleDefinitions": "goto",
+  "editor.gotoLocation.alternativeTypeDefinitionCommand": "editor.action.goToImplementation"
+}
