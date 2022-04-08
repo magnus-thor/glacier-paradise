@@ -1,7 +1,8 @@
 <template>
   <div>Contact us area</div>
   <div class="form">
-    <form name="contact" method="POST" netlify>
+    <form name="contact-us" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
+      <input type="hidden" name="form-name" value="contact-us" />
       <p>
         <label>
           Your Name:
