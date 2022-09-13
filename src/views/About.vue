@@ -4,9 +4,11 @@
     <div>{{ $t("aboutUs.text") }}</div>
   </div>
 </template>
+
 <script>
 export default {
   name: "AboutUsArea",
 };
 </script>
-<style lang="sass"></style>
+<style lang="scss">
+</style>

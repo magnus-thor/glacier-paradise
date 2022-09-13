@@ -4,60 +4,42 @@
       <my-header />
     </header>
 
-    <main>
-      <main-area />
-      <about-us />
-      <contact-us />
+
+    <main class="content">
+      <router-view />
+
     </main>
 
-    <footer>
+    <footer class="footer">
       <my-footer />
     </footer>
   </div>
 </template>
 <script>
-import ContactUs from "./components/contactUs.vue";
-import AboutUs from "./components/aboutUs.vue";
-import MainArea from "./components/mainArea.vue";
 import MyHeader from "./components/myHeader.vue";
 import MyFooter from "./components/myFooter.vue";
 
 export default {
   name: "App",
-  components: { MyHeader, MyFooter, MainArea, AboutUs, ContactUs },
+  components: { MyHeader, MyFooter },
 };
 </script>
 <style lang="scss">
 @import "./assets/base.css";
 
+
 .mainLayout {
-  display: grid;
-  grid-template-rows: 5rem 2fr 2fr 2fr 5rem;
-  grid-template-areas:
-    "header"
-    "main"
-    "aboutUs"
-    "contactUs"
-    "footer";
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
-my-header {
-  grid-area: header;
+.content {
+  flex: 1 0 auto;
 }
 
-main-area {
-  grid-area: main;
-}
-
-about-us {
-  grid-area: aboutUs;
-}
-
-contact-us {
-  grid-area: contactUs;
-}
-
-my-footer {
-  grid-area: footer;
+.footer {
+  flex-shrink: 0;
+  // margin-top: auto;
 }
 </style>
