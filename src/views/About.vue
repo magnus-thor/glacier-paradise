@@ -7,8 +7,9 @@
 
 <script>
 export default {
-  name: "AboutUsArea",
+  name: "AboutUs",
 };
 </script>
 <style lang="scss">
+
 </style>

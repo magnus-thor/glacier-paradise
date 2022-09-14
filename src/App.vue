@@ -16,8 +16,8 @@
   </div>
 </template>
 <script>
-import MyHeader from "./components/myHeader.vue";
-import MyFooter from "./components/myFooter.vue";
+import MyHeader from "@/components/myHeader.vue";
+import MyFooter from "@/components/myFooter.vue";
 
 export default {
   name: "App",

@@ -5,7 +5,8 @@
   </div>
 </template>
 <script>
-import YoutubeVideos from '../components/youtubeVideos.vue';
+import YoutubeVideos from '@/components/youtubeVideos.vue';
+
 export default {
   name: "Home",
   components: { YoutubeVideos }

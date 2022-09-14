@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import ContactUsForm from "../components/contactUsForm.vue";
+import ContactUsForm from "@/components/contactUsForm.vue";
 
 export default {
   name: "ContactUs",
@@ -13,4 +13,5 @@ export default {
 };
 </script>
 <style lang="scss">
+
 </style>
