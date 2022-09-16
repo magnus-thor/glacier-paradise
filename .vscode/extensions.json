@@ -1,13 +1,12 @@
 {
   "recommendations": [
-    "johnsoncodehk.volar",
-    "johnsoncodehk.vscode-typescript-vue-plugin",
     "formulahendry.auto-rename-tag",
     "hwencc.html-tag-wrapper",
     "christian-kohler.path-intellisense",
     "christian-kohler.npm-intellisense",
     "hollowtree.vue-snippets",
     "ishiyama.vue-autoimport",
-    "dariofuzinato.vue-peek"
+    "dariofuzinato.vue-peek",
+    "esbenp.prettier-vscode"
   ]
 }

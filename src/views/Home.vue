@@ -1,15 +1,16 @@
 <template>
   <div>
-    <img src="../assets/images/trodarinn-a-toppnum.jpg" alt="Trodarinn a toppnum">
+    <ImageSlider />
     <YoutubeVideos />
   </div>
 </template>
 <script>
-import YoutubeVideos from '@/components/youtubeVideos.vue';
+import YoutubeVideos from "@/components/youtubeVideos.vue";
+import ImageSlider from "../components/imageSlider.vue";
 
 export default {
   name: "Home",
-  components: { YoutubeVideos }
+  components: { YoutubeVideos, ImageSlider },
 };
 </script>
 <style lang="scss" scoped>
