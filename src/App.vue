@@ -4,10 +4,8 @@
       <my-header />
     </header>
 
-
     <main class="content">
       <router-view />
-
     </main>
 
     <footer class="footer">
@@ -25,8 +23,7 @@ export default {
 };
 </script>
 <style lang="scss">
-@import "./assets/base.css";
-
+@import "./assets/base.scss";
 
 .mainLayout {
   min-height: 100vh;

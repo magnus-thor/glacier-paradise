@@ -15,25 +15,31 @@
     <div class="item">
       <div class="locale-changer">
         <select v-model="$i18n.locale">
-          <option v-for="locale in $i18n.availableLocales" :key="`locale-${locale}`" :value="locale">{{ locale }}
+          <option
+            v-for="locale in $i18n.availableLocales"
+            :key="`locale-${locale}`"
+            :value="locale"
+          >
+            {{ locale }}
           </option>
         </select>
-        <nav>
-        </nav>
+        <nav></nav>
       </div>
     </div>
   </div>
 </template>
 <script>
-
 export default {
   name: "MyHeader",
 };
 </script>
 <style lang="scss">
+@import "@/assets/base.scss";
 .header {
   padding: 1rem 5rem 0 5rem;
   display: flex;
+  background-color: $light_grey;
+  color: $dark_grey;
 
   .item {
     padding-right: 2rem;
