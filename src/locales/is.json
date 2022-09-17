@@ -2,5 +2,17 @@
   "message": "PRUFA I18N",
   "aboutUs": {
     "text": "íslenskur texti"
+  },
+  "cards": {
+    "snowCatTour": {
+      "cardHeader": "Snæfellsjökull Snjósleðaferð",
+      "cardText": "Taktu þátt í þessari sérstöku skoðunarferð um hinn dularfulla Snæfellsjökul. Í gegnum fallegt fjallaskarð komum við að jöklinum þar sem þú getur hoppað um borð í okkar eigin appelsínugula snjósleða til að hefja ævintýrið á Snæfellsjökli.",
+      "linkText": "Lestu meira",
+      "imageAlt": "Sólsetur á toppi Snæfellsjökuls"
+    },
+    "shared": {
+      "duration": "Lengd",
+      "departure": "Brottfarastaður"
+    }
   }
 }

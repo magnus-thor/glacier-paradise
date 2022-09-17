@@ -1,9 +1,11 @@
 <template>
-  <div>
-    <img :src="selectedImage" :alt="imageAlt" height="300" />
+  <div class="grid">
+    <img class="image" :src="selectedImage" :alt="imageAlt" height="300" />
     <div class="buttons">
-      <button @click="previous" :disabled="disablePrevious">Previous</button>
-      <button @click="next" :disabled="disableNext">Next</button>
+      <button class="button" @click="previous" :disabled="disablePrevious">
+        Previous
+      </button>
+      <button class="button" @click="next" :disabled="disableNext">Next</button>
     </div>
   </div>
 </template>
@@ -24,12 +26,6 @@ export default {
       selectedImageNumber: 0,
     };
   },
-  // created() {
-  //   this.selectedImage = new URL(
-  //     this.images[this.selectedImageNumber],
-  //     import.meta.url
-  //   );
-  // },
   computed: {
     imageAlt() {
       return this.images[this.selectedImageNumber].split("/")[3];
@@ -56,11 +52,30 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.buttons {
-  margin-top: 1rem;
+.grid {
+  display: grid;
+  height: 300px;
 
-  button:first-child {
-    margin-right: 1rem;
-  }
+  align-content: space-around;
+  justify-content: space-between;
+}
+
+.image {
+  grid-row: 1;
+  grid-column: 1;
+}
+
+.buttons {
+  grid-row: 1;
+  grid-column: 1;
+  align-self: center;
+  z-index: 10;
+
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  width: -moz-available; /* WebKit-based browsers will ignore this. */
+  width: -webkit-fill-available; /* Mozilla-based browsers will ignore this. */
+  width: fill-available;
 }
 </style>
