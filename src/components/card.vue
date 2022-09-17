@@ -1,37 +1,39 @@
 <template>
   <div class="card">
     <img :src="renderImage" :alt="image.alt" />
-    <div class="info bottom-border">
-      <div class="info--item">
-        <div class="icon">
-          <v-icon name="io-time-outline" scale="2" />
+    <div class="margin-left-right">
+      <div class="info bottom-border">
+        <div class="info--item">
+          <div class="icon">
+            <v-icon name="io-time-outline" scale="2" />
+          </div>
+          <div>
+            <p>
+              <strong>{{ $t("cards.shared.departure") }}</strong>
+            </p>
+            <p>{{ info.duration }}</p>
+          </div>
         </div>
-        <div>
-          <p>
-            <strong>{{ $t("cards.shared.departure") }}</strong>
-          </p>
-          <p>{{ info.duration }}</p>
+        <div class="info--item">
+          <div class="icon">
+            <v-icon name="fa-bus" scale="2" />
+          </div>
+          <div>
+            <p>
+              <strong>{{ $t("cards.shared.departure") }}</strong>
+            </p>
+            <p>{{ info.departure }}</p>
+          </div>
         </div>
       </div>
-      <div class="info--item">
-        <div class="icon">
-          <v-icon name="fa-bus" scale="2" />
-        </div>
-        <div>
-          <p>
-            <strong>{{ $t("cards.shared.departure") }}</strong>
-          </p>
-          <p>{{ info.departure }}</p>
-        </div>
+      <div class="card--header">
+        <h2>{{ card.header }}</h2>
       </div>
+      <div class="card--text bottom-border">
+        <p>{{ card.text }}</p>
+      </div>
+      <a class="link" :href="link.href">{{ link.text }}</a>
     </div>
-    <div class="card--header">
-      <h2>{{ card.header }}</h2>
-    </div>
-    <div class="card--text bottom-border">
-      <p>{{ card.text }}</p>
-    </div>
-    <a class="link" :href="link.href">{{ link.text }}</a>
   </div>
 </template>
 
@@ -75,9 +77,14 @@ export default {
   }
 }
 
+.margin-left-right {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
 .info {
   display: flex;
-  margin: 1rem;
+  margin-top: 1rem;
   justify-content: space-evenly;
 
   strong {
@@ -94,15 +101,13 @@ export default {
   }
 }
 
-.card--header,
-.card--text {
-  margin-left: 1rem;
-  margin-right: 1rem;
+.card--header {
+  margin-top: 1rem;
 }
 
 .bottom-border {
   padding-bottom: 0.5rem;
-  border-bottom: 1px inset grey;
+  border-bottom: 1px inset grey; //TODO: swap to correct colors.
 }
 
 .link {
@@ -110,12 +115,10 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: 1rem;
-  margin-right: 1rem;
   text-decoration: none;
 
   &:hover {
-    background-color: green;
+    background-color: green; //TODO: swap to correct colors.
     cursor: pointer;
   }
 }
