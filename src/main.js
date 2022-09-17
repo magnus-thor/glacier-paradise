@@ -4,9 +4,9 @@ import i18n from "./i18n.js";
 import router from "./router";
 
 import { OhVueIcon, addIcons } from "oh-vue-icons";
-import { FaBus, IoTimeOutline } from "oh-vue-icons/icons";
+import { FaBus, IoTimeOutline, FcPrevious, FcNext } from "oh-vue-icons/icons";
 
-addIcons(FaBus, IoTimeOutline);
+addIcons(FaBus, IoTimeOutline, FcPrevious, FcNext);
 
 const app = createApp(App);
 app.use(i18n);

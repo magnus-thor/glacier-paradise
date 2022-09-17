@@ -71,59 +71,55 @@ export default {
   }
 
   img {
-    height: 100%;
+    // height: 100%;
     width: 100%;
     object-fit: fill;
   }
-}
 
-.margin-left-right {
-  margin-left: 1rem;
-  margin-right: 1rem;
-}
-
-.info {
-  display: flex;
-  margin-top: 1rem;
-  justify-content: space-evenly;
-
-  strong {
-    font-weight: bold;
+  .margin-left-right {
+    margin-left: 1rem;
+    margin-right: 1rem;
   }
 
-  &--item {
+  .info {
     display: flex;
+    margin-top: 1rem;
+    justify-content: space-evenly;
+
+    strong {
+      font-weight: bold;
+    }
+
+    &--item {
+      display: flex;
+      align-items: center;
+    }
+
+    .icon {
+      margin-right: 0.5rem;
+    }
+  }
+
+  .card--header {
+    margin-top: 1rem;
+  }
+
+  .bottom-border {
+    padding-bottom: 0.5rem;
+    border-bottom: 1px inset grey; //TODO: swap to correct colors.
+  }
+
+  .link {
+    height: 3rem;
+    display: flex;
+    justify-content: center;
     align-items: center;
+    text-decoration: none;
+
+    &:hover {
+      background-color: green; //TODO: swap to correct colors.
+      cursor: pointer;
+    }
   }
-
-  .icon {
-    margin-right: 0.5rem;
-  }
-}
-
-.card--header {
-  margin-top: 1rem;
-}
-
-.bottom-border {
-  padding-bottom: 0.5rem;
-  border-bottom: 1px inset grey; //TODO: swap to correct colors.
-}
-
-.link {
-  height: 3rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-decoration: none;
-
-  &:hover {
-    background-color: green; //TODO: swap to correct colors.
-    cursor: pointer;
-  }
-}
-
-.flex {
-  display: flex;
 }
 </style>
