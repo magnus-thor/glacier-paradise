@@ -2,5 +2,17 @@
   "message": "TESTING I18N",
   "aboutUs": {
     "text": "english text"
+  },
+  "cards": {
+    "snowCatTour": {
+      "cardHeader": "Snæfellsjökull Glacier Snow-cat tour",
+      "cardText": "Join this special sightseeing tour on the mystical Snæfellsjökull Glacier. Through a scenic mountain pass, we reach the foot of the glacier where you can jump aboard our very own orange snow-cat to start your adventure on Snæfellsjökull glacier.",
+      "linkText": "Read more",
+      "imageAlt": "Sunset from the top of Snaefellsjokull"
+    },
+    "shared": {
+      "duration": "Duration",
+      "departure": "Departure"
+    }
   }
 }

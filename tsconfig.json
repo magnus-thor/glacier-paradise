@@ -3,38 +3,22 @@
     "baseUrl": "./src/",
     "outDir": "./dist/",
     "paths": {
-      "~/*": [
-        "./*"
-      ],
-      "@/*": [
-        "./*"
-      ],
-      "@common/*": [
-        "../../common/*"
-      ],
+      "@/*": ["./*"]
     },
     "sourceMap": true,
     "noImplicitAny": true,
     "module": "esnext",
     "target": "esnext",
     "moduleResolution": "node",
-    "jsx": "react",
+    "jsx": "preserve",
     "allowSyntheticDefaultImports": true,
     "resolveJsonModule": true,
     "esModuleInterop": true,
     "allowJs": true,
     "strict": true,
     "strictNullChecks": false,
-    "lib": [
-      "esnext",
-      "dom"
-    ],
-    "types": [
-      "vite/client"
-    ]
+    "lib": ["esnext", "dom"],
+    "types": ["vite/client"]
   },
-  "exclude": [
-    "node_modules",
-    "dist"
-  ]
+  "exclude": ["node_modules", "dist"]
 }
