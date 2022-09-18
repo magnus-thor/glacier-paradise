@@ -11,7 +11,7 @@
 </template>
 <script>
 import YoutubeVideos from "@/components/youtubeVideos.vue";
-import ImageSlider from "../components/imageSlider.vue";
+import ImageSlider from "@/components/imageSlider.vue";
 import Cards from "@/components/cards.vue";
 
 export default {
@@ -33,7 +33,7 @@ export default {
 
 .videos,
 .cardsContainer {
-  margin-top: 2rem;
+  margin-top: 16rem;
   width: 100%;
 }
 </style>

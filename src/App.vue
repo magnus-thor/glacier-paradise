@@ -37,6 +37,17 @@ export default {
 
 .footer {
   flex-shrink: 0;
-  // margin-top: auto;
+}
+
+body:has(dialog[open]) {
+  overflow: hidden;
+}
+
+dialog {
+  position: fixed;
+  width: 25rem;
+  z-index: 100;
+  border: 1px solid;
+  box-shadow: 2px 2px;
 }
 </style>
