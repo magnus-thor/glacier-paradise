@@ -5,7 +5,14 @@
     </header>
 
     <main class="content">
-      <router-view />
+      <router-view v-slot="{ Component, route }">
+        <transition
+          :enter-active-class="route.meta.enterClass"
+          :leave-active-class="route.meta.leaveClass"
+        >
+          <component :is="Component" />
+        </transition>
+      </router-view>
     </main>
 
     <footer class="footer">
@@ -24,6 +31,7 @@ export default {
 </script>
 <style lang="scss">
 @import "./assets/base.scss";
+@import "animate.css";
 
 .mainLayout {
   min-height: 100vh;
@@ -49,5 +57,12 @@ dialog {
   z-index: 100;
   border: 1px solid;
   box-shadow: 2px 2px;
+}
+
+.animate__animated.animate__fadeInRight,
+.animate__animated.animate__fadeInLeft,
+.animate__animated.animate__fadeOutLeft,
+.animate__animated.animate__fadeOutRight {
+  --animate-duration: 0.5s;
 }
 </style>

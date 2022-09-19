@@ -64,7 +64,7 @@ export default {
       duration: String,
       departure: String,
     },
-    cardIndex: Number,
+    cardIndex: String,
   },
   mounted() {
     this.cardDialog = document.getElementById(`cardDialog_${this.cardIndex}`);

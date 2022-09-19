@@ -1,6 +1,6 @@
 <template>
   <div class="imageSlider">
-    <transition mode="in-out" appear
+    <transition name="imageFade" mode="out-in"
       ><div class="image" :key="selectedImageNumber">
         <img :src="selectedImage" :alt="imageAlt" /></div
     ></transition>
@@ -102,13 +102,13 @@ export default {
   }
 }
 
-.v-enter-active,
-.v-leave-active {
-  transition: opacity 1.5s ease;
+.imageFade-enter-active,
+.imageFade-leave-active {
+  transition: opacity 0.5s ease;
 }
 
-.v-enter-from,
-.v-leave-to {
+.imageFade-enter-from,
+.imageFade-leave-to {
   opacity: 0;
 }
 </style>
