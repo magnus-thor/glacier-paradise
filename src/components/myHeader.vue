@@ -47,6 +47,14 @@ export default {
     &:last-of-type {
       margin-left: auto;
     }
+
+    a:hover {
+      background-color: blue;
+    }
+
+    a.router-link-active {
+      background-color: yellow;
+    }
   }
 }
 </style>

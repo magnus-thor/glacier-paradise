@@ -12,7 +12,8 @@
     },
     "shared": {
       "duration": "Lengd",
-      "departure": "Brottfarastaður"
+      "departure": "Brottfarastaður",
+      "hours": "tímar"
     }
   },
   "header": {

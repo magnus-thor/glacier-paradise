@@ -1,6 +1,6 @@
 <template>
   <div class="imageSlider">
-    <transition mode="in-out" appear
+    <transition name="imageFade" mode="out-in"
       ><div class="image" :key="selectedImageNumber">
         <img :src="selectedImage" :alt="imageAlt" /></div
     ></transition>
@@ -21,12 +21,12 @@ export default {
   data() {
     return {
       images: [
-        "../assets/images/fra-breiduvik.jpg",
-        "../assets/images/hvitur-jokull-blar-himinn.jpg",
-        "../assets/images/jokull-upp-med-stapafelli.jpg",
-        "../assets/images/solsetur.jpg",
-        "../assets/images/toppurinn.jpg",
-        "../assets/images/trodarinn-a-toppnum.jpg",
+        "/src/assets/images/fra-breiduvik.jpg",
+        "/src/assets/images/hvitur-jokull-blar-himinn.jpg",
+        "/src/assets/images/jokull-upp-med-stapafelli.jpg",
+        "/src/assets/images/solsetur.jpg",
+        "/src/assets/images/toppurinn.jpg",
+        "/src/assets/images/trodarinn-a-toppnum.jpg",
       ],
       selectedImageNumber: 0,
     };
@@ -42,7 +42,7 @@ export default {
       return this.selectedImageNumber >= this.images.length - 1;
     },
     selectedImage() {
-      return new URL(this.images[this.selectedImageNumber], import.meta.url);
+      return this.images[this.selectedImageNumber];
     },
   },
   methods: {
@@ -102,13 +102,13 @@ export default {
   }
 }
 
-.v-enter-active,
-.v-leave-active {
-  transition: opacity 1.5s ease;
+.imageFade-enter-active,
+.imageFade-leave-active {
+  transition: opacity 0.5s ease;
 }
 
-.v-enter-from,
-.v-leave-to {
+.imageFade-enter-from,
+.imageFade-leave-to {
   opacity: 0;
 }
 </style>

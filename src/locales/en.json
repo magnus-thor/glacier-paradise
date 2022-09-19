@@ -11,7 +11,8 @@
     },
     "shared": {
       "duration": "Duration",
-      "departure": "Departure"
+      "departure": "Departure",
+      "hours": "hours"
     }
   },
   "header": {
