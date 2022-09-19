@@ -1,5 +1,4 @@
 {
-  "message": "TESTING I18N",
   "aboutUs": {
     "text": "english text"
   },
@@ -13,6 +12,11 @@
     "shared": {
       "duration": "Duration",
       "departure": "Departure"
+    }
+  },
+  "header": {
+    "navLinks": {
+      "home": "Home"
     }
   }
 }

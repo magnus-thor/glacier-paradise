@@ -14,5 +14,10 @@
       "duration": "Lengd",
       "departure": "Brottfarastaður"
     }
+  },
+  "header": {
+    "navLinks": {
+      "home": "Heima"
+    }
   }
 }

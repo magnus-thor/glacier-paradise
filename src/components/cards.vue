@@ -6,24 +6,6 @@
       :link="{ text: snowCatTour.linkText, href: snowCatTour.linkHref }"
       :info="{ duration: '2-3', departure: 'Arnarstapi' }"
     />
-    <Card
-      :image="{ src: snowCatTour.imageSrc, alt: snowCatTour.imageAlt }"
-      :card="{ header: snowCatTour.cardHeader, text: snowCatTour.cardText }"
-      :link="{ text: snowCatTour.linkText, href: snowCatTour.linkHref }"
-      :info="{ duration: '2-3', departure: 'Arnarstapi' }"
-    />
-    <Card
-      :image="{ src: snowCatTour.imageSrc, alt: snowCatTour.imageAlt }"
-      :card="{ header: snowCatTour.cardHeader, text: snowCatTour.cardText }"
-      :link="{ text: snowCatTour.linkText, href: snowCatTour.linkHref }"
-      :info="{ duration: '2-3', departure: 'Arnarstapi' }"
-    />
-    <Card
-      :image="{ src: snowCatTour.imageSrc, alt: snowCatTour.imageAlt }"
-      :card="{ header: snowCatTour.cardHeader, text: snowCatTour.cardText }"
-      :link="{ text: snowCatTour.linkText, href: snowCatTour.linkHref }"
-      :info="{ duration: '2-3', departure: 'Arnarstapi' }"
-    />
   </div>
 </template>
 
