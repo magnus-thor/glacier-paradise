@@ -21,12 +21,12 @@ export default {
   data() {
     return {
       images: [
-        "/src/assets/images/fra-breiduvik.jpg",
-        "/src/assets/images/hvitur-jokull-blar-himinn.jpg",
-        "/src/assets/images/jokull-upp-med-stapafelli.jpg",
-        "/src/assets/images/solsetur.jpg",
-        "/src/assets/images/toppurinn.jpg",
-        "/src/assets/images/trodarinn-a-toppnum.jpg",
+        "./src/assets/images/fra-breiduvik.jpg",
+        "./src/assets/images/hvitur-jokull-blar-himinn.jpg",
+        "./src/assets/images/jokull-upp-med-stapafelli.jpg",
+        "./assets/images/solsetur.jpg",
+        "./src/assets/images/toppurinn.jpg",
+        "./src/assets/images/trodarinn-a-toppnum.jpg",
       ],
       selectedImageNumber: 0,
     };
