@@ -16,12 +16,13 @@
 </template>
 
 <script>
+import image1 from "@/assets/images/fra-breiduvik.jpg";
 export default {
   name: "imageSlider",
   data() {
     return {
       images: [
-        "./src/assets/images/fra-breiduvik.jpg",
+        image1,
         "./src/assets/images/hvitur-jokull-blar-himinn.jpg",
         "./src/assets/images/jokull-upp-med-stapafelli.jpg",
         "./assets/images/solsetur.jpg",
