@@ -1,16 +1,21 @@
 <template>
   <div
-    v-if="displayBG"
-    :class="{ 'modal-overlay': displayBG }"
+    :class="{ 'modal-overlay': dialogOpen }"
     id="modal-overlay"
     :style="show"
   ></div>
 
-  <div class="card">
-    <img :src="image.src" :alt="image.alt" />
-    <button @click="openDialog">click</button>
+  <div class="card" :style="`background-image: url(${this.image.src}) `">
+    <div class="card__info">
+      <h2>{{ card.header }}</h2>
+      <button @click="openDialog">Read more</button>
+    </div>
 
     <dialog :id="`cardDialog_${cardIndex}`">
+      <button @click="closeDialog">
+        <v-icon name="io-close" scale="1.2" />
+      </button>
+
       <div class="margin-left-right">
         <div class="info bottom-border">
           <div class="info--item">
@@ -43,7 +48,6 @@
           <p>{{ card.text }}</p>
         </div>
         <a class="link" :href="link.href">{{ link.text }}</a>
-        <button @click="closeDialog">ok</button>
       </div>
     </dialog>
   </div>
@@ -83,19 +87,13 @@ export default {
       }
     },
     closeDialog() {
-      // debugger;
-      console.log("closeDialog", this.dialogOpen);
       this.dialogOpen = false;
       this.cardDialog.close();
     },
   },
   computed: {
     show() {
-      console.log("show", this.dialogOpen);
       return this.dialogOpen ? `background-image: url(${this.image.src})` : "";
-    },
-    displayBG() {
-      return this.dialogOpen;
     },
   },
 };
@@ -116,19 +114,25 @@ export default {
 
 .card {
   width: 26rem;
+  height: 20rem;
   border: 1px inset grey;
-  box-shadow: 5px -5px grey;
+  box-shadow: 5px 5px grey;
   // border-radius: 5%;
+  background-size: cover;
+
+  &__info {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    h2 {
+      align-self: center;
+    }
+  }
 
   h2 {
     padding-bottom: 1rem;
-  }
-
-  img {
-    width: 100%;
-    object-fit: fill;
-    // border-top-left-radius: 6.5%;
-    // border-top-right-radius: 6.5%;
   }
 
   .margin-left-right {
@@ -179,6 +183,17 @@ export default {
       background-color: green; //TODO: swap to correct colors.
       cursor: pointer;
     }
+  }
+}
+
+dialog {
+  display: flex;
+  flex-direction: column;
+
+  button {
+    border: none;
+    background-color: inherit;
+    align-self: flex-end;
   }
 }
 </style>
