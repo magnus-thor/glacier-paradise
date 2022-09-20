@@ -17,18 +17,17 @@
 
 <script>
 import image1 from "@/assets/images/fra-breiduvik.jpg";
+import image2 from "@/assets/images/hvitur-jokull-blar-himinn.jpg";
+import image3 from "@/assets/images/jokull-upp-med-stapafelli.jpg";
+import image4 from "@/assets/images/solsetur.jpg";
+import image5 from "@/assets/images/toppurinn.jpg";
+import image6 from "@/assets/images/trodarinn-a-toppnum.jpg";
+
 export default {
   name: "imageSlider",
   data() {
     return {
-      images: [
-        image1,
-        "./src/assets/images/hvitur-jokull-blar-himinn.jpg",
-        "./src/assets/images/jokull-upp-med-stapafelli.jpg",
-        "./assets/images/solsetur.jpg",
-        "./src/assets/images/toppurinn.jpg",
-        "./src/assets/images/trodarinn-a-toppnum.jpg",
-      ],
+      images: [image1, image2, image3, image4, image5, image6],
       selectedImageNumber: 0,
     };
   },

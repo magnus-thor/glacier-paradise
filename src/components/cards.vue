@@ -31,8 +31,11 @@ export default {
   name: "cards",
   components: { Card },
   data() {
-    return {
-      snowCatTour: {
+    return {};
+  },
+  computed: {
+    snowCatTour() {
+      return {
         imageSrc:
           "/src/assets/images/Sunset-from-the-top-of-Snaefellsjokull-1-2.jpg",
         imageAlt: this.$t("cards.snowCatTour.imageAlt"),
@@ -40,16 +43,18 @@ export default {
         cardText: this.$t("cards.snowCatTour.cardText"),
         linkText: this.$t("cards.snowCatTour.linkText"),
         linkHref: "#",
-      },
-      someOtherTour: {
+      };
+    },
+    someOtherTour() {
+      return {
         imageSrc: "/src/assets/images/trodarinn-a-toppnum.jpg",
         imageAlt: this.$t("cards.snowCatTour.imageAlt"),
         cardHeader: this.$t("cards.snowCatTour.cardHeader"),
         cardText: this.$t("cards.snowCatTour.cardText"),
         linkText: this.$t("cards.snowCatTour.linkText"),
         linkHref: "#",
-      },
-    };
+      };
+    },
   },
 };
 </script>

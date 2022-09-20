@@ -5,7 +5,7 @@
     :style="show"
   ></div>
 
-  <div class="card" :style="`background-image: url(${this.image.src}) `">
+  <div class="card" :style="{ backgroundImage: `url(${image.src})` }">
     <div class="card__info">
       <h2>{{ card.header }}</h2>
       <button @click="openDialog">Read more</button>
@@ -93,7 +93,10 @@ export default {
   },
   computed: {
     show() {
-      return this.dialogOpen ? `background-image: url(${this.image.src})` : "";
+      // return new URL(this.image.src, import.meta.url);
+      return this.dialogOpen
+        ? `background-image: url(${new URL(this.image.src, import.meta.url)})`
+        : "";
     },
   },
 };
