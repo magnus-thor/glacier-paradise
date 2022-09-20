@@ -26,7 +26,8 @@
 
 <script>
 import Card from "@/components/card.vue";
-
+import snowCatImage from "@/assets/images/Sunset-from-the-top-of-Snaefellsjokull-1-2.jpg";
+import someOtherTour from "@/assets/images/trodarinn-a-toppnum.jpg";
 export default {
   name: "cards",
   components: { Card },
@@ -36,10 +37,7 @@ export default {
   computed: {
     snowCatTour() {
       return {
-        imageSrc: new URL(
-          "/src/assets/images/Sunset-from-the-top-of-Snaefellsjokull-1-2.jpg",
-          import.meta.url
-        ),
+        imageSrc: snowCatImage,
         imageAlt: this.$t("cards.snowCatTour.imageAlt"),
         cardHeader: this.$t("cards.snowCatTour.cardHeader"),
         cardText: this.$t("cards.snowCatTour.cardText"),
@@ -49,10 +47,7 @@ export default {
     },
     someOtherTour() {
       return {
-        imageSrc: new URL(
-          "/src/assets/images/trodarinn-a-toppnum.jpg",
-          import.meta.url
-        ),
+        imageSrc: someOtherTour,
         imageAlt: this.$t("cards.snowCatTour.imageAlt"),
         cardHeader: this.$t("cards.snowCatTour.cardHeader"),
         cardText: this.$t("cards.snowCatTour.cardText"),
