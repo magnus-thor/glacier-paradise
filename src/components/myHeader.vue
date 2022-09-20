@@ -4,13 +4,15 @@
       <router-link to="/">{{ $t("header.navLinks.home") }}</router-link>
     </div>
     <div class="item">
-      <router-link to="/about">About</router-link>
+      <router-link to="/about">{{ $t("header.navLinks.about") }}</router-link>
     </div>
     <div class="item">
-      <router-link to="/contactUs">Contact Us</router-link>
+      <router-link to="/contactUs">{{
+        $t("header.navLinks.contact")
+      }}</router-link>
     </div>
     <div class="item">
-      <router-link to="/terms">Terms</router-link>
+      <router-link to="/terms">{{ $t("header.navLinks.terms") }}</router-link>
     </div>
     <div class="item">
       <div class="locale-changer">
