@@ -37,7 +37,7 @@ export default {
     snowCatTour() {
       return {
         imageSrc: new URL(
-          "/src/assets/images/Sunset-from-the-top-of-Snaefellsjokull-1-2.jpg",
+          "/assets/images/Sunset-from-the-top-of-Snaefellsjokull-1-2.jpg",
           import.meta.url
         ),
         imageAlt: this.$t("cards.snowCatTour.imageAlt"),
@@ -50,7 +50,7 @@ export default {
     someOtherTour() {
       return {
         imageSrc: new URL(
-          "/src/assets/images/trodarinn-a-toppnum.jpg",
+          "/assets/images/trodarinn-a-toppnum.jpg",
           import.meta.url
         ),
         imageAlt: this.$t("cards.snowCatTour.imageAlt"),
