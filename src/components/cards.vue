@@ -26,30 +26,35 @@
 
 <script>
 import Card from "@/components/card.vue";
-
+import snowCatImage from "@/assets/images/Sunset-from-the-top-of-Snaefellsjokull-1-2.jpg";
+import someOtherTour from "@/assets/images/trodarinn-a-toppnum.jpg";
 export default {
   name: "cards",
   components: { Card },
   data() {
-    return {
-      snowCatTour: {
-        imageSrc:
-          "/src/assets/images/Sunset-from-the-top-of-Snaefellsjokull-1-2.jpg",
+    return {};
+  },
+  computed: {
+    snowCatTour() {
+      return {
+        imageSrc: snowCatImage,
         imageAlt: this.$t("cards.snowCatTour.imageAlt"),
         cardHeader: this.$t("cards.snowCatTour.cardHeader"),
         cardText: this.$t("cards.snowCatTour.cardText"),
         linkText: this.$t("cards.snowCatTour.linkText"),
         linkHref: "#",
-      },
-      someOtherTour: {
-        imageSrc: "/src/assets/images/trodarinn-a-toppnum.jpg",
+      };
+    },
+    someOtherTour() {
+      return {
+        imageSrc: someOtherTour,
         imageAlt: this.$t("cards.snowCatTour.imageAlt"),
         cardHeader: this.$t("cards.snowCatTour.cardHeader"),
         cardText: this.$t("cards.snowCatTour.cardText"),
         linkText: this.$t("cards.snowCatTour.linkText"),
         linkHref: "#",
-      },
-    };
+      };
+    },
   },
 };
 </script>
