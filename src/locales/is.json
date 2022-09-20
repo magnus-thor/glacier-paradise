@@ -15,5 +15,10 @@
       "departure": "Brottfarastaður",
       "hours": "tímar"
     }
+  },
+  "header": {
+    "navLinks": {
+      "home": "Heima"
+    }
   }
 }

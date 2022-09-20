@@ -1,5 +1,4 @@
 {
-  "message": "TESTING I18N",
   "aboutUs": {
     "text": "english text"
   },
@@ -14,6 +13,11 @@
       "duration": "Duration",
       "departure": "Departure",
       "hours": "hours"
+    }
+  },
+  "header": {
+    "navLinks": {
+      "home": "Home"
     }
   }
 }
