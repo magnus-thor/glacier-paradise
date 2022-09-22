@@ -35,8 +35,9 @@ export default {
   name: "MyHeader",
 };
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
 @import "@/assets/base.scss";
+
 .header {
   padding: 1rem 5rem 0 5rem;
   display: flex;
