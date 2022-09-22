@@ -1,7 +1,7 @@
 <template>
   <div class="mainLayout">
     <header>
-      <my-header />
+      <component :is="renderHeaderComponent" />
     </header>
 
     <main class="content">
@@ -23,10 +23,29 @@
 <script>
 import MyHeader from "@/components/myHeader.vue";
 import MyFooter from "@/components/myFooter.vue";
+import MobileHeader from "@/components/mobileHeader.vue";
 
 export default {
   name: "App",
-  components: { MyHeader, MyFooter },
+  components: { MyHeader, MyFooter, MobileHeader },
+  mounted() {
+    window.addEventListener("resize", () => {
+      this.innerWidth = window.innerWidth;
+    });
+  },
+  data() {
+    return {
+      innerWidth: window.innerWidth,
+    };
+  },
+  computed: {
+    mobileView() {
+      return this.innerWidth < 760;
+    },
+    renderHeaderComponent() {
+      return this.mobileView ? "mobile-header" : "my-header";
+    },
+  },
 };
 </script>
 <style lang="scss">

@@ -18,7 +18,10 @@
   },
   "header": {
     "navLinks": {
-      "home": "Heima"
+      "home": "Heima",
+      "about": "Um Okkur",
+      "contact": "Hafðu Samband",
+      "terms": "Skilmálar"
     }
   }
 }

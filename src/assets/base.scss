@@ -3,3 +3,31 @@ $grey: #808081;
 $dark_grey: #363635;
 $white: #dadada;
 $yellow: #b99e33;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.bm-overlay {
+  background: purple;
+}
+
+.bm-menu {
+  background-color: green;
+}
+
+.bm-item-list {
+  a {
+    color: orange;
+  }
+}
+// .bm-burger-bars {
+//   background-color: blue;
+// }
