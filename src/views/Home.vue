@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div class="page home">
     <ImageSlider />
     <div class="cardsContainer">
       <Cards />

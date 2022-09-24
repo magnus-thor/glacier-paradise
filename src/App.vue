@@ -10,7 +10,9 @@
           :enter-active-class="route.meta.enterClass"
           :leave-active-class="route.meta.leaveClass"
         >
-          <component :is="Component" />
+          <keep-alive include="About">
+            <component :is="Component" />
+          </keep-alive>
         </transition>
       </router-view>
     </main>
@@ -56,10 +58,18 @@ export default {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  background-color: $white;
 }
 
 .content {
   flex: 1 0 auto;
+  position: relative;
+}
+
+.page {
+  position: absolute;
+  height: 100%;
+  width: 100%;
 }
 
 .footer {

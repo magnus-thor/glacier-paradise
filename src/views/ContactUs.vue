@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="page">
     <contact-us-form />
   </div>
 </template>
@@ -9,9 +9,7 @@ import ContactUsForm from "@/components/contactUsForm.vue";
 
 export default {
   name: "ContactUs",
-  components: { ContactUsForm }
+  components: { ContactUsForm },
 };
 </script>
-<style lang="scss">
-
-</style>
+<style lang="scss"></style>
