@@ -15,7 +15,8 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
+import { computed, defineComponent, ref } from "vue";
 import image1 from "@/assets/images/fra-breiduvik.jpg";
 import image2 from "@/assets/images/hvitur-jokull-blar-himinn.jpg";
 import image3 from "@/assets/images/jokull-upp-med-stapafelli.jpg";
@@ -23,37 +24,42 @@ import image4 from "@/assets/images/solsetur.jpg";
 import image5 from "@/assets/images/toppurinn.jpg";
 import image6 from "@/assets/images/trodarinn-a-toppnum.jpg";
 
-export default {
+export default defineComponent({
   name: "imageSlider",
-  data() {
+  setup() {
+    const images = ref([image1, image2, image3, image4, image5, image6]);
+    let selectedImageNumber = ref(0);
+
+    const imageAlt = computed(
+      () => images.value[selectedImageNumber.value].split("/")[3]
+    );
+    const disablePrevious = computed(() => selectedImageNumber.value <= 0);
+    const disableNext = computed(
+      () => selectedImageNumber.value >= images.value.length - 1
+    );
+    const selectedImage = computed(
+      () => images.value[selectedImageNumber.value]
+    );
+
+    const previous = () => {
+      selectedImageNumber.value--;
+    };
+    const next = () => {
+      selectedImageNumber.value++;
+    };
+
     return {
-      images: [image1, image2, image3, image4, image5, image6],
-      selectedImageNumber: 0,
+      selectedImageNumber,
+      images,
+      disableNext,
+      disablePrevious,
+      selectedImage,
+      imageAlt,
+      previous,
+      next,
     };
   },
-  computed: {
-    imageAlt() {
-      return this.images[this.selectedImageNumber].split("/")[3];
-    },
-    disablePrevious() {
-      return this.selectedImageNumber <= 0;
-    },
-    disableNext() {
-      return this.selectedImageNumber >= this.images.length - 1;
-    },
-    selectedImage() {
-      return this.images[this.selectedImageNumber];
-    },
-  },
-  methods: {
-    previous() {
-      this.selectedImageNumber--;
-    },
-    next() {
-      this.selectedImageNumber++;
-    },
-  },
-};
+});
 </script>
 
 <style lang="scss" scoped>

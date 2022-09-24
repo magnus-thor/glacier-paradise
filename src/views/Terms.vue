@@ -4,12 +4,17 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
+import { defineComponent } from "vue";
 import TermsMarkdown from "@/components/termsMarkdown.vue";
 
-export default {
+export default defineComponent({
   name: "Terms",
   components: { TermsMarkdown },
-};
+});
 </script>
-<style lang="scss"></style>
+<style lang="scss" scoped>
+.page {
+  background-color: green;
+}
+</style>

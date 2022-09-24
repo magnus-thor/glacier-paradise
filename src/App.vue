@@ -7,8 +7,11 @@
     <main class="content">
       <router-view v-slot="{ Component, route }">
         <transition
-          :enter-active-class="route.meta.enterClass"
-          :leave-active-class="route.meta.leaveClass"
+          :enterActiveClass="generateClassList2((route.meta.enterClass as string))"
+          :leaveActiveClass="generateClassList2((route.meta.leaveClass as string))"
+          enter-to-class="posAbsolute"
+          leave-from-class="posAbsolute"
+          mode="out-in"
         >
           <keep-alive include="About">
             <component :is="Component" />
@@ -22,33 +25,42 @@
     </footer>
   </div>
 </template>
-<script>
+<script lang="ts">
+import { computed, defineComponent, onUnmounted, ref } from "vue";
 import MyHeader from "@/components/myHeader.vue";
 import MyFooter from "@/components/myFooter.vue";
 import MobileHeader from "@/components/mobileHeader.vue";
+import { useI18n } from "vue-i18n";
 
-export default {
+export default defineComponent({
   name: "App",
   components: { MyHeader, MyFooter, MobileHeader },
-  mounted() {
-    window.addEventListener("resize", () => {
-      this.innerWidth = window.innerWidth;
-    });
-  },
-  data() {
-    return {
-      innerWidth: window.innerWidth,
+  setup() {
+    const { t } = useI18n({ useScope: "global" });
+    const options = { capture: true };
+    let innerWidth = ref(window.innerWidth);
+    const callBack = () => {
+      innerWidth.value = window.innerWidth;
     };
+    window.addEventListener("resize", callBack, options);
+    onUnmounted(() => {
+      window.removeEventListener("resize", callBack, options);
+    });
+
+    const renderHeaderComponent = computed(() => {
+      return innerWidth.value < 760 ? "mobile-header" : "my-header";
+    });
+
+    const generateClassList = (className: string): string => {
+      return `${className} posAbsolute`;
+    };
+    const generateClassList2 = (className: string): string => {
+      return `${className}`;
+    };
+
+    return { renderHeaderComponent, t, generateClassList, generateClassList2 };
   },
-  computed: {
-    mobileView() {
-      return this.innerWidth < 760;
-    },
-    renderHeaderComponent() {
-      return this.mobileView ? "mobile-header" : "my-header";
-    },
-  },
-};
+});
 </script>
 <style lang="scss">
 @import "./assets/base.scss";
@@ -63,15 +75,15 @@ export default {
 
 .content {
   flex: 1 0 auto;
-  position: relative;
 }
 
-.page {
+.posAbsolute {
   position: absolute;
-  height: 100%;
+  min-height: min-content;
   width: 100%;
 }
 
+//TODO: fix footer when using the router
 .footer {
   flex-shrink: 0;
 }
