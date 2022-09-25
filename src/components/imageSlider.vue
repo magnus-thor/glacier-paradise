@@ -17,17 +17,25 @@
 
 <script lang="ts">
 import { computed, defineComponent, ref } from "vue";
-import image1 from "@/assets/images/fra-breiduvik.jpg";
-import image2 from "@/assets/images/hvitur-jokull-blar-himinn.jpg";
-import image3 from "@/assets/images/jokull-upp-med-stapafelli.jpg";
-import image4 from "@/assets/images/solsetur.jpg";
-import image5 from "@/assets/images/toppurinn.jpg";
-import image6 from "@/assets/images/trodarinn-a-toppnum.jpg";
+// import image1 from "public/images/fra-breiduvik.jpg";
+// import image2 from "public/images/hvitur-jokull-blar-himinn.jpg";
+// import image3 from "public/images/jokull-upp-med-stapafelli.jpg";
+// import image4 from "public/images/solsetur.jpg";
+// import image5 from "public/images/toppurinn.jpg";
+// import image6 from "public/images/trodarinn-a-toppnum.jpg";
 
 export default defineComponent({
   name: "imageSlider",
   setup() {
-    const images = ref([image1, image2, image3, image4, image5, image6]);
+    const images = ref([
+      "public/images/fra-breiduvik.jpg",
+      "public/images/solsetur.jpg",
+      "public/images/hvitur-jokull-blar-himinn.jpg",
+      "public/images/jokull-upp-med-stapafelli.jpg",
+      "public/images/solsetur.jpg",
+      "public/images/toppurinn.jpg",
+      "public/images/trodarinn-a-toppnum.jpg",
+    ]);
     let selectedImageNumber = ref(0);
 
     const imageAlt = computed(
