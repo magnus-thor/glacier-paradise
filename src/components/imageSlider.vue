@@ -66,16 +66,16 @@ export default defineComponent({
 .imageSlider {
   display: grid;
   // height: 300px;
-  width: 100%;
+  // width: 100%;
 
-  align-content: space-around;
-  justify-content: space-between;
+  // align-content: space-around;
+  // justify-content: space-between;
 }
 
 .image {
   grid-row: 1;
   grid-column: 1;
-  width: 100vw;
+  width: 90vw;
   height: 40rem;
 
   img {

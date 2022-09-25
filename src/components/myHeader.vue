@@ -30,10 +30,12 @@
     </div>
   </div>
 </template>
-<script>
-export default {
+<script lang="ts">
+import { defineComponent } from "vue";
+
+export default defineComponent({
   name: "MyHeader",
-};
+});
 </script>
 <style lang="scss" scoped>
 @import "@/assets/base.scss";

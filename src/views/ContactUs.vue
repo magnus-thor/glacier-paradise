@@ -4,12 +4,13 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
 import ContactUsForm from "@/components/contactUsForm.vue";
+import { defineComponent } from "vue";
 
-export default {
+export default defineComponent({
   name: "ContactUs",
   components: { ContactUsForm },
-};
+});
 </script>
 <style lang="scss"></style>

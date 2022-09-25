@@ -7,11 +7,13 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
+import { defineComponent } from "vue";
 import Instagram from "@/components/instagram.vue";
-export default {
+
+export default defineComponent({
   name: "About",
   components: { Instagram },
-};
+});
 </script>
 <style lang="scss"></style>

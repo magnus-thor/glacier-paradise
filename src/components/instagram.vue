@@ -17,9 +17,6 @@ export default {
     } else {
       console.log("Feed exists");
     }
-    // document
-    //   .getElementById("feed")
-    //   .setAttribute("data-behold-id", "cDjxN13pDqwQdtEH9oOt");
   },
 };
 </script>

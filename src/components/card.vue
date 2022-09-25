@@ -79,28 +79,21 @@ export default defineComponent({
     cardIndex: Number,
   },
   setup(props) {
-    let cardDialog;
+    let cardDialog: HTMLDialogElement;
     onMounted(() => {
-      cardDialog = document.getElementById(`cardDialog_${props.cardIndex}`);
+      cardDialog = document.getElementById(
+        `cardDialog_${props.cardIndex}`
+      ) as HTMLDialogElement;
     });
     let dialogOpen = ref(false);
 
     const openDialog = () => {
-      // @ts-expect-error
-      if (typeof cardDialog.showModal === "function") {
-        // @ts-expect-error
-        cardDialog.showModal();
-        dialogOpen.value = true;
-      } else {
-        // @ts-expect-error
-        outputBox.value =
-          "Sorry, the <dialog> API is not supported by this browser.";
-      }
+      cardDialog.showModal();
+      dialogOpen.value = true;
     };
 
     const closeDialog = () => {
       dialogOpen.value = false;
-      // @ts-expect-error
       cardDialog.close();
     };
 
