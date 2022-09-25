@@ -33,31 +33,31 @@ export default defineComponent({
   setup() {
     let loadImages = ref([
       {
-        src: "src/assets/images/fra-breiduvik.jpg",
+        src: "public/images/fra-breiduvik.jpg",
         alt: "fra-breiduvik",
       },
       {
-        src: "src/assets/images/solsetur.jpg",
+        src: "public/images/solsetur.jpg",
         alt: "solsetur",
       },
       {
-        src: "src/assets/images/hvitur-jokull-blar-himinn.jpg",
+        src: "public/images/hvitur-jokull-blar-himinn.jpg",
         alt: "hvitur-jokull-blar-himinn",
       },
       {
-        src: "src/assets/images/jokull-upp-med-stapafelli.jpg",
+        src: "public/images/jokull-upp-med-stapafelli.jpg",
         alt: "jokull-upp-med-stapafelli",
       },
       {
-        src: "src/assets/images/solsetur.jpg",
+        src: "public/images/solsetur.jpg",
         alt: "solsetur",
       },
       {
-        src: "src/assets/images/toppurinn.jpg",
+        src: "public/images/toppurinn.jpg",
         alt: "toppurinn",
       },
       {
-        src: "src/assets/images/trodarinn-a-toppnum.jpg",
+        src: "public/images/trodarinn-a-toppnum.jpg",
         alt: "trodarinn-a-toppnum",
       },
     ]);

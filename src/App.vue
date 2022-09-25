@@ -71,6 +71,10 @@ export default defineComponent({
   display: flex;
   flex-direction: column;
   background-color: $white;
+
+  @media screen and (max-width: 760px) {
+    padding-top: 3.5rem;
+  }
 }
 
 .content {
