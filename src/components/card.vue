@@ -5,7 +5,7 @@
     :style="show"
   ></div>
 
-  <div class="card" :style="`background-image: url(${this.image.src}) `">
+  <div class="card" :style="`background-image: url(${image.src}) `">
     <div class="card__info">
       <h2>{{ card.header }}</h2>
       <button @click="openDialog">Read more</button>
@@ -53,50 +53,57 @@
   </div>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import { computed, defineComponent, onMounted, PropType, ref } from "vue";
+import { CardImage, CardInfo, CardLink, CardText } from "@/types/props";
+
+export default defineComponent({
   name: "card",
   props: {
-    image: { src: String, alt: String },
-    card: { header: String, text: String },
-    link: { text: String, href: String },
+    image: {
+      required: true,
+      type: Object as PropType<CardImage>,
+    },
+    card: {
+      required: true,
+      type: Object as PropType<CardText>,
+    },
+    link: {
+      required: true,
+      type: Object as PropType<CardLink>,
+    },
     info: {
-      duration: String,
-      departure: String,
+      required: true,
+      type: Object as PropType<CardInfo>,
     },
-    cardIndex: String,
+    cardIndex: Number,
   },
-  mounted() {
-    this.cardDialog = document.getElementById(`cardDialog_${this.cardIndex}`);
-  },
-  data() {
-    return {
-      dialogOpen: false,
-      cardDialog: "",
-    };
-  },
+  setup(props) {
+    let cardDialog: HTMLDialogElement;
+    onMounted(() => {
+      cardDialog = document.getElementById(
+        `cardDialog_${props.cardIndex}`
+      ) as HTMLDialogElement;
+    });
+    let dialogOpen = ref(false);
 
-  methods: {
-    openDialog() {
-      if (typeof this.cardDialog.showModal === "function") {
-        this.cardDialog.showModal();
-        this.dialogOpen = true;
-      } else {
-        outputBox.value =
-          "Sorry, the <dialog> API is not supported by this browser.";
-      }
-    },
-    closeDialog() {
-      this.dialogOpen = false;
-      this.cardDialog.close();
-    },
+    const openDialog = () => {
+      cardDialog.showModal();
+      dialogOpen.value = true;
+    };
+
+    const closeDialog = () => {
+      dialogOpen.value = false;
+      cardDialog.close();
+    };
+
+    const show = computed(() =>
+      dialogOpen ? `background-image: url(${props.image.src})` : ""
+    );
+
+    return { dialogOpen, show, closeDialog, openDialog };
   },
-  computed: {
-    show() {
-      return this.dialogOpen ? `background-image: url(${this.image.src})` : "";
-    },
-  },
-};
+});
 </script>
 
 <style lang="scss" scoped>

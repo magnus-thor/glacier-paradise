@@ -11,40 +11,17 @@
   </Slide>
 </template>
 
-<script>
+<script lang="ts">
+import { defineComponent } from "vue";
+// @ts-expect-error TODO fix
 import { Slide } from "vue3-burger-menu";
-export default {
+
+export default defineComponent({
   name: "mobileHeader",
   components: { Slide },
-  data() {
-    return {};
-  },
-};
+});
 </script>
 
 <style lang="scss" scoped>
 @import "@/assets/base.scss";
-
-// .header {
-//   padding: 1rem 5rem 0 5rem;
-//   display: flex;
-//   background-color: $light_grey;
-//   color: $dark_grey;
-
-//   .item {
-//     padding-right: 2rem;
-
-//     &:last-of-type {
-//       margin-left: auto;
-//     }
-
-//     a:hover {
-//       background-color: blue;
-//     }
-
-//     a.router-link-active {
-//       background-color: yellow;
-//     }
-//   }
-// }
 </style>

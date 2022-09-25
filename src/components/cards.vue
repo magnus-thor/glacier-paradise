@@ -1,62 +1,31 @@
 <template>
   <div class="cards">
-    <div>
+    <template v-for="(tour, index) in allTours">
       <Card
-        :image="{ src: snowCatTour.imageSrc, alt: snowCatTour.imageAlt }"
-        :card="{ header: snowCatTour.cardHeader, text: snowCatTour.cardText }"
-        :link="{ text: snowCatTour.linkText, href: snowCatTour.linkHref }"
-        :info="{ duration: '2-3', departure: 'Arnarstapi' }"
-        cardIndex="1"
+        :image="{ src: tour.imageSrc, alt: $t(tour.imageAlt) }"
+        :card="{ header: $t(tour.cardHeader), text: $t(tour.cardText) }"
+        :link="{ text: $t(tour.linkText), href: tour.linkHref }"
+        :info="{ duration: tour.duration, departure: tour.departure }"
+        :cardIndex="index"
       />
-    </div>
-    <div>
-      <Card
-        :image="{ src: someOtherTour.imageSrc, alt: someOtherTour.imageAlt }"
-        :card="{
-          header: someOtherTour.cardHeader,
-          text: someOtherTour.cardText,
-        }"
-        :link="{ text: someOtherTour.linkText, href: someOtherTour.linkHref }"
-        :info="{ duration: '2-3', departure: 'Arnarstapi' }"
-        cardIndex="2"
-      />
-    </div>
+    </template>
   </div>
 </template>
 
-<script>
+<script lang="ts">
 import Card from "@/components/card.vue";
-import snowCatImage from "@/assets/images/Sunset-from-the-top-of-Snaefellsjokull-1-2.jpg";
-import someOtherTour from "@/assets/images/trodarinn-a-toppnum.jpg";
-export default {
+import { defineComponent, ref } from "vue";
+import { tours } from "@/assets/tours/tours";
+
+export default defineComponent({
   name: "cards",
   components: { Card },
-  data() {
-    return {};
+  setup() {
+    const allTours = ref(tours);
+
+    return { allTours };
   },
-  computed: {
-    snowCatTour() {
-      return {
-        imageSrc: snowCatImage,
-        imageAlt: this.$t("cards.snowCatTour.imageAlt"),
-        cardHeader: this.$t("cards.snowCatTour.cardHeader"),
-        cardText: this.$t("cards.snowCatTour.cardText"),
-        linkText: this.$t("cards.snowCatTour.linkText"),
-        linkHref: "#",
-      };
-    },
-    someOtherTour() {
-      return {
-        imageSrc: someOtherTour,
-        imageAlt: this.$t("cards.snowCatTour.imageAlt"),
-        cardHeader: this.$t("cards.snowCatTour.cardHeader"),
-        cardText: this.$t("cards.snowCatTour.cardText"),
-        linkText: this.$t("cards.snowCatTour.linkText"),
-        linkHref: "#",
-      };
-    },
-  },
-};
+});
 </script>
 
 <style lang="scss" scoped>

@@ -1,10 +1,12 @@
 <template>
   <div class="footer__container">My footer goes here</div>
 </template>
-<script>
-export default {
+<script lang="ts">
+import { defineComponent } from "vue";
+
+export default defineComponent({
   name: "MyFooter",
-};
+});
 </script>
 <style lang="scss">
 .footer__container {

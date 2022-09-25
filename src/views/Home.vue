@@ -1,26 +1,26 @@
 <template>
-  <div class="home">
-    <ImageSlider />
-    <div class="cardsContainer">
-      <Cards />
-    </div>
-    <div class="videos">
-      <YoutubeVideos />
+  <div class="page">
+    <div class="home">
+      <ImageSlider />
+      <div class="cardsContainer">
+        <Cards />
+      </div>
+      <div class="videos">
+        <!-- <YoutubeVideos /> -->
+      </div>
     </div>
   </div>
 </template>
-<script>
+<script lang="ts">
 import YoutubeVideos from "@/components/youtubeVideos.vue";
 import ImageSlider from "@/components/imageSlider.vue";
 import Cards from "@/components/cards.vue";
+import { defineComponent } from "vue";
 
-export default {
+export default defineComponent({
   name: "Home",
   components: { YoutubeVideos, ImageSlider, Cards },
-  data() {
-    return {};
-  },
-};
+});
 </script>
 <style lang="scss" scoped>
 .home {

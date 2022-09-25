@@ -3,26 +3,33 @@
     <component :is="componentToRender" />
   </div>
 </template>
-<script>
+<script lang="ts">
+import { computed, defineComponent } from "vue";
+// @ts-expect-error TODO fix
 import { VueComponent as MarkdownIs } from "@/assets/md/terms_is.md";
+// @ts-expect-error TODO fix
 import { VueComponent as MarkdownEn } from "@/assets/md/terms_en.md";
+import { useI18n } from "vue-i18n";
 
-export default {
+export default defineComponent({
   name: "TermsMarkdown",
   components: {
-    MarkdownIs, MarkdownEn
+    MarkdownIs,
+    MarkdownEn,
   },
-  computed: {
-    componentToRender() {
-      const lang = this.$i18n.locale;
+  setup() {
+    const { locale } = useI18n();
+    const componentToRender = computed(() => {
+      const lang = locale.value;
       return `markdown-${lang}`;
-    }
-  }
-}
+    });
+
+    return { componentToRender };
+  },
+});
 </script>
 <style lang="scss">
 .markdown {
   padding: 5rem;
-
 }
 </style>

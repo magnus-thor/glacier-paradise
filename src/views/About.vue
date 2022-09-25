@@ -1,15 +1,19 @@
 <template>
-  <div>
+  <div class="page">
     About Us Area
     <div>{{ $t("aboutUs.text") }}</div>
+
+    <!-- <Instagram /> -->
   </div>
 </template>
 
-<script>
-export default {
-  name: "AboutUs",
-};
-</script>
-<style lang="scss">
+<script lang="ts">
+import { defineComponent } from "vue";
+import Instagram from "@/components/instagram.vue";
 
-</style>
+export default defineComponent({
+  name: "About",
+  components: { Instagram },
+});
+</script>
+<style lang="scss"></style>

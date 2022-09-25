@@ -1,17 +1,16 @@
 <template>
-  <div>
+  <div class="page">
     <contact-us-form />
   </div>
 </template>
 
-<script>
+<script lang="ts">
 import ContactUsForm from "@/components/contactUsForm.vue";
+import { defineComponent } from "vue";
 
-export default {
+export default defineComponent({
   name: "ContactUs",
-  components: { ContactUsForm }
-};
+  components: { ContactUsForm },
+});
 </script>
-<style lang="scss">
-
-</style>
+<style lang="scss"></style>
