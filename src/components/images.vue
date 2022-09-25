@@ -4,11 +4,6 @@
     :modules="modules"
     :space-between="20"
     :pagination="{ clickable: true }"
-    :autoplay="{
-      delay: 7000,
-      disableOnInteraction: false,
-      pauseOnMouseEnter: true,
-    }"
   >
     <swiper-slide
       class="imageSwiper"
@@ -33,31 +28,31 @@ export default defineComponent({
   setup() {
     let loadImages = ref([
       {
-        src: "public/images/fra-breiduvik.jpg",
+        src: "/images/fra-breiduvik.jpg",
         alt: "fra-breiduvik",
       },
       {
-        src: "public/images/solsetur.jpg",
+        src: "/images/solsetur.jpg",
         alt: "solsetur",
       },
       {
-        src: "public/images/hvitur-jokull-blar-himinn.jpg",
+        src: "/images/hvitur-jokull-blar-himinn.jpg",
         alt: "hvitur-jokull-blar-himinn",
       },
       {
-        src: "public/images/jokull-upp-med-stapafelli.jpg",
+        src: "/images/jokull-upp-med-stapafelli.jpg",
         alt: "jokull-upp-med-stapafelli",
       },
       {
-        src: "public/images/solsetur.jpg",
+        src: "/images/solsetur.jpg",
         alt: "solsetur",
       },
       {
-        src: "public/images/toppurinn.jpg",
+        src: "/images/toppurinn.jpg",
         alt: "toppurinn",
       },
       {
-        src: "public/images/trodarinn-a-toppnum.jpg",
+        src: "/images/trodarinn-a-toppnum.jpg",
         alt: "trodarinn-a-toppnum",
       },
     ]);
@@ -80,11 +75,21 @@ export default defineComponent({
 .imageSlider {
   margin: auto;
   height: 30rem;
-  width: auto;
+  width: 100%;
 }
 
 .imageSwiper {
   display: flex;
-  justify-content: center;
+  margin: 0;
+
+  img {
+    object-fit: contain;
+    margin: 0;
+    width: 100%;
+  }
+
+  @media screen and (min-width: 760px) {
+    justify-content: center;
+  }
 }
 </style>

@@ -1,5 +1,5 @@
-import snowCatImage from "@/assets/images/Sunset-from-the-top-of-Snaefellsjokull-1-2.jpg";
-import someOtherTour from "@/assets/images/trodarinn-a-toppnum.jpg";
+import snowCatImage from "/images/Sunset-from-the-top-of-Snaefellsjokull-1-2.jpg";
+import someOtherTour from "/images/trodarinn-a-toppnum.jpg";
 
 export const tours = [
   {

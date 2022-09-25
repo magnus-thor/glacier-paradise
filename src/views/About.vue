@@ -1,6 +1,6 @@
 <template>
   <div class="page">
-    <div>{{ $t("aboutUs.text") }}</div>
+    <!-- <div>{{ $t("aboutUs.text") }}</div> -->
 
     <Images />
 
