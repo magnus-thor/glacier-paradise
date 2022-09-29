@@ -1,9 +1,6 @@
-import snowCatImage from "@/assets/images/Sunset-from-the-top-of-Snaefellsjokull-1-2.jpg";
-import someOtherTour from "@/assets/images/trodarinn-a-toppnum.jpg";
-
 export const tours = [
   {
-    imageSrc: snowCatImage,
+    imageSrc: "images/Sunset-from-the-top-of-Snaefellsjokull-1-2.jpg",
     imageAlt: "cards.snowCatTour.imageAlt",
     cardHeader: "cards.snowCatTour.cardHeader",
     cardText: "cards.snowCatTour.cardText",
@@ -13,7 +10,7 @@ export const tours = [
     departure: "Arnarstapi",
   },
   {
-    imageSrc: someOtherTour,
+    imageSrc: "images/trodarinn-a-toppnum.jpg",
     imageAlt: "cards.snowCatTour.imageAlt",
     cardHeader: "cards.snowCatTour.cardHeader",
     cardText: "cards.snowCatTour.cardText",

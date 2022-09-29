@@ -6,7 +6,7 @@
     :pagination="{ clickable: true }"
     :autoplay="{
       delay: 7000,
-      disableOnInteraction: false,
+      disableOnInteraction: true,
       pauseOnMouseEnter: true,
     }"
   >

@@ -35,5 +35,6 @@ export default defineComponent({
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
+  background-color: white;
 }
 </style>
