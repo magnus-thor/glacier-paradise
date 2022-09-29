@@ -1,36 +1,47 @@
 <template>
-  <div ref="scrollRef">
+  <header ref="scrollRef">
     <div id="header" class="header bg-color">
-      <div v-for="(route, index) in routes">
-        <nav class="item">
-          <router-link :to="route.linkTo">{{
-            $t(route.nameTranslationKey)
-          }}</router-link>
-        </nav>
+      <div class="invisible-element"></div>
+      <div class="nav-routes">
+        <template v-for="(route, index) in routes">
+          <nav class="item">
+            <router-link :to="route.linkTo">{{
+              $t(route.nameTranslationKey)
+            }}</router-link>
+          </nav>
+        </template>
       </div>
-      <div class="item">
-        <div class="locale-changer">
-          <select v-model="$i18n.locale">
-            <option
-              v-for="locale in $i18n.availableLocales"
-              :key="`locale-${locale}`"
-              :value="locale"
-            >
-              {{ locale }}
-            </option>
-          </select>
-        </div>
+      <div class="locale-changer">
+        <select v-model="$i18n.locale">
+          <option
+            v-for="locale in $i18n.availableLocales"
+            :key="`locale-${locale}`"
+            :value="locale"
+          >
+            {{ locale }}
+          </option>
+        </select>
+        <button
+          v-for="locale in $i18n.availableLocales"
+          :key="`locale-${locale}`"
+          @click="changeLocale(locale)"
+        >
+          {{ locale }}
+        </button>
       </div>
     </div>
-  </div>
+  </header>
 </template>
 <script lang="ts">
 import { onIntersect } from "@/composables/onIntersect";
 import { defineComponent, onMounted, ref } from "vue";
+import { useI18n } from "vue-i18n";
 
 export default defineComponent({
   name: "MyHeader",
   setup() {
+    let { locale } = useI18n();
+
     const routes = ref([
       {
         linkTo: "/",
@@ -65,7 +76,11 @@ export default defineComponent({
       observer.value = onIntersect(scrollRef.value, onEnter, onExit, false);
     });
 
-    return { routes, scrollRef };
+    const changeLocale = (lang: string) => {
+      locale.value = lang;
+    };
+
+    return { routes, scrollRef, changeLocale };
   },
 });
 </script>
@@ -73,32 +88,62 @@ export default defineComponent({
 @import "@/assets/base.scss";
 
 .bg-color {
-  background-color: $light_grey;
+  background-color: $dark_grey;
+  z-index: 100;
+
+  .nav-routes .item {
+    a {
+      color: green;
+    }
+
+    a:hover {
+      color: green;
+    }
+
+    a.router-link-active {
+      color: green;
+    }
+  }
+}
+
+.nav-routes {
+  display: flex;
+  justify-content: center;
+
+  .item {
+    padding-right: 2rem;
+
+    a {
+      color: $yellow;
+    }
+
+    a:hover {
+      color: $white;
+    }
+
+    a.router-link-active {
+      color: $light_grey;
+    }
+  }
 }
 
 .header {
   position: fixed;
   width: 100%;
-  padding: 1rem 5rem 0.5rem 5rem;
+  padding: 1rem 0 0.5rem 0;
   display: flex;
-  justify-content: center;
-  width: 100%;
-  color: $dark_grey;
+}
 
-  .item {
-    padding-right: 2rem;
+.invisible-element {
+  margin-right: auto;
+}
 
-    // &:last-of-type {
-    //   margin-left: auto;
-    // }
+.locale-changer {
+  margin-left: auto;
+}
 
-    a:hover {
-      background-color: blue;
-    }
-
-    a.router-link-active {
-      background-color: yellow;
-    }
-  }
+.invisible-element,
+.locale-changer {
+  width: 4rem;
 }
 </style>

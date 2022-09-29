@@ -1,8 +1,6 @@
 <template>
   <div class="mainLayout">
-    <header>
-      <component :is="renderHeaderComponent" />
-    </header>
+    <component :is="renderHeaderComponent" />
 
     <main class="content">
       <router-view v-slot="{ Component, route }">
