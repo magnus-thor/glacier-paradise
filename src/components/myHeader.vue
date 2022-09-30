@@ -2,7 +2,11 @@
   <header ref="scrollRef">
     <div id="header" class="header bg-color">
       <div class="header-logo">
-        <img id="header-image" :src="logoSrc" alt="Glacier paradise logo" />
+        <img
+          id="header-image"
+          src="images/logo-glacier-paradise-transparent.png"
+          alt="Glacier paradise logo"
+        />
       </div>
       <div class="nav-routes">
         <template v-for="(route, index) in routes">
@@ -36,7 +40,7 @@
 </template>
 <script lang="ts">
 import { onIntersect } from "@/composables/onIntersect";
-import { defineComponent, onMounted, ref } from "vue";
+import { computed, defineComponent, onMounted, ref } from "vue";
 import { useI18n } from "vue-i18n";
 
 export default defineComponent({
@@ -66,17 +70,23 @@ export default defineComponent({
     const observer = ref({});
     const scrollRef = ref<HTMLElement>();
 
-    const logoSrc = ref("images/logo-glacier-paradise-transparent.png");
+    const displayTransparentLogo = ref(true);
 
     const onEnter = () => {
       document.getElementById("header").classList.toggle("bg-color");
-      logoSrc.value = "images/logo-glacier-paradise-transparent.png";
+      displayTransparentLogo.value = false;
     };
 
     const onExit = () => {
       document.getElementById("header").classList.toggle("bg-color");
-      logoSrc.value = "images/logo-glacier-paradise.png";
+      displayTransparentLogo.value = true;
     };
+
+    // const logoSrc = computed(() => {
+    //   return displayTransparentLogo
+    //     ? "images/logo-glacier-paradise-transparent.png"
+    //     : "images/logo-glacier-paradise.png";
+    // });
 
     onMounted(() => {
       observer.value = onIntersect(scrollRef.value, onEnter, onExit, false);
@@ -86,7 +96,7 @@ export default defineComponent({
       locale.value = lang;
     };
 
-    return { routes, scrollRef, changeLocale, logoSrc };
+    return { routes, scrollRef, changeLocale };
   },
 });
 </script>
