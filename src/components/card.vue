@@ -11,7 +11,7 @@
       <button @click="openDialog">Read more</button>
     </div>
 
-    <dialog :id="`cardDialog_${cardIndex}`">
+    <dialog :id="`cardDialog_${cardIndex}`" v-show="dialogOpen">
       <button @click="closeDialog">
         <v-icon name="io-close" scale="1.2" />
       </button>
@@ -84,6 +84,7 @@ export default defineComponent({
       cardDialog = document.getElementById(
         `cardDialog_${props.cardIndex}`
       ) as HTMLDialogElement;
+      cardDialog.close();
     });
     let dialogOpen = ref(false);
 

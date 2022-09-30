@@ -4,6 +4,11 @@
     :modules="modules"
     :space-between="20"
     :pagination="{ clickable: true }"
+    :autoplay="{
+      delay: 7000,
+      disableOnInteraction: true,
+      pauseOnMouseEnter: true,
+    }"
   >
     <swiper-slide
       class="imageSwiper"

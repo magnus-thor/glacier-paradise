@@ -1,8 +1,6 @@
 <template>
   <div class="mainLayout">
-    <header>
-      <component :is="renderHeaderComponent" />
-    </header>
+    <component :is="renderHeaderComponent" />
 
     <main class="content">
       <router-view v-slot="{ Component, route }">
@@ -48,7 +46,7 @@ export default defineComponent({
     });
 
     const renderHeaderComponent = computed(() => {
-      return innerWidth.value < 760 ? "mobile-header" : "my-header";
+      return innerWidth.value < 576 ? "mobile-header" : "my-header";
     });
 
     const generateClassList = (className: string): string => {
@@ -72,7 +70,7 @@ export default defineComponent({
   flex-direction: column;
   background-color: $white;
 
-  @media screen and (max-width: 760px) {
+  @media screen and (max-width: 576) {
     padding-top: 3.5rem;
   }
 }
