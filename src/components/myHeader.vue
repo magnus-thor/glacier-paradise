@@ -1,7 +1,9 @@
 <template>
   <header ref="scrollRef">
     <div id="header" class="header bg-color">
-      <div class="invisible-element"></div>
+      <div class="header-logo">
+        <img id="header-image" :src="logoSrc" alt="Glacier paradise logo" />
+      </div>
       <div class="nav-routes">
         <template v-for="(route, index) in routes">
           <nav class="item">
@@ -64,12 +66,16 @@ export default defineComponent({
     const observer = ref({});
     const scrollRef = ref<HTMLElement>();
 
+    const logoSrc = ref("images/logo-glacier-paradise-transparent.png");
+
     const onEnter = () => {
       document.getElementById("header").classList.toggle("bg-color");
+      logoSrc.value = "images/logo-glacier-paradise-transparent.png";
     };
 
     const onExit = () => {
       document.getElementById("header").classList.toggle("bg-color");
+      logoSrc.value = "images/logo-glacier-paradise.png";
     };
 
     onMounted(() => {
@@ -80,7 +86,7 @@ export default defineComponent({
       locale.value = lang;
     };
 
-    return { routes, scrollRef, changeLocale };
+    return { routes, scrollRef, changeLocale, logoSrc };
   },
 });
 </script>
@@ -130,20 +136,29 @@ export default defineComponent({
 .header {
   position: fixed;
   width: 100%;
+  height: 4rem;
   padding: 1rem 0 0.5rem 0;
   display: flex;
+  align-items: center;
 }
 
-.invisible-element {
+.hide-image {
+  display: none;
+}
+
+.header-logo {
+  padding-left: 3rem;
   margin-right: auto;
+  width: 8rem;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
 }
 
 .locale-changer {
   margin-left: auto;
-}
-
-.invisible-element,
-.locale-changer {
-  width: 4rem;
+  width: 8rem;
 }
 </style>

@@ -13,8 +13,4 @@ export default defineComponent({
   components: { TermsMarkdown },
 });
 </script>
-<style lang="scss" scoped>
-.page {
-  background-color: green;
-}
-</style>
+<style lang="scss" scoped></style>

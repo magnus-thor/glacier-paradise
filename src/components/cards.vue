@@ -32,8 +32,10 @@ export default defineComponent({
 .cards {
   margin-top: 2rem;
   width: 100%;
+  height: 30rem;
   display: flex;
   justify-content: space-evenly;
+  align-items: center;
   flex-wrap: wrap;
   background-color: white;
 }
