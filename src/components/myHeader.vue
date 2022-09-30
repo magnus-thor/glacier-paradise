@@ -4,7 +4,7 @@
       <div class="header-logo">
         <img
           id="header-image"
-          src="images/logo-glacier-paradise-transparent.png"
+          src="/images/logo-glacier-paradise-transparent.png"
           alt="Glacier paradise logo"
         />
       </div>
@@ -40,7 +40,7 @@
 </template>
 <script lang="ts">
 import { onIntersect } from "@/composables/onIntersect";
-import { computed, defineComponent, onMounted, ref } from "vue";
+import { defineComponent, onMounted, ref } from "vue";
 import { useI18n } from "vue-i18n";
 
 export default defineComponent({

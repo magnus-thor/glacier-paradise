@@ -20,5 +20,6 @@ export default defineConfig(({ mode }) => {
     optimizeDeps: {
       exclude: ["oh-vue-icons/icons"],
     },
+    css: { preprocessorOptions: { css: { charset: false } } },
   };
 });

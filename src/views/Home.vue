@@ -31,7 +31,7 @@ export default defineComponent({
 </script>
 <style lang="scss" scoped>
 .page {
-  background-image: url(images/iskyunum3.jpg);
+  background-image: url(/images/iskyunum3.jpg);
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
