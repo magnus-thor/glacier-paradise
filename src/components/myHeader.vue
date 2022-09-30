@@ -93,15 +93,15 @@ export default defineComponent({
 
   .nav-routes .item {
     a {
-      color: green;
+      color: $white;
     }
 
     a:hover {
-      color: green;
+      color: $white;
     }
 
     a.router-link-active {
-      color: green;
+      color: $white;
     }
   }
 }
@@ -114,11 +114,11 @@ export default defineComponent({
     padding-right: 2rem;
 
     a {
-      color: $yellow;
+      color: $white;
     }
 
     a:hover {
-      color: $white;
+      color: $dark_grey;
     }
 
     a.router-link-active {
