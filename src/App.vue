@@ -1,5 +1,7 @@
 <template>
   <div class="mainLayout">
+    <!-- <div class="image-container"></div> -->
+
     <component :is="renderHeaderComponent" />
 
     <main class="content">
@@ -11,9 +13,7 @@
           leave-from-class="posAbsolute"
           mode="out-in"
         >
-          <keep-alive include="About">
-            <component :is="Component" />
-          </keep-alive>
+          <component :is="Component" />
         </transition>
       </router-view>
     </main>
@@ -87,7 +87,7 @@ export default defineComponent({
 
 //TODO: fix footer when using the router
 .footer {
-  flex-shrink: 0;
+  z-index: 1;
 }
 
 body:has(dialog[open]) {

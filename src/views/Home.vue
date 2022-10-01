@@ -1,11 +1,13 @@
 <template>
   <div class="page">
     <div class="home">
+      <div class="image-container">
+        <div class="scrolling-bg-image"></div>
+      </div>
       <!-- <ImageSlider /> -->
       <!-- <div class="mainImage">
         <img src="/images/trodarinn-a-toppnum.jpg" alt="trodarinn a toppnum" />
       </div> -->
-      <div class="image-container"></div>
       <div class="full">
         <h1>Glacier Paradise</h1>
       </div>
@@ -31,13 +33,14 @@ export default defineComponent({
 </script>
 <style lang="scss" scoped>
 .page {
-  background-image: url(/images/iskyunum3.jpg);
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  min-height: 100vh;
+  // background-image: url(/images/iskyunum3.jpg);
+  // background-position: center center;
+  // background-repeat: no-repeat;
+  // background-attachment: fixed;
+  // background-size: cover;
+  // min-height: 100vh;
   overflow: hidden;
+  position: relative;
 }
 
 .full {
@@ -51,17 +54,6 @@ export default defineComponent({
   padding-bottom: 3rem;
   justify-items: center;
 }
-
-// .image-container {
-//   background-image: url(images/iskyunum2.jpg);
-//   width: 5076px;
-//   height: 100vh;
-//   background-position: center center;
-//   background-repeat: no-repeat;
-//   background-attachment: fixed;
-//   background-size: cover;
-//   animation: slide 60s linear infinite;
-// }
 
 .mainImage {
   width: 100%;
@@ -79,6 +71,7 @@ export default defineComponent({
   margin-top: 16rem;
   margin-bottom: 6rem;
   width: 100vw;
+  z-index: 1;
 }
 
 @keyframes slide {
@@ -88,5 +81,26 @@ export default defineComponent({
   100% {
     transform: translate3d(-1692px, 0, 0); /* The image width */
   }
+}
+
+.image-container {
+  margin-top: -5rem;
+  overflow: hidden;
+  position: absolute;
+}
+
+.scrolling-bg-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-image: url(/images/iskyunum3_tinified.jpg);
+  width: 5076px;
+  height: 100vh;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  animation: slide 60s linear infinite;
+  // z-index: -5;
 }
 </style>
