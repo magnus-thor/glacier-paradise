@@ -18,15 +18,6 @@
         </template>
       </div>
       <div class="locale-changer">
-        <!-- <select v-model="$i18n.locale">
-          <option
-            v-for="locale in $i18n.availableLocales"
-            :key="`locale-${locale}`"
-            :value="locale"
-          >
-            {{ locale }}
-          </option>
-        </select> -->
         <template v-for="locale in $i18n.availableLocales">
           <button
             :key="`locale-${locale}`"
@@ -88,9 +79,8 @@ export default defineComponent({
         document.getElementById("header").classList.add("bg-color");
         // document.getElementById("header-logo").classList.toggle("center-logo");
         if (isLogoInCenter) {
-          document
-            .getElementById("header-logo")
-            .classList.remove("center-logo");
+          const headerLogo = document.getElementById("header-logo");
+          headerLogo.classList.remove("center-logo");
           isLogoInCenter = false;
         }
       }
@@ -101,7 +91,6 @@ export default defineComponent({
     });
 
     const showBackground = computed(() => {
-      console.log("path", route.path);
       return route.path !== "/";
     });
 
@@ -136,7 +125,7 @@ export default defineComponent({
   .header-logo img {
     width: 100%;
     height: auto;
-    // transition: left 2s, top 2s;
+    transition: 2s;
   }
 }
 
@@ -191,17 +180,10 @@ export default defineComponent({
     position: fixed;
     width: 14rem;
 
-    top: calc(50% - 100px);
+    top: calc(30% - 100px);
     left: calc(50% - 7rem);
-    // transition: all 1s ease-out;
   }
 }
-
-//If logo should animate from center to header
-// .transform-logo-location {
-//   -webkit-transform-origin: 100% 50%;
-//   transform: translate();
-// }
 
 .locale-changer {
   margin-left: auto;

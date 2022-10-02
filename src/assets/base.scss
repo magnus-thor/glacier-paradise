@@ -18,21 +18,32 @@ p {
 }
 
 .bm-overlay {
-  background: purple;
+  // background: purple;
+  // right: 100px;
 }
 
 .bm-menu {
-  background-color: green;
+  background-color: $dark_grey;
+}
+
+.bm-burger-button {
+  // left: 0;
+  // right: 36px;
 }
 
 .bm-item-list {
   a {
-    color: orange;
+    color: $yellow;
+
+    &:hover {
+      color: $white;
+    }
   }
 }
-// .bm-burger-bars {
-//   background-color: blue;
-// }
+
+.bm-burger-bars {
+  background-color: $yellow;
+}
 
 .page {
   min-height: 100vh;
