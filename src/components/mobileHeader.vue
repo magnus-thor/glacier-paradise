@@ -1,7 +1,11 @@
 <template>
   <header ref="scrollRef">
     <div id="header" class="header" :class="{ 'bg-color': showBackground }">
-      <div id="header-logo" class="header-logo center-logo">
+      <div
+        id="header-logo"
+        class="header-logo"
+        :class="{ 'center-logo': !showBackground }"
+      >
         <img
           id="header-image"
           src="/images/logo-glacier-paradise-transparent.png"
