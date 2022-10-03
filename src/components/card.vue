@@ -1,55 +1,45 @@
 <template>
   <div
-    :class="{ 'modal-overlay': dialogOpen }"
-    id="modal-overlay"
-    :style="show"
-  ></div>
-
-  <div class="card" :style="`background-image: url(${image.src}) `">
+    @mouseenter="displayCardContent = true"
+    @mouseleave="displayCardContent = false"
+    class="card"
+    :style="`background-image: url(${image.src}) `"
+  >
     <div class="card__info">
-      <h2>{{ card.header }}</h2>
-      <button @click="openDialog">Read more</button>
+      <h2 class="card__header">{{ card.header }}</h2>
+      <transition name="imageFade" mode="out-in">
+        <div v-if="displayCardContent" class="info--item card__duration">
+          <div class="icon">
+            <v-icon name="io-time-outline" scale="2" />
+          </div>
+          <div>
+            <p>
+              <strong>{{ $t("cards.shared.duration") }}</strong>
+            </p>
+            <p>{{ info.duration }} {{ $t("cards.shared.hours") }}</p>
+          </div>
+        </div>
+      </transition>
+      <transition name="imageFade" mode="out-in">
+        <div v-if="displayCardContent" class="info--item card__departure">
+          <div class="icon">
+            <v-icon name="fa-bus" scale="2" />
+          </div>
+          <div>
+            <p>
+              <strong>{{ $t("cards.shared.departure") }}</strong>
+            </p>
+            <p>{{ info.departure }}</p>
+          </div>
+        </div>
+      </transition>
+      <transition name="imageFade" mode="out-in">
+        <div v-if="displayCardContent" class="card__link">
+          <a>Read more</a>
+          <!-- <a>TODO swap for router-link tag</a> /* -->
+        </div>
+      </transition>
     </div>
-
-    <dialog :id="`cardDialog_${cardIndex}`" v-show="dialogOpen">
-      <button @click="closeDialog">
-        <v-icon name="io-close" scale="1.2" />
-      </button>
-
-      <div class="margin-left-right">
-        <div class="info bottom-border">
-          <div class="info--item">
-            <div class="icon">
-              <v-icon name="io-time-outline" scale="2" />
-            </div>
-            <div>
-              <p>
-                <strong>{{ $t("cards.shared.duration") }}</strong>
-              </p>
-              <p>{{ info.duration }} {{ $t("cards.shared.hours") }}</p>
-            </div>
-          </div>
-          <div class="info--item">
-            <div class="icon">
-              <v-icon name="fa-bus" scale="2" />
-            </div>
-            <div>
-              <p>
-                <strong>{{ $t("cards.shared.departure") }}</strong>
-              </p>
-              <p>{{ info.departure }}</p>
-            </div>
-          </div>
-        </div>
-        <div class="card--header">
-          <h2>{{ card.header }}</h2>
-        </div>
-        <div class="card--text bottom-border">
-          <p>{{ card.text }}</p>
-        </div>
-        <a class="link" :href="link.href">{{ link.text }}</a>
-      </div>
-    </dialog>
   </div>
 </template>
 
@@ -79,54 +69,22 @@ export default defineComponent({
     cardIndex: Number,
   },
   setup(props) {
-    let cardDialog: HTMLDialogElement;
-    onMounted(() => {
-      cardDialog = document.getElementById(
-        `cardDialog_${props.cardIndex}`
-      ) as HTMLDialogElement;
-      cardDialog.close();
-    });
-    let dialogOpen = ref(false);
+    const displayCardContent = ref(false);
 
-    const openDialog = () => {
-      cardDialog.showModal();
-      dialogOpen.value = true;
-    };
-
-    const closeDialog = () => {
-      dialogOpen.value = false;
-      cardDialog.close();
-    };
-
-    const show = computed(() =>
-      dialogOpen ? `background-image: url(${props.image.src})` : ""
-    );
-
-    return { dialogOpen, show, closeDialog, openDialog };
+    return { displayCardContent };
   },
 });
 </script>
 
 <style lang="scss" scoped>
-.modal-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 50;
-
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
 .card {
   width: 26rem;
   height: 20rem;
   border: 1px inset grey;
   box-shadow: 5px 5px grey;
-  // border-radius: 5%;
+  border-radius: 2%;
   background-size: cover;
+  padding: 1rem;
 
   &__info {
     height: 100%;
@@ -134,74 +92,92 @@ export default defineComponent({
     flex-direction: column;
     justify-content: space-between;
 
-    h2 {
-      align-self: center;
-    }
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: repeat(10, 2rem);
+    padding: 1rem;
   }
 
   h2 {
-    padding-bottom: 1rem;
+    // padding-bottom: 1rem;
   }
 
-  .margin-left-right {
-    margin-left: 1rem;
-    margin-right: 1rem;
+  // .margin-left-right {
+  //   margin-left: 1rem;
+  //   margin-right: 1rem;
+  // }
+
+  .card__header {
+    grid-row: 0 / 3;
+    grid-column: 1 / 4;
+    // grid-area: cardHeader;
+    // margin-bottom: 1rem;
   }
 
-  .info {
+  .card__departure {
+    grid-row: 4 / 7;
+    grid-column: 1 / 2;
+  }
+
+  .card__duration {
+    grid-row: 4 / 7;
+    grid-column: 3 / 4;
+  }
+
+  .card__link {
+    grid-row: 10 / 10;
+    grid-column: 2 / 3;
+
+    justify-self: center;
+  }
+
+  strong {
+    font-weight: bold;
+  }
+
+  &--item {
     display: flex;
-    margin-top: 1rem;
-    justify-content: space-evenly;
-
-    strong {
-      font-weight: bold;
-    }
-
-    &--item {
-      display: flex;
-      align-items: center;
-
-      p {
-        margin: 0;
-      }
-    }
-
-    .icon {
-      margin-right: 0.5rem;
-    }
-  }
-
-  .card--header {
-    margin-top: 1rem;
-  }
-
-  .bottom-border {
-    padding-bottom: 0.5rem;
-    border-bottom: 1px inset grey; //TODO: swap to correct colors.
-  }
-
-  .link {
-    height: 3rem;
-    display: flex;
-    justify-content: center;
     align-items: center;
-    text-decoration: none;
 
-    &:hover {
-      background-color: green; //TODO: swap to correct colors.
-      cursor: pointer;
+    p {
+      margin: 0;
     }
   }
+
+  .icon {
+    margin-right: 0.5rem;
+  }
+
+  // .card--header {
+  //   margin-top: 1rem;
+  // }
+
+  // .bottom-border {
+  //   padding-bottom: 0.5rem;
+  //   border-bottom: 1px inset grey; //TODO: swap to correct colors.
+  // }
+
+  // .link {
+  //   height: 3rem;
+  //   display: flex;
+  //   justify-content: center;
+  //   align-items: center;
+  //   text-decoration: none;
+
+  //   &:hover {
+  //     background-color: green; //TODO: swap to correct colors.
+  //     cursor: pointer;
+  //   }
+  // }
 }
 
-dialog {
-  display: flex;
-  flex-direction: column;
+.imageFade-enter-active,
+.imageFade-leave-active {
+  transition: opacity 0.5s ease;
+}
 
-  button {
-    border: none;
-    background-color: inherit;
-    align-self: flex-end;
-  }
+.imageFade-enter-from,
+.imageFade-leave-to {
+  opacity: 0;
 }
 </style>

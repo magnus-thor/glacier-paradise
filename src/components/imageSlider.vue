@@ -17,12 +17,6 @@
 
 <script lang="ts">
 import { computed, defineComponent, ref } from "vue";
-// import image1 from "public/images/fra-breiduvik.jpg";
-// import image2 from "public/images/hvitur-jokull-blar-himinn.jpg";
-// import image3 from "public/images/jokull-upp-med-stapafelli.jpg";
-// import image4 from "public/images/solsetur.jpg";
-// import image5 from "public/images/toppurinn.jpg";
-// import image6 from "public/images/trodarinn-a-toppnum.jpg";
 
 export default defineComponent({
   name: "imageSlider",

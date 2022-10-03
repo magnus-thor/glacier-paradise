@@ -1,6 +1,6 @@
 <template>
   <div class="cards">
-    <template v-for="(tour, index) in allTours">
+    <template v-for="(tour, index) in fTour">
       <Card
         :image="{ src: tour.imageSrc, alt: $t(tour.imageAlt) }"
         :card="{ header: $t(tour.cardHeader), text: $t(tour.cardText) }"
@@ -22,8 +22,9 @@ export default defineComponent({
   components: { Card },
   setup() {
     const allTours = ref(tours);
-
-    return { allTours };
+    const fTour = [allTours.value[0]];
+    console.log("fTour", fTour);
+    return { fTour };
   },
 });
 </script>
