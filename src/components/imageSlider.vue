@@ -28,13 +28,13 @@ export default defineComponent({
   name: "imageSlider",
   setup() {
     const images = ref([
-      "public/images/fra-breiduvik.jpg",
-      "public/images/solsetur.jpg",
-      "public/images/hvitur-jokull-blar-himinn.jpg",
-      "public/images/jokull-upp-med-stapafelli.jpg",
-      "public/images/solsetur.jpg",
-      "public/images/toppurinn.jpg",
-      "public/images/trodarinn-a-toppnum.jpg",
+      "/images/fra-breiduvik.jpg",
+      "/images/solsetur.jpg",
+      "/images/hvitur-jokull-blar-himinn.jpg",
+      "/images/jokull-upp-med-stapafelli.jpg",
+      "/images/solsetur.jpg",
+      "/images/toppurinn.jpg",
+      "/images/trodarinn-a-toppnum.jpg",
     ]);
     let selectedImageNumber = ref(0);
 

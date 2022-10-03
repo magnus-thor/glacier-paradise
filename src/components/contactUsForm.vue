@@ -66,23 +66,19 @@ export default defineComponent({
 
   .form-grid {
     width: 100%;
+
     .input-fields {
-      display: flex;
+      width: 100%;
+    }
+
+    input {
       width: 100%;
     }
 
     .name,
     .email,
     .subject {
-      width: 30%;
-      input {
-        width: -webkit-fill-available;
-      }
-    }
-
-    .name,
-    .email {
-      margin-right: 5%;
+      margin-right: 2%;
     }
 
     .message {
@@ -97,6 +93,26 @@ export default defineComponent({
     .submit {
       button {
         width: 100%;
+      }
+    }
+
+    @media screen and (min-width: 650px) {
+      .input-fields {
+        display: flex;
+      }
+
+      .name,
+      .email,
+      .subject {
+        width: 30%;
+        input {
+          width: -webkit-fill-available;
+        }
+      }
+
+      .name,
+      .email {
+        margin-right: 5%;
       }
     }
   }

@@ -1,5 +1,7 @@
 <template>
   <div class="mainLayout">
+    <!-- <div class="image-container"></div> -->
+
     <component :is="renderHeaderComponent" />
 
     <main class="content">
@@ -11,9 +13,7 @@
           leave-from-class="posAbsolute"
           mode="out-in"
         >
-          <keep-alive include="About">
-            <component :is="Component" />
-          </keep-alive>
+          <component :is="Component" />
         </transition>
       </router-view>
     </main>
@@ -46,7 +46,7 @@ export default defineComponent({
     });
 
     const renderHeaderComponent = computed(() => {
-      return innerWidth.value < 576 ? "mobile-header" : "my-header";
+      return innerWidth.value < 650 ? "mobile-header" : "my-header";
     });
 
     const generateClassList = (className: string): string => {
@@ -69,10 +69,6 @@ export default defineComponent({
   display: flex;
   flex-direction: column;
   background-color: $white;
-
-  @media screen and (max-width: 576) {
-    padding-top: 3.5rem;
-  }
 }
 
 .content {
@@ -87,7 +83,7 @@ export default defineComponent({
 
 //TODO: fix footer when using the router
 .footer {
-  flex-shrink: 0;
+  z-index: 1;
 }
 
 body:has(dialog[open]) {

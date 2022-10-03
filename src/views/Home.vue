@@ -1,14 +1,10 @@
 <template>
   <div class="page">
     <div class="home">
-      <!-- <ImageSlider /> -->
-      <!-- <div class="mainImage">
-        <img src="/images/trodarinn-a-toppnum.jpg" alt="trodarinn a toppnum" />
-      </div> -->
-      <div class="image-container"></div>
-      <div class="full">
-        <h1>Glacier Paradise</h1>
+      <div class="image-container">
+        <div ref="scrollingImage" class="scrolling-bg-image"></div>
       </div>
+      <div class="full"></div>
       <div class="cardsContainer">
         <Cards />
       </div>
@@ -22,27 +18,38 @@
 import YoutubeVideos from "@/components/youtubeVideos.vue";
 import ImageSlider from "@/components/imageSlider.vue";
 import Cards from "@/components/cards.vue";
-import { defineComponent } from "vue";
+import { computed, defineComponent, onUnmounted, ref } from "vue";
 
 export default defineComponent({
   name: "Home",
   components: { YoutubeVideos, ImageSlider, Cards },
+  setup() {
+    const scrollingImage = ref<HTMLElement>();
+
+    const options = { capture: true };
+    let innerWidth = ref(window.innerWidth);
+    const callBack = () => {
+      console.log("scrollingImage", scrollingImage.value);
+      innerWidth.value = window.innerWidth;
+      scrollingImage.value.style.width = "6144px";
+    };
+    window.addEventListener("resize", callBack, options);
+    onUnmounted(() => {
+      window.removeEventListener("resize", callBack, options);
+    });
+
+    return { scrollingImage };
+  },
 });
 </script>
 <style lang="scss" scoped>
 .page {
-  background-image: url(images/iskyunum3.jpg);
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  min-height: 100vh;
   overflow: hidden;
+  position: relative;
 }
 
 .full {
-  min-height: 100vh;
-  padding-top: 5rem;
+  min-height: 60vh;
 }
 
 .home {
@@ -51,17 +58,6 @@ export default defineComponent({
   padding-bottom: 3rem;
   justify-items: center;
 }
-
-// .image-container {
-//   background-image: url(images/iskyunum2.jpg);
-//   width: 5076px;
-//   height: 100vh;
-//   background-position: center center;
-//   background-repeat: no-repeat;
-//   background-attachment: fixed;
-//   background-size: cover;
-//   animation: slide 60s linear infinite;
-// }
 
 .mainImage {
   width: 100%;
@@ -79,14 +75,36 @@ export default defineComponent({
   margin-top: 16rem;
   margin-bottom: 6rem;
   width: 100vw;
+  z-index: 1;
+}
+
+.image-container {
+  position: absolute;
+}
+
+.scrolling-bg-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-image: url(/images/iskyunum1_tinified.jpg);
+  width: 5076px;
+  height: 100vh;
+  background-position: 0 50%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  animation: slide 40s linear infinite;
 }
 
 @keyframes slide {
   0% {
     transform: translate3d(0, 0, 0);
   }
+  50% {
+    transform: translate3d(calc(100vw - 100%), 0, 0); /* The image width */
+  }
   100% {
-    transform: translate3d(-1692px, 0, 0); /* The image width */
+    transform: translate3d(0, 0, 0);
   }
 }
 </style>

@@ -1,8 +1,16 @@
 <template>
   <header ref="scrollRef">
-    <div id="header" class="header bg-color">
-      <div class="header-logo">
-        <img id="header-image" :src="logoSrc" alt="Glacier paradise logo" />
+    <div id="header" class="header" :class="{ 'bg-color': showBackground }">
+      <div
+        id="header-logo"
+        class="header-logo"
+        :class="{ 'center-logo': !showBackground }"
+      >
+        <img
+          id="header-image"
+          src="/images/logo-glacier-paradise-transparent.png"
+          alt="Glacier paradise logo"
+        />
       </div>
       <div class="nav-routes">
         <template v-for="(route, index) in routes">
@@ -14,36 +22,31 @@
         </template>
       </div>
       <div class="locale-changer">
-        <select v-model="$i18n.locale">
-          <option
-            v-for="locale in $i18n.availableLocales"
+        <template v-for="locale in $i18n.availableLocales">
+          <button
             :key="`locale-${locale}`"
-            :value="locale"
+            @click="changeLocale(locale)"
+            v-if="locale !== $i18n.locale"
+            class="locale-button"
           >
             {{ locale }}
-          </option>
-        </select>
-        <button
-          v-for="locale in $i18n.availableLocales"
-          :key="`locale-${locale}`"
-          @click="changeLocale(locale)"
-        >
-          {{ locale }}
-        </button>
+          </button>
+        </template>
       </div>
     </div>
   </header>
 </template>
 <script lang="ts">
 import { onIntersect } from "@/composables/onIntersect";
-import { defineComponent, onMounted, ref } from "vue";
+import { computed, defineComponent, onMounted, ref } from "vue";
 import { useI18n } from "vue-i18n";
+import { useRoute } from "vue-router";
 
 export default defineComponent({
   name: "MyHeader",
   setup() {
     let { locale } = useI18n();
-
+    const route = useRoute();
     const routes = ref([
       {
         linkTo: "/",
@@ -63,30 +66,43 @@ export default defineComponent({
       },
     ]);
 
-    const observer = ref({});
     const scrollRef = ref<HTMLElement>();
 
-    const logoSrc = ref("images/logo-glacier-paradise-transparent.png");
+    const observer = ref({});
+    let isLogoInCenter = true;
 
     const onEnter = () => {
-      document.getElementById("header").classList.toggle("bg-color");
-      logoSrc.value = "images/logo-glacier-paradise-transparent.png";
+      if (route.path === "/") {
+        document.getElementById("header").classList.remove("bg-color");
+        // document.getElementById("header-logo").classList.toggle("center-logo");
+      }
     };
 
     const onExit = () => {
-      document.getElementById("header").classList.toggle("bg-color");
-      logoSrc.value = "images/logo-glacier-paradise.png";
+      if (route.path === "/") {
+        document.getElementById("header").classList.add("bg-color");
+        // document.getElementById("header-logo").classList.toggle("center-logo");
+        if (isLogoInCenter) {
+          const headerLogo = document.getElementById("header-logo");
+          headerLogo.classList.remove("center-logo");
+          isLogoInCenter = false;
+        }
+      }
     };
 
     onMounted(() => {
       observer.value = onIntersect(scrollRef.value, onEnter, onExit, false);
     });
 
+    const showBackground = computed(() => {
+      return route.path !== "/";
+    });
+
     const changeLocale = (lang: string) => {
       locale.value = lang;
     };
 
-    return { routes, scrollRef, changeLocale, logoSrc };
+    return { routes, scrollRef, changeLocale, showBackground };
   },
 });
 </script>
@@ -95,20 +111,25 @@ export default defineComponent({
 
 .bg-color {
   background-color: $dark_grey;
-  z-index: 100;
 
-  .nav-routes .item {
-    a {
-      color: $white;
-    }
+  // .nav-routes .item {
+  //   a {
+  //     color: $yellow;
+  //   }
 
-    a:hover {
-      color: $white;
-    }
+  //   a:hover {
+  //     color: $white;
+  //   }
 
-    a.router-link-active {
-      color: $white;
-    }
+  //   a.router-link-active {
+  //     color: $white;
+  //   }
+  // }
+
+  .header-logo img {
+    width: 100%;
+    height: auto;
+    transition: 2s;
   }
 }
 
@@ -120,11 +141,11 @@ export default defineComponent({
     padding-right: 2rem;
 
     a {
-      color: $white;
+      color: $yellow;
     }
 
     a:hover {
-      color: $dark_grey;
+      color: $white;
     }
 
     a.router-link-active {
@@ -140,6 +161,7 @@ export default defineComponent({
   padding: 1rem 0 0.5rem 0;
   display: flex;
   align-items: center;
+  z-index: 100;
 }
 
 .hide-image {
@@ -157,8 +179,29 @@ export default defineComponent({
   }
 }
 
+.center-logo {
+  img {
+    position: fixed;
+    width: 14rem;
+
+    top: calc(30% - 100px);
+    left: calc(50% - 7rem);
+  }
+}
+
 .locale-changer {
   margin-left: auto;
   width: 8rem;
+}
+
+.locale-button {
+  background: none;
+  color: $white;
+  border: none;
+  padding: 0;
+  // font: inherit;
+  cursor: pointer;
+  outline: inherit;
+  font-size: large;
 }
 </style>
