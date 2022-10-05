@@ -19,4 +19,14 @@ export const tours = [
     duration: "4-5",
     departure: "Arnarstapi",
   },
+  {
+    imageSrc: "images/toppurinn.jpg",
+    imageAlt: "cards.snowCatTour.imageAlt",
+    cardHeader: "cards.snowCatTour.cardHeader",
+    cardText: "cards.snowCatTour.cardText",
+    linkText: "cards.snowCatTour.linkText",
+    linkHref: "#",
+    duration: "4-5",
+    departure: "Arnarstapi",
+  },
 ];

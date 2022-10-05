@@ -35,7 +35,7 @@
       </transition>
       <transition name="imageFade" mode="out-in">
         <div v-if="displayCardContent" class="card__link">
-          <a>Read more</a>
+          <a href="#">Read more</a>
           <!-- <a>TODO swap for router-link tag</a> /* -->
         </div>
       </transition>

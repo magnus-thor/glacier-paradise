@@ -1,7 +1,14 @@
 <template>
   <div class="cards">
-    <template v-for="(tour, index) in fTour">
-      <Card
+    <template v-for="(tour, index) in allTours">
+      <!-- <Card
+        :image="{ src: tour.imageSrc, alt: $t(tour.imageAlt) }"
+        :card="{ header: $t(tour.cardHeader), text: $t(tour.cardText) }"
+        :link="{ text: $t(tour.linkText), href: tour.linkHref }"
+        :info="{ duration: tour.duration, departure: tour.departure }"
+        :cardIndex="index"
+      /> -->
+      <Tour
         :image="{ src: tour.imageSrc, alt: $t(tour.imageAlt) }"
         :card="{ header: $t(tour.cardHeader), text: $t(tour.cardText) }"
         :link="{ text: $t(tour.linkText), href: tour.linkHref }"
@@ -16,15 +23,15 @@
 import Card from "@/components/card.vue";
 import { defineComponent, ref } from "vue";
 import { tours } from "@/assets/tours/tours";
+import Tour from "./tour.vue";
 
 export default defineComponent({
   name: "cards",
-  components: { Card },
+  components: { Card, Tour },
   setup() {
     const allTours = ref(tours);
-    const fTour = [allTours.value[0]];
-    console.log("fTour", fTour);
-    return { fTour };
+    // const fTour = [allTours.value[0]];
+    return { allTours };
   },
 });
 </script>
@@ -33,7 +40,7 @@ export default defineComponent({
 .cards {
   margin-top: 2rem;
   width: 100%;
-  height: 40rem;
+  // height: 40rem;
   display: flex;
   justify-content: space-evenly;
   align-items: center;

@@ -8,7 +8,7 @@
       >
         <img
           id="header-image"
-          src="/images/logo-glacier-paradise-transparent.png"
+          src="/logos/logo-glacier-paradise-transparent.png"
           alt="Glacier paradise logo"
         />
       </div>

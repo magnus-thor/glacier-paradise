@@ -46,7 +46,7 @@ export default defineComponent({
     });
 
     const renderHeaderComponent = computed(() => {
-      return innerWidth.value < 650 ? "mobile-header" : "my-header";
+      return innerWidth.value < 710 ? "mobile-header" : "my-header";
     });
 
     const generateClassList = (className: string): string => {

@@ -1,14 +1,17 @@
 <template>
   <div class="page">
     <div class="home">
-      <div class="image-container">
+      <div class="image--container">
         <div ref="scrollingImage" class="scrolling-bg-image"></div>
       </div>
       <div class="full"></div>
-      <div class="cardsContainer">
+      <div class="glacier-info--container">
+        <GlacierInfo />
+      </div>
+      <div class="cards--container">
         <Cards />
       </div>
-      <!-- <div class="videos"> -->
+      <!-- <div class="videos--container"> -->
       <!-- <YoutubeVideos /> -->
       <!-- </div> -->
     </div>
@@ -19,17 +22,17 @@ import YoutubeVideos from "@/components/youtubeVideos.vue";
 import ImageSlider from "@/components/imageSlider.vue";
 import Cards from "@/components/cards.vue";
 import { computed, defineComponent, onUnmounted, ref } from "vue";
+import GlacierInfo from "@/components/glacier-info.vue";
 
 export default defineComponent({
   name: "Home",
-  components: { YoutubeVideos, ImageSlider, Cards },
+  components: { YoutubeVideos, ImageSlider, Cards, GlacierInfo },
   setup() {
     const scrollingImage = ref<HTMLElement>();
 
     const options = { capture: true };
     let innerWidth = ref(window.innerWidth);
     const callBack = () => {
-      console.log("scrollingImage", scrollingImage.value);
       innerWidth.value = window.innerWidth;
       scrollingImage.value.style.width = "6144px";
     };
@@ -49,7 +52,7 @@ export default defineComponent({
 }
 
 .full {
-  min-height: 60vh;
+  min-height: 80vh;
 }
 
 .home {
@@ -70,15 +73,16 @@ export default defineComponent({
   }
 }
 
-.videos,
-.cardsContainer {
-  margin-top: 16rem;
-  margin-bottom: 6rem;
+.videos--container,
+.cards--container,
+.glacier-info--container {
+  margin-top: 2rem;
+  // margin-bottom: 6rem;
   width: 100vw;
   z-index: 1;
 }
 
-.image-container {
+.image--container {
   position: absolute;
 }
 
@@ -93,7 +97,11 @@ export default defineComponent({
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: 100% 100%;
-  animation: slide 40s linear infinite;
+  animation: slide 70s linear;
+
+  @media screen and (min-width: 1024px) {
+    animation: slide 40s linear infinite;
+  }
 }
 
 @keyframes slide {
@@ -101,7 +109,7 @@ export default defineComponent({
     transform: translate3d(0, 0, 0);
   }
   50% {
-    transform: translate3d(calc(100vw - 100%), 0, 0); /* The image width */
+    transform: translate3d(calc(100vw - 100%), 0, 0);
   }
   100% {
     transform: translate3d(0, 0, 0);

@@ -96,7 +96,7 @@ export default defineComponent({
       }
     }
 
-    @media screen and (min-width: 650px) {
+    @media screen and (min-width: $small_screen) {
       .input-fields {
         display: flex;
       }
