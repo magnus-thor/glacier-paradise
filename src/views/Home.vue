@@ -6,11 +6,11 @@
       </div>
       <div class="full"></div>
       <!-- <Instagram /> -->
-      <div class="glacier-info--container">
-        <GlacierInfo />
+      <div ref="scrollRef" class="glacier-info--container">
+        <GlacierInfo v-if="loadComponents" />
       </div>
       <div class="cards--container">
-        <Cards />
+        <Cards v-if="loadComponents" />
       </div>
       <!-- <div class="videos--container"> -->
       <!-- <YoutubeVideos /> -->
@@ -21,16 +21,36 @@
 <script lang="ts">
 import YoutubeVideos from "@/components/youtubeVideos.vue";
 import ImageSlider from "@/components/imageSlider.vue";
-import Cards from "@/components/cards.vue";
-import { defineComponent, onUnmounted, ref } from "vue";
-import GlacierInfo from "@/components/glacier-info.vue";
+import { defineAsyncComponent, defineComponent, onUnmounted, ref } from "vue";
 import Instagram from "@/components/instagram.vue";
+import { onIntersect } from "@/composables/onIntersect";
 
 export default defineComponent({
   name: "Home",
-  components: { YoutubeVideos, ImageSlider, Cards, GlacierInfo, Instagram },
+  components: {
+    YoutubeVideos,
+    ImageSlider,
+    Cards: defineAsyncComponent(() => import("@/components/cards.vue")),
+    GlacierInfo: defineAsyncComponent(
+      () => import("@/components/glacier-info.vue")
+    ),
+    Instagram,
+  },
   setup() {
     const scrollingImage = ref<HTMLElement>();
+    const scrollRef = ref<HTMLElement>();
+    const observer = ref({});
+
+    const loadComponents = ref(false);
+
+    const onEnter = () => {
+      debugger;
+      loadComponents.value = true;
+    };
+
+    const onExit = () => {
+      debugger;
+    };
 
     const options = { capture: true };
     let innerWidth = ref(window.innerWidth);
@@ -41,9 +61,10 @@ export default defineComponent({
     window.addEventListener("resize", callBack, options);
     onUnmounted(() => {
       window.removeEventListener("resize", callBack, options);
+      observer.value = onIntersect(scrollRef.value, onEnter, onExit, false);
     });
 
-    return { scrollingImage };
+    return { scrollingImage, loadComponents, scrollRef };
   },
 });
 </script>
@@ -99,23 +120,26 @@ export default defineComponent({
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: 100% 100%;
-  animation: slide 70s linear;
   -webkit-animation: slide 70s linear;
+  animation: slide 70s linear;
 
   @media screen and (min-width: 1024px) {
-    animation: slide 40s linear infinite;
-    -webkit-animation: slide 40s linear infinite;
+    -webkit-animation: slide 40s linear;
+    animation: slide 10s linear;
   }
 }
 
 @keyframes slide {
   0% {
+    // -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
   }
   50% {
-    transform: translate3d(calc(100vw - 100%), 0, 0);
+    // -webkit-transform: translate3d(calc(100vw - 100%), 0, 0);
+    transform: translate3d(-2900px, 0, 0);
   }
   100% {
+    // -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
   }
 }
