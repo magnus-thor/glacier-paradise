@@ -63,17 +63,18 @@ export default defineComponent({
   padding: 1rem;
   // height: 25rem;
   width: 100%;
-  // transform: skew(-1deg, -1deg);
+  // transform: skew(0deg, -1deg);
+  // transform: rotate3d(0, 0, 10, 15deg);
   background-color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
   row-gap: 1rem;
+  border-radius: 5px;
 
   .tour--image {
     height: 10rem;
     width: 70%;
-    border: 1px solid green;
 
     img {
       width: 100%;
@@ -82,12 +83,24 @@ export default defineComponent({
     }
   }
 
+  // .tour--image,
+  // .tour--text {
+  //   transform: skew(0deg, -1deg);
+  // }
+
   @media screen and (min-width: $small_screen) {
     height: 20rem;
     flex-direction: row;
+    max-width: 1024px;
 
     &.row-reverse {
+      // transform: skew(0deg, 1deg);
       flex-direction: row-reverse;
+
+      // .tour--text,
+      // .tour--image {
+      //   transform: skew(0deg, -1deg);
+      // }
     }
 
     .tour--text {
@@ -101,7 +114,6 @@ export default defineComponent({
     .tour--image {
       height: 80%;
       width: 40%;
-      border: 1px solid green;
 
       img {
         width: 100%;

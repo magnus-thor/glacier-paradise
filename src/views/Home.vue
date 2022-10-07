@@ -5,6 +5,7 @@
         <div ref="scrollingImage" class="scrolling-bg-image"></div>
       </div>
       <div class="full"></div>
+      <!-- <Instagram /> -->
       <div class="glacier-info--container">
         <GlacierInfo />
       </div>
@@ -21,12 +22,13 @@
 import YoutubeVideos from "@/components/youtubeVideos.vue";
 import ImageSlider from "@/components/imageSlider.vue";
 import Cards from "@/components/cards.vue";
-import { computed, defineComponent, onUnmounted, ref } from "vue";
+import { defineComponent, onUnmounted, ref } from "vue";
 import GlacierInfo from "@/components/glacier-info.vue";
+import Instagram from "@/components/instagram.vue";
 
 export default defineComponent({
   name: "Home",
-  components: { YoutubeVideos, ImageSlider, Cards, GlacierInfo },
+  components: { YoutubeVideos, ImageSlider, Cards, GlacierInfo, Instagram },
   setup() {
     const scrollingImage = ref<HTMLElement>();
 
@@ -52,7 +54,7 @@ export default defineComponent({
 }
 
 .full {
-  min-height: 80vh;
+  min-height: 90vh;
 }
 
 .home {
@@ -98,9 +100,11 @@ export default defineComponent({
   background-attachment: fixed;
   background-size: 100% 100%;
   animation: slide 70s linear;
+  -webkit-animation: slide 70s linear;
 
   @media screen and (min-width: 1024px) {
     animation: slide 40s linear infinite;
+    -webkit-animation: slide 40s linear infinite;
   }
 }
 
