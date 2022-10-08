@@ -40,21 +40,27 @@ export default defineComponent({
   position: fixed;
   top: 0;
   left: 0;
-  background-image: url(/images/iskyunum1_tinified.jpg);
-  width: 5044px;
+  background-image: url(/images/trodarinn-a-toppnum.jpg);
+  width: 100%;
   height: 100%;
   background-position: 0 50%;
   background-repeat: no-repeat;
-  background-attachment: fixed;
   // background-size: 100% 100%;
   // background-size: center center;
   background-size: cover;
+  background-attachment: scroll;
   // -webkit-animation: slide 30s linear;
-  animation: slide 30s linear;
+  // animation: slide 30s linear;
 
-  @media screen and (min-width: 1024px) {
+  @media screen and (min-width: 1366px) {
     // -webkit-animation: slide 40s linear;
-    // animation: slide 10s linear;
+    background-image: url(/images/iskyunum1_tinified.jpg);
+    width: 5044px;
+    background-attachment: fixed;
+
+    background-size: 100% 100%;
+
+    animation: slide 40s linear;
   }
 }
 
