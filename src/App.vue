@@ -6,9 +6,13 @@
 
     <main class="content">
       <router-view v-slot="{ Component, route }">
-        <transition :enterActiveClass="generateClassList2((route.meta.enterClass as string))"
-          :leaveActiveClass="generateClassList2((route.meta.leaveClass as string))" enter-to-class="pos-absolute"
-          leave-from-class="pos-absolute" mode="out-in">
+        <transition
+          :enterActiveClass="generateClassList2((route.meta.enterClass as string))"
+          :leaveActiveClass="generateClassList2((route.meta.leaveClass as string))"
+          enter-to-class="pos-absolute"
+          leave-from-class="pos-absolute"
+          mode="out-in"
+        >
           <component :is="Component" />
         </transition>
       </router-view>
@@ -31,7 +35,7 @@ import { useI18n } from "vue-i18n";
 
 export default defineComponent({
   name: "App",
-  components: { MyHeader, MyFooter, MobileHeader },
+  components: { MyHeader, MyFooter, MobileHeader, BgImage },
   setup() {
     const { t } = useI18n({ useScope: "global" });
 
