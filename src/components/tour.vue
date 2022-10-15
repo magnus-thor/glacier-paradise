@@ -4,18 +4,18 @@
       <img :src="image.src" :alt="image.alt" />
     </div>
     <div class="tour--text">
-      <h3>tour header</h3>
+      <h3>Top of the Diamond tour</h3>
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos,
-        fugit quam sit aliquid odit sint ducimus ratione eligendi, quae adipisci
-        quasi, aliquam saepe praesentium voluptatibus cumque similique eum
-        perspiciatis. Molestias?
+        Here we will hop on our vehicle and make our way to the foot of the glacier. Alternatively, you can follow our
+        bus in your own car, if it is suitable for F-roads, as we drive a mountain pass along the side of the glacier.
+        This gravel and bumpy F road offer spectacular views of the glacier and the surrounding area and it is a great
+        part of this adventure. Therefor we do advise customers to start the journey with the bus so they can enjoy the
+        scenery along the way.
       </p>
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos,
-        fugit quam sit aliquid odit sint ducimus ratione eligendi, quae adipisci
-        quasi, aliquam saepe praesentium voluptatibus cumque similique eum
-        perspiciatis. Molestias?
+        Up on arrival it is time for the real fun to begin. We get on board the snow-cat to start our ascent to the top
+        of the glacier, or as close to it as possible. The snow-cats used for the tour are specially equipped so
+        travellers can enjoy the scenery along the way.
       </p>
     </div>
   </div>
@@ -72,6 +72,14 @@ export default defineComponent({
   row-gap: 1rem;
   border-radius: 5px;
 
+  h3 {
+    text-align: center;
+  }
+
+  p {
+    padding: 2rem;
+  }
+
   .tour--image {
     height: 10rem;
     width: 70%;
@@ -89,7 +97,7 @@ export default defineComponent({
   // }
 
   @media screen and (min-width: $small_screen) {
-    height: 20rem;
+    height: max-content;
     flex-direction: row;
     max-width: 1024px;
 

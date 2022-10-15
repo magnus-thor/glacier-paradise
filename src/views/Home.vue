@@ -5,10 +5,10 @@
       <div class="full"></div>
       <!-- <Instagram /> -->
       <div ref="scrollRef" class="glacier-info--container">
-        <GlacierInfo v-if="loadComponents" />
+        <GlacierInfo />
       </div>
       <div class="cards--container">
-        <Cards v-if="loadComponents" />
+        <Cards />
       </div>
       <!-- <div class="videos--container"> -->
       <!-- <YoutubeVideos /> -->

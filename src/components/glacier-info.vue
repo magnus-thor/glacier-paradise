@@ -1,8 +1,7 @@
 <template>
   <div class="glacier-info">
     <div class="glacier-info--content">
-      <h2>Snæfellsjökull</h2>
-      <p>Hæð: 1.446 m</p>
+      <p>{{$t("glacierInfo")}}</p>
     </div>
   </div>
 </template>
@@ -12,29 +11,41 @@ import { defineComponent } from "vue";
 
 export default defineComponent({
   name: "glacierInfo",
-  setup() {},
+  setup() { },
 });
 </script>
 
 <style lang="scss" scoped>
 @import "@/assets/base.scss";
+
 .glacier-info {
-  height: 10rem;
+  height: max-content;
   width: 100%;
 
-  .glacier-info--content {
-    padding: 1rem;
+  p {
+    padding: 2rem 3rem;
   }
+
+  .glacier-info--content {
+    padding: 2rem 1rem;
+    height: 100%;
+    width: 100%;
+    background: white;
+  }
+
   @media screen and (min-width: $small_screen) {
     display: flex;
     flex-direction: column;
     align-items: center;
 
+
+    p {
+      padding: 2rem;
+    }
+
     .glacier-info--content {
       max-width: 1024px;
-      width: 100%;
-      height: 10rem;
-      background: white;
+      // height: 12rem;
     }
   }
 }
