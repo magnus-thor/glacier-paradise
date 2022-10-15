@@ -1,38 +1,27 @@
 <template>
   <header ref="scrollRef">
-    <div id="header" class="header" :class="{ 'bg-color': showBackground }">
-      <div
-        id="header-logo"
-        class="header-logo"
-        :class="{ 'center-logo': !showBackground }"
-      >
-        <img
-          id="header-image"
-          src="/logos/logo-glacier-paradise-transparent.png"
-          alt="Glacier paradise logo"
-        />
+    <div id="header" class="header" :class="{ 'header-background': !showCenterLogo }">
+      <div id="header-logo" class="header-logo" :class="{ 'center-logo': showCenterLogo }">
+        <img id="header-image" src="/logos/logo-glacier-paradise-transparent.png" alt="Glacier paradise logo" />
       </div>
       <div class="bm-overlay">
-        <Slide :closeOnNavigation="true" right width="180">
+        <Slide :closeOnNavigation="closeOnNavigation" right width="180">
           <template v-for="locale in $i18n.availableLocales">
-            <button
-              :key="`locale-${locale}`"
-              @click="changeLocale(locale)"
-              v-if="locale !== $i18n.locale"
-              class="locale-button"
-            >
+            <button :key="`locale-${locale}`" @click="changeLocale(locale)" v-if="locale !== $i18n.locale"
+              class="locale-button">
               {{ locale }}
             </button>
           </template>
           <template v-for="(route, index) in routes">
             <nav class="item">
               <router-link :to="route.linkTo">{{
-                $t(route.nameTranslationKey)
+              $t(route.nameTranslationKey)
               }}</router-link>
             </nav>
           </template>
         </Slide>
       </div>
+
     </div>
   </header>
 </template>
@@ -44,6 +33,7 @@ import { useI18n } from "vue-i18n";
 import { useRoute } from "vue-router";
 // @ts-expect-error TODO fix
 import { Slide } from "vue3-burger-menu";
+
 
 export default defineComponent({
   name: "mobileHeader",
@@ -73,26 +63,22 @@ export default defineComponent({
     const scrollRef = ref<HTMLElement>();
 
     const observer = ref({});
-    let isLogoInCenter = true;
+    let shouldCenterLogo = true;
 
     const onEnter = () => {
       if (route.path === "/") {
-        console.log("onEnter");
-        document.getElementById("header").classList.remove("bg-color");
-        // document.getElementById("header-logo").classList.toggle("center-logo");
+        document.getElementById("header").classList.remove("header-background");
+        if (shouldCenterLogo) document.getElementById("header-logo").classList.add("center-logo");
       }
     };
 
     const onExit = () => {
-      console.log("path", route.path);
       if (route.path === "/") {
-        console.log("onExit");
-        document.getElementById("header").classList.add("bg-color");
-        // document.getElementById("header-logo").classList.toggle("center-logo");
-        if (isLogoInCenter) {
+        document.getElementById("header").classList.add("header-background");
+        if (shouldCenterLogo) {
           const headerLogo = document.getElementById("header-logo");
           headerLogo.classList.remove("center-logo");
-          isLogoInCenter = false;
+          shouldCenterLogo = false;
         }
       }
     };
@@ -101,22 +87,24 @@ export default defineComponent({
       observer.value = onIntersect(scrollRef.value, onEnter, onExit, false);
     });
 
-    const showBackground = computed(() => {
-      return route.path !== "/";
+    const showCenterLogo = computed(() => {
+      return route.path === "/" && shouldCenterLogo;
     });
-
-    console.log("showBackground", showBackground.value);
 
     const changeLocale = (lang: string) => {
       locale.value = lang;
     };
-    return { routes, scrollRef, changeLocale, showBackground };
+
+    const closeOnNavigation = ref(true);
+
+    return { routes, scrollRef, changeLocale, showCenterLogo, closeOnNavigation };
   },
 });
 </script>
 
 <style lang="scss" scoped>
 @import "@/assets/base.scss";
+
 .header {
   position: fixed;
   display: flex;
@@ -127,7 +115,7 @@ export default defineComponent({
   padding-left: 0.5rem;
 }
 
-.bg-color {
+.header-background {
   background-color: $dark_grey;
 }
 

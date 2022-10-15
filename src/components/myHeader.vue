@@ -1,34 +1,22 @@
 <template>
   <header ref="scrollRef">
-    <div id="header" class="header" :class="{ 'bg-color': showBackground }">
-      <div
-        id="header-logo"
-        class="header-logo"
-        :class="{ 'center-logo': !showBackground }"
-      >
-        <img
-          id="header-image"
-          src="/logos/logo-glacier-paradise-transparent.png"
-          alt="Glacier paradise logo"
-        />
+    <div id="header" class="header" :class="{ 'header-background': !showCenterLogo }">
+      <div id="header-logo" class="header-logo" :class="{ 'center-logo': showCenterLogo }">
+        <img id="header-image" src="/logos/logo-glacier-paradise-transparent.png" alt="Glacier paradise logo" />
       </div>
       <div class="nav-routes">
         <template v-for="(route, index) in routes">
           <nav class="item">
             <router-link :to="route.linkTo">{{
-              $t(route.nameTranslationKey)
+            $t(route.nameTranslationKey)
             }}</router-link>
           </nav>
         </template>
       </div>
       <div class="locale-changer">
         <template v-for="locale in $i18n.availableLocales">
-          <button
-            :key="`locale-${locale}`"
-            @click="changeLocale(locale)"
-            v-if="locale !== $i18n.locale"
-            class="locale-button"
-          >
+          <button :key="`locale-${locale}`" @click="changeLocale(locale)" v-if="locale !== $i18n.locale"
+            class="locale-button">
             {{ locale }}
           </button>
         </template>
@@ -69,23 +57,22 @@ export default defineComponent({
     const scrollRef = ref<HTMLElement>();
 
     const observer = ref({});
-    let isLogoInCenter = true;
+    let shouldCenterLogo = true;
 
     const onEnter = () => {
       if (route.path === "/") {
-        document.getElementById("header").classList.remove("bg-color");
-        // document.getElementById("header-logo").classList.toggle("center-logo");
+        document.getElementById("header").classList.remove("header-background");
+        if (shouldCenterLogo) document.getElementById("header-logo").classList.add("center-logo");
       }
     };
 
     const onExit = () => {
       if (route.path === "/") {
-        document.getElementById("header").classList.add("bg-color");
-        // document.getElementById("header-logo").classList.toggle("center-logo");
-        if (isLogoInCenter) {
+        document.getElementById("header").classList.add("header-background");
+        if (shouldCenterLogo) {
           const headerLogo = document.getElementById("header-logo");
           headerLogo.classList.remove("center-logo");
-          isLogoInCenter = false;
+          shouldCenterLogo = false;
         }
       }
     };
@@ -94,22 +81,23 @@ export default defineComponent({
       observer.value = onIntersect(scrollRef.value, onEnter, onExit, false);
     });
 
-    const showBackground = computed(() => {
-      return route.path !== "/";
+
+    const showCenterLogo = computed(() => {
+      return route.path === "/" && shouldCenterLogo;
     });
 
     const changeLocale = (lang: string) => {
       locale.value = lang;
     };
 
-    return { routes, scrollRef, changeLocale, showBackground };
+    return { routes, scrollRef, changeLocale, showCenterLogo };
   },
 });
 </script>
 <style lang="scss" scoped>
 @import "@/assets/base.scss";
 
-.bg-color {
+.header-background {
   background-color: $dark_grey;
 
   // .nav-routes .item {

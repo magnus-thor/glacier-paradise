@@ -2,7 +2,7 @@
   <div class="page">
     <div class="home">
       <div class="image--container">
-        <div ref="scrollingImage" class="scrolling-bg-image"></div>
+        <div ref="scrollingImage" id="image" class="scrolling-bg-image"></div>
       </div>
       <div class="full"></div>
       <!-- <Instagram /> -->
@@ -19,38 +19,51 @@
   </div>
 </template>
 <script lang="ts">
-import YoutubeVideos from "@/components/youtubeVideos.vue";
-import ImageSlider from "@/components/imageSlider.vue";
-import { defineAsyncComponent, defineComponent, onUnmounted, ref } from "vue";
-import Instagram from "@/components/instagram.vue";
+import GlacierInfo from "@/components/glacier-info.vue";
+import Cards from "@/components/cards.vue";
+// import YoutubeVideos from "@/components/youtubeVideos.vue";
+// import ImageSlider from "@/components/imageSlider.vue";
+import { defineComponent, onBeforeUnmount, onMounted, ref } from "vue";
+// import Instagram from "@/components/instagram.vue";
 import { onIntersect } from "@/composables/onIntersect";
 
+// : defineAsyncComponent(
+//       () => import("@/components/glacier-info.vue")
+//     )
+// : defineAsyncComponent(() => import("@/components/cards.vue"))
+
 export default defineComponent({
-  name: "Home",
+  name: "HomeComponent",
   components: {
-    YoutubeVideos,
-    ImageSlider,
-    Cards: defineAsyncComponent(() => import("@/components/cards.vue")),
-    GlacierInfo: defineAsyncComponent(
-      () => import("@/components/glacier-info.vue")
-    ),
-    Instagram,
+    // YoutubeVideos,
+    // ImageSlider,
+    Cards,
+    GlacierInfo,
+    // Instagram
   },
   setup() {
-    const scrollingImage = ref<HTMLElement>();
-    const scrollRef = ref<HTMLElement>();
+    const scrollingImage = ref();
+    const scrollRef = ref();
     const observer = ref({});
+
+    const ua = navigator.userAgent
+
+    onMounted(() => {
+
+      if (
+        /iPad|iPhone|iPod/.test(ua)
+      ) {
+        document.getElementById("image").classList.add("ios")
+      }
+    })
 
     const loadComponents = ref(false);
 
     const onEnter = () => {
-      debugger;
       loadComponents.value = true;
     };
 
-    const onExit = () => {
-      debugger;
-    };
+    const onExit = () => { };
 
     const options = { capture: true };
     let innerWidth = ref(window.innerWidth);
@@ -59,7 +72,7 @@ export default defineComponent({
       scrollingImage.value.style.width = "6144px";
     };
     window.addEventListener("resize", callBack, options);
-    onUnmounted(() => {
+    onBeforeUnmount(() => {
       window.removeEventListener("resize", callBack, options);
       observer.value = onIntersect(scrollRef.value, onEnter, onExit, false);
     });
@@ -113,19 +126,28 @@ export default defineComponent({
   position: fixed;
   top: 0;
   left: 0;
-  background-image: url(/images/iskyunum1_tinified.jpg);
   width: 5076px;
   height: 100vh;
   background-position: 0 50%;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: 100% 100%;
+  background-image: url(/images/iskyunum1_tinified.jpg);
   -webkit-animation: slide 70s linear;
   animation: slide 70s linear;
 
+  &.ios {
+    background-size: cover;
+    animation: slide-ios 70s linear;
+  }
+
   @media screen and (min-width: 1024px) {
     -webkit-animation: slide 40s linear;
-    animation: slide 10s linear;
+    animation: slide 30s linear;
+
+    .ios {
+      animation: slide-ios 30s linear;
+    }
   }
 }
 
@@ -134,12 +156,29 @@ export default defineComponent({
     // -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
   }
+
   50% {
     // -webkit-transform: translate3d(calc(100vw - 100%), 0, 0);
-    transform: translate3d(-2900px, 0, 0);
+    transform: translate3d(calc(100vw - 100%), 0, 0);
   }
+
   100% {
     // -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes slide-ios {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  50% {
+
+    transform: translate3d(-2900px, 0, 0);
+  }
+
+  100% {
     transform: translate3d(0, 0, 0);
   }
 }
