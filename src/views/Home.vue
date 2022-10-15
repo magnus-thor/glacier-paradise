@@ -43,8 +43,8 @@ export default defineComponent({
   },
   setup() {
     const scrollingImage = ref();
-    const scrollRef = ref();
-    const observer = ref({});
+    // const scrollRef = ref();
+    // const observer = ref({});
 
     const ua = navigator.userAgent
 
@@ -66,18 +66,18 @@ export default defineComponent({
     const onExit = () => { };
 
     const options = { capture: true };
-    let innerWidth = ref(window.innerWidth);
-    const callBack = () => {
-      innerWidth.value = window.innerWidth;
-      scrollingImage.value.style.width = "6144px";
-    };
-    window.addEventListener("resize", callBack, options);
+    // let innerWidth = ref(window.innerWidth);
+    // const callBack = () => {
+    //   innerWidth.value = window.innerWidth;
+    //   scrollingImage.value.style.width = "6144px";
+    // };
+    // window.addEventListener("resize", callBack, options);
     onBeforeUnmount(() => {
-      window.removeEventListener("resize", callBack, options);
-      observer.value = onIntersect(scrollRef.value, onEnter, onExit, false);
+      // window.removeEventListener("resize", callBack, options);
+      // observer.value = onIntersect(scrollRef.value, onEnter, onExit, false);
     });
 
-    return { scrollingImage, loadComponents, scrollRef };
+    return { scrollingImage, loadComponents };
   },
 });
 </script>
@@ -96,17 +96,6 @@ export default defineComponent({
   grid-template-columns: 1fr;
   padding-bottom: 3rem;
   justify-items: center;
-}
-
-.mainImage {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-
-  img {
-    width: 80%;
-    height: 100vh;
-  }
 }
 
 .videos--container,
@@ -128,13 +117,12 @@ export default defineComponent({
   left: 0;
   width: 5076px;
   height: 100vh;
-  background-position: 0 50%;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: 100% 100%;
+  background-size: cover;
   background-image: url(/images/iskyunum1_tinified.jpg);
-  -webkit-animation: slide 70s linear;
-  animation: slide 70s linear;
+  animation: slide-small-screen 30s linear;
+  translate: -7% 0;
+
+  // TODO: add @media (orientation: landscape) and (orientation: portrait) for the image
 
   &.ios {
     background-size: cover;
@@ -142,10 +130,11 @@ export default defineComponent({
   }
 
   @media screen and (min-width: 1024px) {
+    translate: 0 0;
     -webkit-animation: slide 40s linear;
-    animation: slide 30s linear;
+    animation: slide 40s linear;
 
-    .ios {
+    &.ios {
       animation: slide-ios 30s linear;
     }
   }
@@ -153,19 +142,32 @@ export default defineComponent({
 
 @keyframes slide {
   0% {
-    // -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
   }
 
   50% {
-    // -webkit-transform: translate3d(calc(100vw - 100%), 0, 0);
     transform: translate3d(calc(100vw - 100%), 0, 0);
   }
 
   100% {
-    // -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
   }
+
+}
+
+@keyframes slide-small-screen {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  50% {
+    transform: translate3d(calc(100vw - 93%), 0, 0);
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+
 }
 
 @keyframes slide-ios {
