@@ -6,13 +6,9 @@
 
     <main class="content">
       <router-view v-slot="{ Component, route }">
-        <transition
-          :enterActiveClass="generateClassList2((route.meta.enterClass as string))"
-          :leaveActiveClass="generateClassList2((route.meta.leaveClass as string))"
-          enter-to-class="posAbsolute"
-          leave-from-class="posAbsolute"
-          mode="out-in"
-        >
+        <transition :enterActiveClass="generateClassList2((route.meta.enterClass as string))"
+          :leaveActiveClass="generateClassList2((route.meta.leaveClass as string))" enter-to-class="posAbsolute"
+          leave-from-class="posAbsolute" mode="out-in">
           <component :is="Component" />
         </transition>
       </router-view>
