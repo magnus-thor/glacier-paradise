@@ -21,5 +21,17 @@ export default defineConfig(({ mode }) => {
       exclude: ["oh-vue-icons/icons"],
     },
     css: { preprocessorOptions: { css: { charset: false } } },
+    build: {
+      rollupOptions: {
+        output: {
+          manualChunks: {
+            home: ["./src/views/Home.vue"],
+            about: ["./src/views/About.vue"],
+            "contact-us": ["./src/views/ContactUs.vue"],
+            terms: ["./src/views/Terms.vue"],
+          },
+        },
+      },
+    },
   };
 });

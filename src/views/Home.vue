@@ -3,59 +3,43 @@
     <div class="home">
       <ScrollingBgImage />
       <div class="full"></div>
-      <!-- <Instagram /> -->
-      <div ref="scrollRef" class="glacier-info--container">
+      <div class="glacier-info--container">
         <GlacierInfo />
       </div>
-      <div class="cards--container">
-        <Cards />
+      <div ref="cardsRef" class="cards--container">
+        <Cards v-if="loadComponents" />
       </div>
-      <!-- <div class="videos--container"> -->
-      <!-- <YoutubeVideos /> -->
-      <!-- </div> -->
     </div>
   </div>
 </template>
 <script lang="ts">
 import GlacierInfo from "@/components/glacier-info.vue";
-import Cards from "@/components/cards.vue";
-// import YoutubeVideos from "@/components / youtubeVideos.vue";
-// import ImageSlider from "@/components/imageSlider.vue";
-import { defineComponent, onBeforeUnmount, onMounted, ref } from "vue";
-// import Instagram from "@/components/instagram.vue";
+import { defineAsyncComponent, defineComponent, onMounted, ref } from "vue";
 import { onIntersect } from "@/composables/onIntersect";
 import ScrollingBgImage from "@/components/scrolling-bg-image.vue";
-
-// : defineAsyncComponent(
-//       () => import("@/components/glacier-info.vue")
-//     )
-// : defineAsyncComponent(() => import("@/components/cards.vue"))
 
 export default defineComponent({
   name: "HomeComponent",
   components: {
-    // YoutubeVideos,
-    // ImageSlider,
-    Cards,
+    Cards: defineAsyncComponent(() => import("@/components/cards.vue")),
     GlacierInfo,
     ScrollingBgImage
   },
   setup() {
+    const cardsRef = ref<HTMLElement>(null);
 
     const loadComponents = ref(false);
+    const observer = ref({});
 
     const onEnter = () => {
       loadComponents.value = true;
     };
 
-    const onExit = () => { };
-
-    const options = { capture: true };
-    onBeforeUnmount(() => {
-      // observer.value = onIntersect(scrollRef.value, onEnter, onExit, false);
+    onMounted(() => {
+      observer.value = onIntersect(cardsRef.value, onEnter);
     });
 
-    return { loadComponents };
+    return { loadComponents, cardsRef };
   },
 });
 </script>
@@ -80,7 +64,6 @@ export default defineComponent({
 .cards--container,
 .glacier-info--container {
   margin-top: 2rem;
-  // margin-bottom: 6rem;
   width: 100vw;
   z-index: 1;
 }

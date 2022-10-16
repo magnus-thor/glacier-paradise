@@ -35,6 +35,7 @@ export default defineComponent({
   setup() {
     let { locale } = useI18n();
     const route = useRoute();
+    //TODO: extract routes to keep same in both headers
     const routes = ref([
       {
         linkTo: "/",
