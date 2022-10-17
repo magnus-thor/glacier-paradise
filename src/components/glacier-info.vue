@@ -14,14 +14,20 @@
 <script lang="ts">
 import { IWeather } from "@/interfaces/weather";
 import { store } from "@/store/store";
-import { defineComponent, ref } from "vue";
+import { defineComponent, ref, computed } from "vue";
 
 export default defineComponent({
   name: "glacierInfo",
   setup() {
-    const weather: IWeather = store.weather;
+    // const weather: IWeather = store.weather;
 
-    const svgPath = `/weather-icons/svg/${weather.symbol_code}.svg`;
+    const weather = computed(() => {
+      return store.weather;
+    })
+
+    const svgPath = computed(() => {
+      return `/weather-icons/svg/${weather.value.symbol_code}.svg`;
+    })
 
     return { weather, svgPath }
   },
