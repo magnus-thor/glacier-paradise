@@ -23,7 +23,7 @@ export default defineComponent({
   components: {
     Cards: defineAsyncComponent(() => import("@/components/cards.vue")),
     GlacierInfo,
-    ScrollingBgImage
+    ScrollingBgImage,
   },
   setup() {
     const cardsRef = ref<HTMLElement>(null);

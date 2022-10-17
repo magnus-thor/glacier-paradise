@@ -1,17 +1,30 @@
 <template>
   <div class="glacier-info">
     <div class="glacier-info--content">
-      <p>{{$t("glacierInfo")}}</p>
+      <div class="text"></div>
+      <div class="weather">
+        <img :src="svgPath" :alt="weather.symbol_code" />
+        <p>hiti: {{ weather.air_temperature }} </p>
+        <p>vindur: {{ weather.wind_speed }}</p>
+      </div>
     </div>
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
+import { IWeather } from "@/interfaces/weather";
+import { store } from "@/store/store";
+import { defineComponent, ref } from "vue";
 
 export default defineComponent({
   name: "glacierInfo",
-  setup() { },
+  setup() {
+    const weather: IWeather = store.weather;
+
+    const svgPath = `/weather-icons/svg/${weather.symbol_code}.svg`;
+
+    return { weather, svgPath }
+  },
 });
 </script>
 
@@ -22,15 +35,12 @@ export default defineComponent({
   height: max-content;
   width: 100%;
 
-  p {
-    padding: 2rem 3rem;
-  }
-
   .glacier-info--content {
     padding: 2rem 1rem;
     height: 100%;
     width: 100%;
     background: white;
+    display: flex
   }
 
   @media screen and (min-width: $small_screen) {
@@ -39,18 +49,26 @@ export default defineComponent({
     align-items: center;
 
 
-    p {
-      padding: 2rem;
-    }
-
     .glacier-info--content {
       max-width: 1024px;
-      // height: 12rem;
     }
   }
 }
 
-h2 {
-  margin-bottom: 0.5rem;
+.text {
+  width: 80%;
+}
+
+.weather {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 0.8rem;
+
+  img {
+    width: 3rem;
+    height: 3rem;
+  }
 }
 </style>

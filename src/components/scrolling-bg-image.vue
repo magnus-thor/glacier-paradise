@@ -5,9 +5,9 @@
 </template>
 
 <script lang="ts">
-import { onMounted } from "vue";
+import { defineComponent, onMounted } from "vue";
 
-export default {
+export default defineComponent({
 	name: "ScrollingBgImage",
 	setup() {
 		const ua = navigator.userAgent;
@@ -20,7 +20,7 @@ export default {
 
 		return {};
 	},
-};
+});
 </script>
 
 <style lang="scss" scoped>

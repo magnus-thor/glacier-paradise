@@ -25,12 +25,18 @@ import MyHeader from "@/components/myHeader.vue";
 import MyFooter from "@/components/myFooter.vue";
 import MobileHeader from "@/components/mobileHeader.vue";
 import { useI18n } from "vue-i18n";
+import { store } from "./store/store";
+import { fetchWeather } from "./composables/fetchWeather";
+import { IWeather } from "@/interfaces/weather";
 
 export default defineComponent({
   name: "App",
   components: { MyHeader, MyFooter, MobileHeader },
   setup() {
     const { t } = useI18n({ useScope: "global" });
+
+    fetchWeather().then((weather: IWeather) => store.weather = weather)
+
     const options = { capture: true };
     let innerWidth = ref(window.innerWidth);
     const callBack = () => {
