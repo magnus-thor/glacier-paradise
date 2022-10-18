@@ -12,18 +12,19 @@
 </template>
 
 <script lang="ts">
-import { IWeather } from "@/interfaces/weather";
-import { store } from "@/store/store";
 import { defineComponent, ref, computed } from "vue";
+import { fetchWeather } from "@/composables/fetchWeather";
+
 
 export default defineComponent({
   name: "glacierInfo",
-  setup() {
-    // const weather: IWeather = store.weather;
+  async setup() {
+    // const weather = computed(() => {
+    //   return store.weather;
+    // })
 
-    const weather = computed(() => {
-      return store.weather;
-    })
+    const tempWeather = await fetchWeather();
+    const weather = ref(tempWeather);
 
     const svgPath = computed(() => {
       return `/weather-icons/svg/${weather.value.symbol_code}.svg`;
@@ -53,7 +54,6 @@ export default defineComponent({
     display: flex;
     flex-direction: column;
     align-items: center;
-
 
     .glacier-info--content {
       max-width: 1024px;

@@ -4,7 +4,12 @@
       <ScrollingBgImage />
       <div class="full"></div>
       <div class="glacier-info--container">
-        <GlacierInfo />
+        <Suspense>
+          <GlacierInfo />
+          <template #fallback>
+            <h1>TODO: create fallback skeleton</h1>
+          </template>
+        </Suspense>
       </div>
       <div ref="cardsRef" class="cards--container">
         <Cards v-if="loadComponents" />

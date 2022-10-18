@@ -6,16 +6,20 @@ export const fetchWeather = async () => {
 		lon: "-23.62258",
 	};
 	let status: any = undefined;
+
 	const getSymbolCode = (data: Record<string, any>): string => {
 		if (data.next_1_hours) {
 			return data.next_1_hours.summary.symbol_code;
-		} else if (data.next_6_hours) {
+		}
+		if (data.next_6_hours) {
 			return data.next_6_hours.summary.symbol_code;
-		} else if (data.next_12_hours) {
+		}
+		if (data.next_12_hours) {
 			return data.next_12_hours.summary.symbol_code;
 		}
 		return "unknown";
 	};
+
 	let weather: IWeather = await fetch(
 		`https://api.met.no/weatherapi/locationforecast/2.0/compact?lat=${stapiLocations.lat}&lon=${stapiLocations.lon}`
 	)
