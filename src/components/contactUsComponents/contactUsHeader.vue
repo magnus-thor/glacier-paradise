@@ -4,23 +4,22 @@
       <p><strong>Any questions?</strong></p>
       <h1>Contact us</h1>
     </div>
-    <div class="contact-us-info--wrapper">
+    <!-- <div class="contact-us-info--wrapper">
       <contact-us-info
         v-for="info in contactUsInfo"
         :icon-name="info.iconName"
         :header="info.header"
         :paragraphs="info.paragraphs"
       />
-    </div>
+    </div> -->
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import ContactUsInfo from "./contactUsInfo.vue";
 
 export default defineComponent({
-  components: { ContactUsInfo },
+  components: {},
   setup() {
     //TODO: rename
     const contactUsInfo = [
@@ -50,8 +49,8 @@ export default defineComponent({
   text-align: center;
 }
 
-.contact-us-info--wrapper {
+/* .contact-us-info--wrapper {
   margin-top: 2rem;
   display: flex;
-}
+} */
 </style>

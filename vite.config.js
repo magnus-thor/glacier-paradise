@@ -20,6 +20,9 @@ export default defineConfig(({ mode }) => {
     optimizeDeps: {
       exclude: ["oh-vue-icons/icons"],
     },
+    server: {
+      port: 8000,
+    },
     css: { preprocessorOptions: { css: { charset: false } } },
     build: {
       rollupOptions: {

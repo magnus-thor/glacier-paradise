@@ -35,7 +35,7 @@ import { useI18n } from "vue-i18n";
 
 export default defineComponent({
   name: "App",
-  components: { MyHeader, MyFooter, MobileHeader, BgImage },
+  components: { MyHeader, MyFooter, MobileHeader },
   setup() {
     const { t } = useI18n({ useScope: "global" });
 

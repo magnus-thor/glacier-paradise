@@ -23,12 +23,14 @@ export default defineComponent({
 })
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .contact-us-info {
   margin: 0.5rem;
+  text-align: center;
 }
 
 h2 {
   font-size: 1.2rem;
+  margin-bottom: 0.5rem;
 }
 </style>
