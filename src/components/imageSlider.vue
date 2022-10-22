@@ -1,9 +1,10 @@
 <template>
-  <div class="imageSlider">
-    <transition name="imageFade" mode="out-in"
-      ><div class="image" :key="selectedImageNumber">
-        <img :src="selectedImage" :alt="imageAlt" /></div
-    ></transition>
+  <div class="image-slider">
+    <transition name="image-fade" mode="out-in">
+      <div class="image" :key="selectedImageNumber">
+        <img :src="selectedImage" :alt="imageAlt" />
+      </div>
+    </transition>
     <div class="buttons">
       <button class="button" @click="previous" :disabled="disablePrevious">
         <v-icon name="fc-previous" fill="green" scale="2" />
@@ -19,7 +20,7 @@
 import { computed, defineComponent, ref } from "vue";
 
 export default defineComponent({
-  name: "imageSlider",
+  name: "ImageSlider",
   setup() {
     const images = ref([
       "/images/fra-breiduvik.jpg",
@@ -65,7 +66,7 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
-.imageSlider {
+.image-slider {
   display: grid;
   // height: 300px;
   // width: 100%;
@@ -96,8 +97,10 @@ export default defineComponent({
   display: flex;
   justify-content: space-between;
   width: 100%;
-  width: -moz-available; /* WebKit-based browsers will ignore this. */
-  width: -webkit-fill-available; /* Mozilla-based browsers will ignore this. */
+  width: -moz-available;
+  /* WebKit-based browsers will ignore this. */
+  width: -webkit-fill-available;
+  /* Mozilla-based browsers will ignore this. */
   width: fill-available;
   padding-left: 3rem;
   padding-right: 3rem;
@@ -110,13 +113,13 @@ export default defineComponent({
   }
 }
 
-.imageFade-enter-active,
-.imageFade-leave-active {
+.image-fade-enter-active,
+.image-fade-leave-active {
   transition: opacity 0.5s ease;
 }
 
-.imageFade-enter-from,
-.imageFade-leave-to {
+.image-fade-enter-from,
+.image-fade-leave-to {
   opacity: 0;
 }
 </style>

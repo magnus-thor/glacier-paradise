@@ -6,13 +6,25 @@ import router from "./router";
 import { OhVueIcon, addIcons } from "oh-vue-icons";
 import {
   FaBus,
-  IoTimeOutline,
+  FaRegularAddressCard,
+  FaRegularClock,
   FcPrevious,
+  FcPhoneAndroid,
   FcNext,
+  IoTimeOutline,
   IoClose,
 } from "oh-vue-icons/icons";
 
-addIcons(FaBus, IoTimeOutline, FcPrevious, FcNext, IoClose);
+addIcons(
+  FaBus,
+  FaRegularAddressCard,
+  FaRegularClock,
+  FcPhoneAndroid,
+  IoTimeOutline,
+  FcPrevious,
+  FcNext,
+  IoClose
+);
 
 const app = createApp(App);
 app.use(i18n);

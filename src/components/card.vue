@@ -1,10 +1,6 @@
 <template>
-  <div
-    @mouseenter="displayCardContent = true"
-    @mouseleave="displayCardContent = false"
-    class="card"
-    :style="`background-image: url(${image.src}) `"
-  >
+  <div @mouseenter="displayCardContent = true" @mouseleave="displayCardContent = false" class="card"
+    :style="`background-image: url(${image.src}) `">
     <div class="card__info">
       <h2 class="card__header">{{ card.header }}</h2>
       <transition name="imageFade" mode="out-in">
@@ -45,7 +41,7 @@
 
 <script lang="ts">
 import { computed, defineComponent, onMounted, PropType, ref } from "vue";
-import { CardImage, CardInfo, CardLink, CardText } from "@/types/props";
+import { CardImage, CardInfo, CardLink, CardText } from "@/interfaces/props";
 
 export default defineComponent({
   name: "card",

@@ -1,22 +1,11 @@
 <template>
-  <swiper
-    class="imageSlider"
-    :modules="modules"
-    :space-between="20"
-    :pagination="{ clickable: true }"
-    :autoplay="{
-      delay: 7000,
-      disableOnInteraction: true,
-      pauseOnMouseEnter: true,
-    }"
-  >
-    <swiper-slide
-      class="imageSwiper"
-      v-if="images.length"
-      v-for="image in images"
-      :key="image.alt"
-      ><img :src="image.src" :alt="image.alt"
-    /></swiper-slide>
+  <swiper class="image-slider" :modules="modules" :space-between="20" :pagination="{ clickable: true }" :autoplay="{
+    delay: 7000,
+    disableOnInteraction: true,
+    pauseOnMouseEnter: true,
+  }">
+    <swiper-slide class="image-swiper" v-if="images.length" v-for="image in images" :key="image.alt"><img
+        :src="image.src" :alt="image.alt" /></swiper-slide>
   </swiper>
 </template>
 
@@ -77,13 +66,13 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
-.imageSlider {
+.image-slider {
   margin: auto;
   height: 30rem;
   width: 100%;
 }
 
-.imageSwiper {
+.image-swiper {
   display: flex;
   margin: 0;
 

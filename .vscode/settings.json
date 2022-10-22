@@ -6,5 +6,9 @@
   "editor.cursorBlinking": "smooth",
   "vuejsAutoImport.importWithSemicolon": true,
   "editor.gotoLocation.multipleDefinitions": "goto",
-  "editor.gotoLocation.alternativeTypeDefinitionCommand": "editor.action.goToImplementation"
+  "editor.gotoLocation.alternativeTypeDefinitionCommand": "editor.action.goToImplementation",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "typescript.preferences.quoteStyle": "double",
+  "volar.autoCompleteRefs": true,
+  "volar.completion.preferredTagNameCase": "auto-kebab"
 }

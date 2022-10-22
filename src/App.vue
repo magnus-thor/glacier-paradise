@@ -1,5 +1,5 @@
 <template>
-  <div class="mainLayout">
+  <div class="main-layout">
     <!-- <div class="image-container"></div> -->
 
     <component :is="renderHeaderComponent" />
@@ -7,8 +7,8 @@
     <main class="content">
       <router-view v-slot="{ Component, route }">
         <transition :enterActiveClass="generateClassList2((route.meta.enterClass as string))"
-          :leaveActiveClass="generateClassList2((route.meta.leaveClass as string))" enter-to-class="posAbsolute"
-          leave-from-class="posAbsolute" mode="out-in">
+          :leaveActiveClass="generateClassList2((route.meta.leaveClass as string))" enter-to-class="pos-absolute"
+          leave-from-class="pos-absolute" mode="out-in">
           <component :is="Component" />
         </transition>
       </router-view>
@@ -52,7 +52,7 @@ export default defineComponent({
     });
 
     const generateClassList = (className: string): string => {
-      return `${className} posAbsolute`;
+      return `${className} pos-absolute`;
     };
     const generateClassList2 = (className: string): string => {
       return `${className}`;
@@ -66,7 +66,7 @@ export default defineComponent({
 @import "./assets/base.scss";
 @import "animate.css";
 
-.mainLayout {
+.main-layout {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -77,7 +77,7 @@ export default defineComponent({
   flex: 1 0 auto;
 }
 
-.posAbsolute {
+.pos-absolute {
   position: absolute;
   min-height: min-content;
   width: 100%;
