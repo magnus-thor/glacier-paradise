@@ -13,6 +13,9 @@ import {
   FcNext,
   IoTimeOutline,
   IoClose,
+  WiCelsius,
+  WiDirectionUp,
+  OiLocation,
 } from "oh-vue-icons/icons";
 
 addIcons(
@@ -23,7 +26,10 @@ addIcons(
   IoTimeOutline,
   FcPrevious,
   FcNext,
-  IoClose
+  IoClose,
+  WiCelsius,
+  WiDirectionUp,
+  OiLocation
 );
 
 const app = createApp(App);

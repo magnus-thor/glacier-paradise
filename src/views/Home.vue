@@ -2,6 +2,7 @@
   <div class="page">
     <div class="home">
       <ScrollingBgImage />
+      <h1>Special sightseeing tours of Snæfellsjökull</h1>
       <div class="full"></div>
       <div class="glacier-info--container">
         <Suspense>
@@ -52,6 +53,11 @@ export default defineComponent({
 .page {
   overflow: hidden;
   position: relative;
+  h1 {
+    z-index: 1;
+    margin-top: 25%;
+    color: white;
+  }
 }
 
 .full {

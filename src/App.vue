@@ -25,9 +25,9 @@
 </template>
 <script lang="ts">
 import { computed, defineComponent, onUnmounted, ref } from "vue";
-import MyHeader from "@/components/myHeader.vue";
-import MyFooter from "@/components/myFooter.vue";
-import MobileHeader from "@/components/mobileHeader.vue";
+import MyHeader from "@/components/my-header.vue";
+import MyFooter from "@/components/my-footer.vue";
+import MobileHeader from "@/components/mobile-header.vue";
 import { useI18n } from "vue-i18n";
 // import { store } from "./store/store";
 // import { fetchWeather } from "./composables/fetchWeather";

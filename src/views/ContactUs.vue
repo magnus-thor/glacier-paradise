@@ -15,15 +15,14 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import ContactUsHeader from "@/components/contactUsComponents/contactUsHeader.vue";
-import ContactUsForm from "@/components/contactUsComponents/contactUsForm.vue";
-import ContactUsInfo from "@/components/contactUsComponents/contactUsInfo.vue";
+import ContactUsHeader from "@/components/contactUsComponents/contact-us-header.vue";
+import ContactUsForm from "@/components/contactUsComponents/contact-us-form.vue";
+import ContactUsInfo from "@/components/contactUsComponents/contact-us-Info.vue";
 
 export default defineComponent({
   name: "ContactUs",
   components: { ContactUsForm, ContactUsHeader, ContactUsInfo },
   setup() {
-    //TODO: rename
     const contactUsInfo = [
       {
         iconName: "fa-regular-address-card",
@@ -51,10 +50,8 @@ export default defineComponent({
 .contact-us-page {
   margin-top: 10%;
   display: flex;
-  // grid-template-columns: 1fr;
   flex-direction: column;
   align-items: center;
-  // justify-content: center;
 }
 
 .contact-us-info--wrapper {
