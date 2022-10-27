@@ -1,22 +1,38 @@
 <template>
   <header ref="scrollRef">
-    <div id="header" class="header" :class="{ 'header-background': !showCenterLogo }">
-      <div id="header-logo" class="header-logo" :class="{ 'center-logo': showCenterLogo }">
-        <img id="header-image" src="/logos/logo-glacier-paradise-transparent.png" alt="Glacier paradise logo" />
+    <div
+      id="header"
+      class="header"
+      :class="{ 'header-background': !showCenterLogo }"
+    >
+      <div
+        id="header-logo"
+        class="header-logo"
+        :class="{ 'center-logo': showCenterLogo }"
+      >
+        <img
+          id="header-image"
+          src="/logos/logo-glacier-paradise-transparent.png"
+          alt="Glacier paradise logo"
+        />
       </div>
       <div class="nav-routes">
         <template v-for="(route, index) in routes">
           <nav class="item">
             <router-link :to="route.linkTo">{{
-            $t(route.nameTranslationKey)
+              $t(route.nameTranslationKey)
             }}</router-link>
           </nav>
         </template>
       </div>
       <div class="locale-changer">
         <template v-for="locale in $i18n.availableLocales">
-          <button :key="`locale-${locale}`" @click="changeLocale(locale)" v-if="locale !== $i18n.locale"
-            class="locale-button">
+          <button
+            :key="`locale-${locale}`"
+            @click="changeLocale(locale)"
+            v-if="locale !== $i18n.locale"
+            class="locale-button"
+          >
             {{ locale }}
           </button>
         </template>
@@ -63,7 +79,8 @@ export default defineComponent({
     const onEnter = () => {
       if (route.path === "/") {
         document.getElementById("header").classList.remove("header-background");
-        if (shouldCenterLogo) document.getElementById("header-logo").classList.add("center-logo");
+        if (shouldCenterLogo)
+          document.getElementById("header-logo").classList.add("center-logo");
       }
     };
 
@@ -81,7 +98,6 @@ export default defineComponent({
     onMounted(() => {
       observer.value = onIntersect(scrollRef.value, onEnter, onExit, false);
     });
-
 
     const showCenterLogo = computed(() => {
       return route.path === "/" && shouldCenterLogo;

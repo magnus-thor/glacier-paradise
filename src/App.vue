@@ -1,6 +1,9 @@
 <template>
   <div class="main-layout">
     <!-- <div class="image-container"></div> -->
+    <div id="preload">
+      <img src="/images/iskyunum1_tinified.avif" rel="preload" />
+    </div>
 
     <component :is="renderHeaderComponent" />
 
@@ -69,6 +72,10 @@ export default defineComponent({
 <style lang="scss">
 @import "./assets/base.scss";
 @import "animate.css";
+
+div#preload {
+  display: none;
+}
 
 .main-layout {
   min-height: 100vh;

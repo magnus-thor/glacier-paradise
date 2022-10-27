@@ -1,27 +1,42 @@
 <template>
   <header ref="scrollRef">
-    <div id="header" class="header" :class="{ 'header-background': !showCenterLogo }">
-      <div id="header-logo" class="header-logo" :class="{ 'center-logo': showCenterLogo }">
-        <img id="header-image" src="/logos/logo-glacier-paradise-transparent.png" alt="Glacier paradise logo" />
+    <div
+      id="header"
+      class="header"
+      :class="{ 'header-background': !showCenterLogo }"
+    >
+      <div
+        id="header-logo"
+        class="header-logo"
+        :class="{ 'center-logo': showCenterLogo }"
+      >
+        <img
+          id="header-image"
+          src="/logos/logo-glacier-paradise-transparent.png"
+          alt="Glacier paradise logo"
+        />
       </div>
       <div class="bm-overlay">
         <Slide :closeOnNavigation="closeOnNavigation" right width="180">
           <template v-for="locale in $i18n.availableLocales">
-            <button :key="`locale-${locale}`" @click="changeLocale(locale)" v-if="locale !== $i18n.locale"
-              class="locale-button">
+            <button
+              :key="`locale-${locale}`"
+              @click="changeLocale(locale)"
+              v-if="locale !== $i18n.locale"
+              class="locale-button"
+            >
               {{ locale }}
             </button>
           </template>
           <template v-for="(route, index) in routes">
             <nav class="item">
               <router-link :to="route.linkTo">{{
-              $t(route.nameTranslationKey)
+                $t(route.nameTranslationKey)
               }}</router-link>
             </nav>
           </template>
         </Slide>
       </div>
-
     </div>
   </header>
 </template>
@@ -33,7 +48,6 @@ import { useI18n } from "vue-i18n";
 import { useRoute } from "vue-router";
 // @ts-expect-error TODO fix
 import { Slide } from "vue3-burger-menu";
-
 
 export default defineComponent({
   name: "mobileHeader",
@@ -68,7 +82,8 @@ export default defineComponent({
     const onEnter = () => {
       if (route.path === "/") {
         document.getElementById("header").classList.remove("header-background");
-        if (shouldCenterLogo) document.getElementById("header-logo").classList.add("center-logo");
+        if (shouldCenterLogo)
+          document.getElementById("header-logo").classList.add("center-logo");
       }
     };
 
@@ -97,7 +112,13 @@ export default defineComponent({
 
     const closeOnNavigation = ref(true);
 
-    return { routes, scrollRef, changeLocale, showCenterLogo, closeOnNavigation };
+    return {
+      routes,
+      scrollRef,
+      changeLocale,
+      showCenterLogo,
+      closeOnNavigation,
+    };
   },
 });
 </script>
