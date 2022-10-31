@@ -6,6 +6,15 @@
     <a class="logo" href="https://www.facebook.com/glacierparadise"
       ><img src="/logos/facebook-logo.png" alt="Facebook"
     /></a>
+    <a
+      class="logo clicky"
+      title="Privacy-friendly Web Analytics"
+      href="https://clicky.com/101385907"
+      ><img
+        alt="Clicky"
+        src="https://static.getclicky.com/media/links/badge.gif"
+        border="0"
+    /></a>
   </div>
 </template>
 <script lang="ts">
@@ -26,6 +35,13 @@ export default defineComponent({
   img {
     width: 30px;
     height: auto;
+  }
+
+  &.clicky {
+    img {
+      width: 80px;
+      height: auto;
+    }
   }
 }
 </style>
