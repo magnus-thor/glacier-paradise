@@ -14,6 +14,8 @@ const routes = [
       index: 1,
       enterClass: "",
       leaveClass: "",
+      title: "Glacier paradise, special sightseing tours of Snæfellsjökull", // TODO Agnes: Update the sentence to use a few keywords to help with finding the page, max 55 chars  -> https://www.seobility.net/en/wiki/Meta_Title
+      description: "1", // TODO Agnes: add a description of the website/page -> https://www.seobility.net/en/wiki/Meta_Description
     },
   },
   {
@@ -24,6 +26,8 @@ const routes = [
       index: 2,
       enterClass: "",
       leaveClass: "",
+      title: "",
+      description: "2",
     },
   },
   {
@@ -34,6 +38,8 @@ const routes = [
       index: 3,
       enterClass: "",
       leaveClass: "",
+      title: "",
+      description: "3",
     },
   },
   {
@@ -44,6 +50,8 @@ const routes = [
       index: 4,
       enterClass: "",
       leaveClass: "",
+      title: "",
+      description: "4",
     },
   },
 ];
@@ -51,6 +59,12 @@ const routes = [
 const router = createRouter({
   history: createWebHistory(),
   routes,
+});
+
+router.beforeEach((to) => {
+  // TODO: When live check if pages have correct info in google search
+  document.title = to.meta.title;
+  document.getElementById("metaDescription").content = to.meta.description;
 });
 
 router.afterEach((to, from) => {
