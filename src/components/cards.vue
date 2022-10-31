@@ -22,6 +22,7 @@ export default defineComponent({
   name: "cards",
   components: { Card, Tour },
   setup() {
+    console.log("cards setup");
     const allTours = ref(tours);
     return { allTours };
   },
@@ -30,12 +31,9 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 .cards {
-  margin-top: 2rem;
   width: 100%;
   display: flex;
   align-items: center;
   flex-direction: column;
-  row-gap: 10rem;
-  margin-bottom: 1rem;
 }
 </style>

@@ -13,7 +13,10 @@
         </Suspense>
       </div>
       <div ref="cardsRef" class="cards--container">
-        <Cards v-if="loadComponents" />
+        <Cards v-if="loadCardsComponent" />
+      </div>
+      <div class="instagram--container">
+        <Instagram v-if="loadInstagramComponent" />
       </div>
     </div>
   </div>
@@ -23,6 +26,7 @@ import GlacierInfo from "@/components/glacier-info.vue";
 import { defineAsyncComponent, defineComponent, onMounted, ref } from "vue";
 import { onIntersect } from "@/composables/onIntersect";
 import ScrollingBgImage from "@/components/scrolling-bg-image.vue";
+import Instagram from "@/components/instagram.vue";
 
 export default defineComponent({
   name: "HomeComponent",
@@ -30,22 +34,34 @@ export default defineComponent({
     Cards: defineAsyncComponent(() => import("@/components/cards.vue")),
     GlacierInfo,
     ScrollingBgImage,
+    Instagram,
   },
   setup() {
     const cardsRef = ref<HTMLElement>(null);
-
-    const loadComponents = ref(false);
+    const loadCardsComponent = ref(false);
+    const loadInstagramComponent = ref(false);
     const observer = ref({});
 
-    const onEnter = () => {
-      loadComponents.value = true;
+    const onEnterCardsComponent = () => {
+      loadCardsComponent.value = true;
+    };
+    const onExitCardsComponent = () => {
+      loadInstagramComponent.value = true;
     };
 
     onMounted(() => {
-      observer.value = onIntersect(cardsRef.value, onEnter);
+      observer.value = onIntersect(
+        cardsRef.value,
+        onEnterCardsComponent,
+        onExitCardsComponent
+      );
     });
 
-    return { loadComponents, cardsRef };
+    return {
+      loadCardsComponent,
+      loadInstagramComponent,
+      cardsRef,
+    };
   },
 });
 </script>
@@ -73,8 +89,10 @@ export default defineComponent({
 
 .videos--container,
 .cards--container,
+.instagram--container,
 .glacier-info--container {
-  margin-top: 2rem;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
   width: 100vw;
   z-index: 1;
 }
