@@ -25,7 +25,12 @@
 </template>
 
 <script lang="ts">
-import { CardImage, CardText, CardLink, CardInfo } from "@/types/props";
+import {
+  TourImage,
+  TourCardText,
+  TourLink,
+  TourInfo,
+} from "@/interfaces/props";
 import { computed, defineComponent, PropType } from "vue";
 
 export default defineComponent({
@@ -33,25 +38,25 @@ export default defineComponent({
   props: {
     image: {
       required: true,
-      type: Object as PropType<CardImage>,
+      type: Object as PropType<TourImage>,
     },
     card: {
       required: true,
-      type: Object as PropType<CardText>,
+      type: Object as PropType<TourCardText>,
     },
     link: {
       required: true,
-      type: Object as PropType<CardLink>,
+      type: Object as PropType<TourLink>,
     },
     info: {
       required: true,
-      type: Object as PropType<CardInfo>,
+      type: Object as PropType<TourInfo>,
     },
-    cardIndex: Number,
+    tourIndex: Number,
   },
   setup(props) {
     const reverseFlow = computed(() => {
-      return props.cardIndex % 2 !== 0;
+      return props.tourIndex % 2 !== 0;
     });
 
     return { reverseFlow };

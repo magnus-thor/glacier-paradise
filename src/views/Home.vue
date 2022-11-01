@@ -12,8 +12,8 @@
           </template>
         </Suspense>
       </div>
-      <div ref="cardsRef" class="cards--container">
-        <Cards v-if="loadCardsComponent" />
+      <div ref="toursRef" class="tours--container">
+        <Tours v-if="loadToursComponent" />
       </div>
       <div class="instagram--container">
         <Instagram v-if="loadInstagramComponent" />
@@ -22,45 +22,47 @@
   </div>
 </template>
 <script lang="ts">
-import GlacierInfo from "@/components/glacier-info.vue";
+import GlacierInfo from "@/components/homeComponents/glacier-info.vue";
 import { defineAsyncComponent, defineComponent, onMounted, ref } from "vue";
 import { onIntersect } from "@/composables/onIntersect";
-import ScrollingBgImage from "@/components/scrolling-bg-image.vue";
-import Instagram from "@/components/instagram.vue";
+import ScrollingBgImage from "@/components/homeComponents/scrolling-bg-image.vue";
+import Instagram from "@/components/homeComponents/instagram.vue";
 
 export default defineComponent({
   name: "HomeComponent",
   components: {
-    Cards: defineAsyncComponent(() => import("@/components/cards.vue")),
+    Tours: defineAsyncComponent(
+      () => import("@/components/homeComponents/tours.vue")
+    ),
     GlacierInfo,
     ScrollingBgImage,
     Instagram,
   },
   setup() {
-    const cardsRef = ref<HTMLElement>(null);
-    const loadCardsComponent = ref(false);
+    const toursRef = ref<HTMLElement>(null);
+    const loadToursComponent = ref(false);
     const loadInstagramComponent = ref(false);
     const observer = ref({});
 
-    const onEnterCardsComponent = () => {
-      loadCardsComponent.value = true;
+    const onEnterToursComponent = () => {
+      loadToursComponent.value = true;
     };
-    const onExitCardsComponent = () => {
+    const onExitToursComponent = () => {
       loadInstagramComponent.value = true;
     };
 
     onMounted(() => {
       observer.value = onIntersect(
-        cardsRef.value,
-        onEnterCardsComponent,
-        onExitCardsComponent
+        toursRef.value,
+        onEnterToursComponent,
+        onExitToursComponent
       );
     });
 
     return {
-      loadCardsComponent,
+      loadToursComponent,
       loadInstagramComponent,
-      cardsRef,
+      toursRef,
     };
   },
 });
@@ -88,7 +90,7 @@ export default defineComponent({
 }
 
 .videos--container,
-.cards--container,
+.tours--container,
 .instagram--container,
 .glacier-info--container {
   margin-top: 3rem;

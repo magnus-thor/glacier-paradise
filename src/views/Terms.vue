@@ -6,7 +6,7 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import TermsMarkdown from "@/components/terms-markdown.vue";
+import TermsMarkdown from "@/components/temsComponents/terms-markdown.vue";
 
 export default defineComponent({
   name: "Terms",

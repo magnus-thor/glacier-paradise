@@ -10,8 +10,8 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import Instagram from "@/components/instagram.vue";
-import Images from "@/components/images.vue";
+import Instagram from "@/components/homeComponents/instagram.vue";
+import Images from "@/components/aboutUsComponent/images.vue";
 
 export default defineComponent({
   name: "About",

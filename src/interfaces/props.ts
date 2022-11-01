@@ -1,21 +1,21 @@
-interface CardImage {
+interface TourImage {
   src: string;
   alt: string;
 }
 
-interface CardText {
+interface TourCardText {
   header: string;
   text: string;
 }
 
-interface CardLink {
+interface TourLink {
   text: string;
   href: string;
 }
 
-interface CardInfo {
+interface TourInfo {
   duration: string;
   departure: string;
 }
 
-export { CardImage, CardText, CardLink, CardInfo };
+export { TourImage, TourCardText, TourLink, TourInfo };

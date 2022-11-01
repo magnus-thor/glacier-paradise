@@ -1,5 +1,5 @@
 <template>
-  <div class="cards">
+  <div class="tours">
     <template v-for="(tour, index) in allTours">
       <Tour
         :image="{ src: tour.imageSrc, alt: $t(tour.imageAlt) }"
@@ -13,16 +13,14 @@
 </template>
 
 <script lang="ts">
-import Card from "@/components/card.vue";
 import { defineComponent, ref } from "vue";
 import { tours } from "@/assets/tours/tours";
 import Tour from "./tour.vue";
 
 export default defineComponent({
-  name: "cards",
-  components: { Card, Tour },
+  name: "tours",
+  components: { Tour },
   setup() {
-    console.log("cards setup");
     const allTours = ref(tours);
     return { allTours };
   },
@@ -30,7 +28,7 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
-.cards {
+.tours {
   width: 100%;
   display: flex;
   align-items: center;

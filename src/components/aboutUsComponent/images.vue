@@ -1,11 +1,24 @@
 <template>
-  <swiper class="image-slider" :modules="modules" :space-between="20" :pagination="{ clickable: true }" :autoplay="{
-    delay: 7000,
-    disableOnInteraction: true,
-    pauseOnMouseEnter: true,
-  }">
-    <swiper-slide class="image-swiper" v-if="images.length" v-for="image in images" :key="image.alt"><img
-        :src="image.src" :alt="image.alt" /></swiper-slide>
+  <!-- eslint-disable  -->
+
+  <swiper
+    class="image-slider"
+    :modules="modules"
+    :space-between="20"
+    :pagination="{ clickable: true }"
+    :autoplay="{
+      delay: 7000,
+      disableOnInteraction: true,
+      pauseOnMouseEnter: true,
+    }"
+  >
+    <swiper-slide
+      class="image-swiper"
+      v-if="images.length"
+      v-for="image in images"
+      :key="image.alt"
+      ><img :src="image.src" :alt="image.alt"
+    /></swiper-slide>
   </swiper>
 </template>
 
