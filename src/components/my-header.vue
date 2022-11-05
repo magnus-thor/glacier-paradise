@@ -49,7 +49,7 @@ import { defineComponent } from "vue";
 import { setupHeader } from "@/composables/headerShared";
 
 export default defineComponent({
-  name: "MyHeader",
+  name: "yHeader",
   setup() {
     const { routes, scrollRef, changeLocale, showCenterLogo } = setupHeader();
 
@@ -111,33 +111,12 @@ export default defineComponent({
   }
 }
 
-.sub-routes {
-  margin-top: 0.2rem;
-  margin-left: 1.5rem;
-  display: flex;
-  padding: 0.3rem 0.6rem;
-  border: 1px solid $yellow;
-  border-radius: 5%;
-  width: fit-content;
-
-  a {
-    color: $yellow;
-  }
-
-  a:hover {
-    color: $white;
-  }
-
-  a.router-link-active {
-    color: $light_grey;
-  }
-}
-
 .header {
   position: fixed;
   width: 100%;
   height: 4rem;
-  padding: 2rem 0 0.5rem 0;
+  padding: 1rem 0 0.5rem 0;
+  align-items: center;
   display: flex;
   z-index: 100;
 }

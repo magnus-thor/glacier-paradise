@@ -40,6 +40,7 @@ export default defineComponent({
         paragraphs: ["All year round !"],
       },
     ];
+
     return { contactUsInfo };
   },
 });

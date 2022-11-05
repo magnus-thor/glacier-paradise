@@ -10,7 +10,7 @@ import { VueComponent as MarkdownEn } from "@/assets/md/terms_en.md";
 import { useI18n } from "vue-i18n";
 
 export default defineComponent({
-  name: "TermsMarkdown",
+  name: "termsMarkdown",
   components: {
     MarkdownIs,
     MarkdownEn,

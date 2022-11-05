@@ -20,7 +20,7 @@
 import { computed, defineComponent, ref } from "vue";
 
 export default defineComponent({
-  name: "ImageSlider",
+  name: "imageSlider",
   setup() {
     const images = ref([
       "/images/fra-breiduvik.jpg",

@@ -21,7 +21,7 @@
 import { defineComponent } from "vue";
 
 export default defineComponent({
-  name: "MyFooter",
+  name: "myFooter",
 });
 </script>
 <style lang="scss">

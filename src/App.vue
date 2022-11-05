@@ -1,6 +1,5 @@
 <template>
   <div class="main-layout">
-    <!-- <div class="image-container"></div> -->
     <div id="preload">
       <img src="/images/iskyunum1_tinified.avif" rel="preload" />
     </div>
@@ -32,17 +31,12 @@ import MyHeader from "@/components/my-header.vue";
 import MyFooter from "@/components/my-footer.vue";
 import MobileHeader from "@/components/mobile-header.vue";
 import { useI18n } from "vue-i18n";
-// import { store } from "./store/store";
-// import { fetchWeather } from "./composables/fetchWeather";
-// import { IWeather } from "@/interfaces/weather";
 
 export default defineComponent({
-  name: "App",
+  name: "GlacierParadise",
   components: { MyHeader, MyFooter, MobileHeader },
   setup() {
     const { t } = useI18n({ useScope: "global" });
-
-    // fetchWeather().then((weather: IWeather) => store.weather = weather)
 
     const options = { capture: true };
     let innerWidth = ref(window.innerWidth);
@@ -94,7 +88,6 @@ div#preload {
   width: 100%;
 }
 
-//TODO: fix footer when using the router
 .footer {
   z-index: 1;
 }

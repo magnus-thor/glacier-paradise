@@ -8,7 +8,7 @@
 import { defineComponent, onMounted } from "vue";
 
 export default defineComponent({
-  name: "ScrollingBgImage",
+  name: "scrollingBgImage",
   setup() {
     const ua = navigator.userAgent;
 

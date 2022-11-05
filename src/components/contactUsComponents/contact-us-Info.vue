@@ -10,16 +10,12 @@
 import { defineComponent } from 'vue'
 
 export default defineComponent({
+  name: "contactUsInfo",
 	props: {
 		iconName: String,
 		header: String,
 		paragraphs: Array<String>,
 	},
-	setup() {
-
-
-		return {}
-	}
 })
 </script>
 

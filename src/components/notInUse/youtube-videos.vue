@@ -15,7 +15,7 @@
 import { defineComponent } from "vue";
 
 export default defineComponent({
-  name: "YoutubeVideo",
+  name: "youtubeVideo",
 });
 </script>
 <style lang="scss"></style>
