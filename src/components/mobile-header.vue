@@ -17,7 +17,7 @@
         />
       </div>
       <div class="bm-overlay">
-        <Slide :closeOnNavigation="closeOnNavigation" right width="180">
+        <Slide closeOnNavigation="true" right width="180">
           <template v-for="locale in $i18n.availableLocales">
             <button
               :key="`locale-${locale}`"
@@ -42,82 +42,21 @@
 </template>
 
 <script lang="ts">
-import { onIntersect } from "@/composables/onIntersect";
-import { computed, defineComponent, onMounted, ref } from "vue";
-import { useI18n } from "vue-i18n";
-import { useRoute } from "vue-router";
-// @ts-expect-error TODO fix
+import { setupHeader } from "@/composables/headerShared";
+import { defineComponent } from "vue";
 import { Slide } from "vue3-burger-menu";
 
 export default defineComponent({
   name: "mobileHeader",
   components: { Slide },
   setup() {
-    let { locale } = useI18n();
-    const route = useRoute();
-    const routes = ref([
-      {
-        linkTo: "/",
-        nameTranslationKey: "header.navLinks.home",
-      },
-      {
-        linkTo: "/about",
-        nameTranslationKey: "header.navLinks.about",
-      },
-      {
-        linkTo: "/contactUs",
-        nameTranslationKey: "header.navLinks.contact",
-      },
-      {
-        linkTo: "/terms",
-        nameTranslationKey: "header.navLinks.terms",
-      },
-    ]);
-
-    const scrollRef = ref<HTMLElement>();
-
-    const observer = ref({});
-    let shouldCenterLogo = true;
-
-    const onEnter = () => {
-      if (route.path === "/") {
-        document.getElementById("header").classList.remove("header-background");
-        if (shouldCenterLogo)
-          document.getElementById("header-logo").classList.add("center-logo");
-      }
-    };
-
-    const onExit = () => {
-      if (route.path === "/") {
-        document.getElementById("header").classList.add("header-background");
-        if (shouldCenterLogo) {
-          const headerLogo = document.getElementById("header-logo");
-          headerLogo.classList.remove("center-logo");
-          shouldCenterLogo = false;
-        }
-      }
-    };
-
-    onMounted(() => {
-      observer.value = onIntersect(scrollRef.value, onEnter, onExit, false);
-    });
-
-    const showCenterLogo = computed(() => {
-      return route.path === "/" && shouldCenterLogo;
-    });
-
-    const changeLocale = (lang: string) => {
-      locale.value = lang;
-    };
-
-    const closeOnNavigation = ref(true);
+    const { routes, scrollRef, changeLocale, showCenterLogo } = setupHeader();
 
     return {
       routes,
       scrollRef,
       changeLocale,
       showCenterLogo,
-      closeOnNavigation,
     };
   },
 });

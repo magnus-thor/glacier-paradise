@@ -14,7 +14,7 @@
 
 <script lang="ts">
 import { defineComponent, ref } from "vue";
-import { tours } from "@/assets/tours/tours";
+import { tours } from "@/assets/tours/tours-home-info";
 import Tour from "./tour.vue";
 
 export default defineComponent({

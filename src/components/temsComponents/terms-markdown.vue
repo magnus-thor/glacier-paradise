@@ -5,9 +5,7 @@
 </template>
 <script lang="ts">
 import { computed, defineComponent } from "vue";
-// @ts-expect-error TODO fix
 import { VueComponent as MarkdownIs } from "@/assets/md/terms_is.md";
-// @ts-expect-error TODO fix
 import { VueComponent as MarkdownEn } from "@/assets/md/terms_en.md";
 import { useI18n } from "vue-i18n";
 
