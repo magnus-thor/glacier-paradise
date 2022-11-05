@@ -9,7 +9,7 @@ import { defineComponent } from "vue";
 import TermsMarkdown from "@/components/temsComponents/terms-markdown.vue";
 
 export default defineComponent({
-  name: "Terms",
+  name: "TermsView",
   components: { TermsMarkdown },
 });
 </script>

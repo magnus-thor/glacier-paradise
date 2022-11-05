@@ -14,7 +14,7 @@ import Instagram from "@/components/homeComponents/instagram.vue";
 import Images from "@/components/aboutUsComponent/images.vue";
 
 export default defineComponent({
-  name: "About",
+  name: "AboutUsView",
   components: { Instagram, Images },
 });
 </script>

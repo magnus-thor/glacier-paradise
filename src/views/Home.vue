@@ -12,7 +12,7 @@
           </template>
         </Suspense>
       </div>
-      <div ref="toursRef" class="tours--container">
+      <div ref="toursRef" id="tours" class="tours--container">
         <Tours v-if="loadToursComponent" />
       </div>
       <div class="instagram--container">
@@ -29,7 +29,7 @@ import ScrollingBgImage from "@/components/homeComponents/scrolling-bg-image.vue
 import Instagram from "@/components/homeComponents/instagram.vue";
 
 export default defineComponent({
-  name: "HomeComponent",
+  name: "HomeView",
   components: {
     Tours: defineAsyncComponent(
       () => import("@/components/homeComponents/tours.vue")
@@ -71,9 +71,12 @@ export default defineComponent({
 .page {
   overflow: hidden;
   position: relative;
+
   h1 {
     z-index: 1;
-    margin-top: 25%;
+    margin-top: 25rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
     color: white;
   }
 }

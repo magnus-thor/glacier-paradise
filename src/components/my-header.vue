@@ -16,15 +16,39 @@
           alt="Glacier paradise logo"
         />
       </div>
-      <div class="nav-routes">
-        <template v-for="(route, index) in routes">
-          <nav class="item">
-            <router-link :to="route.linkTo">{{
-              $t(route.nameTranslationKey)
-            }}</router-link>
-          </nav>
-        </template>
-      </div>
+
+      <nav>
+        <div class="nav-routes" ref="toursRef">
+          <template v-for="route in routes">
+            <div class="item">
+              <template v-if="route.linkTo !== '/tours'">
+                <router-link
+                  :to="route.linkTo"
+                  @click="displaySubRoutes = false"
+                  >{{ $t(route.nameTranslationKey) }}</router-link
+                >
+              </template>
+              <template v-else>
+                <button
+                  class="nav-button bottom-border"
+                  @click="displaySubRoutes = true"
+                  @mouseover="displaySubRoutes = true"
+                >
+                  {{ $t(route.nameTranslationKey) }}
+                </button>
+              </template>
+            </div>
+          </template>
+        </div>
+        <div class="sub-routes" v-show="displaySubRoutes">
+          <template v-for="tourRoute in tourRoutes">
+            <router-link class="sub-route" :to="tourRoute.linkTo"
+              >TBD</router-link
+            >
+          </template>
+        </div>
+      </nav>
+
       <div class="locale-changer">
         <template v-for="locale in $i18n.availableLocales">
           <button
@@ -41,6 +65,7 @@
   </header>
 </template>
 <script lang="ts">
+import useDetectOutsideClick from "@/composables/detectClickOutside";
 import { onIntersect } from "@/composables/onIntersect";
 import { computed, defineComponent, onMounted, ref } from "vue";
 import { useI18n } from "vue-i18n";
@@ -58,6 +83,10 @@ export default defineComponent({
         nameTranslationKey: "header.navLinks.home",
       },
       {
+        linkTo: "/tours",
+        nameTranslationKey: "header.navLinks.tours",
+      },
+      {
         linkTo: "/about",
         nameTranslationKey: "header.navLinks.about",
       },
@@ -70,6 +99,25 @@ export default defineComponent({
         nameTranslationKey: "header.navLinks.terms",
       },
     ]);
+
+    const tourRoutes = ref([
+      {
+        linkTo: "/tours/snowcat",
+        nameTranslationKey: "header.navLinks.home",
+      },
+      {
+        linkTo: "/tours/midnight-sun",
+        nameTranslationKey: "header.navLinks.tours",
+      },
+      {
+        linkTo: "/tours/others",
+        nameTranslationKey: "header.navLinks.about",
+      },
+    ]);
+
+    const toursRef = ref();
+
+    const displaySubRoutes = ref(false);
 
     const scrollRef = ref<HTMLElement>();
 
@@ -107,7 +155,19 @@ export default defineComponent({
       locale.value = lang;
     };
 
-    return { routes, scrollRef, changeLocale, showCenterLogo };
+    useDetectOutsideClick(toursRef, () => {
+      displaySubRoutes.value = false;
+    });
+
+    return {
+      routes,
+      tourRoutes,
+      scrollRef,
+      changeLocale,
+      showCenterLogo,
+      displaySubRoutes,
+      toursRef,
+    };
   },
 });
 </script>
@@ -116,20 +176,6 @@ export default defineComponent({
 
 .header-background {
   background-color: $dark_grey;
-
-  // .nav-routes .item {
-  //   a {
-  //     color: $yellow;
-  //   }
-
-  //   a:hover {
-  //     color: $white;
-  //   }
-
-  //   a.router-link-active {
-  //     color: $white;
-  //   }
-  // }
 
   .header-logo img {
     width: 100%;
@@ -145,8 +191,23 @@ export default defineComponent({
   .item {
     padding-right: 2rem;
 
-    a {
+    button.nav-button {
+      background: none;
+      color: inherit;
+      border: none;
+      padding: 0;
+      font: inherit;
+      cursor: pointer;
+      outline: inherit;
+    }
+
+    a,
+    button.nav-button {
       color: $yellow;
+
+      &.bottom-border {
+        border-bottom: 1px solid;
+      }
     }
 
     a:hover {
@@ -159,13 +220,62 @@ export default defineComponent({
   }
 }
 
+.sub-routes {
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid $yellow;
+    top: -5px;
+    left: 70px;
+  }
+
+  margin-top: 0.2rem;
+  margin-left: 1.5rem;
+  display: flex;
+  padding: 0.3rem 0.6rem;
+  border: 1px solid $yellow;
+  border-radius: 5%;
+  width: fit-content;
+
+  a,
+  button.nav-button {
+    color: $yellow;
+  }
+
+  a:hover,
+  button.nav-button:hover {
+    color: $white;
+  }
+
+  a.router-link-active {
+    color: $light_grey;
+  }
+
+  .sub-route + .sub-route {
+    margin-left: 1rem;
+  }
+}
+
+.arrow-up {
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+}
+
 .header {
   position: fixed;
   width: 100%;
   height: 4rem;
-  padding: 1rem 0 0.5rem 0;
+  padding: 2rem 0 0.5rem 0;
   display: flex;
-  align-items: center;
   z-index: 100;
 }
 

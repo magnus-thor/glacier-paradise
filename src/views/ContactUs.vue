@@ -20,7 +20,7 @@ import ContactUsForm from "@/components/contactUsComponents/contact-us-form.vue"
 import ContactUsInfo from "@/components/contactUsComponents/contact-us-Info.vue";
 
 export default defineComponent({
-  name: "ContactUs",
+  name: "ContactUsView",
   components: { ContactUsForm, ContactUsHeader, ContactUsInfo },
   setup() {
     const contactUsInfo = [

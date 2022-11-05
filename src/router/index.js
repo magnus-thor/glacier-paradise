@@ -4,6 +4,7 @@ const Home = () => import("@/views/Home.vue");
 const About = () => import("@/views/About.vue");
 const ContactUs = () => import("@/views/ContactUs.vue");
 const Terms = () => import("@/views/Terms.vue");
+const Tours = () => import("@/views/Tours.vue");
 
 const routes = [
   {
@@ -43,15 +44,33 @@ const routes = [
     },
   },
   {
-    path: "/terms",
-    name: "Terms",
-    component: Terms,
+    path: "/tours",
+    name: "Tours",
+    component: Tours,
     meta: {
       index: 4,
       enterClass: "",
       leaveClass: "",
       title: "",
       description: "4",
+    },
+    children: [
+      {
+        path: "/snowCat",
+        name: "Snow cat tour",
+      },
+    ],
+  },
+  {
+    path: "/terms",
+    name: "Terms",
+    component: Terms,
+    meta: {
+      index: 5,
+      enterClass: "",
+      leaveClass: "",
+      title: "",
+      description: "5",
     },
   },
 ];
