@@ -1,22 +1,22 @@
 <template>
   <div class="page">
     <div class="home">
-      <ScrollingBgImage />
+      <scrolling-bg-image />
       <h1>Special sightseeing tours of Snæfellsjökull</h1>
       <div class="full"></div>
       <div class="glacier-info--container">
         <Suspense>
-          <GlacierInfo />
+          <glacier-info />
           <template #fallback>
             <h1>TODO: create fallback skeleton</h1>
           </template>
         </Suspense>
       </div>
       <div ref="toursRef" id="tours" class="tours--container">
-        <Tours v-if="loadToursComponent" />
+        <tours v-if="loadToursComponent" />
       </div>
       <div class="instagram--container">
-        <Instagram v-if="loadInstagramComponent" />
+        <instagram v-if="loadInstagramComponent" />
       </div>
     </div>
   </div>

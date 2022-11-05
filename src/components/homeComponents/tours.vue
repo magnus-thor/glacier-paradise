@@ -1,7 +1,7 @@
 <template>
   <div class="tours">
     <template v-for="(tour, index) in allTours">
-      <Tour
+      <tour
         :image="{ src: tour.imageSrc, alt: $t(tour.imageAlt) }"
         :card="{ header: $t(tour.cardHeader), text: $t(tour.cardText) }"
         :link="{ text: $t(tour.linkText), href: tour.linkHref }"
@@ -14,7 +14,7 @@
 
 <script lang="ts">
 import { defineComponent, ref } from "vue";
-import { tours } from "@/assets/tours/tours-home-info";
+import { tours } from "@/assets/tours-info/tours-home-info";
 import Tour from "./tour.vue";
 
 export default defineComponent({

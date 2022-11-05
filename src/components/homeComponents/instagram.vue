@@ -10,7 +10,6 @@ import { defineComponent, onMounted } from "vue";
 export default defineComponent({
   name: "instagram",
   setup() {
-    console.log("IG Setup");
     onMounted(() => {
       window.beholdWidgets.initialize();
     });

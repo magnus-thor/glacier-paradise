@@ -2,7 +2,7 @@
   <div class="page">
     <!-- <div>{{ $t("aboutUs.text") }}</div> -->
 
-    <Images />
+    <images />
 
     <!-- <Instagram /> -->
   </div>
@@ -10,12 +10,11 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import Instagram from "@/components/homeComponents/instagram.vue";
 import Images from "@/components/aboutUsComponent/images.vue";
 
 export default defineComponent({
   name: "AboutUsView",
-  components: { Instagram, Images },
+  components: { Images },
 });
 </script>
 <style lang="scss"></style>

@@ -5,6 +5,12 @@ const About = () => import("@/views/About.vue");
 const ContactUs = () => import("@/views/ContactUs.vue");
 const Terms = () => import("@/views/Terms.vue");
 const Tours = () => import("@/views/Tours.vue");
+const SnowCatTour = () =>
+  import("@/components/tourComponents/snow-cat-tour.vue");
+const MidnightSunTour = () =>
+  import("@/components/tourComponents/midnight-sun-tour.vue");
+const OtherTours = () => import("@/components/tourComponents/other-tours.vue");
+const TourCards = () => import("@/components/tourComponents/tour-cards.vue");
 
 const routes = [
   {
@@ -45,7 +51,6 @@ const routes = [
   },
   {
     path: "/tours",
-    name: "Tours",
     component: Tours,
     meta: {
       index: 4,
@@ -56,8 +61,52 @@ const routes = [
     },
     children: [
       {
-        path: "/snowCat",
+        path: "",
+        name: "Tour cards",
+        component: TourCards,
+        meta: {
+          index: 4,
+          enterClass: "",
+          leaveClass: "",
+          title: "",
+          description: "3",
+        },
+      },
+      {
+        path: "snow-cat",
         name: "Snow cat tour",
+        component: SnowCatTour,
+        meta: {
+          index: 4,
+          enterClass: "",
+          leaveClass: "",
+          title: "",
+          description: "3",
+        },
+      },
+      {
+        path: "midnight-sun",
+        name: "Midnight sun tour",
+        component: MidnightSunTour,
+        meta: {
+          index: 4,
+          enterClass: "",
+          leaveClass: "",
+          title: "",
+          description: "3",
+        },
+      },
+      {
+        path: "other",
+        name: "Other tours",
+        component: OtherTours,
+        meta: {
+          index: 4,
+          enterClass: "",
+          leaveClass: "",
+          title: "",
+          description: "3",
+        },
       },
     ],
   },
@@ -91,9 +140,14 @@ router.afterEach((to, from) => {
   const FadeInLeft = "animate__animated animate__fadeInLeft";
   const FadeOutLeft = "animate__animated animate__fadeOutLeft";
   const FadeOutRight = "animate__animated animate__fadeOutRight";
+  const samePageLeave = "animate__animated animate__backOutDown";
+  const samePageEnter = "animate__animated animate__fadeInDown";
   if (to.meta.index > from.meta.index) {
     to.meta.enterClass = FadeInRight;
     to.meta.leaveClass = FadeOutLeft;
+  } else if (to.meta.index === from.meta.index) {
+    to.meta.enterClass = samePageEnter;
+    to.meta.leaveClass = samePageLeave;
   } else {
     to.meta.enterClass = FadeInLeft;
     to.meta.leaveClass = FadeOutRight;

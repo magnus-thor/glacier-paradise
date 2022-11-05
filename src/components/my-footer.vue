@@ -25,13 +25,20 @@ export default defineComponent({
 });
 </script>
 <style lang="scss">
+@import "@/assets/base.scss";
+
 .footer__container {
   border: 1px solid;
   height: 5rem;
+  background-color: $dark_grey;
+  align-items: center;
+  display: flex;
+  flex-direction: row-reverse;
 }
 
 .logo {
-  padding-left: 2rem;
+  padding-right: 2rem;
+
   img {
     width: 30px;
     height: auto;

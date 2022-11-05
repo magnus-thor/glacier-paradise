@@ -1,6 +1,4 @@
 <template>
-  <!-- eslint-disable  -->
-
   <swiper
     class="image-slider"
     :modules="modules"
