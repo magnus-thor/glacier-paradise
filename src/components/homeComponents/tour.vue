@@ -20,6 +20,7 @@
         it as possible. The snow-cats used for the tour are specially equipped
         so travellers can enjoy the scenery along the way.
       </p>
+      <router-link :to="`/tours/${link.href}`">Read more</router-link>
     </div>
   </div>
 </template>

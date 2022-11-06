@@ -1,10 +1,8 @@
-$light_grey: #939493;
-$grey: #808081;
-$dark_grey: #363635;
-$white: #dadada;
-$yellow: #b99e33;
+@import "./variables.scss";
 
-$small_screen: 780px;
+body {
+  font-family: sans-serif;
+}
 
 html,
 body,
@@ -17,13 +15,23 @@ h6,
 p {
   margin: 0;
   padding: 0;
-  font-family: "Be Vietnam Pro", sans-serif;
 }
 
 p {
-  // font-family: "Be Vietnam Pro", sans-serif;
-  font-style: normal;
-  font-weight: 100;
+  font-family: sans-serif;
+  // font-family: sans-serif;
+  // font-family: $font-BeVietnamPro-Bold;
+
+  // font-weight: 100;
+  // font-style: normal;
+  // font-stretch: normal;
+  // line-height: initial;
+
+  font-weight: thin;
+  // font-style: normal;
+  // font-stretch: normal;
+  // line-height: initial;
+  // font-size: 48px;
 }
 
 .bm-overlay {

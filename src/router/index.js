@@ -5,8 +5,8 @@ const About = () => import("@/views/About.vue");
 const ContactUs = () => import("@/views/ContactUs.vue");
 const Terms = () => import("@/views/Terms.vue");
 const Tours = () => import("@/views/Tours.vue");
-const SnowCatTour = () =>
-  import("@/components/tourComponents/snow-cat-tour.vue");
+const TopOfTheDiamondTour = () =>
+  import("@/components/tourComponents/top-of-the-diamond-tour.vue");
 const MidnightSunTour = () =>
   import("@/components/tourComponents/midnight-sun-tour.vue");
 const OtherTours = () => import("@/components/tourComponents/other-tours.vue");
@@ -75,7 +75,7 @@ const routes = [
       {
         path: "snow-cat",
         name: "Snow cat tour",
-        component: SnowCatTour,
+        component: TopOfTheDiamondTour,
         meta: {
           index: 4,
           enterClass: "",
