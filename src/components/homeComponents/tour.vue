@@ -20,7 +20,9 @@
         it as possible. The snow-cats used for the tour are specially equipped
         so travellers can enjoy the scenery along the way.
       </p>
-      <router-link :to="`/tours/${link.href}`">Read more</router-link>
+      <router-link class="router-link" :to="`/tours/${link.href}`">{{
+        $t("links.linkText")
+      }}</router-link>
     </div>
   </div>
 </template>
@@ -84,21 +86,38 @@ export default defineComponent({
 
   h3 {
     text-align: center;
+    padding-top: 0.5rem;
+    border-bottom: 4px solid $light_grey;
   }
 
   p {
     padding: 2rem;
+
+    + p {
+      padding-top: 0;
+    }
   }
 
   .tour--image {
     height: 10rem;
     width: 70%;
+    padding-right: 1rem;
 
     img {
       width: 100%;
       height: 100%;
       object-fit: cover;
     }
+  }
+
+  .tour--text {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .router-link {
+    color: $light_grey;
   }
 
   @media screen and (min-width: $small_screen) {
@@ -113,9 +132,6 @@ export default defineComponent({
     .tour--text {
       padding: 1rem;
       width: 60%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
     }
 
     .tour--image {

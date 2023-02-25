@@ -64,17 +64,13 @@ export default defineComponent({
       width: 100%;
     }
 
-    .name,
-    .email,
-    .subject {
-      margin-right: 2%;
-    }
-
     .message {
       margin-top: 1rem;
 
       textarea {
+        width: 99%;
         width: -webkit-fill-available;
+        width: -moz-available;
         height: 10rem;
       }
     }
@@ -97,6 +93,7 @@ export default defineComponent({
 
         input {
           width: -webkit-fill-available;
+          width: -moz-available;
         }
       }
 

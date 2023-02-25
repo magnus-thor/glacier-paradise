@@ -25,35 +25,12 @@ const routes = [
       description: "1", // TODO Agnes: add a description of the website/page -> https://www.seobility.net/en/wiki/Meta_Description
     },
   },
-  {
-    path: "/about",
-    name: "About",
-    component: About,
-    meta: {
-      index: 2,
-      enterClass: "",
-      leaveClass: "",
-      title: "",
-      description: "2",
-    },
-  },
-  {
-    path: "/contactUs",
-    name: "ContactUs",
-    component: ContactUs,
-    meta: {
-      index: 3,
-      enterClass: "",
-      leaveClass: "",
-      title: "",
-      description: "3",
-    },
-  },
+
   {
     path: "/tours",
     component: Tours,
     meta: {
-      index: 4,
+      index: 2,
       enterClass: "",
       leaveClass: "",
       title: "",
@@ -65,7 +42,7 @@ const routes = [
         name: "Tour cards",
         component: TourCards,
         meta: {
-          index: 4,
+          index: 2,
           enterClass: "",
           leaveClass: "",
           title: "",
@@ -77,7 +54,7 @@ const routes = [
         name: "Snow cat tour",
         component: TopOfTheDiamondTour,
         meta: {
-          index: 4,
+          index: 2,
           enterClass: "",
           leaveClass: "",
           title: "",
@@ -89,7 +66,7 @@ const routes = [
         name: "Midnight sun tour",
         component: MidnightSunTour,
         meta: {
-          index: 4,
+          index: 2,
           enterClass: "",
           leaveClass: "",
           title: "",
@@ -109,6 +86,30 @@ const routes = [
         },
       },
     ],
+  },
+  {
+    path: "/about",
+    name: "About",
+    component: About,
+    meta: {
+      index: 3,
+      enterClass: "",
+      leaveClass: "",
+      title: "",
+      description: "2",
+    },
+  },
+  {
+    path: "/contactUs",
+    name: "ContactUs",
+    component: ContactUs,
+    meta: {
+      index: 4,
+      enterClass: "",
+      leaveClass: "",
+      title: "",
+      description: "3",
+    },
   },
   {
     path: "/terms",

@@ -1,4 +1,7 @@
 {
+  "home": {
+    "header": "Special sightseeing tours of Snæfellsjökull"
+  },
   "aboutUs": {
     "text": "english text"
   },
@@ -23,6 +26,9 @@
       "contact": "Contact Us",
       "terms": "Terms"
     }
+  },
+  "links": {
+    "linkText": "Read more"
   },
   "glacierInfo": "Discover the mystical powers of the magnificent Snæfellsjökull. Come along on this fantastic tour of a glacier that sits on top of a 700.000-year-old stratovolcano. Snæfellsjökull is one of the most famous sites in Iceland both the glacier and the area around is said to hold mystical energy, the feeling of standing on a glacier which sits above a mighty volcano is second to none. The incredible views from the glacier will provide fantastic photo opportunities and lasting memories. Those looking for an exciting adventure should not miss this excursion. "
 }

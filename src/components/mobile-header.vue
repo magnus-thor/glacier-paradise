@@ -17,7 +17,7 @@
         />
       </div>
       <div class="bm-overlay">
-        <Slide closeOnNavigation="true" right width="180">
+        <Slide :closeOnNavigation="true" right width="180">
           <template v-for="locale in $i18n.availableLocales">
             <button
               :key="`locale-${locale}`"

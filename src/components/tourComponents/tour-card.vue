@@ -1,161 +1,141 @@
 <template>
-  <div
-    @mouseenter="displayCardContent = true"
-    @mouseleave="displayCardContent = false"
-    class="card"
-    :style="`background-image: url(${image.src}) `"
-  >
-    <div class="card__info">
-      <h2 class="card__header">{{ card.header }}</h2>
-      <transition name="imageFade" mode="out-in">
-        <div v-if="displayCardContent" class="info--item card__duration">
-          <div class="icon">
-            <v-icon name="io-time-outline" scale="2" />
+  <div class="card">
+    <div class="card__wrapper">
+      <div class="card__image"></div>
+      <div class="card__content">
+        <h2>{{ card.header }}</h2>
+        <p>{{ card.text }}</p>
+        <div class="card__info">
+          <div>
+            <p>
+              <strong>Duration:</strong>
+            </p>
+            <p>
+              <strong>{{ info.duration }}</strong>
+            </p>
           </div>
           <div>
             <p>
-              <strong>{{ $t("cards.shared.duration") }}</strong>
+              <strong>Departure:</strong>
             </p>
-            <p>{{ info.duration }} {{ $t("cards.shared.hours") }}</p>
-          </div>
-        </div>
-      </transition>
-      <transition name="imageFade" mode="out-in">
-        <div v-if="displayCardContent" class="info--item card__departure">
-          <div class="icon">
-            <v-icon name="fa-bus" scale="2" />
-          </div>
-          <div>
             <p>
-              <strong>{{ $t("cards.shared.departure") }}</strong>
+              <strong>{{ info.departure }}</strong>
             </p>
-            <p>{{ info.departure }}</p>
           </div>
         </div>
-      </transition>
-      <transition name="imageFade" mode="out-in">
-        <div v-if="displayCardContent" class="card__link">
-          <router-link :to="`/tours/${link.href}`">Read more</router-link>
-        </div>
-      </transition>
+        <nav class="nav__link">
+          <router-link :to="link.href">{{ $t(link.text) }}</router-link>
+        </nav>
+      </div>
     </div>
   </div>
 </template>
 
-<script lang="ts">
-import { defineComponent, PropType, ref } from "vue";
-import { CardImage, CardInfo, CardLink, CardText } from "@/interfaces/props";
-export default defineComponent({
-  name: "card",
-  props: {
-    image: {
-      required: true,
-      type: Object as PropType<CardImage>,
-    },
-    card: {
-      required: true,
-      type: Object as PropType<CardText>,
-    },
-    link: {
-      required: true,
-      type: Object as PropType<CardLink>,
-    },
-    info: {
-      required: true,
-      type: Object as PropType<CardInfo>,
-    },
-    cardIndex: Number,
+<script lang="ts" setup>
+import { CardText, CardLink, CardInfo } from "@/interfaces/props";
+import { PropType } from "vue";
+
+const props = defineProps({
+  image: {
+    required: true,
+    type: String,
+    default: "",
   },
-  setup(props) {
-    const displayCardContent = ref(false);
-    return { displayCardContent };
+  card: {
+    required: true,
+    type: Object as PropType<CardText>,
   },
+  link: {
+    required: true,
+    type: Object as PropType<CardLink>,
+  },
+  info: {
+    required: true,
+    type: Object as PropType<CardInfo>,
+  },
+  cardIndex: Number,
 });
 </script>
 
 <style lang="scss" scoped>
+@import "@/assets/base.scss";
+
 .card {
-  width: 26rem;
-  height: 20rem;
-  border: 1px inset grey;
-  box-shadow: 5px 5px grey;
-  border-radius: 2%;
-  background-size: cover;
-  padding: 1rem;
-  &__info {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
-    grid-template-rows: repeat(10, 2rem);
-    padding: 1rem;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+
+  @media screen and (min-width: $small_screen) {
+    height: 20rem;
+    width: 35rem;
   }
+  // border: 1px solid black;
+  // border-radius: 4%;
+
   h2 {
-    // padding-bottom: 1rem;
+    font-size: 18px;
+    margin-bottom: 1rem;
   }
-  // .margin-left-right {
-  //   margin-left: 1rem;
-  //   margin-right: 1rem;
-  // }
-  .card__header {
-    grid-row: 0 / 3;
-    grid-column: 1 / 4;
-    // grid-area: cardHeader;
-    // margin-bottom: 1rem;
+
+  p {
+    font-size: 14px;
   }
-  .card__departure {
-    grid-row: 4 / 7;
-    grid-column: 1 / 2;
+}
+
+$card-height-lg-screen: 18rem;
+
+.card__wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+
+  @media screen and (min-width: $small_screen) {
+    flex-direction: row;
   }
-  .card__duration {
-    grid-row: 4 / 7;
-    grid-column: 3 / 4;
+}
+
+.card__image {
+  width: 90%;
+  background-image: v-bind("props.image");
+  background-repeat: round;
+  box-sizing: border-box;
+
+  @media screen and (max-width: $small_screen) {
+    height: 15rem;
   }
-  .card__link {
-    grid-row: 10 / 10;
-    grid-column: 2 / 3;
-    justify-self: center;
+
+  @media screen and (min-width: $small_screen) {
+    width: 20rem;
+    height: $card-height-lg-screen;
+    border-start-start-radius: 5%;
+    border-end-start-radius: 5%;
   }
-  strong {
-    font-weight: bold;
+}
+
+.card__content {
+  width: 90%;
+  background: white;
+  padding: 1rem;
+  box-sizing: border-box;
+
+  @media screen and (min-width: $small_screen) {
+    width: 20rem;
+    height: $card-height-lg-screen;
+    border-start-end-radius: 6%;
+    border-end-end-radius: 6%;
   }
-  &--item {
+
+  .card__info {
+    margin-top: 1rem;
     display: flex;
-    align-items: center;
-    p {
-      margin: 0;
-    }
+    justify-content: space-evenly;
   }
-  .icon {
-    margin-right: 0.5rem;
-  }
-  // .card--header {
-  //   margin-top: 1rem;
-  // }
-  // .bottom-border {
-  //   padding-bottom: 0.5rem;
-  //   border-bottom: 1px inset grey; //TODO: swap to correct colors.
-  // }
-  // .link {
-  //   height: 3rem;
-  //   display: flex;
-  //   justify-content: center;
-  //   align-items: center;
-  //   text-decoration: none;
-  //   &:hover {
-  //     background-color: green; //TODO: swap to correct colors.
-  //     cursor: pointer;
-  //   }
-  // }
 }
-.imageFade-enter-active,
-.imageFade-leave-active {
-  transition: opacity 0.5s ease;
-}
-.imageFade-enter-from,
-.imageFade-leave-to {
-  opacity: 0;
+
+.nav__link {
+  margin-top: 0.6rem;
+  text-align: center;
 }
 </style>

@@ -1,5 +1,7 @@
 {
-  "message": "PRUFA I18N",
+  "home": {
+    "header": "Sérstakar skoðunarferðir um Snæfellsjökul"
+  },
   "aboutUs": {
     "text": "íslenskur texti"
   },
@@ -24,6 +26,9 @@
       "contact": "Hafa Samband",
       "terms": "Skilmálar"
     }
+  },
+  "links": {
+    "linkText": "Lestu meira"
   },
   "glacierInfo": "Afhjúpaðu leyndardóma Snæfellsjökuls, Komdu með í þessa magnþrungnu ferð um jökul sem að situr ofan á virkri eldstöð sem að á sér 700 þúsund ára sögu. Snæfellsjökull er einn af þekktari jöklum landsins og sést hann víða að. Bæði jökullin og svæðið í kring er talið geyma orku og er tilfinningin að standa á jökli sem að situr ofan á voldugu eldfjalli óviðjafnanleg. Magnaða útsýnið af jöklinum veitir frábær ljósmynda tækifæri og minningar. Þeir sem að leita að spennandi ævintýrum ættu ekki láta þessa ferð fram hjá sér fara. "
 }

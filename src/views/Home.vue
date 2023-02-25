@@ -2,7 +2,7 @@
   <div class="page">
     <div class="home">
       <scrolling-bg-image />
-      <h1>Special sightseeing tours of Snæfellsjökull</h1>
+      <h1>{{ $t("home.header") }}</h1>
       <div class="full"></div>
       <div class="glacier-info--container">
         <Suspense>
