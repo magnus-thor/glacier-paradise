@@ -7,13 +7,11 @@
       <div class="glacier-info--container">
         <Suspense>
           <glacier-info />
-          <template #fallback>
-            <h1>TODO: create fallback skeleton</h1>
-          </template>
+          <template #fallback> Some fall back </template>
         </Suspense>
       </div>
-      <div ref="toursRef" id="tours" class="tours--container">
-        <tours v-if="loadToursComponent" />
+      <div ref="cardsRef" id="tours" class="cards--container">
+        <cards v-if="loadCardsComponent" />
       </div>
       <div class="instagram--container">
         <instagram v-if="loadInstagramComponent" />
@@ -31,15 +29,15 @@ import Instagram from "@/components/homeComponents/instagram.vue";
 export default defineComponent({
   name: "HomeView",
   components: {
-    Tours: defineAsyncComponent(
-      () => import("@/components/homeComponents/tours.vue")
+    Cards: defineAsyncComponent(
+      () => import("@/components/homeComponents/cards.vue")
     ),
     GlacierInfo,
     ScrollingBgImage,
     Instagram,
   },
   setup() {
-    const toursRef = ref<HTMLElement>(null);
+    const cardsRef = ref<HTMLElement>(null);
     const loadToursComponent = ref(false);
     const loadInstagramComponent = ref(false);
     const observer = ref({});
@@ -53,16 +51,16 @@ export default defineComponent({
 
     onMounted(() => {
       observer.value = onIntersect(
-        toursRef.value,
+        cardsRef.value,
         onEnterToursComponent,
         onExitToursComponent
       );
     });
 
     return {
-      loadToursComponent,
+      loadCardsComponent: loadToursComponent,
       loadInstagramComponent,
-      toursRef,
+      cardsRef,
     };
   },
 });
@@ -93,7 +91,7 @@ export default defineComponent({
 }
 
 .videos--container,
-.tours--container,
+.cards--container,
 .instagram--container,
 .glacier-info--container {
   margin-top: 3rem;

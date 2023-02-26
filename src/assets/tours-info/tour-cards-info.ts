@@ -29,4 +29,14 @@ export const tourCards = [
     duration: "4-5",
     departure: "Arnarstapi",
   },
+  {
+    imageSrc: "/images/trodarinn-a-toppnum.jpg",
+    imageAlt: "cards.giftCard.imageAlt",
+    cardHeader: "cards.giftCard.cardHeader",
+    cardText: "cards.giftCard.cardText",
+    linkText: "cards.giftCard.linkText",
+    linkHref: "tours/other",
+    duration: "4-5",
+    departure: "Arnarstapi",
+  },
 ];

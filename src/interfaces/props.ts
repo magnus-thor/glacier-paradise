@@ -6,6 +6,7 @@ interface TourImage {
 interface TourCardText {
   header: string;
   text: string;
+  additionalText?: string;
 }
 
 interface TourLink {

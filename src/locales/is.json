@@ -1,13 +1,7 @@
 {
   "home": {
     "header": "Skoðunarferðir á Snæfellsjökul",
-    "tours": {
-      "topOfTheDiamond": {
-        "header": "",
-        "p1": "",
-        "p2": ""
-      }
-    }
+    "tours": {}
   },
   "aboutUs": {
     "text": "íslenskur texti"

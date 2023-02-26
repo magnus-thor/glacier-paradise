@@ -4,28 +4,31 @@
       <img :src="image.src" :alt="image.alt" />
     </div>
     <div class="tour--text">
-      <h3>{{ $t(card.header) }}</h3>
+      <h3>{{ card.header }}</h3>
       <p>
-        {{ $t(card.text) }}
+        {{ card.text }}
       </p>
-      <router-link class="router-link" :to="`/tours/${link.href}`">{{
-        $t("links.linkText")
-      }}</router-link>
+      <p v-if="card.additionalText">
+        {{ card.additionalText }}
+      </p>
+      <router-link
+        v-if="link.href"
+        class="router-link"
+        :to="`/tours/${link.href}`"
+        >{{ $t("links.linkText") }}</router-link
+      >
+
+      <slot></slot>
     </div>
   </div>
 </template>
 
 <script lang="ts">
-import {
-  TourImage,
-  TourCardText,
-  TourLink,
-  TourInfo,
-} from "@/interfaces/props";
+import { TourImage, TourCardText, TourLink } from "@/interfaces/props";
 import { computed, defineComponent, PropType } from "vue";
 
 export default defineComponent({
-  name: "tour",
+  name: "card",
   props: {
     image: {
       required: true,
