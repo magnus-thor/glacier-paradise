@@ -10,23 +10,33 @@
       <input type="hidden" name="form-name" value="contact-us" />
       <div class="input-fields">
         <div class="name">
-          <label for="text"> Your Name: </label>
+          <label for="text">
+            {{ $t("contactUs.inputFieldLabels.name") }}:
+          </label>
           <input id="text" type="text" name="name" required />
         </div>
         <div class="email">
-          <label for="email"> Your Email: </label>
+          <label for="email">
+            {{ $t("contactUs.inputFieldLabels.email") }}:
+          </label>
           <input id="email" type="email" name="email" required />
         </div>
         <div class="subject">
-          <label for="subject"> Subject: </label>
+          <label for="subject">
+            {{ $t("contactUs.inputFieldLabels.subject") }}:
+          </label>
           <input id="subject" type="text" name="subject" />
         </div>
       </div>
       <div class="message">
-        <label for="message"> Message: </label>
+        <label for="message">
+          {{ $t("contactUs.inputFieldLabels.message") }}:
+        </label>
         <textarea id="message" name="message"></textarea>
       </div>
-      <div class="submit"><button type="submit">Send</button></div>
+      <div class="submit">
+        <button type="submit">{{ $t("contactUs.buttons.send") }}</button>
+      </div>
     </form>
   </div>
 </template>

@@ -18,26 +18,33 @@ import { defineComponent } from "vue";
 import ContactUsHeader from "@/components/contactUsComponents/contact-us-header.vue";
 import ContactUsForm from "@/components/contactUsComponents/contact-us-form.vue";
 import ContactUsInfo from "@/components/contactUsComponents/contact-us-Info.vue";
+import { useI18n } from "vue-i18n";
 
 export default defineComponent({
   name: "ContactUsView",
   components: { ContactUsForm, ContactUsHeader, ContactUsInfo },
   setup() {
-    const contactUsInfo = [
+    const { t } = useI18n({ useScope: "global" });
+
+    const contactUsInfo: {
+      iconName: string;
+      header: string;
+      paragraphs: string[];
+    }[] = [
       {
         iconName: "fa-regular-address-card",
-        header: "Address",
+        header: t("contactUs.info.address.header"),
         paragraphs: ["Samkomuhúsið á Stapa", "356 Snæfellsbær"],
       },
       {
         iconName: "fc-phone-android",
-        header: "Phone",
+        header: t("contactUs.info.phone.header"),
         paragraphs: ["+354 8612844", "+354 8657402"],
       },
       {
         iconName: "fa-regular-clock",
-        header: "Opening period",
-        paragraphs: ["All year round !"],
+        header: t("contactUs.info.openingPeriod.header"),
+        paragraphs: [t("contactUs.info.openingPeriod.paragraphs")],
       },
     ];
 

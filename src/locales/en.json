@@ -1,9 +1,42 @@
 {
   "home": {
-    "header": "Special sightseeing tours of Snæfellsjökull"
+    "header": "Special sightseeing tours of Snæfellsjökull",
+    "tours": {
+      "topOfTheDiamond": {
+        "header": "Top of the Diamond tour",
+        "text": "Discover the mystical powers of the magnificent Snæfellsjökull. Come along on this fantastic tour of a glacier that sits on top of a 700-thousand-year-old stratovolcano. Snæfellsjökull is one of the most famous sites in Iceland both the glacier and the area around is believed to hold mystical energy, the feeling of standing on a glacier which sits above a mighty volcano is second to none.",
+        "imageAlt": "Sunset from the top of Snaefellsjokull"
+      },
+      "midnightSunTour": {
+        "header": "Midnight-sun tour",
+        "text": "Discover the mystical powers of the magnificent Snæfellsjökull. Come along on this fantastic tour of a glacier that sits on top of a 700-thousand-year-old stratovolcano. Snæfellsjökull is one of the most famous sites in Iceland both the glacier and the area around is believed to hold mystical energy, the feeling of standing on a glacier which sits above a mighty volcano is second to none.",
+        "imageAlt": ""
+      }
+    }
   },
   "aboutUs": {
     "text": "english text"
+  },
+  "contactUs": {
+    "header": "Contact us",
+    "preamble": "Any questions",
+    "inputFieldLabels": {
+      "name": "Name",
+      "email": "Email",
+      "subject": "Subject",
+      "message": "Message"
+    },
+    "buttons": {
+      "send": "Send"
+    },
+    "info": {
+      "address": { "header": "Address" },
+      "phone": { "header": "Phone" },
+      "openingPeriod": {
+        "header": "Opening period",
+        "paragraphs": "All year round !"
+      }
+    }
   },
   "cards": {
     "snowCatTour": {

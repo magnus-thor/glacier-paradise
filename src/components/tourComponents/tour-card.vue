@@ -69,8 +69,6 @@ const props = defineProps({
     height: 20rem;
     width: 35rem;
   }
-  // border: 1px solid black;
-  // border-radius: 4%;
 
   h2 {
     font-size: 18px;

@@ -5,7 +5,7 @@
         <card
           :image="`url(${card.imageSrc})`"
           :card="{ header: $t(card.cardHeader), text: $t(card.cardText) }"
-          :link="{ text: $t(card.linkText), href: card.linkHref }"
+          :link="{ text: card.linkText, href: card.linkHref }"
           :info="{ duration: card.duration, departure: card.departure }"
           :cardIndex="index"
         />

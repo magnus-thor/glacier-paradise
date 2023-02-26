@@ -1,8 +1,10 @@
 <template>
   <div class="contact-us-header">
     <div>
-      <p><strong>Any questions?</strong></p>
-      <h1>Contact us</h1>
+      <p>
+        <strong>{{ $t("contactUs.preamble") }}?</strong>
+      </p>
+      <h1>{{ $t("contactUs.header") }}</h1>
     </div>
   </div>
 </template>

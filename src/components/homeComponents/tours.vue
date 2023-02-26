@@ -5,7 +5,6 @@
         :image="{ src: tour.imageSrc, alt: $t(tour.imageAlt) }"
         :card="{ header: $t(tour.cardHeader), text: $t(tour.cardText) }"
         :link="{ text: $t(tour.linkText), href: tour.linkHref }"
-        :info="{ duration: tour.duration, departure: tour.departure }"
         :cardIndex="index"
       />
     </template>

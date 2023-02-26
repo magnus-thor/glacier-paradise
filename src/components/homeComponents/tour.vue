@@ -4,21 +4,9 @@
       <img :src="image.src" :alt="image.alt" />
     </div>
     <div class="tour--text">
-      <h3>Top of the Diamond tour</h3>
+      <h3>{{ $t(card.header) }}</h3>
       <p>
-        Here we will hop on our vehicle and make our way to the foot of the
-        glacier. Alternatively, you can follow our bus in your own car, if it is
-        suitable for F-roads, as we drive a mountain pass along the side of the
-        glacier. This gravel and bumpy F road offer spectacular views of the
-        glacier and the surrounding area and it is a great part of this
-        adventure. Therefor we do advise customers to start the journey with the
-        bus so they can enjoy the scenery along the way.
-      </p>
-      <p>
-        Up on arrival it is time for the real fun to begin. We get on board the
-        snow-cat to start our ascent to the top of the glacier, or as close to
-        it as possible. The snow-cats used for the tour are specially equipped
-        so travellers can enjoy the scenery along the way.
+        {{ $t(card.text) }}
       </p>
       <router-link class="router-link" :to="`/tours/${link.href}`">{{
         $t("links.linkText")
@@ -50,10 +38,6 @@ export default defineComponent({
     link: {
       required: true,
       type: Object as PropType<TourLink>,
-    },
-    info: {
-      required: true,
-      type: Object as PropType<TourInfo>,
     },
     tourIndex: Number,
   },
@@ -87,7 +71,8 @@ export default defineComponent({
   h3 {
     text-align: center;
     padding-top: 0.5rem;
-    border-bottom: 4px solid $light_grey;
+    padding-bottom: 1rem;
+    border-bottom: 4px solid $blue;
   }
 
   p {
@@ -117,7 +102,9 @@ export default defineComponent({
   }
 
   .router-link {
-    color: $light_grey;
+    color: $blue;
+    font-weight: bold;
+    text-decoration: none;
   }
 
   @media screen and (min-width: $small_screen) {

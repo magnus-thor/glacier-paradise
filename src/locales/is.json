@@ -1,9 +1,40 @@
 {
   "home": {
-    "header": "Sérstakar skoðunarferðir um Snæfellsjökul"
+    "header": "Skoðunarferðir á Snæfellsjökul",
+    "tours": {
+      "topOfTheDiamond": {
+        "header": "",
+        "p1": "",
+        "p2": ""
+      }
+    }
   },
   "aboutUs": {
     "text": "íslenskur texti"
+  },
+  "contactUs": {
+    "header": "Hafðu samband",
+    "preamble": "Fyrir nánari upplýsingar",
+    "inputFieldLabels": {
+      "name": "Nafn",
+      "email": "Netfang",
+      "subject": "Viðfangsefni",
+      "message": "Skilaboð"
+    },
+    "buttons": {
+      "send": "Senda"
+    },
+    "info": {
+      "address": {
+        "header": "Heimilisfang",
+        "paragraphs": "Samkomuhúsið á Stapa"
+      },
+      "phone": { "header": "Sími" },
+      "openingPeriod": {
+        "header": "Opnunartími",
+        "paragraphs": "Allt árið !"
+      }
+    }
   },
   "cards": {
     "snowCatTour": {

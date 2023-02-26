@@ -106,7 +106,7 @@ export default defineComponent({
     }
 
     a.router-link-active {
-      color: $light_grey;
+      color: $white;
     }
   }
 }
