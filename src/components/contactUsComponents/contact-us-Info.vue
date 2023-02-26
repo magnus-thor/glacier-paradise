@@ -2,7 +2,7 @@
   <div class="contact-us-info">
     <v-icon :name="iconName" scale="2.5" />
     <h2>{{ header }}:</h2>
-    <p v-for="paragraph in paragraphs">{{ paragraph }}</p>
+    <p v-for="paragraph in paragraphs">{{ $t(paragraph) }}</p>
   </div>
 </template>
 
@@ -14,7 +14,10 @@ export default defineComponent({
   props: {
     iconName: String,
     header: String,
-    paragraphs: Array<String>,
+    paragraphs: {
+      type: Array<string>,
+      default: [],
+    },
   },
 });
 </script>

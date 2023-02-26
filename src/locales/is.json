@@ -1,7 +1,30 @@
 {
   "home": {
     "header": "Skoðunarferðir á Snæfellsjökul",
-    "tours": {}
+    "tours": {
+      "topOfTheDiamond": {
+        "header": "Top of the Diamond tour",
+        "text": "Discover the mystical powers of the magnificent Snæfellsjökull. Come along on this fantastic tour of a glacier that sits on top of a 700-thousand-year-old stratovolcano. Snæfellsjökull is one of the most famous sites in Iceland both the glacier and the area around is believed to hold mystical energy, the feeling of standing on a glacier which sits above a mighty volcano is second to none.",
+        "additionalText": "The incredible views from the top of the glacier will provide fantastic photo opportunities and lasting memories. Those looking for an exciting adventure should not miss this excursion.",
+        "imageAlt": "Sunset from the top of Snaefellsjokull"
+      },
+      "midnightSunTour": {
+        "header": "Midnight-sun tour",
+        "text": "Our “Midnight-sun tour” is an experience like no other. You will witness the incredible views from the top of the glacier bathed in the red, yellow and golden colour of the midnight-sun. As the sun sets and the sky turns into a magnificent palette of colours, we'll take a moment to appreciate the unique experience of standing on a glacier in the light of the midnight sun.",
+        "additionalText": "",
+        "imageAlt": ""
+      },
+      "cabin": {
+        "header": "Cosy cottage",
+        "text": "A cosy cottage in the charming village of Arnarstapi with beautiful ocean and mountain views. Fully equipped cosy getaway which is a great base to explore everything the spectacular Snæfellsnes peninsula has to offer.",
+        "additionalText": "",
+        "imageAlt": "Cozy cabin located in Arnarstapi",
+        "airbnb": {
+          "before": "Available for bookings until July",
+          "after": "Available for bookings after June"
+        }
+      }
+    }
   },
   "aboutUs": {
     "text": "íslenskur texti"
@@ -36,6 +59,12 @@
       "cardText": "Taktu þátt í þessari sérstöku skoðunarferð um hinn dularfulla Snæfellsjökul. Í gegnum fallegt fjallaskarð komum við að jöklinum þar sem þú getur hoppað um borð í okkar eigin appelsínugula snjósleða til að hefja ævintýrið á Snæfellsjökli.",
       "linkText": "Lestu meira",
       "imageAlt": "Sólsetur á toppi Snæfellsjökuls"
+    },
+    "giftCard": {
+      "cardHeader": "Gift card",
+      "cardText": "",
+      "linkText": "Read more",
+      "imageAlt": ""
     },
     "shared": {
       "duration": "Lengd",
