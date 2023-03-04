@@ -13,7 +13,9 @@ export default defineComponent({
     const ua = navigator.userAgent;
 
     onMounted(() => {
+      console.log("onMounted");
       if (/iPad|iPhone|iPod/.test(ua)) {
+        console.log("IS IOS");
         document.getElementById("image").classList.add("ios");
       }
     });
@@ -24,6 +26,8 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
+@import "@/assets/mixins.scss";
+
 .image--container {
   position: absolute;
 }
@@ -36,24 +40,24 @@ export default defineComponent({
   height: 100vh;
   background-size: cover;
   background-image: url(/images/iskyunum1_tinified.avif);
-  animation: slide-small-screen 30s linear;
+  animation: slide-small-screen 10s linear;
   translate: -80% 0;
 
   // TODO: add @media (orientation: landscape) and (orientation: portrait) for the image
 
   &.ios {
     background-size: cover;
-    animation: slide-ios 70s linear;
+    // animation: slide-ios 70s linear;
   }
 
-  @media screen and (min-width: 1024px) {
+  @include for-tablet-portrait-up {
     translate: 0 0;
     -webkit-animation: slide 40s linear;
     animation: slide 40s linear;
 
-    &.ios {
-      animation: slide-ios 30s linear;
-    }
+    // &.ios {
+    //   animation: slide-ios 30s linear;
+    // }
   }
 }
 

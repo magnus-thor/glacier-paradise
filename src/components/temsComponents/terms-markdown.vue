@@ -28,6 +28,7 @@ export default defineComponent({
 </script>
 <style lang="scss">
 @import "@/assets/base.scss";
+@import "@/assets/mixins.scss";
 
 .markdown {
   margin: auto 1rem;
@@ -52,12 +53,12 @@ export default defineComponent({
     }
   }
 
-  @media screen and (min-width: $small_screen) {
+  @include for-tablet-portrait-up {
     margin: auto;
     width: 60%;
   }
 
-  @media screen and (min-width: $medium_screen) {
+  @include for-desktop-up {
     margin: auto;
     width: 40%;
   }

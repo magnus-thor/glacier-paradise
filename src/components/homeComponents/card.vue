@@ -56,6 +56,7 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 @import "@/assets/base.scss";
+@import "@/assets/mixins.scss";
 
 .tour {
   padding: 1rem;
@@ -110,7 +111,7 @@ export default defineComponent({
     text-decoration: none;
   }
 
-  @media screen and (min-width: $small_screen) {
+  @include for-tablet-portrait-up {
     height: max-content;
     flex-direction: row;
     max-width: 1024px;

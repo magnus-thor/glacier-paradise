@@ -49,12 +49,13 @@ export default defineComponent({
 </script>
 <style lang="scss" scoped>
 @import "@/assets/base.scss";
+@import "@/assets/mixins.scss";
 
 .form {
   margin-top: 3rem;
   width: 100%;
 
-  @media screen and (min-width: $small_screen) {
+  @include for-tablet-portrait-up {
     width: 65%;
   }
 
@@ -91,7 +92,7 @@ export default defineComponent({
       }
     }
 
-    @media screen and (min-width: $small_screen) {
+    @include for-tablet-portrait-up {
       .input-fields {
         display: flex;
       }

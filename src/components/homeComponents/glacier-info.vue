@@ -50,6 +50,7 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 @import "@/assets/base.scss";
+@import "@/assets/mixins.scss";
 
 .glacier-info {
   height: max-content;
@@ -66,7 +67,7 @@ export default defineComponent({
     justify-content: space-evenly;
   }
 
-  @media screen and (min-width: $small_screen) {
+  @include for-tablet-portrait-up {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -92,7 +93,7 @@ export default defineComponent({
     margin-right: 1rem;
   }
 
-  @media screen and (min-width: $small_screen) {
+  @include for-tablet-portrait-up {
     > a {
       margin-right: 9rem;
     }
@@ -106,14 +107,14 @@ export default defineComponent({
   justify-content: space-around;
   row-gap: 0.8rem;
 
-  @media screen and (max-width: $small_screen) {
+  @include for-tablet-portrait-down {
     padding-top: 1rem;
     p {
       padding-left: 2rem;
     }
   }
 
-  @media screen and (min-width: $small_screen) {
+  @include for-tablet-portrait-up {
     flex-direction: column;
     align-items: end;
   }

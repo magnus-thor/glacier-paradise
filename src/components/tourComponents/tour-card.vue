@@ -59,13 +59,14 @@ const props = defineProps({
 
 <style lang="scss" scoped>
 @import "@/assets/base.scss";
+@import "@/assets/mixins.scss";
 
 .card {
   height: 100%;
   width: 100%;
   box-sizing: border-box;
 
-  @media screen and (min-width: $small_screen) {
+  @include for-tablet-portrait-up {
     height: 20rem;
     width: 35rem;
   }
@@ -89,7 +90,7 @@ $card-height-lg-screen: 18rem;
   align-items: center;
   box-sizing: border-box;
 
-  @media screen and (min-width: $small_screen) {
+  @include for-tablet-portrait-up {
     flex-direction: row;
   }
 }
@@ -100,11 +101,11 @@ $card-height-lg-screen: 18rem;
   background-repeat: round;
   box-sizing: border-box;
 
-  @media screen and (max-width: $small_screen) {
+  @include for-tablet-portrait-down {
     height: 15rem;
   }
 
-  @media screen and (min-width: $small_screen) {
+  @include for-tablet-portrait-up {
     width: 20rem;
     height: $card-height-lg-screen;
     border-start-start-radius: 5%;
@@ -118,7 +119,7 @@ $card-height-lg-screen: 18rem;
   padding: 1rem;
   box-sizing: border-box;
 
-  @media screen and (min-width: $small_screen) {
+  @include for-tablet-portrait-up {
     width: 20rem;
     height: $card-height-lg-screen;
     border-start-end-radius: 6%;

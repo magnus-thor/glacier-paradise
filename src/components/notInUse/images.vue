@@ -77,6 +77,8 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
+@import "@/assets/mixins.scss";
+
 .image-slider {
   margin: auto;
   height: 30rem;
@@ -93,7 +95,7 @@ export default defineComponent({
     width: 100%;
   }
 
-  @media screen and (min-width: 760px) {
+  @include for-tablet-portrait-up {
     justify-content: center;
   }
 }

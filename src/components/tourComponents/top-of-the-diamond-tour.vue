@@ -86,6 +86,7 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 @import "@/assets/base.scss";
+@import "@/assets/mixins.scss";
 
 .top-of-the-diamond-tour {
   margin-top: 2rem;
@@ -101,7 +102,7 @@ export default defineComponent({
   display: grid;
   grid-template-columns: 1fr;
 
-  @media screen and (min-width: $small-screen) {
+  @include for-tablet-portrait-up {
     grid-template-columns: 50% 50%;
   }
   p {

@@ -51,6 +51,7 @@ export default defineComponent({
 </script>
 <style lang="scss">
 @import "@/assets/base.scss";
+@import "@/assets/mixins.scss";
 
 .contact-us-page {
   margin-top: 10%;
@@ -65,7 +66,7 @@ export default defineComponent({
   display: flex;
   justify-content: space-between;
 
-  @media screen and (min-width: $small_screen) {
+  @include for-tablet-portrait-up {
     width: 65%;
   }
 }

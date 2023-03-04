@@ -30,6 +30,8 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
+@import "@/assets/mixins.scss";
+
 .image--container {
   overflow: hidden;
   // position: relative;
@@ -52,7 +54,7 @@ export default defineComponent({
   // -webkit-animation: slide 30s linear;
   // animation: slide 30s linear;
 
-  @media screen and (min-width: 1366px) {
+  @include for-desktop-up {
     // -webkit-animation: slide 40s linear;
     background-image: url(/images/iskyunum1_tinified.jpg);
     width: 5044px;
