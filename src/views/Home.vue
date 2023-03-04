@@ -67,7 +67,7 @@ export default defineComponent({
 </script>
 <style lang="scss" scoped>
 .page {
-  overflow: hidden;
+  overflow-x: hidden;
   position: relative;
 
   h1 {

@@ -78,6 +78,10 @@ div#preload {
   background-color: $white;
 }
 
+// .main-layout:has(.about-us--wrapper, .markdown) {
+//   background-color: white;
+// }
+
 .content {
   flex: 1 0 auto;
 }

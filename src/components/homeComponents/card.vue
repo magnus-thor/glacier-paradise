@@ -42,11 +42,11 @@ export default defineComponent({
       required: true,
       type: Object as PropType<TourLink>,
     },
-    tourIndex: Number,
+    cardIndex: Number,
   },
   setup(props) {
     const reverseFlow = computed(() => {
-      return props.tourIndex % 2 !== 0;
+      return props.cardIndex % 2 === 0;
     });
 
     return { reverseFlow };

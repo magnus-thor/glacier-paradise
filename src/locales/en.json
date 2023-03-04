@@ -27,7 +27,9 @@
     }
   },
   "aboutUs": {
-    "text": "english text"
+    "company": "Glacier Paradise is a local family business founded in 2022 when the couple Vignir and Kolfinna were offered to buy the snowcats from previous owner Snæfellsnes Excursion. They live in Ólafsvík with three children. They first started working with glacier tours over 20 years ago, they are the third party within the same family who organised tours to Snæfellsjökul.",
+    "vignir": "Vignir comes from Grenivík a small village in the north of Iceland. He  worked at sea in his early 20” and was stationed in Ólafsvík when he met his wife,  longest time has he worked as a  groundwork machine operator. His first trip to Snæfellsjökull was in 2004 and since then he has had one foot on it.",
+    "kolfinna": "Kolfinna is born and raised in Ólafsvík,  She has been working in service most of her adult life, she started working for her Grandmother and Uncle  with  glaciertours and restaurant service in the summer during her teens. During the winter she works at the school in Snæfellsbæ."
   },
   "contactUs": {
     "header": "Contact us",

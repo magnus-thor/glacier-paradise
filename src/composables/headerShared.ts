@@ -63,6 +63,7 @@ export const setupHeader = () => {
 
   const changeLocale = (lang: string) => {
     locale.value = lang;
+    document.documentElement.lang = lang;
   };
 
   return {

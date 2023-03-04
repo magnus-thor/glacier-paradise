@@ -27,7 +27,9 @@
     }
   },
   "aboutUs": {
-    "text": "íslenskur texti"
+    "company": "Glacier Paradise er lítið fjölskyldu fyrirtæki sem stofnað var árið 2022 af hjónunum Vigni og Kolfinnu. Þau búa í Ólafsvík ásamt 3 börnum. Þeirra fyrstu kynni af vinnu  í kringum jöklaferðir var fyrir meira en 20 árum og hafa verið viðloðin ferðirnar síðan. Þau eru þriðji aðili innan sömu fjölskyldu sem að bjóða u ferðir á Snæfellsjökul.",
+    "vignir": "Vignir er upp alinn á Grenivík. Hann starfaði við sjómennsku snemma á tvítugs aldrinum og var á vertíð í Ólafsvík þar sem hann kynnist Kolfinnu. Lengst af hefur hann unnið á vinnuvélum við jarðvegsvinnu. Hann fór í sína fyrstu ferð upp á Snæfellsjökul 2004 og hefur verið með annan fótinn á jöklinum síðan.",
+    "kolfinna": "Kolfinna er fædd og uppalin í Ólafsvík. Hún hefur lengst unnið við þjónustustörf og byrjaði ung að vinna með ömmu sinni og frænda í ferðaþjónustunni Snjófelli sem þá var með ferðir á Snæfellsjökul og matsölustaðinn Arnarbæ á Arnarstapa.  Yfir vetrartímann vinnur hún í Grunnskóla Snæfellsbæjar."
   },
   "contactUs": {
     "header": "Hafðu samband",

@@ -28,13 +28,13 @@ export const cardsInfo: ICardInfo[] = [
     linkText: "",
     linkHref: "",
   },
-  {
-    imageSrc: "images/toppurinn.jpg",
-    imageAlt: "home.tours.topOfTheDiamond.imageAlt",
-    cardHeader: "home.tours.topOfTheDiamond.header",
-    cardText: "home.tours.topOfTheDiamond.text",
-    cardAdditionalText: "",
-    linkText: "links.linkText",
-    linkHref: "other",
-  },
+  // {
+  //   imageSrc: "images/toppurinn.jpg",
+  //   imageAlt: "home.tours.topOfTheDiamond.imageAlt",
+  //   cardHeader: "home.tours.topOfTheDiamond.header",
+  //   cardText: "home.tours.topOfTheDiamond.text",
+  //   cardAdditionalText: "",
+  //   linkText: "links.linkText",
+  //   linkHref: "other",
+  // },
 ];

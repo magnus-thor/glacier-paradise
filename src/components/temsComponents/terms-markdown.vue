@@ -27,7 +27,39 @@ export default defineComponent({
 });
 </script>
 <style lang="scss">
+@import "@/assets/base.scss";
+
 .markdown {
-  padding: 5rem;
+  margin: auto 1rem;
+
+  h1 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  h2 {
+    margin: 1rem auto 0.4rem auto;
+    text-align: left;
+  }
+
+  p {
+    margin: 0 auto;
+    text-align: left;
+
+    &:last-of-type {
+      margin-bottom: 3rem;
+    }
+  }
+
+  @media screen and (min-width: $small_screen) {
+    margin: auto;
+    width: 60%;
+  }
+
+  @media screen and (min-width: $medium_screen) {
+    margin: auto;
+    width: 40%;
+  }
 }
 </style>
