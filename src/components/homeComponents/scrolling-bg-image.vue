@@ -40,15 +40,20 @@ export default defineComponent({
   height: 100vh;
   background-size: cover;
   background-image: url(/images/iskyunum1_tinified.avif);
-  animation: slide-small-screen 10s linear;
+  animation: slide-small-screen 70s linear;
   translate: -80% 0;
 
   // TODO: add @media (orientation: landscape) and (orientation: portrait) for the image
 
   &.ios {
-    background-size: cover;
+    background-size: 100% 100%;
     // animation: slide-ios 70s linear;
   }
+
+  // @media only screen and (-webkit-min-device-pixel-ratio: 2) {
+  //   /* CSS */
+  //   width: 1076px;
+  // }
 
   @include for-tablet-portrait-up {
     translate: 0 0;
