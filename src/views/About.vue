@@ -1,7 +1,7 @@
 <template>
   <div class="page">
     <div class="about-us--wrapper">
-      <h1>About us</h1>
+      <h1>{{ $t("aboutUs.header") }}</h1>
       <img
         src="/images/vignir-og-kolfinna-rotated.jpg"
         alt="picture of owners"
@@ -25,14 +25,15 @@ export default defineComponent({
 </script>
 <style lang="scss">
 @import "@/assets/base.scss";
+@import "@/assets/mixins.scss";
 
 .about-us--wrapper {
   display: flex;
   flex-direction: column;
 
   h1 {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+    margin: 2rem auto;
+    width: 90%;
     text-align: center;
   }
 
@@ -48,9 +49,13 @@ export default defineComponent({
     height: auto;
   }
 
-  @media screen and (min-width: $small_screen) {
+  @include for-tablet-portrait-up {
+    h1 {
+      width: 80%;
+    }
+
     p {
-      width: 60%;
+      width: 70%;
     }
 
     img {
@@ -58,9 +63,13 @@ export default defineComponent({
     }
   }
 
-  @media screen and (min-width: $medium_screen) {
+  @include for-desktop-up {
+    h1 {
+      width: 70%;
+    }
+
     p {
-      width: 40%;
+      width: 60%;
     }
 
     img {
