@@ -11,12 +11,9 @@
       <p v-if="card.additionalText">
         {{ card.additionalText }}
       </p>
-      <router-link
-        v-if="link.href"
-        class="router-link"
-        :to="`/tours/${link.href}`"
-        >{{ $t("links.linkText") }}</router-link
-      >
+      <router-link v-if="link.href" class="router-link" :to="link.href">{{
+        link.text ? link.text : $t("links.linkText")
+      }}</router-link>
 
       <slot></slot>
     </div>

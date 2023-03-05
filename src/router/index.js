@@ -100,7 +100,7 @@ const routes = [
     },
   },
   {
-    path: "/contactUs",
+    path: "/contactUs/:id?",
     name: "ContactUs",
     component: ContactUs,
     meta: {

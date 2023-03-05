@@ -2,22 +2,31 @@ import { ICardInfo } from "@/interfaces/interfaces";
 
 export const cardsInfo: ICardInfo[] = [
   {
-    imageSrc: "images/Sunset-from-the-top-of-Snaefellsjokull-1-2.jpg",
+    imageSrc: "images/topoftthediamond.card.jpg",
     imageAlt: "home.tours.topOfTheDiamond.imageAlt",
     cardHeader: "home.tours.topOfTheDiamond.header",
     cardText: "home.tours.topOfTheDiamond.text",
     cardAdditionalText: "home.tours.topOfTheDiamond.additionalText",
     linkText: "links.linkText",
-    linkHref: "snow-cat",
+    linkHref: "/tours/snow-cat",
   },
   {
-    imageSrc: "images/trodarinn-a-toppnum.jpg",
+    imageSrc: "images/midnightsun.card.jpg",
     imageAlt: "home.tours.midnightSunTour.imageAlt",
     cardHeader: "home.tours.midnightSunTour.header",
     cardText: "home.tours.midnightSunTour.text",
     cardAdditionalText: "",
     linkText: "links.linkText",
-    linkHref: "midnight-sun",
+    linkHref: "/tours/midnight-sun",
+  },
+  {
+    imageSrc: "images/toppurinn.jpg",
+    imageAlt: "home.tours.customTours.imageAlt",
+    cardHeader: "home.tours.customTours.header",
+    cardText: "home.tours.customTours.text",
+    cardAdditionalText: "",
+    linkText: "home.tours.customTours.linkText",
+    linkHref: "/contactUs/customTours",
   },
   {
     imageSrc: "images/cabin.jpg",
@@ -28,13 +37,4 @@ export const cardsInfo: ICardInfo[] = [
     linkText: "",
     linkHref: "",
   },
-  // {
-  //   imageSrc: "images/toppurinn.jpg",
-  //   imageAlt: "home.tours.topOfTheDiamond.imageAlt",
-  //   cardHeader: "home.tours.topOfTheDiamond.header",
-  //   cardText: "home.tours.topOfTheDiamond.text",
-  //   cardAdditionalText: "",
-  //   linkText: "links.linkText",
-  //   linkHref: "other",
-  // },
 ];

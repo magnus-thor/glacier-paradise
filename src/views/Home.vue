@@ -38,12 +38,12 @@ export default defineComponent({
   },
   setup() {
     const cardsRef = ref<HTMLElement>(null);
-    const loadToursComponent = ref(false);
+    const loadCardsComponent = ref(false);
     const loadInstagramComponent = ref(false);
     const observer = ref({});
 
     const onEnterToursComponent = () => {
-      loadToursComponent.value = true;
+      loadCardsComponent.value = true;
     };
     const onExitToursComponent = () => {
       loadInstagramComponent.value = true;
@@ -58,7 +58,7 @@ export default defineComponent({
     });
 
     return {
-      loadCardsComponent: loadToursComponent,
+      loadCardsComponent,
       loadInstagramComponent,
       cardsRef,
     };
@@ -72,22 +72,23 @@ export default defineComponent({
 
   h1 {
     z-index: 1;
+    margin: auto;
     margin-top: 25rem;
     padding-left: 1rem;
     padding-right: 1rem;
     color: white;
+    text-align: center;
+    max-width: 35ch;
   }
 }
 
 .full {
-  min-height: 90vh;
+  min-height: 45vh;
 }
 
 .home {
   display: grid;
   grid-template-columns: 1fr;
-  padding-bottom: 3rem;
-  justify-items: center;
 }
 
 .videos--container,
@@ -96,7 +97,6 @@ export default defineComponent({
 .glacier-info--container {
   margin-top: 3rem;
   margin-bottom: 2rem;
-  width: 100vw;
   z-index: 1;
 }
 </style>

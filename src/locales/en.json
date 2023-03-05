@@ -1,6 +1,6 @@
 {
   "home": {
-    "header": "Special sightseeing tours of Snæfellsjökull",
+    "header": "Experience the beauty of Snæfellsjökull like never before with our special sightseeing tours",
     "tours": {
       "topOfTheDiamond": {
         "header": "Top of the Diamond tour",
@@ -12,7 +12,7 @@
         "header": "Midnight-sun tour",
         "text": "Our “Midnight-sun tour” is an experience like no other. You will witness the incredible views from the top of the glacier bathed in the red, yellow and golden colour of the midnight-sun. As the sun sets and the sky turns into a magnificent palette of colours, we'll take a moment to appreciate the unique experience of standing on a glacier in the light of the midnight sun.",
         "additionalText": "",
-        "imageAlt": ""
+        "imageAlt": "View from top of Snæfellsjökul in the midnight sun"
       },
       "cabin": {
         "header": "Cosy cottage",
@@ -23,6 +23,13 @@
           "before": "Available for bookings until July",
           "after": "Available for bookings after June"
         }
+      },
+      "customTours": {
+        "header": "Custom tours",
+        "text": "Experience the natural beauty of Snæfellsjökull glacier like never before with Glacier Paradise's custom-made tours. Our tours are tailored to meet your specific needs and skill level, whether you're looking for a private tour, skiing tour, tour for large groups, or a customized combination. With private tours available for individuals or small groups, and tours for larger groups, we offer a personalized experience for everyone. Discover the hidden secrets and breathtaking vistas of Snæfellsjökull with our experienced guides. Contact us today to start planning your Icelandic adventure!",
+        "additionalText": "Contact us for more information.",
+        "linkText": "Contact us",
+        "imageAlt": ""
       }
     }
   },
