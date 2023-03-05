@@ -30,16 +30,33 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 @import "@/assets/base.scss";
+@import "@/assets/mixins.scss";
 
 .cards--container {
   margin-top: 2rem;
 }
 
 .cards {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+
+  @include for-tablet-portrait-down {
+    .card {
+      margin-bottom: 2rem;
+    }
+  }
+
+  @include for-desktop-up {
+    width: 95%;
+    margin: auto;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @include for-big-desktop-up {
+    width: 70%;
+    margin: auto;
+    grid-template-columns: 1fr 1fr;
+  }
 }
 </style>

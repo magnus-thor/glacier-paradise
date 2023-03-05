@@ -9,7 +9,7 @@ const TopOfTheDiamondTour = () =>
   import("@/components/tourComponents/top-of-the-diamond-tour.vue");
 const MidnightSunTour = () =>
   import("@/components/tourComponents/midnight-sun-tour.vue");
-const OtherTours = () => import("@/components/tourComponents/other-tours.vue");
+const OtherTours = () => import("@/components/tourComponents/custom-tours.vue");
 const TourCards = () => import("@/components/tourComponents/tour-cards.vue");
 
 const routes = [

@@ -53,5 +53,6 @@ export default defineComponent({
   display: flex;
   align-items: center;
   flex-direction: column;
+  flex-grow: -1;
 }
 </style>
