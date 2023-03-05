@@ -9,19 +9,6 @@ import { defineComponent, onMounted } from "vue";
 
 export default defineComponent({
   name: "scrollingBgImage",
-  setup() {
-    const ua = navigator.userAgent;
-
-    onMounted(() => {
-      console.log("onMounted");
-      if (/iPad|iPhone|iPod/.test(ua)) {
-        console.log("IS IOS");
-        document.getElementById("image").classList.add("ios");
-      }
-    });
-
-    return {};
-  },
 });
 </script>
 
@@ -38,31 +25,16 @@ export default defineComponent({
   left: 0;
   width: 5076px;
   height: 100vh;
-  background-size: cover;
+  background-size: 100% 100%;
+
   background-image: url(/images/iskyunum1_tinified.avif);
-  animation: slide-small-screen 70s linear;
+  animation: slide-small-screen 40s linear;
   translate: -80% 0;
-
-  // TODO: add @media (orientation: landscape) and (orientation: portrait) for the image
-
-  &.ios {
-    background-size: 100% 100%;
-    // animation: slide-ios 70s linear;
-  }
-
-  // @media only screen and (-webkit-min-device-pixel-ratio: 2) {
-  //   /* CSS */
-  //   width: 1076px;
-  // }
 
   @include for-tablet-portrait-up {
     translate: 0 0;
     -webkit-animation: slide 40s linear;
     animation: slide 40s linear;
-
-    // &.ios {
-    //   animation: slide-ios 30s linear;
-    // }
   }
 }
 
