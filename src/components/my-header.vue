@@ -114,8 +114,8 @@ export default defineComponent({
 .header {
   position: fixed;
   width: 100%;
-  height: 4rem;
-  padding: 1rem 0 0.5rem 0;
+  height: 6rem;
+  // padding: 1rem 0 0.5rem 0;
   align-items: center;
   display: flex;
   z-index: 100;

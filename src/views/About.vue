@@ -1,26 +1,22 @@
 <template>
-  <div class="page">
-    <div class="about-us--wrapper">
-      <h1>{{ $t("aboutUs.header") }}</h1>
-      <img
-        src="/images/vignir-og-kolfinna-rotated.jpg"
-        alt="picture of owners"
-      />
-      <div>
-        <p>{{ $t("aboutUs.company") }}</p>
-        <p>{{ $t("aboutUs.vignir") }}</p>
-        <p>{{ $t("aboutUs.kolfinna") }}</p>
-      </div>
+  <div class="page about-us--wrapper">
+    <div class="main-content">
+      <main-content />
+    </div>
+    <div class="info-component">
+      <info />
     </div>
   </div>
 </template>
 
 <script lang="ts">
+import Info from "@/components/aboutUsComponents/info.vue";
+import MainContent from "@/components/aboutUsComponents/mainContent.vue";
 import { defineComponent } from "vue";
 
 export default defineComponent({
   name: "AboutUsView",
-  components: {},
+  components: { Info, MainContent },
 });
 </script>
 <style lang="scss">
@@ -28,52 +24,62 @@ export default defineComponent({
 @import "@/assets/mixins.scss";
 
 .about-us--wrapper {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-areas: "overLay";
+  margin: 1rem;
+  // flex-direction: column;
 
   h1 {
-    margin: 2rem auto;
-    width: 90%;
-    text-align: center;
+    font-size: 1.5em;
   }
 
-  p {
-    width: 80%;
-    margin: 2rem auto 0 auto;
-    text-align: left;
+  h2 {
+    font-size: 1.2em;
   }
 
-  img {
-    align-self: center;
-    width: 80%;
-    height: auto;
+  // p {
+  //   width: 80%;
+  //   margin: 2rem auto 0 auto;
+  //   text-align: left;
+  // }
+
+  // img {
+  //   align-self: center;
+  //   width: 80%;
+  //   height: auto;
+  // }
+
+  // @include for-tablet-portrait-up {
+  //   h1 {
+  //     width: 80%;
+  //   }
+
+  //   p {
+  //     width: 70%;
+  //   }
+
+  //   img {
+  //     width: 60%;
+  //   }
+  // }
+
+  @include for-tablet-landscape-down {
+    .main-content {
+      margin-bottom: 1rem;
+    }
   }
 
-  @include for-tablet-portrait-up {
-    h1 {
-      width: 80%;
+  @include for-tablet-landscape-up {
+    .main-content {
+      grid-area: overLay;
     }
 
-    p {
-      width: 70%;
-    }
-
-    img {
-      width: 60%;
-    }
-  }
-
-  @include for-desktop-up {
-    h1 {
-      width: 70%;
-    }
-
-    p {
-      width: 60%;
-    }
-
-    img {
-      width: 40%;
+    .info-component {
+      grid-area: overLay;
+      justify-self: end;
+      width: 30%;
+      margin-right: 1rem;
+      min-height: 72vh;
     }
   }
 }
