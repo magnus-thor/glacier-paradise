@@ -4,18 +4,14 @@
 
     <div class="staff">
       <h2>Vignir</h2>
-      <div class="image-text--wrapper">
-        <img class="staff-image" src="/images/vignir.jpg" alt="" />
-        <p>{{ $t("aboutUs.vignir") }}</p>
-      </div>
+      <img class="staff-image" src="/images/vignir.jpg" alt="" />
+      <p>{{ $t("aboutUs.vignir") }}</p>
     </div>
 
     <div class="staff">
       <h2>Kolfinna</h2>
-      <div class="image-text--wrapper">
-        <img class="staff-image right" src="/images/kolfinna.jpg" alt="" />
-        <p>{{ $t("aboutUs.kolfinna") }}</p>
-      </div>
+      <img class="staff-image right" src="/images/kolfinna.jpg" alt="" />
+      <p>{{ $t("aboutUs.kolfinna") }}</p>
     </div>
   </div>
 </template>
@@ -54,25 +50,13 @@ export default defineComponent({
 }
 
 .staff {
-  .image-text--wrapper {
-    // display: flex;
-
-    &.reverse {
-      // flex-direction: row-reverse;
-    }
-  }
-
   .staff-image {
     border-radius: 50%;
-    shape-outside: circle(50%);
+    shape-outside: ellipse(45.95% 55.21% at 50px 65px);
 
     width: 100px;
     float: left;
-    margin-right: 1rem;
-
-    &.right {
-      float: right;
-    }
+    margin-right: 2rem;
   }
 }
 </style>
