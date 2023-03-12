@@ -7,9 +7,9 @@
       <div ref="cardsRef" id="tours" class="cards--container">
         <cards v-if="loadCardsComponent" />
       </div>
-      <div class="glacier-info--container">
-        <glacier-info />
-      </div>
+      <!-- <div class="glacier-info--container">
+        <glacier-info v-if="loadInstagramComponent" />
+      </div> -->
       <div class="instagram--container">
         <instagram v-if="loadInstagramComponent" />
       </div>
