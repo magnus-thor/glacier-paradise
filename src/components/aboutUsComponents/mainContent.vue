@@ -42,6 +42,10 @@ p {
   margin-top: 1rem;
 }
 
+p {
+  font-size: 0.8rem;
+}
+
 @include for-tablet-landscape-down {
   .company-info {
     margin: auto;
@@ -52,6 +56,10 @@ p {
   .company-info {
     padding-left: 2rem;
     width: 50%;
+  }
+
+  p {
+    font-size: 1rem;
   }
 }
 </style>

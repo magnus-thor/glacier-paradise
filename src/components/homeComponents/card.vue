@@ -50,7 +50,7 @@ export default defineComponent({
   },
   setup(props) {
     const reverseFlow = computed(() => {
-      return props.cardIndex % 2 === 0;
+      return props.cardIndex % 2 !== 0;
     });
 
     return { reverseFlow };
@@ -89,10 +89,14 @@ export default defineComponent({
   }
 
   .tour--image {
-    height: 10rem;
+    height: 16rem;
     width: 70%;
     padding-right: 1rem;
     padding-left: 1rem;
+
+    @include for-tablet-landscape-down {
+      margin: auto;
+    }
 
     img {
       width: 100%;
@@ -117,7 +121,22 @@ export default defineComponent({
     }
   }
 
-  @include for-tablet-portrait-up {
+  @include for-tablet-landscape-down {
+    .tour--image {
+      margin: auto;
+      margin-bottom: 0.8rem;
+    }
+
+    .tour--text {
+      padding: 1rem;
+      // // width: 60%;
+      // border-radius: 25% 25%;
+      // margin-left: 1rem;
+      // margin-right: 1rem;
+    }
+  }
+
+  @include for-tablet-landscape-up {
     height: max-content;
     flex-direction: row;
     max-width: 1024px;

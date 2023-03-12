@@ -28,12 +28,18 @@ export default defineComponent({
 <style lang="scss" scoped>
 @import "@/assets/base.scss";
 @import "@/assets/variables.scss";
+@import "@/assets/mixins.scss";
 
 .info-wrapper {
   padding: 2rem;
-  padding-bottom: 0;
+  // padding-bottom: 1rem;
   background-color: $dark_grey;
-  height: 100%;
+  margin-bottom: 1rem;
+
+  @include for-tablet-landscape-up {
+    min-height: 85%;
+    // height: 60vh;
+  }
 
   h1,
   h2 {
@@ -53,11 +59,19 @@ export default defineComponent({
 .staff {
   .staff-image {
     border-radius: 50%;
-    shape-outside: ellipse(45.95% 55.21% at 50px 65px);
+    shape-outside: ellipse(45.95% 55.21% at 34px 40px);
 
-    width: 100px;
+    width: 70px;
     float: left;
     margin-right: 2rem;
+  }
+
+  @include for-tablet-landscape-up {
+    .staff-image {
+      shape-outside: ellipse(45.95% 55.21% at 50px 65px);
+      width: 100px;
+      margin-right: 2rem;
+    }
   }
 }
 </style>

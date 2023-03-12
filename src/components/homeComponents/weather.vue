@@ -1,50 +1,79 @@
 <template>
-	<div>
-		<p if="status">{{status}}</p>
-	</div>
+  <div class="weather">
+    <img :src="svgPath" :alt="weather.symbol_code" />
+    <p class="celsius">
+      {{ weather.air_temperature }}
+      <v-icon name="wi-celsius" scale="2" />
+    </p>
+    <p>
+      {{ weather.wind_speed }} m/s
+      <v-icon name="wi-direction-up" id="windIcon" />
+    </p>
+  </div>
 </template>
 
 <script lang="ts">
-import { defineComponent, ref } from 'vue'
+import { defineComponent, ref, computed, onMounted } from "vue";
 
+import { fetchWeather } from "@/composables/fetchWeather";
+import { IWeather } from "@/interfaces/weather";
 export default defineComponent({
-	name: "weather",
-	setup() {
-		console.log("Weather")
-		const stapiLocations = {
-			lat: "64.76936",
-			lon: "-23.62258"
-		}
-		let status = ref(null)
-		const getSymbolCode = (data: Record<string, any>): string => {
-			if (data.next_1_hours) {
-				return data.next_1_hours.summary.symbol_code
-			} else if (data.next_6_hours) {
-				return data.next_6_hours.summary.symbol_code
-			} else if (data.next_12_hours) {
-				return data.next_12_hours.summary.symbol_code
-			}
-			return "unknown";
-		}
-		let weather = fetch(`https://api.met.no/weatherapi/locationforecast/2.0/compact?lat=${stapiLocations.lat}&lon=${stapiLocations.lon}`,)
-			.then(res => res.json())
-			.then(res => {
-				const data = res.properties.timeseries[0].data;
-				const details = data.instant.details;
-				const symbol_code = getSymbolCode(data);
-				return {
-					air_temperature: details.air_temperature,
-					wind_speed: details.wind_speed,
-					symbol_code: data.next_1_hours,
-				}
-			})
-			.catch(err => status = err);
+  name: "weather",
+  async setup() {
+    onMounted(() => {
+      console.log(
+        "weather.value.wind_from_direction",
+        weather.value.wind_from_direction
+      );
+      document.getElementById(
+        "windIcon"
+      ).style.rotate = `${weather.value.wind_from_direction}deg`;
+    });
+    const tempWeather: IWeather = await fetchWeather();
+    const weather = ref(tempWeather);
 
-		return { status }
-	}
-})
+    const svgPath = computed(() => {
+      return `/weather-icons/svg/${weather.value.symbol_code}.svg`;
+    });
+
+    return { weather, svgPath };
+  },
+});
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+@import "@/assets/base.scss";
+@import "@/assets/mixins.scss";
 
+.weather {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: space-around;
+  row-gap: 0.8rem;
+
+  @include for-tablet-portrait-down {
+    padding-top: 1rem;
+    p {
+      padding-left: 2rem;
+    }
+  }
+
+  @include for-tablet-portrait-up {
+    flex-direction: column;
+    align-items: end;
+  }
+
+  img {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .celsius {
+    svg {
+      margin-left: -10px;
+      vertical-align: middle;
+    }
+  }
+}
 </style>

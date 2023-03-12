@@ -2,54 +2,27 @@
   <div class="glacier-info">
     <div class="glacier-info--content">
       <div class="text">
-        <a href="https://goo.gl/maps/wJ1brAWbtDX9m1aD9" class="flip">
-          <v-icon name="oi-location" scale="2" color="#3a57b9" />
-        </a>
-        <img src="/logos/Map_Of_Iceland_clip_art_medium.png" alt="glacier" />
+        <div class="iceland-map">
+          <a
+            href="https://goo.gl/maps/wJ1brAWbtDX9m1aD9"
+            class="location-icon flip"
+          >
+            <v-icon name="oi-location" scale="2" color="#3a57b9" />
+          </a>
+          <img src="/logos/Map_Of_Iceland_clip_art_medium.png" alt="glacier" />
+        </div>
         <img src="/logos/transparent_glacier.png" alt="glacier" />
-      </div>
-      <div class="weather">
-        <img :src="svgPath" :alt="weather.symbol_code" />
-        <p class="celsius">
-          {{ weather.air_temperature }}
-          <v-icon name="wi-celsius" scale="2" />
-        </p>
-        <p>
-          {{ weather.wind_speed }} m/s
-          <v-icon name="wi-direction-up" id="windIcon" />
-        </p>
       </div>
     </div>
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent, ref, computed, onMounted } from "vue";
-import { fetchWeather } from "@/composables/fetchWeather";
-import { IWeather } from "@/interfaces/weather";
+import { defineComponent } from "vue";
 
 export default defineComponent({
   name: "glacierInfo",
-  async setup() {
-    onMounted(() => {
-      console.log(
-        "weather.value.wind_from_direction",
-        weather.value.wind_from_direction
-      );
-      document.getElementById(
-        "windIcon"
-      ).style.rotate = `${weather.value.wind_from_direction}deg`;
-    });
-    const tempWeather: IWeather = await fetchWeather();
-    const weather = ref(tempWeather);
-    const inputValue = ref(1);
-
-    const svgPath = computed(() => {
-      return `/weather-icons/svg/${weather.value.symbol_code}.svg`;
-    });
-
-    return { weather, svgPath, inputValue };
-  },
+  setup() {},
 });
 </script>
 
@@ -65,8 +38,6 @@ export default defineComponent({
     padding: 2rem 0;
     height: 100%;
     width: 100%;
-    // background: hsl(50 33% 25% / 0.75);
-    // opacity: 0.4;
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
@@ -90,6 +61,29 @@ export default defineComponent({
   }
 }
 
+.iceland-map {
+  position: relative;
+  font-size: 0.6rem;
+
+  .location-icon {
+    position: absolute;
+    top: 80px;
+    left: 2px;
+  }
+
+  // img {
+  //   width: 100px;
+  //   height: auto;
+  // }
+
+  @include for-tablet-landscape-up {
+    // img {
+    //   width: 200px;
+    //   height: auto;
+    // }
+  }
+}
+
 .text {
   display: flex;
   align-items: flex-end;
@@ -102,38 +96,6 @@ export default defineComponent({
   @include for-tablet-portrait-up {
     > a {
       margin-right: 9rem;
-    }
-  }
-}
-
-.weather {
-  display: flex;
-  flex-direction: row-reverse;
-  align-items: center;
-  justify-content: space-around;
-  row-gap: 0.8rem;
-
-  @include for-tablet-portrait-down {
-    padding-top: 1rem;
-    p {
-      padding-left: 2rem;
-    }
-  }
-
-  @include for-tablet-portrait-up {
-    flex-direction: column;
-    align-items: end;
-  }
-
-  img {
-    width: 3rem;
-    height: 3rem;
-  }
-
-  .celsius {
-    svg {
-      margin-left: -10px;
-      vertical-align: middle;
     }
   }
 }

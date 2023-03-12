@@ -27,6 +27,7 @@ export default defineComponent({
   display: grid;
   grid-template-areas: "overLay";
   margin: 1rem;
+  margin-bottom: 0;
 
   h1 {
     font-size: 1.5em;
@@ -52,9 +53,12 @@ export default defineComponent({
       justify-self: end;
       width: 30%;
       margin-right: 1rem;
-      margin-bottom: 2rem;
-      min-height: 75vh;
+      // margin-bottom: 2rem;
+      min-height: 72vh;
     }
+  }
+
+  @include for-desktop-up {
   }
 }
 </style>

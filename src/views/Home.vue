@@ -4,14 +4,11 @@
       <scrolling-bg-image />
       <h1>{{ $t("home.header") }}</h1>
       <div class="full"></div>
-      <div class="glacier-info--container">
-        <Suspense>
-          <glacier-info />
-          <template #fallback> Some fall back </template>
-        </Suspense>
-      </div>
       <div ref="cardsRef" id="tours" class="cards--container">
         <cards v-if="loadCardsComponent" />
+      </div>
+      <div class="glacier-info--container">
+        <glacier-info />
       </div>
       <div class="instagram--container">
         <instagram v-if="loadInstagramComponent" />
