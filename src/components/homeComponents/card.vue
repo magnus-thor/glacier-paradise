@@ -7,7 +7,7 @@
       { cabin: cardIndex === 3 },
     ]"
   >
-    <div class="tour--image">
+    <div :class="['tour--image', { 'border-reverse': reverseFlow }]">
       <img :src="image.src" :alt="image.alt" />
     </div>
     <div :class="['tour--text', { 'border-reverse': reverseFlow }]">
@@ -161,6 +161,15 @@ export default defineComponent({
     .tour--image {
       height: auto;
       width: 40%;
+      img {
+        border-radius: 25% 0;
+      }
+
+      &.border-reverse {
+        img {
+          border-radius: 0 25%;
+        }
+      }
     }
 
     &.custom-tours {
