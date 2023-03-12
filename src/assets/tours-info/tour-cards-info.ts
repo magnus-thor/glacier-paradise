@@ -20,7 +20,7 @@ export const tourCards = [
     departure: "Arnarstapi",
   },
   {
-    imageSrc: "/images/trodarinn-a-toppnum.jpg",
+    imageSrc: "/images/custom_card.jpg",
     imageAlt: "cards.customTours.imageAlt",
     cardHeader: "cards.customTours.cardHeader",
     cardText: "cards.customTours.cardText",

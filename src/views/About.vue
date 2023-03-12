@@ -27,7 +27,6 @@ export default defineComponent({
   display: grid;
   grid-template-areas: "overLay";
   margin: 1rem;
-  // flex-direction: column;
 
   h1 {
     font-size: 1.5em;
@@ -36,32 +35,6 @@ export default defineComponent({
   h2 {
     font-size: 1.2em;
   }
-
-  // p {
-  //   width: 80%;
-  //   margin: 2rem auto 0 auto;
-  //   text-align: left;
-  // }
-
-  // img {
-  //   align-self: center;
-  //   width: 80%;
-  //   height: auto;
-  // }
-
-  // @include for-tablet-portrait-up {
-  //   h1 {
-  //     width: 80%;
-  //   }
-
-  //   p {
-  //     width: 70%;
-  //   }
-
-  //   img {
-  //     width: 60%;
-  //   }
-  // }
 
   @include for-tablet-landscape-down {
     .main-content {
@@ -79,7 +52,8 @@ export default defineComponent({
       justify-self: end;
       width: 30%;
       margin-right: 1rem;
-      min-height: 72vh;
+      margin-bottom: 2rem;
+      min-height: 75vh;
     }
   }
 }

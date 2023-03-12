@@ -31,12 +31,13 @@ export default defineComponent({
 
 .info-wrapper {
   padding: 2rem;
-  background-color: $yellow_info;
+  padding-bottom: 0;
+  background-color: $dark_grey;
   height: 100%;
 
   h1,
   h2 {
-    color: $yellow;
+    color: $card_header_color;
   }
 
   h2 {
@@ -45,7 +46,7 @@ export default defineComponent({
   }
 
   p {
-    color: $white;
+    color: $card_text_color;
   }
 }
 

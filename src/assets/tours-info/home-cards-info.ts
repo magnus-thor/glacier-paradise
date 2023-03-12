@@ -20,7 +20,7 @@ export const cardsInfo: ICardInfo[] = [
     linkHref: "/tours/midnight-sun",
   },
   {
-    imageSrc: "images/toppurinn.jpg",
+    imageSrc: "images/custom_card.jpg",
     imageAlt: "home.tours.customTours.imageAlt",
     cardHeader: "home.tours.customTours.header",
     cardText: "home.tours.customTours.text",

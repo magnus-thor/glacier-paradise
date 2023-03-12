@@ -5,7 +5,8 @@
         <a href="https://goo.gl/maps/wJ1brAWbtDX9m1aD9" class="flip">
           <v-icon name="oi-location" scale="2" color="#3a57b9" />
         </a>
-        <img src="/logos/new_glacier_logo_with_height.png" alt="glacier" />
+        <img src="/logos/Map_Of_Iceland_clip_art_medium.png" alt="glacier" />
+        <img src="/logos/transparent_glacier.png" alt="glacier" />
       </div>
       <div class="weather">
         <img :src="svgPath" :alt="weather.symbol_code" />
@@ -31,6 +32,10 @@ export default defineComponent({
   name: "glacierInfo",
   async setup() {
     onMounted(() => {
+      console.log(
+        "weather.value.wind_from_direction",
+        weather.value.wind_from_direction
+      );
       document.getElementById(
         "windIcon"
       ).style.rotate = `${weather.value.wind_from_direction}deg`;
@@ -60,7 +65,8 @@ export default defineComponent({
     padding: 2rem 0;
     height: 100%;
     width: 100%;
-    background: white;
+    // background: hsl(50 33% 25% / 0.75);
+    // opacity: 0.4;
     display: flex;
     flex-direction: column-reverse;
     align-items: center;

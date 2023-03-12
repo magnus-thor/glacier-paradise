@@ -69,19 +69,21 @@ const props = defineProps({
   @include for-tablet-portrait-up {
     height: 20rem;
     width: 35rem;
+    margin-bottom: 2rem;
   }
 
   h2 {
     font-size: 18px;
-    margin-bottom: 1rem;
+    color: $card_header_color;
   }
 
   p {
     font-size: 14px;
+    color: $card_text_color;
   }
 }
 
-$card-height-lg-screen: 18rem;
+$card-height-lg-screen: 20rem;
 
 .card__wrapper {
   height: 100%;
@@ -114,8 +116,10 @@ $card-height-lg-screen: 18rem;
 }
 
 .card__content {
+  display: grid;
+  grid-template-columns: 1fr;
   width: 90%;
-  background: white;
+  background-color: $dark_grey;
   padding: 1rem;
   box-sizing: border-box;
 
@@ -136,5 +140,15 @@ $card-height-lg-screen: 18rem;
 .nav__link {
   margin-top: 0.6rem;
   text-align: center;
+  align-self: self-end;
+  font-weight: bold;
+
+  a {
+    color: $card_link_color;
+
+    &:hover {
+      color: $card_link_color__hover;
+    }
+  }
 }
 </style>

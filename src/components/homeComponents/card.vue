@@ -1,9 +1,16 @@
 <template>
-  <div :class="['tour', { 'row-reverse': reverseFlow }]">
+  <div
+    :class="[
+      'tour',
+      { 'row-reverse': reverseFlow },
+      { 'custom-tours': cardIndex === 2 },
+      { cabin: cardIndex === 3 },
+    ]"
+  >
     <div class="tour--image">
       <img :src="image.src" :alt="image.alt" />
     </div>
-    <div class="tour--text">
+    <div :class="['tour--text', { 'border-reverse': reverseFlow }]">
       <h3>{{ card.header }}</h3>
       <p>
         {{ card.text }}
@@ -56,28 +63,25 @@ export default defineComponent({
 @import "@/assets/mixins.scss";
 
 .tour {
-  padding: 1rem;
   width: 100%;
-  background-color: white;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  row-gap: 1rem;
-  border-radius: 5px;
 
   + .tour {
-    margin-top: 3rem;
+    margin-top: 5rem;
   }
 
   h3 {
     text-align: center;
     padding-top: 0.5rem;
     padding-bottom: 1rem;
-    border-bottom: 4px solid $blue;
+    border-bottom: 4px solid $grey;
+    color: $card_header_color;
   }
 
   p {
     padding: 2rem;
+    color: $card_text_color;
 
     + p {
       padding-top: 0;
@@ -88,11 +92,12 @@ export default defineComponent({
     height: 10rem;
     width: 70%;
     padding-right: 1rem;
+    padding-left: 1rem;
 
     img {
       width: 100%;
       height: 100%;
-      object-fit: cover;
+      // object-fit: cover;
     }
   }
 
@@ -100,12 +105,16 @@ export default defineComponent({
     display: flex;
     align-items: center;
     flex-direction: column;
+    background-color: $dark_grey;
   }
 
   .router-link {
-    color: $blue;
+    color: $card_link_color;
     font-weight: bold;
-    text-decoration: none;
+
+    &:hover {
+      color: $card_link_color__hover;
+    }
   }
 
   @include for-tablet-portrait-up {
@@ -120,17 +129,27 @@ export default defineComponent({
     .tour--text {
       padding: 1rem;
       width: 60%;
+      border-radius: 0% 25%;
+      margin-right: 1rem;
+
+      &.border-reverse {
+        border-radius: 25% 0%;
+        margin-right: 0;
+        margin-left: 1rem;
+      }
     }
 
     .tour--image {
-      height: 80%;
+      height: auto;
       width: 40%;
+    }
 
-      img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
+    &.custom-tours {
+      max-height: 22rem;
+    }
+
+    &.cabin {
+      max-height: 18rem;
     }
   }
 }
