@@ -10,18 +10,19 @@
     <div :class="['tour--image', { 'border-reverse': reverseFlow }]">
       <img :src="image.src" :alt="image.alt" />
     </div>
-    <div :class="['tour--text', { 'border-reverse': reverseFlow }]">
+    <div
+      :class="[
+        'tour--text',
+        { 'border-reverse': reverseFlow },
+        { prufa: cardIndex === 0 },
+      ]"
+    >
       <h3>{{ card.header }}</h3>
-      <p>
-        {{ card.text }}
-      </p>
-      <p v-if="card.additionalText">
-        {{ card.additionalText }}
-      </p>
-      <router-link v-if="link.href" class="router-link" :to="link.href">{{
-        link.text ? link.text : $t("links.linkText")
-      }}</router-link>
-
+      <p>{{ card.text }}</p>
+      <p v-if="card.additionalText">{{ card.additionalText }}</p>
+      <router-link v-if="link.href" class="router-link" :to="link.href">
+        {{ link.text ? link.text : $t("links.linkText") }}
+      </router-link>
       <slot></slot>
     </div>
   </div>
@@ -32,7 +33,7 @@ import { TourImage, TourCardText, TourLink } from "@/interfaces/props";
 import { computed, defineComponent, PropType } from "vue";
 
 export default defineComponent({
-  name: "card",
+  name: "homeCard",
   props: {
     image: {
       required: true,
@@ -80,7 +81,7 @@ export default defineComponent({
   }
 
   p {
-    padding: 2rem;
+    padding: 1rem;
     color: $card_text_color;
 
     + p {
@@ -89,55 +90,71 @@ export default defineComponent({
   }
 
   .tour--image {
-    height: 16rem;
-    width: 70%;
-    padding-right: 1rem;
-    padding-left: 1rem;
-
-    @include for-tablet-landscape-down {
-      margin: auto;
-    }
+    height: 20rem;
+    width: 94%;
+    margin: auto;
+    margin-bottom: 0.4rem;
 
     img {
       width: 100%;
       height: 100%;
-      // object-fit: cover;
+      border-radius: 25% 25% 0 0;
     }
   }
 
   .tour--text {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     flex-direction: column;
     background-color: $dark_grey;
+
+    &.prufa {
+      // background-color: $dark_grey;
+      // background: linear-gradient(
+      //   90deg,
+      //   rgba(2, 0, 36, 1) 0%,
+      //   rgba(77, 70, 55, 1) 100%,
+      //   rgba(0, 212, 255, 1) 100%
+      // );
+      background-image: linear-gradient(
+        to bottom,
+        #4d4637,
+        #6a4332,
+        #853a49,
+        #873b7d,
+        #3a57b9
+      );
+    }
+
+    &.border-reverse {
+      background-image: linear-gradient(
+        to right top,
+        #4d4637,
+        #655d4e,
+        #7e7666,
+        #98907f,
+        #b3aa99
+      );
+    }
+    margin-left: 3%;
+    margin-right: 3%;
+    border-radius: 0 0 25% 25%;
   }
 
   .router-link {
     color: $card_link_color;
     font-weight: bold;
+    margin-bottom: 1rem;
+    justify-self: flex-end;
 
     &:hover {
       color: $card_link_color__hover;
     }
   }
 
-  @include for-tablet-landscape-down {
-    .tour--image {
-      margin: auto;
-      margin-bottom: 0.8rem;
-    }
-
-    .tour--text {
-      padding: 1rem;
-      // // width: 60%;
-      // border-radius: 25% 25%;
-      // margin-left: 1rem;
-      // margin-right: 1rem;
-    }
-  }
-
   @include for-tablet-landscape-up {
-    height: max-content;
+    // height: max-content;
     flex-direction: row;
     max-width: 1024px;
 
@@ -161,6 +178,8 @@ export default defineComponent({
     .tour--image {
       height: auto;
       width: 40%;
+      margin: 0;
+
       img {
         border-radius: 25% 0;
       }
@@ -178,6 +197,10 @@ export default defineComponent({
 
     &.cabin {
       max-height: 18rem;
+    }
+
+    .router-link {
+      margin-bottom: 0;
     }
   }
 }

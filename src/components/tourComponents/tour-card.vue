@@ -7,17 +7,13 @@
         <p>{{ card.text }}</p>
         <div class="card__info">
           <div>
-            <p>
-              <strong>Duration:</strong>
-            </p>
+            <p><strong>Duration:</strong></p>
             <p>
               <strong>{{ info.duration }}</strong>
             </p>
           </div>
           <div>
-            <p>
-              <strong>Departure:</strong>
-            </p>
+            <p><strong>Departure:</strong></p>
             <p>
               <strong>{{ info.departure }}</strong>
             </p>

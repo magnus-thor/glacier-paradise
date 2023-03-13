@@ -5,7 +5,7 @@
       <h1>{{ $t("home.header") }}</h1>
       <div class="full"></div>
       <div ref="cardsRef" id="tours" class="cards--container">
-        <cards v-if="loadCardsComponent" />
+        <home-cards v-if="loadCardsComponent" />
       </div>
       <!-- <div class="glacier-info--container">
         <glacier-info v-if="loadInstagramComponent" />
@@ -26,8 +26,8 @@ import Instagram from "@/components/homeComponents/instagram.vue";
 export default defineComponent({
   name: "HomeView",
   components: {
-    Cards: defineAsyncComponent(
-      () => import("@/components/homeComponents/cards.vue")
+    HomeCards: defineAsyncComponent(
+      () => import("@/components/homeComponents/home-cards.vue")
     ),
     GlacierInfo,
     ScrollingBgImage,
