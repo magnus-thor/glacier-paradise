@@ -14,7 +14,10 @@
       :class="[
         'tour--text',
         { 'border-reverse': reverseFlow },
-        { prufa: cardIndex === 0 },
+        { gradient0: cardIndex === 0 },
+        { gradient1: cardIndex === 1 },
+        { gradient2: cardIndex === 2 },
+        { gradient3: cardIndex === 3 },
       ]"
     >
       <h3>{{ card.header }}</h3>
@@ -109,34 +112,21 @@ export default defineComponent({
     flex-direction: column;
     background-color: $dark_grey;
 
-    &.prufa {
-      // background-color: $dark_grey;
-      // background: linear-gradient(
-      //   90deg,
-      //   rgba(2, 0, 36, 1) 0%,
-      //   rgba(77, 70, 55, 1) 100%,
-      //   rgba(0, 212, 255, 1) 100%
-      // );
-      background-image: linear-gradient(
-        to bottom,
-        #4d4637,
-        #6a4332,
-        #853a49,
-        #873b7d,
-        #3a57b9
-      );
+    &.gradient0 {
+      @include yellow-brownish-bg-gradient;
+    }
+    &.gradient1 {
+      // @include gold-bg-gradient;
+      @include gold-bg-gradient;
     }
 
-    &.border-reverse {
-      background-image: linear-gradient(
-        to right top,
-        #4d4637,
-        #655d4e,
-        #7e7666,
-        #98907f,
-        #b3aa99
-      );
+    &.gradient2 {
+      @include yellow-brownish-with-animation-bg-gradient;
     }
+    &.gradient3 {
+      @include white-blue-bg-gradient;
+    }
+
     margin-left: 3%;
     margin-right: 3%;
     border-radius: 0 0 25% 25%;

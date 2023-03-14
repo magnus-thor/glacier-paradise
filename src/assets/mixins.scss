@@ -39,3 +39,90 @@
     @content;
   }
 }
+
+@mixin gold-bg-gradient {
+  background: radial-gradient(
+      ellipse farthest-corner at right bottom,
+      #fedb37 0%,
+      #fdb931 8%,
+      #9f7928 30%,
+      #8a6e2f 40%,
+      transparent 80%
+    ),
+    radial-gradient(
+      ellipse farthest-corner at left top,
+      #ffffff 0%,
+      #ffffac 8%,
+      #d1b464 25%,
+      #5d4a1f 62.5%,
+      #5d4a1f 100%
+    );
+
+  a {
+    color: $blue;
+  }
+}
+
+@mixin yellow-brownish-bg-gradient {
+  background: linear-gradient(135deg, #d4af37, #4d4637);
+
+  a {
+    color: $blue;
+  }
+}
+
+@mixin yellow-brownish-with-animation-bg-gradient {
+  background: radial-gradient(circle at bottom, #d4af37, #4d4637);
+  animation: gradient 11s ease infinite;
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  a {
+    color: $blue;
+  }
+}
+
+@mixin white-blue-bg-gradient {
+  background: linear-gradient(135deg, #dadada, #3a57b9);
+}
+
+@mixin gold-bg-gradient {
+  // background-image: linear-gradient(
+  //   10deg,
+  //   #462523 0,
+  //   #cb9b51 22%,
+  //   #f6e27a 45%,
+  //   #f6f2c0 50%,
+  //   #f6e27a 55%,
+  //   #cb9b51 78%,
+  //   #462523 100%
+  // );
+  background-image: linear-gradient(
+    -186deg,
+    #462523 0,
+    #cb9b51 22%,
+    #f6e27a 31%,
+    #f6f2c0 48%,
+    #f6e27a 59%,
+    #cb9b51 78%,
+    #462523 100%
+  );
+  color: transparent;
+
+  a {
+    color: $blue;
+  }
+
+  p {
+    color: $blue;
+  }
+}
