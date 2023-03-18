@@ -49,7 +49,7 @@ import { defineComponent } from "vue";
 import { setupHeader } from "@/composables/headerShared";
 
 export default defineComponent({
-  name: "yHeader",
+  name: "MyHeader",
   setup() {
     const { routes, scrollRef, changeLocale, showCenterLogo } = setupHeader();
 
@@ -64,9 +64,11 @@ export default defineComponent({
 </script>
 <style lang="scss" scoped>
 @import "@/assets/base.scss";
+@import "@/assets/mixins.scss";
 
 .header-background {
   background-color: $dark_grey;
+  @include ellipse-bg-gradient;
 
   .header-logo img {
     width: 100%;

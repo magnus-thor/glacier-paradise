@@ -14,10 +14,11 @@
       :class="[
         'tour--text',
         { 'border-reverse': reverseFlow },
-        { gradient0: cardIndex === 0 },
-        { gradient1: cardIndex === 1 },
-        { gradient2: cardIndex === 2 },
-        { gradient3: cardIndex === 3 },
+        'gradient1',
+        // { gradient0: cardIndex === 0 },
+        // { gradient1: cardIndex === 1 },
+        // { gradient2: cardIndex === 2 },
+        // { gradient3: cardIndex === 3 },
       ]"
     >
       <h3>{{ card.header }}</h3>
@@ -116,7 +117,6 @@ export default defineComponent({
       @include yellow-brownish-bg-gradient;
     }
     &.gradient1 {
-      // @include gold-bg-gradient;
       @include gold-bg-gradient;
     }
 
@@ -156,12 +156,13 @@ export default defineComponent({
       padding: 1rem;
       width: 60%;
       border-radius: 0% 25%;
-      margin-right: 1rem;
+      margin-right: 0;
+      margin-left: 2%;
 
       &.border-reverse {
         border-radius: 25% 0%;
-        margin-right: 0;
-        margin-left: 1rem;
+        margin-right: 2%;
+        margin-left: 0;
       }
     }
 

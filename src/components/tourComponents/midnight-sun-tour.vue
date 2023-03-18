@@ -55,7 +55,7 @@ export default defineComponent({
   .p3,
   .p4 {
     padding: 0 2rem;
-    // display: flex;
+    display: flex;
     align-items: center;
 
     img {

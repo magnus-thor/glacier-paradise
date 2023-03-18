@@ -116,6 +116,7 @@ $card-height-lg-screen: 20rem;
   grid-template-columns: 1fr;
   width: 90%;
   background-color: $dark_grey;
+  @include gold-bg-gradient;
   padding: 1rem;
   box-sizing: border-box;
 

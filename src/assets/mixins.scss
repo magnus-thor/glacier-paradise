@@ -106,6 +106,29 @@
   //   #cb9b51 78%,
   //   #462523 100%
   // );
+  // background-image: linear-gradient(
+  //   to right,
+  //   #462523 0,
+  //   #cb9b51 22%,
+  //   #f6e27a 45%,
+  //   #f6f2c0 50%,
+  //   #f6e27a 55%,
+  //   #cb9b51 78%,
+  //   #462523 100%
+  // );
+  // background-image: linear-gradient(
+  //   313deg,
+  //   #462523 -8%,
+  //   #cb9b51 14%,
+  //   #f6e27a 32%,
+  //   #f6f2c0 46%,
+  //   #f6e27a 66%,
+  //   #cb9b51 84%,
+  //   #462523 117%
+  // );
+
+  //  background: radial-gradient(ellipse at bottom, #462523 -2%, #cb9b51 10%, #f6e27a 69%, #f6f2c0 46%, #f6e27a 66%, #cb9b51 84%, #462523 117%)
+
   background-image: linear-gradient(
     -186deg,
     #462523 0,
@@ -125,4 +148,10 @@
   p {
     color: $blue;
   }
+}
+
+@mixin ellipse-bg-gradient {
+  // background: radial-gradient(circle at right, #d4af37 28%, #4d4637 88%);
+  background: radial-gradient(ellipse at right, #d4af37 3%, #4d4637 49%);
+  animation: gradient-43347d14 6s ease infinite;
 }
