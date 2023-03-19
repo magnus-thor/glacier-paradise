@@ -38,7 +38,6 @@ export default defineComponent({
 
   @include for-tablet-landscape-up {
     min-height: 85%;
-    // height: 60vh;
   }
 
   h1,

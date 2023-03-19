@@ -1,14 +1,6 @@
 <template>
   <div class="main-layout">
-    <div id="preload">
-      <!-- <img src="/images/iskyunum1_tinified.avif" rel="preload" /> -->
-      <img
-        id="header-image"
-        src="/logos/logo-glacier-paradise-transparent.png"
-        alt="Glacier paradise logo"
-        rel="preload"
-      />
-    </div>
+    <div id="preload"></div>
 
     <component :is="renderHeaderComponent" />
 

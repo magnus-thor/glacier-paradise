@@ -84,13 +84,11 @@
     "customTours": {
       "cardHeader": "Custom tour",
       "cardText": "Personalized tours available for individuals, small groups or larger groups, our experienced guides will show you hidden secrets and breathtaking vistas. Contact us today to start planning your Icelandic adventure!",
-      "linkText": "Read more",
       "imageAlt": "Sunset from the top of Snaefellsjokull"
     },
     "giftCard": {
       "cardHeader": "Gift card",
       "cardText": "Discover the beauty of Snæfellsjökull glacier with Glacier Paradise Snowcat Tour gift cards. Expert guides allow visitors to explore stunning landscapes and hidden gems. Perfect adventure gift for all ages and skill levels. ",
-      "linkText": "Read more",
       "imageAlt": ""
     },
     "shared": {
@@ -109,7 +107,8 @@
     }
   },
   "links": {
-    "linkText": "Read more"
+    "readMore": "Read more",
+    "contactUs": "Contact Us"
   },
   "glacierInfo": "Discover the mystical powers of the magnificent Snæfellsjökull. Come along on this fantastic tour of a glacier that sits on top of a 700.000-year-old stratovolcano. Snæfellsjökull is one of the most famous sites in Iceland both the glacier and the area around is said to hold mystical energy, the feeling of standing on a glacier which sits above a mighty volcano is second to none. The incredible views from the glacier will provide fantastic photo opportunities and lasting memories. Those looking for an exciting adventure should not miss this excursion. "
 }

@@ -28,6 +28,7 @@ export default defineComponent({
   grid-template-areas: "overLay";
   margin: 1rem;
   margin-bottom: 0;
+  @include white-blue-bg-gradient;
 
   h1 {
     font-size: 1.5em;
@@ -50,9 +51,9 @@ export default defineComponent({
 
     .info-component {
       grid-area: overLay;
-      justify-self: end;
+      justify-self: start;
       width: 30%;
-      margin-right: 1rem;
+      margin-left: 1rem;
       // margin-bottom: 2rem;
       min-height: 72vh;
     }

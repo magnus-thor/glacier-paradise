@@ -25,7 +25,7 @@
       <p>{{ card.text }}</p>
       <p v-if="card.additionalText">{{ card.additionalText }}</p>
       <router-link v-if="link.href" class="router-link" :to="link.href">
-        {{ link.text ? link.text : $t("links.linkText") }}
+        {{ link.text ? link.text : $t("links.readMore") }}
       </router-link>
       <slot></slot>
     </div>

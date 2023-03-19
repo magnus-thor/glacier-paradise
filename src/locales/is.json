@@ -28,7 +28,6 @@
         "header": "Sérsniðnar ferðir",
         "text": "",
         "additionalText": "Hafðu samband við okkur til að fá meiri upplýsingar.",
-        "linkText": "Hafa samband",
         "imageAlt": ""
       }
     }
@@ -68,7 +67,6 @@
     "snowCatTour": {
       "cardHeader": "Snæfellsjökull Snjósleðaferð",
       "cardText": "Taktu þátt í þessari sérstöku skoðunarferð um hinn dularfulla Snæfellsjökul. Í gegnum fallegt fjallaskarð komum við að jöklinum þar sem þú getur hoppað um borð í okkar eigin appelsínugula snjósleða til að hefja ævintýrið á Snæfellsjökli.",
-      "linkText": "Lestu meira",
       "imageAlt": "Sólsetur á toppi Snæfellsjökuls"
     },
     "giftCard": {
@@ -93,7 +91,8 @@
     }
   },
   "links": {
-    "linkText": "Lestu meira"
+    "linkText": "Lestu meira",
+    "contactUs": "Hafa samband"
   },
   "glacierInfo": "Afhjúpaðu leyndardóma Snæfellsjökuls, Komdu með í þessa magnþrungnu ferð um jökul sem að situr ofan á virkri eldstöð sem að á sér 700 þúsund ára sögu. Snæfellsjökull er einn af þekktari jöklum landsins og sést hann víða að. Bæði jökullin og svæðið í kring er talið geyma orku og er tilfinningin að standa á jökli sem að situr ofan á voldugu eldfjalli óviðjafnanleg. Magnaða útsýnið af jöklinum veitir frábær ljósmynda tækifæri og minningar. Þeir sem að leita að spennandi ævintýrum ættu ekki láta þessa ferð fram hjá sér fara. "
 }
