@@ -5,7 +5,7 @@
       <div class="card__content">
         <h2>{{ card.header }}</h2>
         <p>{{ card.text }}</p>
-        <div class="card__info">
+        <!-- <div class="card__info">
           <div>
             <p><strong>Duration:</strong></p>
             <p>
@@ -18,7 +18,7 @@
               <strong>{{ info.departure }}</strong>
             </p>
           </div>
-        </div>
+        </div> -->
         <nav class="nav__link">
           <router-link :to="link.href">{{ $t(link.text) }}</router-link>
         </nav>
@@ -29,7 +29,7 @@
 
 <script lang="ts" setup>
 import { CardText, CardLink, CardInfo } from "@/interfaces/props";
-import { PropType } from "vue";
+import { computed, PropType } from "vue";
 
 const props = defineProps({
   image: {
@@ -50,6 +50,10 @@ const props = defineProps({
     type: Object as PropType<CardInfo>,
   },
   cardIndex: Number,
+});
+
+const reverseFlow = computed(() => {
+  return props.cardIndex % 2 !== 0;
 });
 </script>
 
@@ -74,8 +78,8 @@ const props = defineProps({
   }
 
   p {
-    font-size: 14px;
-    color: $card_text_color;
+    font-size: 15px;
+    color: black;
   }
 }
 
@@ -90,6 +94,10 @@ $card-height-lg-screen: 20rem;
 
   @include for-tablet-portrait-up {
     flex-direction: row;
+
+    &.row-reverse {
+      flex-direction: row-reverse;
+    }
   }
 }
 
@@ -116,7 +124,7 @@ $card-height-lg-screen: 20rem;
   grid-template-columns: 1fr;
   width: 90%;
   background-color: $dark_grey;
-  @include gold-bg-gradient;
+  @include gold-bg-gradient(40deg);
   padding: 1rem;
   box-sizing: border-box;
 

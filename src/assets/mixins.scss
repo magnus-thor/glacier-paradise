@@ -40,28 +40,24 @@
   }
 }
 
-@mixin gold-bg-gradient {
-  background: radial-gradient(
-      ellipse farthest-corner at right bottom,
-      #fedb37 0%,
-      #fdb931 8%,
-      #9f7928 30%,
-      #8a6e2f 40%,
-      transparent 80%
-    ),
-    radial-gradient(
-      ellipse farthest-corner at left top,
-      #ffffff 0%,
-      #ffffac 8%,
-      #d1b464 25%,
-      #5d4a1f 62.5%,
-      #5d4a1f 100%
-    );
-
-  a {
-    color: $blue;
-  }
-}
+// @mixin gold-bg-gradient {
+//   background: radial-gradient(
+//       ellipse farthest-corner at right bottom,
+//       #fedb37 0%,
+//       #fdb931 8%,
+//       #9f7928 30%,
+//       #8a6e2f 40%,
+//       transparent 80%
+//     ),
+//     radial-gradient(
+//       ellipse farthest-corner at left top,
+//       #ffffff 0%,
+//       #ffffac 8%,
+//       #d1b464 25%,
+//       #5d4a1f 62.5%,
+//       #5d4a1f 100%
+//     );
+// }
 
 @mixin yellow-brownish-bg-gradient($deg: 135deg) {
   background: linear-gradient($deg, #d4af37, #4d4637);
@@ -84,10 +80,6 @@
     100% {
       background-position: 0% 50%;
     }
-  }
-
-  a {
-    color: $blue;
   }
 }
 
@@ -136,14 +128,6 @@
     #462523 100%
   );
   color: transparent;
-
-  a {
-    color: $blue;
-  }
-
-  p {
-    color: $blue;
-  }
 }
 
 @mixin ellipse-bg-gradient {

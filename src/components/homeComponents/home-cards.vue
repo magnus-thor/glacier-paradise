@@ -62,9 +62,15 @@ export default defineComponent({
 
 .nav__link {
   margin-top: 0.6rem;
+  color: $blue;
 
   a {
     color: $card_link_color;
+    font-weight: bold;
+
+    &:hover {
+      color: $card_link_color__hover;
+    }
   }
 
   @include for-tablet-landscape-down {
