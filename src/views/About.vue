@@ -50,10 +50,9 @@ export default defineComponent({
 
     .info-component {
       grid-area: overLay;
-      justify-self: end;
+      justify-self: start;
       width: 30%;
-      margin-right: 1rem;
-      // margin-bottom: 2rem;
+      margin-left: 1rem;
       min-height: 72vh;
     }
   }

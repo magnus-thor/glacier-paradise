@@ -40,31 +40,27 @@
   }
 }
 
-@mixin gold-bg-gradient {
-  background: radial-gradient(
-      ellipse farthest-corner at right bottom,
-      #fedb37 0%,
-      #fdb931 8%,
-      #9f7928 30%,
-      #8a6e2f 40%,
-      transparent 80%
-    ),
-    radial-gradient(
-      ellipse farthest-corner at left top,
-      #ffffff 0%,
-      #ffffac 8%,
-      #d1b464 25%,
-      #5d4a1f 62.5%,
-      #5d4a1f 100%
-    );
+// @mixin gold-bg-gradient {
+//   background: radial-gradient(
+//       ellipse farthest-corner at right bottom,
+//       #fedb37 0%,
+//       #fdb931 8%,
+//       #9f7928 30%,
+//       #8a6e2f 40%,
+//       transparent 80%
+//     ),
+//     radial-gradient(
+//       ellipse farthest-corner at left top,
+//       #ffffff 0%,
+//       #ffffac 8%,
+//       #d1b464 25%,
+//       #5d4a1f 62.5%,
+//       #5d4a1f 100%
+//     );
+// }
 
-  a {
-    color: $blue;
-  }
-}
-
-@mixin yellow-brownish-bg-gradient {
-  background: linear-gradient(135deg, #d4af37, #4d4637);
+@mixin yellow-brownish-bg-gradient($deg: 135deg) {
+  background: linear-gradient($deg, #d4af37, #4d4637);
 
   a {
     color: $blue;
@@ -73,7 +69,7 @@
 
 @mixin yellow-brownish-with-animation-bg-gradient {
   background: radial-gradient(circle at bottom, #d4af37, #4d4637);
-  animation: gradient 11s ease infinite;
+  animation: gradient 1s ease-in-out infinite;
   @keyframes gradient {
     0% {
       background-position: 0% 50%;
@@ -85,17 +81,9 @@
       background-position: 0% 50%;
     }
   }
-
-  a {
-    color: $blue;
-  }
 }
 
-@mixin white-blue-bg-gradient {
-  background: linear-gradient(135deg, #dadada, #3a57b9);
-}
-
-@mixin gold-bg-gradient {
+@mixin gold-bg-gradient($deg: 165deg) {
   // background-image: linear-gradient(
   //   10deg,
   //   #462523 0,
@@ -106,8 +94,31 @@
   //   #cb9b51 78%,
   //   #462523 100%
   // );
+  // background-image: linear-gradient(
+  //   to right,
+  //   #462523 0,
+  //   #cb9b51 22%,
+  //   #f6e27a 45%,
+  //   #f6f2c0 50%,
+  //   #f6e27a 55%,
+  //   #cb9b51 78%,
+  //   #462523 100%
+  // );
+  // background-image: linear-gradient(
+  //   313deg,
+  //   #462523 -8%,
+  //   #cb9b51 14%,
+  //   #f6e27a 32%,
+  //   #f6f2c0 46%,
+  //   #f6e27a 66%,
+  //   #cb9b51 84%,
+  //   #462523 117%
+  // );
+
+  //  background: radial-gradient(ellipse at bottom, #462523 -2%, #cb9b51 10%, #f6e27a 69%, #f6f2c0 46%, #f6e27a 66%, #cb9b51 84%, #462523 117%)
+
   background-image: linear-gradient(
-    -186deg,
+    $deg,
     #462523 0,
     #cb9b51 22%,
     #f6e27a 31%,
@@ -117,12 +128,36 @@
     #462523 100%
   );
   color: transparent;
+}
 
-  a {
-    color: $blue;
-  }
+@mixin ellipse-bg-gradient {
+  // background: radial-gradient(circle at right, #d4af37 28%, #4d4637 88%);
+  background: radial-gradient(ellipse at right, #d4af37 3%, #4d4637 49%);
+  animation: gradient-43347d14 6s ease infinite;
+}
 
-  p {
-    color: $blue;
-  }
+@mixin visions_of_grandeur {
+  background: #000046; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #3a57b9,
+    #000046
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #3a57b9,
+    #000046
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+@mixin white-blue-bg-gradient($deg: 0deg) {
+  // background: linear-gradient(135deg, #dadada, #3a57b9);
+  background: linear-gradient(
+    $deg,
+    #071a5a,
+    #192f6a,
+    #5e738e,
+    #b6b2b8,
+    #e8e5e0
+  );
 }

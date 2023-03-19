@@ -1,9 +1,9 @@
 <template>
-  <div class="page">
+  <div class="page tours">
     <router-view v-slot="{ Component, route }">
       <transition
-        :enterActiveClass="route.meta.enterClass"
-        :leaveActiveClass="route.meta.leaveClass"
+        :enterActiveClass="route.meta.enterClass as string"
+        :leaveActiveClass="route.meta.leaveClass as string"
         enter-to-class="pos-absolute"
         leave-from-class="pos-absolute"
         mode="out-in"
@@ -19,9 +19,7 @@ import { defineComponent } from "vue";
 
 export default defineComponent({
   name: "ToursView",
-  setup() {
-    console.log("TOURS CREATED");
-  },
+  setup() {},
 });
 </script>
 

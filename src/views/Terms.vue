@@ -1,5 +1,5 @@
 <template>
-  <div class="page">
+  <div class="page terms">
     <terms-markdown />
   </div>
 </template>

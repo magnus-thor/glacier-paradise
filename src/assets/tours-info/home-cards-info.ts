@@ -7,7 +7,7 @@ export const cardsInfo: ICardInfo[] = [
     cardHeader: "home.tours.topOfTheDiamond.header",
     cardText: "home.tours.topOfTheDiamond.text",
     cardAdditionalText: "home.tours.topOfTheDiamond.additionalText",
-    linkText: "links.linkText",
+    linkText: "links.readMore",
     linkHref: "/tours/snow-cat",
   },
   {
@@ -16,16 +16,16 @@ export const cardsInfo: ICardInfo[] = [
     cardHeader: "home.tours.midnightSunTour.header",
     cardText: "home.tours.midnightSunTour.text",
     cardAdditionalText: "home.tours.midnightSunTour.additionalText",
-    linkText: "links.linkText",
+    linkText: "links.readMore",
     linkHref: "/tours/midnight-sun",
   },
   {
-    imageSrc: "images/custom_card.jpg",
+    imageSrc: "images/custom_card.png",
     imageAlt: "home.tours.customTours.imageAlt",
     cardHeader: "home.tours.customTours.header",
     cardText: "home.tours.customTours.text",
     cardAdditionalText: "home.tours.customTours.additionalText",
-    linkText: "home.tours.customTours.linkText",
+    linkText: "links.contactUs",
     linkHref: "/contactUs/customTours",
   },
   {

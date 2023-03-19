@@ -24,7 +24,7 @@
       <p>{{ card.text }}</p>
       <p v-if="card.additionalText">{{ card.additionalText }}</p>
       <router-link v-if="link.href" class="router-link" :to="link.href">
-        {{ link.text ? link.text : $t("links.linkText") }}
+        {{ link.text ? link.text : $t("links.readMore") }}
       </router-link>
       <slot></slot>
     </div>
@@ -86,6 +86,7 @@ export default defineComponent({
   p {
     padding: 1rem;
     color: $card_text_color;
+    // font-weight: bold;
 
     + p {
       padding-top: 0;
@@ -113,18 +114,17 @@ export default defineComponent({
     background-color: $dark_grey;
 
     &.gradient0 {
-      @include yellow-brownish-bg-gradient;
+      @include gold-bg-gradient(20deg);
     }
     &.gradient1 {
-      // @include gold-bg-gradient;
       @include gold-bg-gradient;
     }
 
     &.gradient2 {
-      @include yellow-brownish-with-animation-bg-gradient;
+      @include gold-bg-gradient(20deg);
     }
     &.gradient3 {
-      @include white-blue-bg-gradient;
+      @include gold-bg-gradient;
     }
 
     margin-left: 3%;
@@ -156,12 +156,13 @@ export default defineComponent({
       padding: 1rem;
       width: 60%;
       border-radius: 0% 25%;
-      margin-right: 1rem;
+      margin-right: 0;
+      margin-left: 2%;
 
       &.border-reverse {
         border-radius: 25% 0%;
-        margin-right: 0;
-        margin-left: 1rem;
+        margin-right: 2%;
+        margin-left: 0;
       }
     }
 
