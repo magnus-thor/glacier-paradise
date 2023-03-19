@@ -1,6 +1,6 @@
 <template>
   <div class="info-wrapper">
-    <h1>some header goes here</h1>
+    <h1>{{ $t("aboutUs.info-header") }}</h1>
 
     <div class="staff">
       <h2>Vignir</h2>
@@ -42,7 +42,7 @@ export default defineComponent({
 
   h1,
   h2 {
-    color: $card_header_color;
+    color: $yellow;
   }
 
   h2 {

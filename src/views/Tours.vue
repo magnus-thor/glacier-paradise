@@ -1,5 +1,5 @@
 <template>
-  <div class="page">
+  <div class="page tours">
     <router-view v-slot="{ Component, route }">
       <transition
         :enterActiveClass="route.meta.enterClass as string"

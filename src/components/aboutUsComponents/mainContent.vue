@@ -4,8 +4,8 @@
     <div class="content--wrapper">
       <div class="empty"></div>
       <div class="company-info">
-        <h2 class="add-after">{{ $t("aboutUs.header") }}</h2>
-        <h3 class="add-after">{{ $t("aboutUs.sub-header") }}</h3>
+        <h2>{{ $t("aboutUs.header") }}</h2>
+        <h3>{{ $t("aboutUs.sub-header") }}</h3>
         <p>{{ $t("aboutUs.company") }}</p>
       </div>
     </div>
@@ -22,6 +22,7 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
+@import "@/assets/variables.scss";
 @import "@/assets/mixins.scss";
 
 .company-info {
@@ -33,6 +34,10 @@ img {
   width: 100%;
   object-fit: cover;
 }
+h2,
+h3 {
+  color: $yellow;
+}
 
 h2,
 p {
@@ -41,6 +46,7 @@ p {
 
 p {
   font-size: 0.8rem;
+  color: $white;
 }
 
 @include for-tablet-landscape-down {

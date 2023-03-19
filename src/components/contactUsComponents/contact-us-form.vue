@@ -25,7 +25,16 @@
           <label for="subject">
             {{ $t("contactUs.inputFieldLabels.subject") }}:
           </label>
-          <input id="subject" type="text" name="subject" />
+          <input
+            id="subject"
+            type="text"
+            name="subject"
+            :value="
+              $route.params.subject
+                ? $t(`contactUs.subject.${$route.params.subject}`)
+                : ''
+            "
+          />
         </div>
       </div>
       <div class="message">
@@ -41,7 +50,7 @@
   </div>
 </template>
 <script lang="ts">
-import { defineComponent } from "vue";
+import { computed, defineComponent } from "vue";
 
 export default defineComponent({
   name: "ContactUsForm",
@@ -65,10 +74,11 @@ export default defineComponent({
   }
 
   .form-grid {
+    display: grid;
     width: 100%;
 
     .input-fields {
-      width: 100%;
+      width: 99%;
     }
 
     input {
@@ -89,6 +99,7 @@ export default defineComponent({
     .submit {
       button {
         width: 100%;
+        background-color: $yellow;
       }
     }
 
@@ -111,6 +122,11 @@ export default defineComponent({
       .name,
       .email {
         margin-right: 5%;
+      }
+
+      .submit {
+        width: 8rem;
+        justify-self: end;
       }
     }
   }

@@ -36,6 +36,7 @@
   "aboutUs": {
     "header": "Unleash Your Sense of Adventure with Glacier Paradise:",
     "sub-header": "The Best Way to Experience Snæfellsjökull Glacier",
+    "info-header": "Who are we",
     "company": "Glacier Paradise is a local family-owned business founded in 2022 by Vignir and Kolfinna. With over 20 years of experience within glacier tours, they continue a family tradition of providing excellent service to visitors of Snæfellsjökull glacier. Glacier Paradise is the third party within their family to organize tours on the glacier, and they take great pride in carrying on the family legacy. They offer a unique tour experience, where customers get to ride in a snow cat and enjoy the stunning scenery to the top and back again.",
     "vignir": "Vignir is from Grenivík, a small village in the north of Iceland. He worked at sea in his early 20s and met his wife while stationed in Ólafsvík. For most of his career, he has worked as a groundwork machine operator. However, in 2004, he made his first trip to Snæfellsjökull and since then, he has been has been captivated by the mountain ever since.",
     "kolfinna": "Kolfinna was born and raised in Ólafsvík. She took her first trip on the glacier when she was only a few months old and has been drawn to it ever since. During her teenage years, she worked for her grandmother and uncle in Arnarstapi, providing glacier tours and restaurant service over the summers. Throughout her adult life, she has continued working in the service industry. During the winters, she works at the school in Snæfellsbær."
@@ -59,6 +60,11 @@
         "header": "Opening period",
         "paragraphs": "All year round !"
       }
+    },
+    "subject": {
+      "customTours": "Custom tours",
+      "giftCard": "Gift card",
+      "midnightSunTour": "Midnight-sun tour"
     }
   },
   "midnightSun": {

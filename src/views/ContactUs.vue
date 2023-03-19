@@ -49,19 +49,19 @@ export default defineComponent({
   },
 });
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
 @import "@/assets/base.scss";
 @import "@/assets/mixins.scss";
 
 .contact-us-page {
-  margin-top: 10%;
+  padding-top: 10%;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .contact-us-info--wrapper {
-  width: 100%;
+  // width: 100%;
   margin-top: 2rem;
   display: flex;
   justify-content: space-between;

@@ -116,7 +116,7 @@ export default defineComponent({
 .header {
   position: fixed;
   width: 100%;
-  height: 6rem;
+  height: $header_height;
   // padding: 1rem 0 0.5rem 0;
   align-items: center;
   display: flex;

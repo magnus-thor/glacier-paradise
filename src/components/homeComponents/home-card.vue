@@ -14,11 +14,10 @@
       :class="[
         'tour--text',
         { 'border-reverse': reverseFlow },
-        'gradient1',
-        // { gradient0: cardIndex === 0 },
-        // { gradient1: cardIndex === 1 },
-        // { gradient2: cardIndex === 2 },
-        // { gradient3: cardIndex === 3 },
+        { gradient0: cardIndex === 0 },
+        { gradient1: cardIndex === 1 },
+        { gradient2: cardIndex === 2 },
+        { gradient3: cardIndex === 3 },
       ]"
     >
       <h3>{{ card.header }}</h3>
@@ -87,6 +86,7 @@ export default defineComponent({
   p {
     padding: 1rem;
     color: $card_text_color;
+    // font-weight: bold;
 
     + p {
       padding-top: 0;
@@ -114,17 +114,17 @@ export default defineComponent({
     background-color: $dark_grey;
 
     &.gradient0 {
-      @include yellow-brownish-bg-gradient;
+      @include gold-bg-gradient(20deg);
     }
     &.gradient1 {
       @include gold-bg-gradient;
     }
 
     &.gradient2 {
-      @include yellow-brownish-with-animation-bg-gradient;
+      @include gold-bg-gradient(20deg);
     }
     &.gradient3 {
-      @include white-blue-bg-gradient;
+      @include gold-bg-gradient;
     }
 
     margin-left: 3%;

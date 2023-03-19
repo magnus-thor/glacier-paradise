@@ -1,7 +1,5 @@
 <template>
   <div class="main-layout">
-    <div id="preload"></div>
-
     <component :is="renderHeaderComponent" />
 
     <main class="content">
@@ -63,6 +61,7 @@ export default defineComponent({
 </script>
 <style lang="scss">
 @import "@/assets/base.scss";
+@import "@/assets/mixins.scss";
 @import "animate.css";
 
 div#preload {
@@ -74,14 +73,19 @@ div#preload {
   display: flex;
   flex-direction: column;
   background-color: $white;
-}
+  @include white-blue-bg-gradient;
 
-// .main-layout:has(.about-us--wrapper, .markdown) {
-//   background-color: white;
-// }
+  & :has(.tours) {
+    @include white-blue-bg-gradient(270deg);
+  }
+  & :has(.terms) {
+    background-color: $white;
+  }
+}
 
 .content {
   flex: 1 0 auto;
+  // min-height: calc(100vh - $header_height - $footer_height);
 }
 
 .pos-absolute {
