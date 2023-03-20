@@ -132,7 +132,7 @@
 
 @mixin ellipse-bg-gradient {
   // background: radial-gradient(circle at right, #d4af37 28%, #4d4637 88%);
-  background: radial-gradient(ellipse at right, #d4af37 3%, #4d4637 49%);
+  background: radial-gradient(ellipse at right, #d4af37 3%, $dark_grey 49%);
   animation: gradient-43347d14 6s ease infinite;
 }
 

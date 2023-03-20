@@ -78,8 +78,12 @@ export default defineComponent({
 
   h1 {
     padding-left: 2rem;
-    color: $white;
+    color: $yellow;
     // margin-bottom: 1rem;
+  }
+
+  p {
+    color: $white;
   }
 
   img {

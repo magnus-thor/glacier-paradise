@@ -51,7 +51,7 @@ export default defineComponent({
   }
 
   p {
-    color: $card_text_color;
+    color: $white;
   }
 }
 
