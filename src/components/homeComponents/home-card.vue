@@ -79,7 +79,7 @@ export default defineComponent({
     text-align: center;
     padding-top: 0.5rem;
     padding-bottom: 1rem;
-    border-bottom: 4px solid $grey;
+    border-bottom: 4px solid $blue;
     color: $card_header_color;
   }
 
