@@ -2,7 +2,7 @@ import { ICardInfo } from "@/interfaces/interfaces";
 
 export const cardsInfo: ICardInfo[] = [
   {
-    imageSrc: "images/topoftthediamond.card.jpg",
+    imageSrc: "images/topoftthediamond-resized.card.jpg",
     imageAlt: "home.tours.topOfTheDiamond.imageAlt",
     cardHeader: "home.tours.topOfTheDiamond.header",
     cardText: "home.tours.topOfTheDiamond.text",
@@ -11,7 +11,7 @@ export const cardsInfo: ICardInfo[] = [
     linkHref: "/tours/snow-cat",
   },
   {
-    imageSrc: "images/midnightsun.card.jpg",
+    imageSrc: "images/midnightsun-resized.card.jpg",
     imageAlt: "home.tours.midnightSunTour.imageAlt",
     cardHeader: "home.tours.midnightSunTour.header",
     cardText: "home.tours.midnightSunTour.text",
@@ -29,7 +29,7 @@ export const cardsInfo: ICardInfo[] = [
     linkHref: "/contactUs/customTours",
   },
   {
-    imageSrc: "images/cabin.jpg",
+    imageSrc: "images/cabin_northern_lights-resized.jpg",
     imageAlt: "home.tours.cabin.imageAlt",
     cardHeader: "home.tours.cabin.header",
     cardText: "home.tours.cabin.text",

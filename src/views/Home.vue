@@ -63,6 +63,8 @@ export default defineComponent({
 });
 </script>
 <style lang="scss" scoped>
+@import "../assets/mixins.scss";
+
 .page {
   overflow-x: hidden;
   position: relative;
@@ -80,6 +82,7 @@ export default defineComponent({
 }
 
 .full {
+  // min-height: 10vh;
   min-height: 45vh;
 }
 
@@ -96,4 +99,43 @@ export default defineComponent({
   margin-bottom: 2rem;
   z-index: 1;
 }
+
+// @media (min-height: 800px) {
+//   .page {
+//     h1 {
+//       margin-top: 70%;
+//     }
+//     .full {
+//       min-height: 28vh;
+//     }
+//   }
+// }
+
+// @media (min-height: 1000px) {
+//   .page {
+//     overflow-x: hidden;
+//     position: relative;
+
+//     h1 {
+//       margin-top: 45%;
+//     }
+//     .full {
+//       min-height: 40vh;
+//     }
+//   }
+// }
+
+// @media (min-height: 1300px) {
+//   .page {
+//     overflow-x: hidden;
+//     position: relative;
+
+//     h1 {
+//       margin-top: 45%;
+//     }
+//     .full {
+//       min-height: 51vh;
+//     }
+//   }
+// }
 </style>

@@ -128,6 +128,33 @@
     #462523 100%
   );
   color: transparent;
+  // background-repeat: no-repeat;
+  // background-size: cover;
+  // background-attachment: fixed;
+
+  box-shadow: inset 0 0 50px #ffd700, 0 0 50px #ffd700;
+  // box-shadow: inset 0 0 50px #cb9b51, 0 0 50px #cb9b51;
+}
+
+@mixin gold-bg-gradient-new($deg: 165deg) {
+  background-image: linear-gradient($deg, #ffd700, #c7a500);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  box-shadow: inset 0 0 50px #ffd700, 0 0 50px #ffd700;
+
+  // background-image: linear-gradient(
+  //   to bottom,
+  //   #462523 0,
+  //   #cb9b51,
+  //   #f6e27a,
+  //   #f6f2c0,
+  //   #462523
+  // );
+  // background-repeat: no-repeat;
+  // background-size: cover;
+  // background-attachment: fixed;
+  // box-shadow: inset 0 0 50px #cb9b51, 0 0 50px #cb9b51;
 }
 
 @mixin ellipse-bg-gradient {

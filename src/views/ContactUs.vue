@@ -54,10 +54,12 @@ export default defineComponent({
 @import "@/assets/mixins.scss";
 
 .contact-us-page {
-  padding-top: 10%;
+  padding-top: 8rem;
   display: flex;
   flex-direction: column;
   align-items: center;
+  max-width: 70rem;
+  margin: auto;
 }
 
 .contact-us-info--wrapper {

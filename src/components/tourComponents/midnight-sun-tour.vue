@@ -17,7 +17,7 @@
           <!-- <img src="/images/trodararnir.jpg" alt="" /> -->
         </div>
         <div class="p4">
-          <!-- <img src="/images/midnightsun.card.jpg" alt="" /> -->
+          <!-- <img src="/images/midnightsun-resized.card.jpg" alt="" /> -->
           <p>{{ $t("midnightSun.p4") }}</p>
         </div>
       </div>
@@ -37,7 +37,7 @@
         <!-- <img src="/images/trodararnir.jpg" alt="" /> -->
       </div>
       <div class="p4">
-        <!-- <img src="/images/midnightsun.card.jpg" alt="" /> -->
+        <!-- <img src="/images/midnightsun-resized.card.jpg" alt="" /> -->
         <p>{{ $t("midnightSun.p4") }}</p>
       </div>
     </div>

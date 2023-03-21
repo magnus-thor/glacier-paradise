@@ -43,9 +43,9 @@
         </label>
         <textarea id="message" name="message"></textarea>
       </div>
-      <div class="submit">
-        <button type="submit">{{ $t("contactUs.buttons.send") }}</button>
-      </div>
+      <button class="submit" type="submit">
+        {{ $t("contactUs.buttons.send") }}
+      </button>
     </form>
   </div>
 </template>
@@ -98,10 +98,24 @@ export default defineComponent({
     }
 
     .submit {
-      button {
-        width: 100%;
-        background-color: $yellow;
-      }
+      display: inline-block;
+      background-color: #f6c23e;
+      color: #fff;
+      font-size: 1rem;
+      font-weight: bold;
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+      width: 8rem;
+      justify-self: end;
+      margin-right: 1rem;
+    }
+
+    .submit:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     }
 
     @include for-tablet-landscape-up {
