@@ -72,7 +72,7 @@ export default defineComponent({
   h1 {
     z-index: 1;
     margin: auto;
-    margin-top: 25rem;
+    margin-top: 30vh;
     padding-left: 1rem;
     padding-right: 1rem;
     color: white;
@@ -100,42 +100,27 @@ export default defineComponent({
   z-index: 1;
 }
 
-// @media (min-height: 800px) {
-//   .page {
-//     h1 {
-//       margin-top: 70%;
-//     }
-//     .full {
-//       min-height: 28vh;
-//     }
-//   }
-// }
+@media (min-height: 800px) {
+  .page {
+    .full {
+      min-height: 46vh;
+    }
+  }
+}
 
-// @media (min-height: 1000px) {
-//   .page {
-//     overflow-x: hidden;
-//     position: relative;
+@media (min-height: 1000px) {
+  .page {
+    .full {
+      min-height: 45vh;
+    }
+  }
+}
 
-//     h1 {
-//       margin-top: 45%;
-//     }
-//     .full {
-//       min-height: 40vh;
-//     }
-//   }
-// }
-
-// @media (min-height: 1300px) {
-//   .page {
-//     overflow-x: hidden;
-//     position: relative;
-
-//     h1 {
-//       margin-top: 45%;
-//     }
-//     .full {
-//       min-height: 51vh;
-//     }
-//   }
-// }
+@media (min-height: 1300px) {
+  .page {
+    .full {
+      min-height: 58vh;
+    }
+  }
+}
 </style>

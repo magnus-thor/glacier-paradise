@@ -29,14 +29,6 @@ export default defineComponent({
   margin: 1rem;
   margin-bottom: 0;
 
-  h1 {
-    font-size: 1.5em;
-  }
-
-  h2 {
-    font-size: 1.2em;
-  }
-
   @include for-tablet-landscape-down {
     .main-content {
       margin-bottom: 1rem;

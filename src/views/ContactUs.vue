@@ -1,15 +1,19 @@
 <template>
-  <div class="page contact-us-page">
-    <contact-us-header />
-    <div class="contact-us-info--wrapper">
-      <contact-us-info
-        v-for="info in contactUsInfo"
-        :icon-name="info.iconName"
-        :header="$t(info.header)"
-        :paragraphs="info.paragraphs"
-      />
+  <div class="page contact-us-wrapper">
+    <div class="main-content">
+      <contact-us-header />
+      <div class="contact-us-info--wrapper">
+        <contact-us-info
+          v-for="info in contactUsInfo"
+          :icon-name="info.iconName"
+          :header="$t(info.header)"
+          :paragraphs="info.paragraphs"
+        />
+      </div>
     </div>
-    <contact-us-form />
+    <div class="contact-us-form-component">
+      <contact-us-form />
+    </div>
   </div>
 </template>
 
@@ -53,23 +57,33 @@ export default defineComponent({
 @import "@/assets/base.scss";
 @import "@/assets/mixins.scss";
 
-.contact-us-page {
-  padding-top: 8rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  max-width: 70rem;
-  margin: auto;
-}
+.contact-us-wrapper {
+  display: grid;
+  grid-template-areas: "overLay";
+  margin: 1rem;
+  margin-bottom: 0;
 
-.contact-us-info--wrapper {
-  // width: 100%;
-  margin-top: 2rem;
-  display: flex;
-  justify-content: space-between;
+  @include for-tablet-landscape-down {
+    .main-content {
+      margin-bottom: 1rem;
+    }
+  }
 
-  @include for-tablet-portrait-up {
-    width: 65%;
+  @include for-tablet-landscape-up {
+    .main-content {
+      grid-area: overLay;
+    }
+
+    .contact-us-form-component {
+      grid-area: overLay;
+      justify-self: end;
+      width: 40%;
+      margin-left: 1rem;
+      min-height: 72vh;
+    }
+  }
+
+  @include for-desktop-up {
   }
 }
 </style>
