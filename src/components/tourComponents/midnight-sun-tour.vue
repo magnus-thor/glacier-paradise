@@ -4,42 +4,41 @@
       <img src="/images/midnightsun-50%.sida.jpg" alt="" />
       <div class="content--wrapper">
         <div class="p1">
-          <h1>{{ $t("midnightSun.header") }}</h1>
-          <p>{{ $t("midnightSun.p1") }}</p>
+          <h1>{{ $t("midnightSun.info.header") }}</h1>
+          <p>{{ $t("midnightSun.info.p1") }}</p>
           <!-- <img src="/images/bjarturhiminn.jpg" alt="" /> -->
         </div>
         <div class="p2">
           <!-- <img src="/images/rutan.jpg" alt="" /> -->
-          <p>{{ $t("midnightSun.p2") }}</p>
+          <p>{{ $t("midnightSun.info.p2") }}</p>
         </div>
         <div class="p3">
-          <p>{{ $t("midnightSun.p3") }}</p>
+          <p>{{ $t("midnightSun.info.p3") }}</p>
           <!-- <img src="/images/trodararnir.jpg" alt="" /> -->
         </div>
-        <div class="p4">
-          <!-- <img src="/images/midnightsun-resized.card.jpg" alt="" /> -->
-          <p>{{ $t("midnightSun.p4") }}</p>
-        </div>
+        <!-- <div class="p4">
+          <p>{{ $t("midnightSun.info.p4") }}</p>
+        </div> -->
       </div>
     </div>
     <div class="info--container">
       <div class="p1">
-        <h1>{{ $t("midnightSun.header") }}</h1>
-        <p>{{ $t("midnightSun.p1") }}</p>
+        <h1>{{ $t("midnightSun.content.header") }}</h1>
+        <p>{{ $t("midnightSun.content.p1") }}</p>
         <!-- <img src="/images/bjarturhiminn.jpg" alt="" /> -->
       </div>
       <div class="p2">
         <!-- <img src="/images/rutan.jpg" alt="" /> -->
-        <p>{{ $t("midnightSun.p2") }}</p>
+        <p>{{ $t("midnightSun.content.p2") }}</p>
       </div>
       <div class="p3">
-        <p>{{ $t("midnightSun.p3") }}</p>
+        <p>{{ $t("midnightSun.content.p3") }}</p>
         <!-- <img src="/images/trodararnir.jpg" alt="" /> -->
       </div>
-      <div class="p4">
-        <!-- <img src="/images/midnightsun-resized.card.jpg" alt="" /> -->
-        <p>{{ $t("midnightSun.p4") }}</p>
-      </div>
+      <!-- <div class="p4">
+ 
+        <p>{{ $t("midnightSun.content.p4") }}</p>
+      </div> -->
     </div>
   </div>
 </template>
