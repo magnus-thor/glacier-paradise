@@ -17,4 +17,8 @@ export default defineComponent({
 });
 </script>
 
-<style scoped></style>
+<style scoped>
+.contact-us-header {
+  text-align: center;
+}
+</style>

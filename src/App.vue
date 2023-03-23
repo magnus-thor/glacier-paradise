@@ -69,9 +69,6 @@ div#preload {
 }
 
 .main-layout {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
   background-color: $white;
   @include white-blue-bg-gradient(180deg);
 
@@ -86,11 +83,6 @@ div#preload {
   @include for-tablet-landscape-up {
     @include white-blue-bg-gradient;
   }
-}
-
-.content {
-  flex: 1 0 auto;
-  //TODO: add height calc here
 }
 
 .pos-absolute {

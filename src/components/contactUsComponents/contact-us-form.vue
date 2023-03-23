@@ -63,8 +63,8 @@ export default defineComponent({
   padding: 1rem;
   color: $yellow;
   box-sizing: border-box;
-  min-height: calc(100vh - $header_height - $footer_height - 1rem);
-  margin-top: 1rem;
+  min-height: calc(100vh - $header_height - $footer_height - 4rem);
+  margin-top: 2rem;
 
   h2 {
     text-align: center;
@@ -74,6 +74,7 @@ export default defineComponent({
     display: flex;
     flex-direction: column;
     margin: 1rem 0;
+    padding: 0 25%;
 
     .input-fields {
       div {
@@ -147,6 +148,12 @@ export default defineComponent({
       &:hover {
         box-shadow: 2px 2px black;
       }
+    }
+    @include for-tablet-landscape-up {
+      display: flex;
+      flex-direction: column;
+      margin: 1rem 0;
+      padding: 0 1rem;
     }
   }
 }

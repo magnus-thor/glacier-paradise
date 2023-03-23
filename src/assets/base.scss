@@ -62,7 +62,8 @@ p {
 }
 
 .page {
-  padding-top: 6rem;
+  padding-top: $header_height;
+  min-height: calc(100vh - $header_height - $footer_height);
 }
 
 .overflow-hidden {

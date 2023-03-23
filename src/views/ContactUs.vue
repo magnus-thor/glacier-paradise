@@ -65,25 +65,24 @@ export default defineComponent({
 .contact-us--container {
   display: grid;
   grid-template-areas: "overLay";
-  padding-right: 1rem;
-  min-height: calc(100vh - $header_height - $footer_height);
 
   .image {
     img {
-      width: 100vw;
-      height: calc(100vh - $header_height - $footer_height + 3rem);
-      // object-fit: cover;
+      display: block;
+      width: 100%;
     }
   }
 
-  .main-content {
+  .main-content--container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
     grid-template-areas:
       "header"
       "info ";
-    // justify-items: center;
-    // align-items: center;
+    justify-items: center;
+    align-items: center;
+    margin-top: 2rem;
+
     .contact-us-header--container {
       grid-area: header;
     }
@@ -102,6 +101,14 @@ export default defineComponent({
   // }
 
   @include for-tablet-landscape-up {
+    .image {
+      img {
+        display: block;
+        width: 100%;
+        height: calc(100vh - $header_height - $footer_height);
+      }
+    }
+
     .main-content--container {
       grid-area: overLay;
     }
@@ -113,13 +120,15 @@ export default defineComponent({
     .contact-us-form-component {
       grid-area: overLay;
       justify-self: end;
-      width: 40%;
+      width: 30%;
+      margin-right: 2em;
     }
   }
 
   @include for-desktop-up {
     .contact-us-form-component {
       width: 25%;
+      margin-right: 6rem;
     }
   }
 }
