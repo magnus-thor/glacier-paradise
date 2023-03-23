@@ -73,19 +73,24 @@ div#preload {
   display: flex;
   flex-direction: column;
   background-color: $white;
-  @include white-blue-bg-gradient;
+  @include white-blue-bg-gradient(180deg);
 
   & :has(.tours) {
     @include white-blue-bg-gradient(270deg);
   }
+
   & :has(.terms) {
     background-color: $white;
+  }
+
+  @include for-tablet-landscape-up {
+    @include white-blue-bg-gradient;
   }
 }
 
 .content {
   flex: 1 0 auto;
-  // min-height: calc(100vh - $header_height - $footer_height);
+  //TODO: add height calc here
 }
 
 .pos-absolute {

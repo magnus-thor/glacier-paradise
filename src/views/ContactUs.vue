@@ -1,8 +1,13 @@
 <template>
-  <div class="page contact-us-wrapper">
-    <div class="main-content">
-      <contact-us-header />
-      <div class="contact-us-info--wrapper">
+  <div class="page contact-us--container">
+    <div class="image">
+      <img src="/images/toppur_panorama.jpg" alt="" />
+    </div>
+    <div class="main-content--container">
+      <div class="contact-us-header--container">
+        <contact-us-header />
+      </div>
+      <div class="contact-us-info--container">
         <contact-us-info
           v-for="info in contactUsInfo"
           :icon-name="info.iconName"
@@ -57,20 +62,51 @@ export default defineComponent({
 @import "@/assets/base.scss";
 @import "@/assets/mixins.scss";
 
-.contact-us-wrapper {
+.contact-us--container {
   display: grid;
   grid-template-areas: "overLay";
-  margin: 1rem;
-  margin-bottom: 0;
+  padding-right: 1rem;
+  min-height: calc(100vh - $header_height - $footer_height);
 
-  @include for-tablet-landscape-down {
-    .main-content {
-      margin-bottom: 1rem;
+  .image {
+    img {
+      width: 100vw;
+      height: calc(100vh - $header_height - $footer_height + 3rem);
+      // object-fit: cover;
     }
   }
 
+  .main-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+      "header"
+      "info ";
+    // justify-items: center;
+    // align-items: center;
+    .contact-us-header--container {
+      grid-area: header;
+    }
+
+    .contact-us-info--container {
+      display: flex;
+      flex-direction: row;
+      grid-area: info;
+    }
+  }
+
+  // @include for-tablet-landscape-down {
+  //   .main-content {
+  //     margin-bottom: 1rem;
+  //   }
+  // }
+
   @include for-tablet-landscape-up {
-    .main-content {
+    .main-content--container {
+      grid-area: overLay;
+    }
+
+    .image {
       grid-area: overLay;
     }
 
@@ -78,12 +114,13 @@ export default defineComponent({
       grid-area: overLay;
       justify-self: end;
       width: 40%;
-      margin-left: 1rem;
-      min-height: 72vh;
     }
   }
 
   @include for-desktop-up {
+    .contact-us-form-component {
+      width: 25%;
+    }
   }
 }
 </style>

@@ -59,14 +59,14 @@ export default defineComponent({
 @import "@/assets/base.scss";
 @import "@/assets/mixins.scss";
 .form-container {
-  background-color: $dark_grey; /* use the variable for the desired color */
+  background-color: $dark_grey;
   padding: 1rem;
-  color: $white;
+  color: $yellow;
   box-sizing: border-box;
+  min-height: calc(100vh - $header_height - $footer_height - 1rem);
+  margin-top: 1rem;
 
   h2 {
-    margin-top: 0;
-    font-size: 1.5rem;
     text-align: center;
   }
 
@@ -74,8 +74,6 @@ export default defineComponent({
     display: flex;
     flex-direction: column;
     margin: 1rem 0;
-    // min-height: calc(100vh - $header_height - $footer_height);
-    min-height: 100%;
 
     .input-fields {
       div {
@@ -135,11 +133,12 @@ export default defineComponent({
     .submit {
       grid-column: span 2;
       border: none;
-      background-color: #ff5e64;
-      color: $white;
+      background-color: $yellow;
+      color: $dark_grey;
       padding: 1rem;
       border-radius: 4px;
       font-weight: bold;
+      font-size: 1rem;
       box-shadow: 4px 4px black;
       transition: box-shadow 0.3s ease-out;
       width: 60%;

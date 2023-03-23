@@ -32,12 +32,12 @@ export default defineComponent({
 
 .info-wrapper {
   padding: 2rem;
-  // padding-bottom: 1rem;
   background-color: $dark_grey;
-  margin-bottom: 1rem;
+  margin-top: 1rem;
 
   @include for-tablet-landscape-up {
-    min-height: 85%;
+    min-height: calc(100vh - $header_height - $footer_height - 3rem);
+    padding-bottom: unset;
   }
 
   h1,
