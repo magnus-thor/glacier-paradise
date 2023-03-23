@@ -89,9 +89,9 @@ export default defineComponent({
     position: fixed;
     width: 14rem;
 
-    top: calc(25%);
+    top: 20vh;
     left: calc(50% - 7rem);
-    // transition: 2s;
+    transition: 2s;
   }
 }
 

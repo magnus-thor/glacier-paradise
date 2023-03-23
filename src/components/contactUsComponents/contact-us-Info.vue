@@ -25,7 +25,6 @@ export default defineComponent({
 <style lang="scss" scoped>
 .contact-us-info {
   margin: 0.5rem;
-  text-align: center;
 }
 
 h2 {

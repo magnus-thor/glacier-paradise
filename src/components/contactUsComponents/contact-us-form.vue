@@ -1,5 +1,6 @@
 <template>
-  <div class="form">
+  <aside class="form-container">
+    <h2>Contact Us</h2>
     <form
       name="contact-us"
       method="POST"
@@ -10,21 +11,19 @@
       <input type="hidden" name="form-name" value="contact-us" />
       <div class="input-fields">
         <div class="name">
-          <label for="text">
-            {{ $t("contactUs.inputFieldLabels.name") }}:
-          </label>
+          <label for="text">{{ $t("contactUs.inputFieldLabels.name") }}:</label>
           <input id="text" type="text" name="name" required />
         </div>
         <div class="email">
-          <label for="email">
-            {{ $t("contactUs.inputFieldLabels.email") }}:
-          </label>
+          <label for="email"
+            >{{ $t("contactUs.inputFieldLabels.email") }}:</label
+          >
           <input id="email" type="email" name="email" required />
         </div>
         <div class="subject">
-          <label for="subject">
-            {{ $t("contactUs.inputFieldLabels.subject") }}:
-          </label>
+          <label for="subject"
+            >{{ $t("contactUs.inputFieldLabels.subject") }}:</label
+          >
           <input
             id="subject"
             type="text"
@@ -38,16 +37,16 @@
         </div>
       </div>
       <div class="message">
-        <label for="message">
-          {{ $t("contactUs.inputFieldLabels.message") }}:
-        </label>
+        <label for="message"
+          >{{ $t("contactUs.inputFieldLabels.message") }}:</label
+        >
         <textarea id="message" name="message"></textarea>
       </div>
-      <div class="submit">
-        <button type="submit">{{ $t("contactUs.buttons.send") }}</button>
-      </div>
+      <button class="submit" type="submit">
+        {{ $t("contactUs.buttons.send") }}
+      </button>
     </form>
-  </div>
+  </aside>
 </template>
 <script lang="ts">
 import { computed, defineComponent } from "vue";
@@ -59,83 +58,102 @@ export default defineComponent({
 <style lang="scss" scoped>
 @import "@/assets/base.scss";
 @import "@/assets/mixins.scss";
+.form-container {
+  background-color: $dark_grey;
+  padding: 1rem;
+  color: $yellow;
+  box-sizing: border-box;
+  min-height: calc(100vh - $header_height - $footer_height - 4rem);
+  margin-top: 2rem;
 
-.form {
-  margin-top: 3rem;
-  width: 100%;
-
-  @include for-tablet-landscape-up {
-    width: 65%;
+  h2 {
+    text-align: center;
   }
 
-  label {
-    display: block;
-    margin-bottom: 0.2em;
-  }
-
-  .form-grid {
-    display: grid;
-    width: 100%;
+  form {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 0;
+    padding: 0 25%;
 
     .input-fields {
-      width: 95%;
-      margin: auto;
-    }
+      div {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
 
-    input {
-      width: 100%;
+      label {
+        margin-top: 1rem;
+      }
+
+      input {
+        color: $dark_grey;
+        background-color: $white;
+        border: none;
+        padding: 0.5rem;
+        font-size: 1rem;
+        border-radius: 4px;
+        box-shadow: 4px 4px black;
+        margin-top: 0.3rem;
+        transition: box-shadow 0.3s ease-out;
+
+        &:focus {
+          box-shadow: 2px 2px black;
+          outline: none;
+        }
+      }
+
+      label {
+        font-size: 0.8rem;
+        margin-bottom: 0.3rem;
+      }
     }
 
     .message {
-      margin-top: 1rem;
-      margin: auto;
-      min-width: 95%;
+      margin: 1.5rem 0;
+      display: flex;
+      flex-direction: column;
 
       textarea {
-        width: 100%;
         height: 10rem;
+        resize: none;
+        background-color: $white;
+        border-radius: 4px;
+        box-shadow: 4px 4px black;
+        transition: box-shadow 0.3s ease-out;
+        font-size: 1rem;
+
+        &:focus {
+          box-shadow: 2px 2px black;
+          outline: none;
+        }
       }
     }
 
     .submit {
-      button {
-        width: 100%;
-        background-color: $yellow;
+      grid-column: span 2;
+      border: none;
+      background-color: $yellow;
+      color: $dark_grey;
+      padding: 1rem;
+      border-radius: 4px;
+      font-weight: bold;
+      font-size: 1rem;
+      box-shadow: 4px 4px black;
+      transition: box-shadow 0.3s ease-out;
+      width: 60%;
+      margin: auto;
+
+      &:hover {
+        box-shadow: 2px 2px black;
       }
     }
-
     @include for-tablet-landscape-up {
-      .input-fields {
-        width: 100%;
-        display: flex;
-        // grid-template-columns: 1fr 1fr 1fr;
-        justify-content: space-between;
-      }
-
-      .name,
-      .email,
-      .subject {
-        width: 30%;
-
-        input {
-          width: -webkit-fill-available;
-          width: -moz-available;
-        }
-      }
-
-      .message {
-        margin: 0;
-        margin-top: 1rem;
-
-        textarea {
-          width: 99%;
-          height: 10rem;
-        }
-      }
-      .submit {
-        width: 8rem;
-        justify-self: end;
-      }
+      display: flex;
+      flex-direction: column;
+      margin: 1rem 0;
+      padding: 0 1rem;
     }
   }
 }

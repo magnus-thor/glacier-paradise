@@ -1,15 +1,24 @@
 <template>
-  <div class="page contact-us-page">
-    <contact-us-header />
-    <div class="contact-us-info--wrapper">
-      <contact-us-info
-        v-for="info in contactUsInfo"
-        :icon-name="info.iconName"
-        :header="$t(info.header)"
-        :paragraphs="info.paragraphs"
-      />
+  <div class="page contact-us--container">
+    <div class="image">
+      <img src="/images/toppur_panorama.jpg" alt="" />
     </div>
-    <contact-us-form />
+    <div class="main-content--container">
+      <div class="contact-us-header--container">
+        <contact-us-header />
+      </div>
+      <div class="contact-us-info--container">
+        <contact-us-info
+          v-for="info in contactUsInfo"
+          :icon-name="info.iconName"
+          :header="$t(info.header)"
+          :paragraphs="info.paragraphs"
+        />
+      </div>
+    </div>
+    <div class="contact-us-form-component">
+      <contact-us-form />
+    </div>
   </div>
 </template>
 
@@ -53,21 +62,74 @@ export default defineComponent({
 @import "@/assets/base.scss";
 @import "@/assets/mixins.scss";
 
-.contact-us-page {
-  padding-top: 10%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+.contact-us--container {
+  display: grid;
+  grid-template-areas: "overLay";
 
-.contact-us-info--wrapper {
-  // width: 100%;
-  margin-top: 2rem;
-  display: flex;
-  justify-content: space-between;
+  .image {
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
 
-  @include for-tablet-portrait-up {
-    width: 65%;
+  .main-content--container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "header"
+      "info ";
+    justify-items: center;
+    align-items: center;
+    margin-top: 2rem;
+
+    .contact-us-header--container {
+      grid-area: header;
+    }
+
+    .contact-us-info--container {
+      display: flex;
+      flex-direction: row;
+      grid-area: info;
+    }
+  }
+
+  // @include for-tablet-landscape-down {
+  //   .main-content {
+  //     margin-bottom: 1rem;
+  //   }
+  // }
+
+  @include for-tablet-landscape-up {
+    .image {
+      img {
+        display: block;
+        width: 100%;
+        height: calc(100vh - $header_height - $footer_height);
+      }
+    }
+
+    .main-content--container {
+      grid-area: overLay;
+    }
+
+    .image {
+      grid-area: overLay;
+    }
+
+    .contact-us-form-component {
+      grid-area: overLay;
+      justify-self: end;
+      width: 30%;
+      margin-right: 2em;
+    }
+  }
+
+  @include for-desktop-up {
+    .contact-us-form-component {
+      width: 25%;
+      margin-right: 6rem;
+    }
   }
 }
 </style>

@@ -5,7 +5,8 @@
       <div class="card__content">
         <h2>{{ card.header }}</h2>
         <p>{{ card.text }}</p>
-        <!-- <div class="card__info">
+        <!-- TODO: Remove 
+          <div class="card__info">
           <div>
             <p><strong>Duration:</strong></p>
             <p>
@@ -106,6 +107,7 @@ $card-height-lg-screen: 20rem;
   background-image: v-bind("props.image");
   background-repeat: round;
   box-sizing: border-box;
+  // margin-right: 1rem;
 
   @include for-tablet-portrait-down {
     height: 15rem;
@@ -114,8 +116,8 @@ $card-height-lg-screen: 20rem;
   @include for-tablet-portrait-up {
     width: 20rem;
     height: $card-height-lg-screen;
-    border-start-start-radius: 5%;
-    border-end-start-radius: 5%;
+    border-start-start-radius: 25%;
+    //   border-end-start-radius: 5%;
   }
 }
 
@@ -131,8 +133,8 @@ $card-height-lg-screen: 20rem;
   @include for-tablet-portrait-up {
     width: 20rem;
     height: $card-height-lg-screen;
-    border-start-end-radius: 6%;
-    border-end-end-radius: 6%;
+    // border-start-end-radius: 6%;
+    border-end-end-radius: 25%;
   }
 
   .card__info {

@@ -37,9 +37,9 @@
     "header": "Unleash Your Sense of Adventure with Glacier Paradise:",
     "sub-header": "The Best Way to Experience Snæfellsjökull Glacier",
     "info-header": "Who are we",
-    "company": "Glacier Paradise is a local family-owned business founded in 2022 by Vignir and Kolfinna. With over 20 years of experience within glacier tours, they continue a family tradition of providing excellent service to visitors of Snæfellsjökull glacier. Glacier Paradise is the third party within their family to organize tours on the glacier, and they take great pride in carrying on the family legacy. They offer a unique tour experience, where customers get to ride in a snow cat and enjoy the stunning scenery to the top and back again.",
-    "vignir": "Vignir is from Grenivík, a small village in the north of Iceland. He worked at sea in his early 20s and met his wife while stationed in Ólafsvík. For most of his career, he has worked as a groundwork machine operator. However, in 2004, he made his first trip to Snæfellsjökull and since then, he has been has been captivated by the mountain ever since.",
-    "kolfinna": "Kolfinna was born and raised in Ólafsvík. She took her first trip on the glacier when she was only a few months old and has been drawn to it ever since. During her teenage years, she worked for her grandmother and uncle in Arnarstapi, providing glacier tours and restaurant service over the summers. Throughout her adult life, she has continued working in the service industry. During the winters, she works at the school in Snæfellsbær."
+    "company": " Glacier Paradise is a local family-owned business founded in 2022 by Vignir and Kolfinna. With over 20 years of experience within glacier tours, they continue a family tradition of providing excellent service to visitors of Snæfellsjökull glacier. Glacier Paradise is the third party within their family to organize tours on the glacier, and they take great pride in carrying on the family legacy. They offer a unique tour experience, where customers get to ride in a snow-cat and enjoy the stunning scenery to the top and back again. ",
+    "vignir": "Vignir is from Grenivík, a small village in the north of Iceland. He worked at sea in his early 20s and met his wife while stationed in Ólafsvík. For most of his career, he has worked as a groundwork machine operator. However, in 2004, he made his first trip to Snæfellsjökull and since then, he has been captivated by the mountain ever since. ",
+    "kolfinna": "Kolfinna was born and raised in Ólafsvík. She took her first trip on the glacier when she was only a few months old and has been drawn to it ever since. During her teenage years, she worked for her grandmother and uncle in Arnarstapi, providing glacier tours and restaurant service over the summers. Throughout her adult life, she has continued working in the service industry. During the winters, she works at the school in Snæfellsbær. "
   },
   "contactUs": {
     "header": "Contact us",
@@ -68,11 +68,19 @@
     }
   },
   "midnightSun": {
-    "header": "Midnight Sun Tour",
-    "p1": "We start our Snæfellsjökull “Midnight sun tour” in the evening from Anarstapi, a fishing village located on the south side of the peninsula close to Snæfellsjökull.",
-    "p2": "Here we will hop on our vehicle and make our way to the foot of the glacier. Alternatively, you can follow our bus in your own car, if it is suitable for F-roads, as we drive a mountain pass along the side of the glacier. This gravel and bumpy F road offer spectacular views of the glacier and the surrounding area and it is a great part of this adventure. There for do we advise customers to start the journey with the bus so they can enjoy the scenery along the way",
-    "p3": "Up on arrival it is time for the real fun to begin. We get on board the snow-cat to start our ascent to the top of the glacier, or as close to it as possible. The snow-cats used for the tour are specially equipped so travellers can enjoy the scenery along the way. Please take note of that these are the same sours as our “Top of the Diamond” tour except you get the added bonus of the magnificent magic of the midnight sun bathing the horizon with its mystical colour pallet. ",
-    "p4": "From here there is a vast and incredible panorama: Hellissandur, Rif, the wide bay Breiðafjörður, and as far as the West fjords (Látrabjarg cliffs). The mountain’s rugged terrain is also impressive, as is the view south encompassing all of the gulf of Faxaflói, to Reykjavík and even beyond to Keflavík. These excursions are always fascinating, and it is important for travellers to realize that views from the glacier are dependent upon local weather conditions at any given moment. "
+    "content": {
+      "header": "Midnight Sun Tour",
+      "p1": "We start our Snæfellsjökull “Midnight sun tour” in the evening from Anarstapi, a fishing village located on the south side of the peninsula close to Snæfellsjökull.",
+      "p2": "Here we will hop on our vehicle and make our way to the foot of the glacier. Alternatively, you can follow our bus in your own car, if it is suitable for F-roads, as we drive a mountain pass along the side of the glacier. This gravel and bumpy F road offer spectacular views of the glacier and the surrounding area and it is a great part of this adventure. There for do we advise customers to start the journey with the bus so they can enjoy the scenery along the way",
+      "p3": "Up on arrival it is time for the real fun to begin. We get on board the snow-cat to start our ascent to the top of the glacier, or as close to it as possible. The snow-cats used for the tour are specially equipped so travellers can enjoy the scenery along the way. Please take note of that these are the same sours as our “Top of the Diamond” tour except you get the added bonus of the magnificent magic of the midnight sun bathing the horizon with its mystical colour pallet. ",
+      "p4": "From here there is a vast and incredible panorama: Hellissandur, Rif, the wide bay Breiðafjörður, and as far as the West fjords (Látrabjarg cliffs). The mountain’s rugged terrain is also impressive, as is the view south encompassing all of the gulf of Faxaflói, to Reykjavík and even beyond to Keflavík. These excursions are always fascinating, and it is important for travellers to realize that views from the glacier are dependent upon local weather conditions at any given moment."
+    },
+    "info": {
+      "header": "",
+      "p1": "",
+      "p2": "",
+      "p3": ""
+    }
   },
   "cards": {
     "snowCatTour": {

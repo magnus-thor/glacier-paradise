@@ -1,6 +1,6 @@
 export const tourCards = [
   {
-    imageSrc: "/images/topoftthediamond.card.jpg",
+    imageSrc: "/images/topoftthediamond-resized.card.jpg",
     imageAlt: "cards.snowCatTour.imageAlt",
     cardHeader: "cards.snowCatTour.cardHeader",
     cardText: "cards.snowCatTour.cardText",
@@ -10,7 +10,7 @@ export const tourCards = [
     departure: "Arnarstapi",
   },
   {
-    imageSrc: "/images/midnightsun.card.jpg",
+    imageSrc: "/images/midnightsun-resized.card.jpg",
     imageAlt: "cards.midnightSunTour.imageAlt",
     cardHeader: "cards.midnightSunTour.cardHeader",
     cardText: "cards.midnightSunTour.cardText",

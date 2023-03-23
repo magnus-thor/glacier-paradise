@@ -143,7 +143,7 @@ export default defineComponent({
     position: fixed;
     width: 14rem;
 
-    top: calc(30% - 100px);
+    top: 25vh;
     left: calc(50% - 7rem);
   }
 }

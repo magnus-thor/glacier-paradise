@@ -69,23 +69,20 @@ div#preload {
 }
 
 .main-layout {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
   background-color: $white;
-  @include white-blue-bg-gradient;
+  @include white-blue-bg-gradient(180deg);
 
   & :has(.tours) {
     @include white-blue-bg-gradient(270deg);
   }
+
   & :has(.terms) {
     background-color: $white;
   }
-}
 
-.content {
-  flex: 1 0 auto;
-  // min-height: calc(100vh - $header_height - $footer_height);
+  @include for-tablet-landscape-up {
+    @include white-blue-bg-gradient;
+  }
 }
 
 .pos-absolute {

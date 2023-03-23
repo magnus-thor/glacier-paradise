@@ -26,16 +26,6 @@ export default defineComponent({
 .about-us--wrapper {
   display: grid;
   grid-template-areas: "overLay";
-  margin: 1rem;
-  margin-bottom: 0;
-
-  h1 {
-    font-size: 1.5em;
-  }
-
-  h2 {
-    font-size: 1.2em;
-  }
 
   @include for-tablet-landscape-down {
     .main-content {
@@ -53,7 +43,6 @@ export default defineComponent({
       justify-self: start;
       width: 30%;
       margin-left: 1rem;
-      min-height: 72vh;
     }
   }
 
