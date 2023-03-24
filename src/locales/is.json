@@ -60,7 +60,8 @@
       "phone": { "header": "Sími" },
       "openingPeriod": {
         "header": "Opnunartími",
-        "paragraphs": "Allt árið !"
+        "paragraph1": "Við erum með reglulegar ferðir frá Apríl til Águst.",
+        "paragraph2": "Restina af árinu getum við farið ferðir eftir samkomulagi."
       }
     },
     "subject": {

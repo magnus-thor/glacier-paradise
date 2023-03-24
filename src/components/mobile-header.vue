@@ -73,6 +73,8 @@ export default defineComponent({
   justify-items: space-between;
   padding-top: 0.5rem;
   padding-left: 0.5rem;
+  height: $header_height; //TODO: smaller header, use $header_height_mobile and all calcs for min height need to be responsive
+  box-sizing: border-box;
 }
 
 .header-background {
