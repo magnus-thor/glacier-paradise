@@ -1,22 +1,22 @@
 <template>
   <div class="page contact-us--container">
     <div class="image">
-      <img src="/images/toppur_panorama.jpg" alt="" />
+      <img src="/images/toppur_panorama-resized.jpg" alt="" />
     </div>
-    <div class="main-content--container">
-      <div class="contact-us-header--container">
-        <contact-us-header />
-      </div>
-      <div class="contact-us-info--container">
-        <contact-us-info
-          v-for="info in contactUsInfo"
-          :icon-name="info.iconName"
-          :header="$t(info.header)"
-          :paragraphs="info.paragraphs"
-        />
-      </div>
+    <div class="contact-us-header--container">
+      <contact-us-header />
     </div>
-    <div class="contact-us-form-component">
+    <div class="contact-us-info--container">
+      <contact-us-info
+        v-for="info in contactUsInfo"
+        :icon-name="info.iconName"
+        :header="$t(info.header)"
+        :paragraphs="info.paragraphs"
+        class="info__grid-item"
+      />
+    </div>
+
+    <div class="contact-us-form--container">
       <contact-us-form />
     </div>
   </div>
@@ -50,7 +50,10 @@ export default defineComponent({
       {
         iconName: "fa-regular-clock",
         header: "contactUs.info.openingPeriod.header",
-        paragraphs: ["contactUs.info.openingPeriod.paragraphs"],
+        paragraphs: [
+          "contactUs.info.openingPeriod.paragraph1",
+          "contactUs.info.openingPeriod.paragraph2",
+        ],
       },
     ];
 
@@ -64,72 +67,75 @@ export default defineComponent({
 
 .contact-us--container {
   display: grid;
-  grid-template-areas: "overLay";
+  grid-template-columns: 1fr;
 
   .image {
+    grid-area: 1/1/-1/-1;
     img {
       display: block;
       width: 100%;
     }
   }
 
-  .main-content--container {
+  .contact-us-header--container {
+    grid-area: 1/1/-1/-1;
+  }
+
+  .contact-us-info--container {
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-areas:
-      "header"
-      "info ";
-    justify-items: center;
-    align-items: center;
-    margin-top: 2rem;
-
-    .contact-us-header--container {
-      grid-area: header;
-    }
-
-    .contact-us-info--container {
-      display: flex;
-      flex-direction: row;
-      grid-area: info;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 1.5rem 1rem;
+    .info__grid-item:last-of-type {
+      grid-column: span 2;
+      margin: auto;
+      max-width: 48ch;
     }
   }
 
-  // @include for-tablet-landscape-down {
-  //   .main-content {
-  //     margin-bottom: 1rem;
-  //   }
-  // }
-
   @include for-tablet-landscape-up {
+    grid-template-columns: 1fr 1fr 1fr;
+    // grid-template-rows: 7fr 3fr;
+
+    //TODO: use grid-columns to span over each other
     .image {
+      grid-area: 1/1/-1/-1;
+      // width: 100%;
       img {
         display: block;
-        width: 100%;
-        height: calc(100vh - $header_height - $footer_height);
+        // height: 70vh;
+        // width: 80%;
+        // height: 70%;
       }
     }
 
-    .main-content--container {
-      grid-area: overLay;
+    .contact-us-form--container {
+      grid-area: 1/3/3/4;
+      // max-width: 40%;
+      // justify-self: end;
+      align-self: center;
+      margin-right: 1.5rem;
     }
 
-    .image {
-      grid-area: overLay;
-    }
-
-    .contact-us-form-component {
-      grid-area: overLay;
-      justify-self: end;
-      width: 30%;
-      margin-right: 2em;
+    .contact-us-info--container {
+      grid-area: 2/1/3/-1;
+      // margin-top: -6rem;
+      max-width: 60%;
     }
   }
 
   @include for-desktop-up {
-    .contact-us-form-component {
-      width: 25%;
-      margin-right: 6rem;
-    }
+    // .main-content--container {
+    //   grid-area: overLay;
+    //   width: 65%;
+    // }
+
+    // .contact-us-form-component {
+    //   width: 25%;
+    //   margin-right: 6rem;
+    // }
   }
 }
 </style>

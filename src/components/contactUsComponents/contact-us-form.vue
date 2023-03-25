@@ -59,7 +59,7 @@ export default defineComponent({
 @import "@/assets/base.scss";
 @import "@/assets/mixins.scss";
 .form-container {
-  background-color: $dark_grey;
+  background-color: hsl(232, 7%, 28%);
   padding: 1rem;
   color: $yellow;
   box-sizing: border-box;
@@ -149,7 +149,12 @@ export default defineComponent({
         box-shadow: 2px 2px black;
       }
     }
-    @include for-tablet-landscape-up {
+  }
+
+  @include for-tablet-landscape-up {
+    background-color: hsl(232, 7%, 28%, 0.5);
+
+    form {
       display: flex;
       flex-direction: column;
       margin: 1rem 0;
