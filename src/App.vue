@@ -89,6 +89,10 @@ div#preload {
     @include white-blue-bg-gradient(270deg);
   }
 
+  & :has(.midnightSun--container) {
+    @include white-blue-bg-gradient(60deg);
+  }
+
   & :has(.terms) {
     @include white-blue-bg-gradient(180deg);
   }
