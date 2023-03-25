@@ -1,5 +1,4 @@
 import { createWebHistory, createRouter } from "vue-router";
-// TODO: Fix -> footer is shown at top on page switch
 
 const Home = () => import("@/views/Home.vue");
 const About = () => import("@/views/About.vue");
@@ -135,6 +134,7 @@ router.beforeEach((to) => {
   // TODO: When live check if pages have correct info in google search
   document.title = to.meta.title;
   document.getElementById("metaDescription").content = to.meta.description;
+  document.getElementById("footer__container").classList.add("hide");
 });
 
 router.afterEach((to, from) => {
@@ -154,6 +154,8 @@ router.afterEach((to, from) => {
     to.meta.enterClass = FadeInLeft;
     to.meta.leaveClass = FadeOutRight;
   }
+  app;
+  document.getElementById("footer__container").classList.remove("hide");
 });
 
 export default router;
