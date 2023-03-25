@@ -45,9 +45,9 @@ export default defineComponent({
 
 .midnightSun--container {
   margin: auto;
-  @include white-blue-bg-gradient;
   display: grid;
   grid-template-areas: "overLay";
+  min-height: calc(100vh - $header_height - $footer_height);
 
   .content--wrapper {
     display: grid;

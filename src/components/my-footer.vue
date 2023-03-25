@@ -47,12 +47,12 @@ export default defineComponent({
 @import "@/assets/mixins.scss";
 
 .footer__container {
-  border: 1px solid;
   height: $footer_height;
   background-color: $sapphire_blue;
   align-items: center;
   display: flex;
   justify-content: space-between;
+  box-sizing: border-box;
 }
 
 .company-info {
