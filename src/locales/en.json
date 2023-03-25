@@ -57,8 +57,9 @@
       "address": { "header": "Address" },
       "phone": { "header": "Phone" },
       "openingPeriod": {
-        "header": "Opening period",
-        "paragraphs": "All year round !"
+        "header": "Business Hours",
+        "paragraph1": "Our company operates seasonally from the months of April to August, during which we are fully open for business.",
+        "paragraph2": "However, for the rest of the year, our services are available upon request. Kindly contact us in advance and we would be happy to arrange a suitable schedule for you."
       }
     },
     "subject": {
@@ -77,9 +78,9 @@
     },
     "info": {
       "header": "",
-      "p1": "",
-      "p2": "",
-      "p3": ""
+      "p1": "Duration is around 3-4 hours",
+      "p2": "The departure is between 22:00-23:00.",
+      "p3": "Tour price is 25.000 ISK per person"
     }
   },
   "cards": {

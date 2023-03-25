@@ -109,8 +109,4 @@ export default defineComponent({
     margin-top: 1rem;
   }
 }
-
-.bokun--container {
-  // width: 250px;
-}
 </style>

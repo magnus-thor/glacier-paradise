@@ -1,4 +1,5 @@
 import { createWebHistory, createRouter } from "vue-router";
+// TODO: Fix -> footer is shown at top on page switch
 
 const Home = () => import("@/views/Home.vue");
 const About = () => import("@/views/About.vue");

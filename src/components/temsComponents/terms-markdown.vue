@@ -31,22 +31,31 @@ export default defineComponent({
 @import "@/assets/mixins.scss";
 
 .markdown {
-  margin: auto 1rem;
+  margin: auto;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  background-color: $dark_grey;
+  // box-sizing: border-box;
+  padding: 1rem;
+  // padding-right: 1rem;
 
   h1 {
     margin-top: 2rem;
     margin-bottom: 1rem;
     text-align: center;
+    color: $yellow;
   }
 
   h2 {
     margin: 1rem auto 0.4rem auto;
     text-align: left;
+    color: $yellow;
   }
 
   p {
     margin: 0 auto;
     text-align: left;
+    color: $white;
 
     &:last-of-type {
       margin-bottom: 3rem;
@@ -54,13 +63,13 @@ export default defineComponent({
   }
 
   @include for-tablet-portrait-up {
-    margin: auto;
-    width: 60%;
+    // margin: auto;
+    width: 65%;
   }
 
   @include for-desktop-up {
-    margin: auto;
-    width: 40%;
+    // margin: auto;
+    width: 50%;
   }
 }
 </style>

@@ -13,4 +13,8 @@ export default defineComponent({
   components: { TermsMarkdown },
 });
 </script>
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.terms {
+  padding: 6rem 0 1rem 0;
+}
+</style>

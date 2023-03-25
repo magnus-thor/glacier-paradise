@@ -68,11 +68,6 @@ export default defineComponent({
 <style lang="scss" scoped>
 .image-slider {
   display: grid;
-  // height: 300px;
-  // width: 100%;
-
-  // align-content: space-around;
-  // justify-content: space-between;
 }
 
 .image {
@@ -84,7 +79,6 @@ export default defineComponent({
   img {
     width: 100%;
     height: 100%;
-    // object-fit: cover;
   }
 }
 
@@ -98,9 +92,7 @@ export default defineComponent({
   justify-content: space-between;
   width: 100%;
   width: -moz-available;
-  /* WebKit-based browsers will ignore this. */
   width: -webkit-fill-available;
-  /* Mozilla-based browsers will ignore this. */
   width: fill-available;
   padding-left: 3rem;
   padding-right: 3rem;

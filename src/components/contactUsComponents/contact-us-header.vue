@@ -1,11 +1,9 @@
 <template>
   <div class="contact-us-header">
-    <div>
-      <p>
-        <strong>{{ $t("contactUs.preamble") }}?</strong>
-      </p>
-      <h1>{{ $t("contactUs.header") }}</h1>
-    </div>
+    <p>
+      <strong>{{ $t("contactUs.preamble") }}?</strong>
+    </p>
+    <h1>{{ $t("contactUs.header") }}</h1>
   </div>
 </template>
 
@@ -17,8 +15,12 @@ export default defineComponent({
 });
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+@import "@/assets/base.scss";
+
 .contact-us-header {
-  text-align: center;
+  color: $white;
+  padding-top: 1.5rem;
+  padding-left: 2rem;
 }
 </style>

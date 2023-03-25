@@ -1,8 +1,10 @@
 <template>
   <div class="contact-us-info">
-    <v-icon :name="iconName" scale="2.5" />
+    <v-icon :name="iconName" scale="2.5" color="#dadada" />
     <h2>{{ header }}:</h2>
-    <p v-for="paragraph in paragraphs">{{ $t(paragraph) }}</p>
+    <div class="info-text">
+      <p v-for="paragraph in paragraphs">{{ $t(paragraph) }}</p>
+    </div>
   </div>
 </template>
 
@@ -23,12 +25,20 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
+@import "@/assets/base.scss";
+
 .contact-us-info {
-  margin: 0.5rem;
+  text-align: center;
 }
 
 h2 {
   font-size: 1.2rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.3rem;
+  color: $yellow;
+}
+
+p {
+  color: $white;
+  padding-bottom: 0.2rem;
 }
 </style>
