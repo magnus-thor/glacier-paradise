@@ -78,7 +78,7 @@ export default defineComponent({
 }
 
 .header-background {
-  background-color: $dark_grey;
+  background-color: none;
 }
 
 .header-logo img {

@@ -22,15 +22,25 @@
   </div>
 </template>
 <script lang="ts">
-import { computed, defineComponent, onUnmounted, ref } from "vue";
-import MyHeader from "@/components/my-header.vue";
+import {
+  computed,
+  defineComponent,
+  defineAsyncComponent,
+  onUnmounted,
+  ref,
+} from "vue";
 import MyFooter from "@/components/my-footer.vue";
-import MobileHeader from "@/components/mobile-header.vue";
 import { useI18n } from "vue-i18n";
 
 export default defineComponent({
   name: "GlacierParadise",
-  components: { MyHeader, MyFooter, MobileHeader },
+  components: {
+    MobileHeader: defineAsyncComponent(
+      () => import("@/components/mobile-header.vue")
+    ),
+    MyHeader: defineAsyncComponent(() => import("@/components/my-header.vue")),
+    MyFooter,
+  },
   setup() {
     const { t } = useI18n({ useScope: "global" });
 
@@ -69,6 +79,9 @@ div#preload {
 }
 
 .main-layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
   background-color: $white;
   @include white-blue-bg-gradient(180deg);
 
@@ -77,12 +90,16 @@ div#preload {
   }
 
   & :has(.terms) {
-    background-color: $white;
+    @include white-blue-bg-gradient(180deg);
   }
 
   @include for-tablet-landscape-up {
     @include white-blue-bg-gradient;
   }
+}
+
+.content {
+  flex: 1 0 auto;
 }
 
 .pos-absolute {

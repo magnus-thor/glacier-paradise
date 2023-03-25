@@ -87,10 +87,17 @@
   animation: gradient-43347d14 6s ease infinite;
 }
 
+@mixin ellipse-bg-midnight_blue-gradient {
+  // background: radial-gradient(ellipse at right, #d4af37 3%, #191970 49%);
+  background: radial-gradient(ellipse at right, #d4af37 3%, #071a5a 49%);
+
+  animation: gradient-43347d14 6s ease infinite;
+}
+
 @mixin visions_of_grandeur {
   background: #000046;
-  background: -webkit-linear-gradient(to right, #3a57b9, #000046);
-  background: linear-gradient(to right, #3a57b9, #000046);
+  background: -webkit-linear-gradient(to right, $blue, #000046);
+  background: linear-gradient(to right, $blue, #000046);
 }
 
 @mixin white-blue-bg-gradient($deg: 0deg) {

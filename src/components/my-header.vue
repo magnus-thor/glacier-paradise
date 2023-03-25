@@ -68,7 +68,7 @@ export default defineComponent({
 
 .header-background {
   background-color: $blue;
-  @include ellipse-bg-dark_gray-gradient;
+  @include ellipse-bg-midnight_blue-gradient;
 
   .header-logo img {
     width: 100%;
