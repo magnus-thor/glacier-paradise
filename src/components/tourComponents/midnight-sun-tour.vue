@@ -58,7 +58,6 @@ export default defineComponent({
 
 .midnightSun--container {
   margin: auto;
-  // background-color: $white;
   @include white-blue-bg-gradient;
   display: grid;
   grid-template-areas: "overLay";
@@ -71,14 +70,11 @@ export default defineComponent({
 
   .info--container {
     background-color: $dark_grey;
-
-    // @include yellow-brownish-bg-gradient(280deg);
   }
 
   h1 {
     padding-left: 2rem;
     color: $yellow;
-    // margin-bottom: 1rem;
   }
 
   p {
@@ -99,16 +95,6 @@ export default defineComponent({
     &:last-of-type {
       padding-right: 0;
     }
-    // display: flex;
-    // align-items: center;
-
-    // width: 25%;
-
-    // img {
-    //   width: 180px;
-    //   height: auto;
-    //   border-radius: 50%;
-    // }
   }
 
   @include for-tablet-landscape-up {
@@ -125,7 +111,6 @@ export default defineComponent({
       width: 30%;
       margin-right: 2rem;
       margin-bottom: 2rem;
-      // min-height: 65vh;
       margin-top: 2rem;
       border-radius: 5px;
 

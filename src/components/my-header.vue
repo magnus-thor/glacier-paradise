@@ -67,8 +67,8 @@ export default defineComponent({
 @import "@/assets/mixins.scss";
 
 .header-background {
-  background-color: $dark_grey;
-  @include ellipse-bg-gradient;
+  background-color: $blue;
+  @include ellipse-bg-dark_gray-gradient;
 
   .header-logo img {
     width: 100%;
@@ -117,7 +117,6 @@ export default defineComponent({
   position: fixed;
   width: 100%;
   height: $header_height;
-  // padding: 1rem 0 0.5rem 0;
   align-items: center;
   display: flex;
   z-index: 100;
@@ -158,7 +157,6 @@ export default defineComponent({
   color: $white;
   border: none;
   padding: 0;
-  // font: inherit;
   cursor: pointer;
   outline: inherit;
   font-size: large;

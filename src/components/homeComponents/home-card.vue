@@ -86,7 +86,6 @@ export default defineComponent({
   p {
     padding: 1rem;
     color: $card_text_color;
-    // font-weight: bold;
 
     + p {
       padding-top: 0;
@@ -144,7 +143,6 @@ export default defineComponent({
   }
 
   @include for-tablet-landscape-up {
-    // height: max-content;
     flex-direction: row;
     max-width: 1024px;
 

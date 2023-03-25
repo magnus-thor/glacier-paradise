@@ -62,9 +62,6 @@ export default defineComponent({
       },
     ]);
 
-    // const onSwiper = (swiper) => {};
-    // const onSlideChange = () => {};
-
     const images = computed(() => {
       return loadImages.value;
     });

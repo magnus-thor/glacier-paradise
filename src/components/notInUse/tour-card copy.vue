@@ -92,18 +92,9 @@ export default defineComponent({
     grid-template-rows: repeat(10, 2rem);
     padding: 1rem;
   }
-  h2 {
-    // padding-bottom: 1rem;
-  }
-  // .margin-left-right {
-  //   margin-left: 1rem;
-  //   margin-right: 1rem;
-  // }
   .card__header {
     grid-row: 0 / 3;
     grid-column: 1 / 4;
-    // grid-area: cardHeader;
-    // margin-bottom: 1rem;
   }
   .card__departure {
     grid-row: 4 / 7;
@@ -131,24 +122,6 @@ export default defineComponent({
   .icon {
     margin-right: 0.5rem;
   }
-  // .card--header {
-  //   margin-top: 1rem;
-  // }
-  // .bottom-border {
-  //   padding-bottom: 0.5rem;
-  //   border-bottom: 1px inset grey; //TODO: swap to correct colors.
-  // }
-  // .link {
-  //   height: 3rem;
-  //   display: flex;
-  //   justify-content: center;
-  //   align-items: center;
-  //   text-decoration: none;
-  //   &:hover {
-  //     background-color: green; //TODO: swap to correct colors.
-  //     cursor: pointer;
-  //   }
-  // }
 }
 .imageFade-enter-active,
 .imageFade-leave-active {

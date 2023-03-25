@@ -82,7 +82,6 @@ export default defineComponent({
 }
 
 .full {
-  // min-height: 10vh;
   min-height: 45vh;
 }
 

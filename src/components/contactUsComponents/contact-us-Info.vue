@@ -37,13 +37,8 @@ h2 {
   color: $yellow;
 }
 
-// .info-text {
-//   width: 100%;
-// }
-
 p {
   color: $white;
   padding-bottom: 0.2rem;
-  // max-width: 48ch;
 }
 </style>

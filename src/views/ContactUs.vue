@@ -97,45 +97,42 @@ export default defineComponent({
 
   @include for-tablet-landscape-up {
     grid-template-columns: 1fr 1fr 1fr;
-    // grid-template-rows: 7fr 3fr;
 
-    //TODO: use grid-columns to span over each other
     .image {
       grid-area: 1/1/-1/-1;
-      // width: 100%;
       img {
         display: block;
-        // height: 70vh;
-        // width: 80%;
-        // height: 70%;
+        height: 70vh;
       }
     }
 
     .contact-us-form--container {
       grid-area: 1/3/3/4;
-      // max-width: 40%;
-      // justify-self: end;
       align-self: center;
       margin-right: 1.5rem;
     }
 
     .contact-us-info--container {
       grid-area: 2/1/3/-1;
-      // margin-top: -6rem;
       max-width: 60%;
     }
   }
 
-  @include for-desktop-up {
-    // .main-content--container {
-    //   grid-area: overLay;
-    //   width: 65%;
-    // }
+  @include for-medium-desktop-up {
+    .image {
+      img {
+        display: block;
+      }
+    }
 
-    // .contact-us-form-component {
-    //   width: 25%;
-    //   margin-right: 6rem;
-    // }
+    .main-content--container {
+      grid-area: overLay;
+      width: 65%;
+    }
+
+    .contact-us-form--container {
+      margin-right: 6rem;
+    }
   }
 }
 </style>

@@ -70,18 +70,6 @@ export default defineComponent({
     top: 80px;
     left: 2px;
   }
-
-  // img {
-  //   width: 100px;
-  //   height: auto;
-  // }
-
-  @include for-tablet-landscape-up {
-    // img {
-    //   width: 200px;
-    //   height: auto;
-    // }
-  }
 }
 
 .text {
