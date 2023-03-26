@@ -1,5 +1,5 @@
 <template>
-  <div class="footer__container">
+  <div id="footer__container" class="footer__container">
     <div class="company-info">
       <h2>Glacier Paradise</h2>
       <div class="location">
@@ -53,6 +53,10 @@ export default defineComponent({
   display: flex;
   justify-content: space-between;
   box-sizing: border-box;
+
+  &.hide {
+    display: none;
+  }
 }
 
 .company-info {

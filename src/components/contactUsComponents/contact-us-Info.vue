@@ -1,11 +1,11 @@
 <template>
-  <div class="contact-us-info">
+  <section aria-describedby="contact-us-info-header" class="contact-us-info">
     <v-icon :name="iconName" scale="2.5" color="#dadada" />
-    <h2>{{ header }}:</h2>
+    <h2 id="contact-us-info-header">{{ header }}:</h2>
     <div class="info-text">
       <p v-for="paragraph in paragraphs">{{ $t(paragraph) }}</p>
     </div>
-  </div>
+  </section>
 </template>
 
 <script lang="ts">

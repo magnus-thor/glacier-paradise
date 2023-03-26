@@ -4,6 +4,7 @@
 
     <main class="content">
       <router-view v-slot="{ Component, route }">
+        <!-- TODO: fix height while transitioning -> https://markus.oberlehner.net/blog/vue-router-page-transitions/ -->
         <transition
           :enterActiveClass="generateClassList2((route.meta.enterClass as string))"
           :leaveActiveClass="generateClassList2((route.meta.leaveClass as string))"

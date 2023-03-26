@@ -83,6 +83,17 @@
       "p3": "Tour price is 25.000 ISK per person"
     }
   },
+  "topOfTheDiamond": {
+    "header": "Top of the Diamond",
+    "p1": "The tour begins at Anarstapi, a charming fishing village located on the southern side of the peninsula, close to the majestic Snæfellsjökull glacier. After meeting up, we'll board our vehicle and head towards the foot of the glacier. If you prefer, you can follow us in your own car, as long as it's suitable for F-roads.",
+    "p2": "Our mountain pass offers breathtaking views of the glacier and its surroundings, making it an essential part of the adventure. However, we recommend starting the journey with our bus to fully enjoy the scenic ride.",
+    "p3": "Upon arrival, the real fun begins. We'll hop on a specially equipped snow-cat and make our way to the top of the glacier or as close to it as possible. The journey itself is an experience to remember, with stunning views of Hellissandur, Rif, the bay of Breiðafjörður, and even the West fjords (Látrabjarg cliffs).",
+    "p4": "The rugged terrain of the mountain and the panoramic view of the gulf of Faxaflói, Reykjavík, and Keflavík to the south are equally impressive. It's important to note that the views from the glacier are weather-dependent and can vary at any given moment.",
+    "info": {
+      "p3": "At 1446 meters above sea level, Snæfellsjökull is easily accessible and boasts tremendous energy levels. Considered one of the seven great energy centers of the earth, it's no wonder that the glacier has inspired numerous works of literature, including the Nobel-prize winning author Halldór Laxness's 'Christianity Under the Glacier.” This story describes the reintroduction of paganism into a small community and touches on the failures of Christianity in an amusing and edgy tale.The science fiction classic “Journey to the Center of the Earth”, published in 1864 by French author Jules Verne, also features Snæfellsjökull. The characters embark on a hazardous journey that starts at a secret entrance on the glacier and leads them to a subterranean world at the center of the earth, eventually emerging through a volcanic eruption on the south Italian island of Stromboli.",
+      "p4": "Finally, on November 5th, 1993, Snæfellsjökull was supposed to be the landing site for extraterrestrial beings. British man Michael Dillon claimed to have been contacted by the aliens, who promised to land on this specific date and place. This was supported by visions from a woman who claimed to have been abducted. Although the event attracted over 500 alien enthusiasts from around the world, including a CNN camera crew, no alien sightings were reported in the area on that specific date to our knowledge. "
+    }
+  },
   "cards": {
     "snowCatTour": {
       "cardHeader": "Top of the Diamond tour",

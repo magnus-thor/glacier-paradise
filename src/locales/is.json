@@ -37,7 +37,7 @@
     "sub-header": "",
     "info-header": "Þetta erum við",
     "company": "Glacier Paradise er lítið fjölskyldu fyrirtæki sem stofnað var árið 2022 af hjónunum Vigni og Kolfinnu. Þau eru þriðji aðilinn innan fjölskyldunnar til að skipuleggja ferðir á Snæfellsjökul og leggja þau metnað sinn í að halda áfram arfleifð fjölskyldunnar. Með yfir 20 ára reynslu innan jöklaferða í farteskinu halda þau áfram að veita viðskipavinum framúrskarandi þjónustu. Þau bjóða upp á ferðir á Snæfellsjökul með snjótroðara þar sem viðskiptavinurinn getur notið útsýnisins áhyggjulaus í ferðinni.",
-    "vignir": "Vignir er upp alinn á Grenivík. Hann starfaði við sjómennsku snemma á tvítugs aldrinum og var á vertíð í Ólafsvík þar sem hann kynnist Kolfinnu. Lengst af hefur hann unnið á vinnuvélum við jarðvegsvinnu. Hann fór í sína fyrstu ferð upp á Snæfellsjökul 2004 og hefur verið með annan fótinn á jöklinum síðan.",
+    "vignir": "Vignir er uppalinn á Grenivík. Hann starfaði við sjómennsku snemma á tvítugs aldrinum og var á vertíð í Ólafsvík þar sem hann kynnist Kolfinnu. Lengst af hefur hann unnið á vinnuvélum við jarðvegsvinnu. Hann fór í sína fyrstu ferð upp á Snæfellsjökul 2004 og hefur verið með annan fótinn á jöklinum síðan.",
     "kolfinna": "Kolfinna er fædd og uppalin í Ólafsvík og var aðeins nokkra mánaða gömul er hún fór sína fyrstu ferð á jökulinn. Hún hefur lengst unnið við þjónustustörf og byrjaði sem táningur að vinna með ömmu sinni og frænda í ferðaþjónustunni Snjófelli sem þá var með ferðir á Snæfellsjökul og matsölustaðinn Arnarbæ á Arnarstapa.  Yfir vetrartímann vinnur hún í Grunnskóla Snæfellsbæjar."
   },
   "contactUs": {
@@ -83,6 +83,13 @@
       "p2": "",
       "p3": ""
     }
+  },
+  "topOfTheDiamond": {
+    "header": "",
+    "p1": "Við leggjum af stað í “Á toppi Demantsins”  ferðina frá Arnarstapa með rútu. Ykkur er velkomið að fylgja okkur á eigin bíl sé hann útbúinn fyrir fjallvegi. Við keyrum meðfram Stapafellinu og upp jökulhálsinn. Af veginum er frábært útsýni á jökulinn og umlykjandi svæði og mælum við með að taka rútuferðina frá Arnarstapa til að njóta þess. Þegar upp er komið er sest á snjótroðarann og við byrjum ferðina að toppi jökulsins eða eins nálægt toppi og aðstæður leyfa hverju sinni. Snjótroðarinn sem notaður er í ferðirnar er sérstaklega útbúinn svo að viðskiptavinir geti notið útsýnisins í ferðinni sem best.",
+    "p2": "Þegar upp er komið blasir víðáttumikið landslag við okkur, á aðra höndina horfum við yfir Hellissand, Rif og yfir Breiðafjörðinn að Vestfjörðum þar blasir Látrabjarg við. Á hina höndina horfum við á Snæfellsnesfjallgarðinn þar á meðal eldfjallakerfin Helgrindur og Ljósufjöll, við sjáum yfir allan Faxaflóa að Reykjavík og Suðurnesjum. Eins stórfenglegt og útsýnið í ferðunum getur verið þá er vert að minnast á að útsýnið ræðst algjörlega af veður skilyrðum hverju sinni.",
+    "p3": "",
+    "p4": ""
   },
   "cards": {
     "snowCatTour": {

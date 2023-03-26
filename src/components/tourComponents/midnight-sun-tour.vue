@@ -4,6 +4,7 @@
       <img src="/images/midnightsun.sida.jpg" alt="" />
       <div class="content--wrapper">
         <div class="p1">
+          <!-- TODO: Refactor header outside this div -->
           <h1>{{ $t("midnightSun.info.header") }}</h1>
           <p>{{ $t("midnightSun.info.p1") }}</p>
         </div>
@@ -15,7 +16,7 @@
         </div>
       </div>
     </div>
-    <div class="info--container">
+    <aside class="info--container">
       <div class="p1">
         <h1>{{ $t("midnightSun.content.header") }}</h1>
         <p>{{ $t("midnightSun.content.p1") }}</p>
@@ -26,7 +27,7 @@
       <div class="p3">
         <p>{{ $t("midnightSun.content.p3") }}</p>
       </div>
-    </div>
+    </aside>
   </div>
 </template>
 
@@ -99,6 +100,7 @@ export default defineComponent({
       margin-right: 2rem;
       margin-bottom: 2rem;
       margin-top: 2rem;
+      padding-bottom: 2rem;
       border-radius: 5px;
 
       h1 {
