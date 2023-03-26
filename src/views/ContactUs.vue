@@ -102,7 +102,7 @@ export default defineComponent({
       grid-area: 1/1/-1/-1;
       img {
         display: block;
-        height: 70vh;
+        height: 50vh;
       }
     }
 
@@ -122,6 +122,7 @@ export default defineComponent({
     .image {
       img {
         display: block;
+        height: 60vh;
       }
     }
 

@@ -1,5 +1,6 @@
 <template>
   <aside class="form-container">
+    <!-- TODO: Add translation -->
     <h2>Contact Us</h2>
     <form
       name="contact-us"

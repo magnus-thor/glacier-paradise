@@ -1,78 +1,32 @@
 <template>
-  <div class="top-of-the-diamond-tour">
-    <h1>Top Of The Diamond Tour</h1>
-    <div class="content--wrapper">
-      <section>
-        <p>
-          We start our “Top of the Diamond tour” from Anarstapi, a fishing
-          village located on the south side of the peninsula close to
-          Snæfellsjökull.
-        </p>
-        <p>
-          Here we will hop on our vehicle and make our way to the foot of the
-          glacier. Alternatively, you can follow our bus in your own car, if it
-          is suitable for F-roads, as we drive a mountain pass along the side of
-          the glacier. This gravel and bumpy F road offer spectacular views of
-          the glacier and the surrounding area and it is a great part of this
-          adventure. Therefor we do advise customers to start the journey with
-          the bus so they can enjoy the scenery along the way.
-        </p>
-        <p>
-          Up on arrival it is time for the real fun to begin. We get on board
-          the snow-cat to start our ascent to the top of the glacier, or as
-          close to it as possible. The snow-cats used for the tour are specially
-          equipped so travellers can enjoy the scenery along the way.
-        </p>
-        <p>
-          From here there is a vast and incredible panorama: Hellissandur, Rif,
-          the bay Breiðafjörður, and as far as the West fjords (Látrabjarg
-          cliffs). The mountain’s rugged terrain is also impressive, as is the
-          view south encompassing all of the gulf of Faxaflói, to Reykjavík and
-          even beyond to Keflavík. These excursions are always fascinating, and
-          it is important for travellers to realize that views from the glacier
-          are dependent upon local weather conditions at any given moment.
-        </p>
-        <p>
-          Snæfellsjökull is 1446 meters above sea level it’s located at the edge
-          of Snæfellsnes peninsula and is easily accessible. Besides its
-          singular beauty, it boasts a tremendous energy level. it’s said to be
-          one of the seven great energy centres of the earth and has been
-          attributed to various mysterious powers. It has been a prominent theme
-          of authors and inspired the composition of impressive works of
-          literature.
-        </p>
-        <p>
-          Worthy of mention is the story written by Nobel-prize winning author
-          Halldór Laxness, “Christianity Under the Glacier,” which describes
-          reintroduction of paganism into a small community and touches on the
-          failures of Christianity in an amusing and edgy tail.
-        </p>
-        <p>
-          Also in the science fiction classic, “Journey to the Center of the
-          Earth,” which was published in 1864 by French author, Jules Verne,
-          where the characters take on a hazardous journey that starts at a
-          secret entrance on the glacier to a subterranean world at the centre
-          of the earth, ending with emerging to the surface through a volcanic
-          eruption on the south Italian island Stromboli.
-        </p>
-        <p>
-          On 5th of November 1993 aliens wear supposed to land on
-          Snæfellsjökull, A British man Michael Dillon believed he was contacted
-          by the aliens with the message that they would land on this specific
-          date and place, and this was backed up by visions that a woman had
-          while she was abducted. This event did attract over 500 alien
-          enthusiasts from around the world including a camera crew from CNN, to
-          our knowledge no alien sighting was reported on that specific date in
-          the area.
-        </p>
-      </section>
-      <div class="bokun--container">
-        <div
-          class="bokunWidget"
-          data-src="https://widgets.bokun.io/online-sales/a5fa0d8d-ffc2-431e-bece-86e5d8fa2d7c/experience-calendar/17979"
-        ></div>
-      </div>
+  <div class="top-of-the-diamond-tour--container">
+    <div class="image">
+      <img src="/images/toppur_panorama-resized.jpg" alt="" />
     </div>
+    <!-- <div class="header--container">
+      <h1>Top of the diamond</h1>
+    </div> -->
+    <div class="content--wrapper">
+      <p>Info content 1</p>
+      <p>Info content 2</p>
+      <p>Info content 3</p>
+    </div>
+    <aside class="sidebar--container">
+      <h2>{{ $t("topOfTheDiamond.header") }}</h2>
+      <p>{{ $t("topOfTheDiamond.p1") }}</p>
+      <p>{{ $t("topOfTheDiamond.p2") }}</p>
+      <p>{{ $t("topOfTheDiamond.p3") }}</p>
+      <p>{{ $t("topOfTheDiamond.p4") }}</p>
+      <button
+        class="bokunButton"
+        disabled
+        id="bokun_b3447b9e_8bf3_4090_a58d_8b930ced9c1d"
+        data-src="https://widgets.bokun.io/online-sales/a5fa0d8d-ffc2-431e-bece-86e5d8fa2d7c/experience-calendar/17979?partialView=1"
+        data-testid="widget-book-button"
+      >
+        Book now
+      </button>
+    </aside>
   </div>
 </template>
 
@@ -88,25 +42,131 @@ export default defineComponent({
 @import "@/assets/base.scss";
 @import "@/assets/mixins.scss";
 
-.top-of-the-diamond-tour {
-  margin-top: 2rem;
-  margin-left: 2rem;
-  margin-right: 2rem;
-
-  h1 {
-    margin-bottom: 3rem;
-  }
-}
-
-.content--wrapper {
+.top-of-the-diamond-tour--container {
   display: grid;
   grid-template-columns: 1fr;
 
-  @include for-tablet-portrait-up {
-    grid-template-columns: 50% 50%;
+  .image {
+    grid-area: 1/1/-1/-1;
+    img {
+      display: block;
+      width: 100%;
+    }
   }
-  p {
-    margin-top: 1rem;
+
+  .header--container {
+    grid-area: 1/1/-1/-1;
+    color: $white;
+    padding-top: 1.5rem;
+    padding-left: 2rem;
   }
+
+  .content--wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 2rem;
+    justify-items: center;
+    box-sizing: border-box;
+  }
+
+  .sidebar--container {
+    display: grid;
+    background-color: $dark_grey;
+    box-sizing: border-box;
+    padding: 2rem 2rem;
+
+    h2 {
+      color: $yellow;
+    }
+
+    p {
+      color: $white;
+      padding: 0.5rem 0;
+    }
+  }
+
+  @include for-tablet-landscape-up {
+    $row1-height: 50vh;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: $row1-height;
+
+    .image {
+      grid-area: 1/1/-1/-1;
+      img {
+        height: $row1-height;
+        display: block;
+      }
+    }
+
+    .content--wrapper {
+      grid-area: 2/1/3/3;
+      // max-width: 60%;
+    }
+
+    .sidebar--container {
+      grid-area: 1/3/3/4;
+      align-self: center;
+      margin-right: 3rem;
+      margin: 1rem 2rem 1rem 0;
+      background-color: rgba($dark_grey, 0.9);
+    }
+  }
+
+  @include for-medium-desktop-up {
+    $row1-height: 40vh;
+    grid-template-rows: $row1-height;
+    .image {
+      img {
+        display: block;
+        height: $row1-height;
+      }
+    }
+
+    .content--wrapper {
+      // width: 75%;
+    }
+
+    .sidebar--container {
+      margin-right: 5rem;
+    }
+  }
+}
+
+// BOKUN
+.bokunButton {
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 10px 20px;
+  background: #d4af37;
+  border-radius: 5px;
+  box-shadow: none;
+  font-weight: 600;
+  font-size: 16px;
+  text-decoration: none;
+  text-align: center;
+  color: #43464e;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  margin: auto;
+  // height: 2rem;
+  // width: 10rem;
+}
+
+.bokunButton:hover {
+  background: #9d8022;
+}
+
+.bokunButton:active {
+  background: #b29126;
+}
+
+.widgetRoot {
+  background-color: yellow;
+}
+
+.bk-widget-container {
+  /* Change the font color to red */
+  color: red;
 }
 </style>

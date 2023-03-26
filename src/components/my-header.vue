@@ -22,7 +22,7 @@
           <template v-for="route in routes">
             <div class="item">
               <router-link :to="route.linkTo">{{
-                $t(route.nameTranslationKey)
+                $t(route.nameTranslationKey).toLocaleUpperCase()
               }}</router-link>
             </div>
           </template>

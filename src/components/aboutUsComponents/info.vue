@@ -1,5 +1,5 @@
 <template>
-  <div class="info-wrapper">
+  <aside class="info-wrapper">
     <h1>{{ $t("aboutUs.info-header") }}</h1>
 
     <div class="staff">
@@ -13,7 +13,7 @@
       <img class="staff-image right" src="/images/kolfinna.jpg" alt="" />
       <p>{{ $t("aboutUs.kolfinna") }}</p>
     </div>
-  </div>
+  </aside>
 </template>
 
 <script lang="ts">
