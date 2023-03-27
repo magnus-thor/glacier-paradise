@@ -87,9 +87,9 @@
   animation: gradient-43347d14 6s ease infinite;
 }
 
-@mixin ellipse-bg-midnight_blue-gradient {
+@mixin ellipse-bg-midnight_blue-gradient($direction: right) {
   // background: radial-gradient(ellipse at right, #d4af37 3%, #191970 49%);
-  background: radial-gradient(ellipse at right, #d4af37 3%, #071a5a 49%);
+  background: radial-gradient(ellipse at $direction, #d4af37 3%, #071a5a 49%);
 
   animation: gradient-43347d14 6s ease infinite;
 }

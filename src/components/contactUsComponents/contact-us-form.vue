@@ -58,7 +58,7 @@ export default defineComponent({
 </script>
 <style lang="scss" scoped>
 @import "@/assets/base.scss";
-@import "@/assets/mixins.scss";
+
 .form-container {
   background-color: hsl(232, 7%, 28%);
   padding: 1rem;
@@ -129,25 +129,6 @@ export default defineComponent({
           box-shadow: 2px 2px black;
           outline: none;
         }
-      }
-    }
-
-    .submit {
-      grid-column: span 2;
-      border: none;
-      background-color: $yellow;
-      color: $dark_grey;
-      padding: 1rem;
-      border-radius: 4px;
-      font-weight: bold;
-      font-size: 1rem;
-      box-shadow: 4px 4px black;
-      transition: box-shadow 0.3s ease-out;
-      width: 60%;
-      margin: auto;
-
-      &:hover {
-        box-shadow: 2px 2px black;
       }
     }
   }

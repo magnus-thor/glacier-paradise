@@ -3,31 +3,31 @@
     "header": "Upplifðu leyndardóma Snæfellsjökuls í ferð með okkur",
     "tours": {
       "topOfTheDiamond": {
-        "header": "Top of the Diamond tour",
-        "text": "Discover the mystical powers of the magnificent Snæfellsjökull. Come along on this fantastic tour of a glacier that sits on top of a 700-thousand-year-old stratovolcano. Snæfellsjökull is one of the most famous sites in Iceland both the glacier and the area around is believed to hold mystical energy, the feeling of standing on a glacier which sits above a mighty volcano is second to none.",
-        "additionalText": "The incredible views from the top of the glacier will provide fantastic photo opportunities and lasting memories. Those looking for an exciting adventure should not miss this excursion.",
-        "imageAlt": "Sunset from the top of Snaefellsjokull"
+        "header": "Leyndardómar Snæfellsjökuls",
+        "text": "Komdu með í þessa magnþrungnu ferð um jökul sem að situr ofan á virkri eldstöð sem að á sér 700 þúsund ára sögu. Bæði jökullin og svæðið í kring er talið geyma orku og er tilfinningin að standa á jökli sem að situr ofan á voldugu eldfjalli óviðjafnanleg. Magnaða útsýnið af jöklinum veitir frábær ljósmynda tækifæri og minningar. Þeir sem að leita að spennandi ævintýrum ættu ekki láta þessa ferð fram hjá sér fara.",
+        "additionalText": "",
+        "imageAlt": "Útsýni frá toppi Snæfellsjökuls"
       },
       "midnightSunTour": {
-        "header": "Midnight-sun tour",
-        "text": "Our “Midnight-sun tour” is an experience like no other. You will witness the incredible views from the top of the glacier bathed in the red, yellow and golden colour of the midnight-sun. As the sun sets and the sky turns into a magnificent palette of colours, we'll take a moment to appreciate the unique experience of standing on a glacier in the light of the midnight sun.",
+        "header": "Miðnætur ferð",
+        "text": "Miðnætur ferðirnar okkar eru einstök upplifun. Á meðan sólin sest og himininn litast af töfrum miðnætursólarinnar færð þú að njóta þess magnaða útsýni sem jökullinn hefur uppá að bjóða meðan miðnætursólin baðar allt rauðgulum bjarma. ",
         "additionalText": "",
         "imageAlt": "Útsýni frá toppi Snæfellsjökuls í miðnætursólinni"
       },
       "cabin": {
-        "header": "Cosy cottage",
-        "text": "A cosy cottage in the charming village of Arnarstapi with beautiful ocean and mountain views. Fully equipped cosy getaway which is a great base to explore everything the spectacular Snæfellsnes peninsula has to offer.",
+        "header": "Hlýlegur bústaður",
+        "text": "Notalegur fullbúinn bústaður með sjávar- og fjallaútsýni sem að staðsettur er á Arnarstapa.",
         "additionalText": "",
         "imageAlt": "Cozy cabin located in Arnarstapi",
         "airbnb": {
-          "before": "Available for bookings until July",
-          "after": "Available for bookings after June"
+          "old_cabin": "Bókanir til 30. Júní 2023",
+          "new_cabin": "Bókanir frá 1. Júlí 2023"
         }
       },
       "customTours": {
         "header": "Sérsniðnar ferðir",
-        "text": "",
-        "additionalText": "Hafðu samband við okkur til að fá meiri upplýsingar.",
+        "text": "Hvort sem það er fyrir einstaklinga eða hópa þá getum við aðlagað okkur að þínum óskum. Hafðu samband við okkur í dag og byrjum að skipuleggja þitt ævintýri.",
+        "additionalText": "Til að fá meiri upplýsingar ",
         "imageAlt": ""
       }
     }
@@ -77,24 +77,37 @@
       "p2": "Þegar upp er komið er sest á snjótroðarann og við byrjum ferðina að toppi jökulsins eða eins nálægt toppi og aðstæður leyfa hverju sinni. Snjótroðarinn sem að notaður í ferðirnar er sérstaklega útbúinn svo að viðskiptavinir geti notið útsýnisins í ferðinni sem best. Við viljum gera grein fyrir að þetta eru sömu ferðirnar og “Á toppi Demantsins”  nema með stótkostlegum töfrum miðnætur sólarinnar sem baðar sjóndeildarhringinn með stórkostlegu litrófi. ",
       "p3": "Þegar upp er komið blasir víðáttumikið landslag við okkur, á aðra höndina horfum við yfir Hellisand, Rif, yfir Breiðafjörðinn að Vestfjörðum þar blasir Látrabjarg við. Á hina höndina horfum við á Snæfellsnesfjallgarðinn þar á meðal eldfjallakerfin Helgrindur og Ljósufjöll, við sjáum allan Faxaflóa yfir að Reykjavík og Suðurnesjum. Eins mikilfenglegt og útsýnið í ferðunum getur verið þá er vert að minnast á að útsýnið ræðst algjörlega af veður skilyrðum hverju sinni. "
     },
-    "info": {
+    "sidebar": {
       "header": "",
-      "p1": "",
+      "p1": "Brottför er á milli 22:00-23:00, og tekur um 3-4 klst. Verðið er 25.000 kr á mann.",
       "p2": "",
       "p3": ""
     }
   },
   "topOfTheDiamond": {
-    "header": "",
-    "p1": "Við leggjum af stað í “Á toppi Demantsins”  ferðina frá Arnarstapa með rútu. Ykkur er velkomið að fylgja okkur á eigin bíl sé hann útbúinn fyrir fjallvegi. Við keyrum meðfram Stapafellinu og upp jökulhálsinn. Af veginum er frábært útsýni á jökulinn og umlykjandi svæði og mælum við með að taka rútuferðina frá Arnarstapa til að njóta þess. Þegar upp er komið er sest á snjótroðarann og við byrjum ferðina að toppi jökulsins eða eins nálægt toppi og aðstæður leyfa hverju sinni. Snjótroðarinn sem notaður er í ferðirnar er sérstaklega útbúinn svo að viðskiptavinir geti notið útsýnisins í ferðinni sem best.",
-    "p2": "Þegar upp er komið blasir víðáttumikið landslag við okkur, á aðra höndina horfum við yfir Hellissand, Rif og yfir Breiðafjörðinn að Vestfjörðum þar blasir Látrabjarg við. Á hina höndina horfum við á Snæfellsnesfjallgarðinn þar á meðal eldfjallakerfin Helgrindur og Ljósufjöll, við sjáum yfir allan Faxaflóa að Reykjavík og Suðurnesjum. Eins stórfenglegt og útsýnið í ferðunum getur verið þá er vert að minnast á að útsýnið ræðst algjörlega af veður skilyrðum hverju sinni.",
-    "p3": "",
-    "p4": ""
+    "content": {
+      "header": "Á toppi Demantsins",
+      "p1": "Við leggjum af stað í “Á toppi Demantsins” ferðina frá Arnarstapa með rútu. Ykkur er velkomið að fylgja okkur á eigin bíl sé hann útbúinn fyrir fjallvegi. Við keyrum meðfram Stapafellinu og upp jökulhálsinn. Af veginum er frábært útsýni á jökulinn og umlykjandi svæði og mælum við með að taka rútuferðina frá Arnarstapa til að njóta þess.",
+      "p2": "Þegar upp er komið er sest á snjótroðarann og við byrjum ferðina að toppi jökulsins eða eins nálægt toppi og aðstæður leyfa hverju sinni. Snjótroðarinn sem notaður er í ferðirnar er sérstaklega útbúinn svo að viðskiptavinir geti notið útsýnisins í ferðinni sem best.",
+      "p3": "Þegar upp er komið blasir víðáttumikið landslag við okkur, á aðra höndina horfum við yfir Hellissand, Rif og yfir Breiðafjörðinn að Vestfjörðum þar blasir Látrabjarg við. Á hina höndina horfum við á Snæfellsnesfjallgarðinn þar á meðal eldfjallakerfin Helgrindur og Ljósufjöll, við sjáum yfir allan Faxaflóa að Reykjavík og Suðurnesjum.",
+      "p4": "Eins stórfenglegt og útsýnið í ferðunum getur verið þá er vert að minnast á að útsýnið ræðst algjörlega af veður skilyrðum hverju sinni.",
+      "p5": "Brottfarartími okkar er 10:00 á morgnana og lengd ferðarinnar er um það bil 2,5-3 klukkustundir. Ef við erum að fullu bókuð daginn sem þú ætlar að heimsækja okkur, getur þú haft samband við okkur og við munum athuga möguleikann á að bæta við aukaferð seinna um daginn.",
+      "p6": "Verð er 16.000 krónur fyrir fullorðna.",
+      "p7": "Vinsamlegast lestu upplýsingarnar um hvað þú þarft í þessa ferð."
+    },
+    "sidebar": {
+      "header": "Unearthing the fantasy of Snæfellsjökull",
+      "p1": "At 1446 meters above sea level, Snæfellsjökull is easily accessible and boasts tremendous energy levels. Considered one of the seven great energy centers of the earth, it's no wonder that the glacier has inspired numerous works of literature.",
+      "p2": "Including the Nobel-prize winning author Halldór Laxness's 'Christianity Under the Glacier.” This story describes the reintroduction of paganism into a small community and touches on the failures of Christianity in an amusing and edgy tale.",
+      "p3": "The science fiction classic “Journey to the Center of the Earth”, published in 1864 by French author Jules Verne, also features Snæfellsjökull. The characters embark on a hazardous journey that starts at a secret entrance on the glacier and leads them to a subterranean world at the center of the earth, eventually emerging through a volcanic eruption on the south Italian island of Stromboli.",
+      "p4": "Finally, on November 5th, 1993, Snæfellsjökull was supposed to be the landing site for extraterrestrial beings. British man Michael Dillon claimed to have been contacted by the aliens, who promised to land on this specific date and place.",
+      "p5": "This was supported by visions from a woman who claimed to have been abducted. Although the event attracted over 500 alien enthusiasts from around the world, including a CNN camera crew. To our knowledge, no alien sightings were reported in the area on that specific date."
+    }
   },
   "cards": {
     "snowCatTour": {
-      "cardHeader": "Snjótroðara ferð á Snæfellsjökul",
-      "cardText": "Afhjúpaðu leyndardóma Snæfellsjökuls, Komdu með í þessa magnþrungnu ferð um jökul sem að situr ofan á virkri eldstöð sem að á sér 700 þúsund ára sögu. Snæfellsjökull er einn af þekktari jöklum landsins og sést hann víða að. Bæði jökullin og svæðið í kring er talið geyma orku og er tilfinningin að standa á jökli sem að situr ofan á voldugu eldfjalli óviðjafnanleg. Magnaða útsýnið af jöklinum veitir frábær ljósmynda tækifæri og minningar. Þeir sem að leita að spennandi ævintýrum ættu ekki láta þessa ferð fram hjá sér fara. ",
+      "cardHeader": "Leyndardómar Snæfellsjökuls",
+      "cardText": "Komdu með í þessa magnþrungnu ferð um jökul sem að situr ofan á virkri eldstöð sem að á sér 700 þúsund ára sögu. Bæði jökullin og svæðið í kring er talið geyma orku og er tilfinningin að standa á jökli sem að situr ofan á voldugu eldfjalli óviðjafnanleg. Magnaða útsýnið af jöklinum veitir frábær ljósmynda tækifæri og minningar.",
       "imageAlt": "Sólsetur á toppi Snæfellsjökuls"
     },
     "midnightSunTour": {
@@ -105,12 +118,12 @@
     },
     "customTours": {
       "cardHeader": "Sérsniðnar ferðir",
-      "cardText": "hvort sem það er fyrir einstaklinga eða hópa þá getum við aðlagað okkur að þínum óskum. Hafðu samband við okkur í dag og byrjum að skipuleggja þitt ævintýri.",
+      "cardText": "Hvort sem það er fyrir einstaklinga eða hópa þá getum við aðlagað okkur að þínum óskum. Hafðu samband við okkur í dag og byrjum að skipuleggja þitt ævintýri.",
       "imageAlt": "Sunset from the top of Snaefellsjokull"
     },
     "giftCard": {
       "cardHeader": "Glacier Paradise Gjafabréf",
-      "cardText": "Gjafbréf Glacier Paradise er frábær til að geta notið þeirrar fegurðar sem Snæfellsjökull hefur að bjóða.  Gjafabréf frá Glacier Paradise er frábær upplifun fyrir alla aldurshópa. Gefðu gjöf sem að endist ævilangt.   ",
+      "cardText": "Gjafabréf Glacier Paradise er frábær gjöf til að geta notið þeirrar fegurðar sem Snæfellsjökull hefur að bjóða.  Gjafabréf frá Glacier Paradise er frábær upplifun fyrir alla aldurshópa. Gefðu gjöf sem að endist ævilangt.",
       "imageAlt": ""
     },
     "shared": {
@@ -124,13 +137,18 @@
       "home": "Heima",
       "tours": "Ferðir",
       "about": "Um Okkur",
-      "contact": "Hafa Samband",
+      "contact": "Hafðu Samband",
       "terms": "Skilmálar"
     }
   },
   "links": {
     "readMore": "Lestu meira",
-    "contactUs": "Hafa samband"
+    "contactUs": "Hafðu samband"
   },
-  "glacierInfo": "Afhjúpaðu leyndardóma Snæfellsjökuls, Komdu með í þessa magnþrungnu ferð um jökul sem að situr ofan á virkri eldstöð sem að á sér 700 þúsund ára sögu. Snæfellsjökull er einn af þekktari jöklum landsins og sést hann víða að. Bæði jökullin og svæðið í kring er talið geyma orku og er tilfinningin að standa á jökli sem að situr ofan á voldugu eldfjalli óviðjafnanleg. Magnaða útsýnið af jöklinum veitir frábær ljósmynda tækifæri og minningar. Þeir sem að leita að spennandi ævintýrum ættu ekki láta þessa ferð fram hjá sér fara. "
+  "glacierInfo": "Afhjúpaðu leyndardóma Snæfellsjökuls, Komdu með í þessa magnþrungnu ferð um jökul sem að situr ofan á virkri eldstöð sem að á sér 700 þúsund ára sögu. Snæfellsjökull er einn af þekktari jöklum landsins og sést hann víða að. Bæði jökullin og svæðið í kring er talið geyma orku og er tilfinningin að standa á jökli sem að situr ofan á voldugu eldfjalli óviðjafnanleg. Magnaða útsýnið af jöklinum veitir frábær ljósmynda tækifæri og minningar. Þeir sem að leita að spennandi ævintýrum ættu ekki láta þessa ferð fram hjá sér fara. ",
+  "bokun": {
+    "buttons": {
+      "book": "Bóka"
+    }
+  }
 }

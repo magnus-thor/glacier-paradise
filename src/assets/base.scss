@@ -1,16 +1,12 @@
 //BE Vietnam Pro
 @import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
-//BE Vietnam Pro, Roboto and Garand
-// @import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
-
 @import "./variables.scss";
+@import "@/assets/mixins.scss";
 
 body {
   font-family: sans-serif;
   font-family: "Be Vietnam Pro", sans-serif;
-  // font-family: "Cormorant Garamond", serif;
-  // font-family: "Roboto", sans-serif;
 }
 
 html,
@@ -27,10 +23,7 @@ p {
 }
 
 p {
-  // font-family: sans-serif;
-  // font-family: $font-BeVietnamPro-Bold;
-
-  // font-weight: 100;
+  font-weight: 300;
   // font-style: normal;
   // font-stretch: normal;
   // line-height: initial;
@@ -45,15 +38,20 @@ p {
 .bm-overlay {
   // background: purple;
   // right: 100px;
+
+  .bm-burger-button {
+    width: 42px;
+    top: 46px;
+  }
+
+  .bm-burger-bars {
+    background-color: $yellow;
+  }
 }
 
 .bm-menu {
-  background-color: $dark_grey;
-}
-
-.bm-burger-button {
-  // left: 0;
-  // right: 36px;
+  // background-color: $dark_grey;
+  @include ellipse-bg-midnight_blue-gradient(bottom);
 }
 
 .bm-item-list {
@@ -66,10 +64,6 @@ p {
   }
 }
 
-.bm-burger-bars {
-  background-color: $yellow;
-}
-
 .page {
   padding-top: $header_height;
   min-height: calc(100vh - $header_height - $footer_height);
@@ -77,4 +71,40 @@ p {
 
 .overflow-hidden {
   overflow: hidden;
+}
+
+button {
+  margin-top: 1rem;
+  display: inline-block;
+  background: #d4af37;
+  border-radius: 5px;
+  box-shadow: none;
+  font-weight: 600;
+  font-size: 16px;
+  text-decoration: none;
+  text-align: center;
+  color: #43464e;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  margin: auto;
+  height: 2.5rem;
+  width: 10rem;
+  box-sizing: border-box;
+
+  &.small {
+    font-weight: 400;
+    font-size: 12px;
+    height: 1.5rem;
+    width: 8rem;
+  }
+}
+
+button:hover {
+  background: #9d8022;
+}
+
+button:active,
+button:focus {
+  background: #b29126;
 }

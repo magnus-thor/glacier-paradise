@@ -60,7 +60,6 @@ const reverseFlow = computed(() => {
 
 <style lang="scss" scoped>
 @import "@/assets/base.scss";
-@import "@/assets/mixins.scss";
 
 .card {
   height: 100%;

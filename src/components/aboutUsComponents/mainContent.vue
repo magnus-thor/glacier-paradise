@@ -22,8 +22,7 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
-@import "@/assets/variables.scss";
-@import "@/assets/mixins.scss";
+@import "@/assets/base.scss";
 
 .company-info {
   width: 85%;

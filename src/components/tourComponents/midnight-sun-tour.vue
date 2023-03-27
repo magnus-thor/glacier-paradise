@@ -10,6 +10,7 @@
         </div>
         <div class="p2">
           <p>{{ $t("midnightSun.info.p2") }}</p>
+          <!-- <button>{{ $t("midnightSun.info.p2") }}</button> -->
         </div>
         <div class="p3">
           <p>{{ $t("midnightSun.info.p3") }}</p>
@@ -27,12 +28,15 @@
       <div class="p3">
         <p>{{ $t("midnightSun.content.p3") }}</p>
       </div>
+      <div class="p4">
+        <p>{{ $t("midnightSun.content.p4") }}</p>
+      </div>
     </aside>
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
+import { defineComponent, ref } from "vue";
 
 export default defineComponent({
   name: "midnightSunTour",
@@ -42,13 +46,32 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 @import "@/assets/base.scss";
-@import "@/assets/mixins.scss";
+
+button {
+  grid-column: span 2;
+  border: none;
+  background-color: $yellow;
+  color: $dark_grey;
+  padding: 1rem;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 1rem;
+  box-shadow: 4px 4px black;
+  transition: box-shadow 0.3s ease-out;
+  width: 60%;
+  margin: auto;
+
+  &:hover {
+    box-shadow: 2px 2px black;
+  }
+}
 
 .midnightSun--container {
   margin: auto;
   display: grid;
   grid-template-areas: "overLay";
   min-height: calc(100vh - $header_height - $footer_height);
+  @include white-blue-bg-gradient(60deg);
 
   .content--wrapper {
     display: grid;

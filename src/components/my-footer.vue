@@ -44,7 +44,6 @@ export default defineComponent({
 </script>
 <style lang="scss" scoped>
 @import "@/assets/base.scss";
-@import "@/assets/mixins.scss";
 
 .footer__container {
   height: $footer_height;

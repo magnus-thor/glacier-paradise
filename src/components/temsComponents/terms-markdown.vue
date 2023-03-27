@@ -28,7 +28,6 @@ export default defineComponent({
 </script>
 <style lang="scss">
 @import "@/assets/base.scss";
-@import "@/assets/mixins.scss";
 
 .markdown {
   margin: auto;

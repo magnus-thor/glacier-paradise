@@ -9,7 +9,6 @@ const TopOfTheDiamondTour = () =>
   import("@/components/tourComponents/top-of-the-diamond-tour.vue");
 const MidnightSunTour = () =>
   import("@/components/tourComponents/midnight-sun-tour.vue");
-const OtherTours = () => import("@/components/tourComponents/custom-tours.vue");
 const TourCards = () => import("@/components/tourComponents/tour-cards.vue");
 
 const routes = [
@@ -67,18 +66,6 @@ const routes = [
         component: MidnightSunTour,
         meta: {
           index: 2,
-          enterClass: "",
-          leaveClass: "",
-          title: "",
-          description: "3",
-        },
-      },
-      {
-        path: "other",
-        name: "Other tours",
-        component: OtherTours,
-        meta: {
-          index: 4,
           enterClass: "",
           leaveClass: "",
           title: "",

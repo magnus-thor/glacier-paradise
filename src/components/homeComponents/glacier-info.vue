@@ -28,7 +28,6 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 @import "@/assets/base.scss";
-@import "@/assets/mixins.scss";
 
 .glacier-info {
   height: max-content;
