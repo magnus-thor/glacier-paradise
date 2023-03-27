@@ -78,11 +78,11 @@ export default defineComponent({
 }
 
 .header-background {
-  background-color: none;
+  background-color: $sapphire_blue;
 }
 
 .header-logo img {
-  width: 5rem;
+  width: 7rem;
   height: auto;
 }
 
@@ -95,6 +95,11 @@ export default defineComponent({
     left: calc(50% - 7rem);
     transition: 2s;
   }
+}
+
+.item a {
+  font-weight: 600;
+  font-size: 24px;
 }
 
 .bm-overlay {
@@ -110,7 +115,7 @@ export default defineComponent({
   padding: 0;
   cursor: pointer;
   outline: inherit;
-  font-size: large;
+  font-size: 24px;
   transform: translateY(-50px);
 }
 </style>

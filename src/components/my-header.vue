@@ -64,7 +64,6 @@ export default defineComponent({
 </script>
 <style lang="scss" scoped>
 @import "@/assets/base.scss";
-@import "@/assets/mixins.scss";
 
 .header-background {
   background-color: $blue;
@@ -82,7 +81,7 @@ export default defineComponent({
   justify-content: center;
 
   .item {
-    padding-right: 2rem;
+    padding-right: 1rem;
 
     button.nav-button {
       background: none;
@@ -97,6 +96,8 @@ export default defineComponent({
     a,
     button.nav-button {
       color: $yellow;
+      font-weight: 600;
+      font-size: 20px;
 
       &.bottom-border {
         border-bottom: 1px solid;
@@ -127,9 +128,9 @@ export default defineComponent({
 }
 
 .header-logo {
-  padding-left: 3rem;
+  padding-left: 1rem;
   margin-right: auto;
-  width: 8rem;
+  width: 6rem;
 
   img {
     width: 100%;
@@ -149,7 +150,7 @@ export default defineComponent({
 
 .locale-changer {
   margin-left: auto;
-  width: 8rem;
+  width: 2rem;
 }
 
 .locale-button {
@@ -160,5 +161,24 @@ export default defineComponent({
   cursor: pointer;
   outline: inherit;
   font-size: large;
+}
+
+@include for-desktop-up {
+  .header-logo {
+    padding-left: 2.5rem;
+    width: 8rem;
+  }
+
+  .item {
+    padding-right: 2rem;
+
+    a,
+    button.nav-button {
+      font-size: 24px;
+    }
+  }
+  .locale-changer {
+    width: 8rem;
+  }
 }
 </style>

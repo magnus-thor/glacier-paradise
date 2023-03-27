@@ -21,7 +21,6 @@ export default defineComponent({
 </script>
 <style lang="scss">
 @import "@/assets/base.scss";
-@import "@/assets/mixins.scss";
 
 .about-us--wrapper {
   display: grid;

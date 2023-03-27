@@ -13,7 +13,7 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
-@import "@/assets/mixins.scss";
+@import "@/assets/base.scss";
 
 .image--container {
   position: absolute;

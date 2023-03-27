@@ -42,7 +42,6 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 @import "@/assets/base.scss";
-@import "@/assets/mixins.scss";
 
 .midnightSun--container {
   margin: auto;

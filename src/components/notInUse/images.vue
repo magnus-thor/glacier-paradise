@@ -74,8 +74,6 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
-@import "@/assets/mixins.scss";
-
 .image-slider {
   margin: auto;
   height: 30rem;

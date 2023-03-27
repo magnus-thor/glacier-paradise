@@ -3,31 +3,31 @@
     "header": "Upplifðu leyndardóma Snæfellsjökuls í ferð með okkur",
     "tours": {
       "topOfTheDiamond": {
-        "header": "Top of the Diamond tour",
-        "text": "Discover the mystical powers of the magnificent Snæfellsjökull. Come along on this fantastic tour of a glacier that sits on top of a 700-thousand-year-old stratovolcano. Snæfellsjökull is one of the most famous sites in Iceland both the glacier and the area around is believed to hold mystical energy, the feeling of standing on a glacier which sits above a mighty volcano is second to none.",
-        "additionalText": "The incredible views from the top of the glacier will provide fantastic photo opportunities and lasting memories. Those looking for an exciting adventure should not miss this excursion.",
-        "imageAlt": "Sunset from the top of Snaefellsjokull"
+        "header": "Leyndardómar Snæfellsjökuls",
+        "text": "Komdu með í þessa magnþrungnu ferð um jökul sem að situr ofan á virkri eldstöð sem að á sér 700 þúsund ára sögu. Bæði jökullin og svæðið í kring er talið geyma orku og er tilfinningin að standa á jökli sem að situr ofan á voldugu eldfjalli óviðjafnanleg. Magnaða útsýnið af jöklinum veitir frábær ljósmynda tækifæri og minningar. Þeir sem að leita að spennandi ævintýrum ættu ekki láta þessa ferð fram hjá sér fara.",
+        "additionalText": "",
+        "imageAlt": "Útsýni frá toppi Snæfellsjökuls"
       },
       "midnightSunTour": {
-        "header": "Midnight-sun tour",
-        "text": "Our “Midnight-sun tour” is an experience like no other. You will witness the incredible views from the top of the glacier bathed in the red, yellow and golden colour of the midnight-sun. As the sun sets and the sky turns into a magnificent palette of colours, we'll take a moment to appreciate the unique experience of standing on a glacier in the light of the midnight sun.",
+        "header": "Miðnætur ferð",
+        "text": "Miðnætur ferðirnar okkar eru einstök upplifun. Á meðan sólin sest og himininn litast af töfrum miðnætursólarinnar færð þú að njóta þess magnaða útsýni sem jökullinn hefur uppá að bjóða meðan miðnætursólin baðar allt rauðgulum bjarma. ",
         "additionalText": "",
         "imageAlt": "Útsýni frá toppi Snæfellsjökuls í miðnætursólinni"
       },
       "cabin": {
-        "header": "Cosy cottage",
-        "text": "A cosy cottage in the charming village of Arnarstapi with beautiful ocean and mountain views. Fully equipped cosy getaway which is a great base to explore everything the spectacular Snæfellsnes peninsula has to offer.",
+        "header": "Hlýlegur bústaður",
+        "text": "Notalegur fullbúinn bústaður með sjávar- og fjallaútsýni sem að staðsettur er á Arnarstapa.",
         "additionalText": "",
         "imageAlt": "Cozy cabin located in Arnarstapi",
         "airbnb": {
-          "before": "Available for bookings until July",
-          "after": "Available for bookings after June"
+          "old_cabin": "Bókanir til 30. Júní 2023",
+          "new_cabin": "Bókanir frá 1. Júlí 2023"
         }
       },
       "customTours": {
         "header": "Sérsniðnar ferðir",
-        "text": "",
-        "additionalText": "Hafðu samband við okkur til að fá meiri upplýsingar.",
+        "text": "Hvort sem það er fyrir einstaklinga eða hópa þá getum við aðlagað okkur að þínum óskum. Hafðu samband við okkur í dag og byrjum að skipuleggja þitt ævintýri.",
+        "additionalText": "Til að fá meiri upplýsingar ",
         "imageAlt": ""
       }
     }
@@ -105,7 +105,7 @@
     },
     "customTours": {
       "cardHeader": "Sérsniðnar ferðir",
-      "cardText": "hvort sem það er fyrir einstaklinga eða hópa þá getum við aðlagað okkur að þínum óskum. Hafðu samband við okkur í dag og byrjum að skipuleggja þitt ævintýri.",
+      "cardText": "Hvort sem það er fyrir einstaklinga eða hópa þá getum við aðlagað okkur að þínum óskum. Hafðu samband við okkur í dag og byrjum að skipuleggja þitt ævintýri.",
       "imageAlt": "Sunset from the top of Snaefellsjokull"
     },
     "giftCard": {
@@ -124,13 +124,13 @@
       "home": "Heima",
       "tours": "Ferðir",
       "about": "Um Okkur",
-      "contact": "Hafa Samband",
+      "contact": "Hafðu Samband",
       "terms": "Skilmálar"
     }
   },
   "links": {
     "readMore": "Lestu meira",
-    "contactUs": "Hafa samband"
+    "contactUs": "Hafðu samband"
   },
   "glacierInfo": "Afhjúpaðu leyndardóma Snæfellsjökuls, Komdu með í þessa magnþrungnu ferð um jökul sem að situr ofan á virkri eldstöð sem að á sér 700 þúsund ára sögu. Snæfellsjökull er einn af þekktari jöklum landsins og sést hann víða að. Bæði jökullin og svæðið í kring er talið geyma orku og er tilfinningin að standa á jökli sem að situr ofan á voldugu eldfjalli óviðjafnanleg. Magnaða útsýnið af jöklinum veitir frábær ljósmynda tækifæri og minningar. Þeir sem að leita að spennandi ævintýrum ættu ekki láta þessa ferð fram hjá sér fara. "
 }

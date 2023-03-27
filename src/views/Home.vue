@@ -4,6 +4,7 @@
       <scrolling-bg-image />
       <h1>{{ $t("home.header") }}</h1>
       <div class="full"></div>
+      <!-- TODO: Add an arrow pointing down -->
       <div ref="cardsRef" id="tours" class="cards--container">
         <home-cards v-if="loadCardsComponent" />
       </div>
@@ -11,7 +12,10 @@
         <glacier-info v-if="loadInstagramComponent" />
       </div> -->
       <div class="instagram--container">
-        <instagram v-if="loadInstagramComponent" />
+        <!--
+          TODO: fix onExit function not running
+          <instagram v-if="loadInstagramComponent" /> -->
+        <instagram />
       </div>
     </div>
   </div>
@@ -40,9 +44,11 @@ export default defineComponent({
     const observer = ref({});
 
     const onEnterToursComponent = () => {
+      console.log("onEnter");
       loadCardsComponent.value = true;
     };
     const onExitToursComponent = () => {
+      console.log("onEXIT");
       loadInstagramComponent.value = true;
     };
 

@@ -58,7 +58,7 @@ export default defineComponent({
 </script>
 <style lang="scss" scoped>
 @import "@/assets/base.scss";
-@import "@/assets/mixins.scss";
+
 .form-container {
   background-color: hsl(232, 7%, 28%);
   padding: 1rem;

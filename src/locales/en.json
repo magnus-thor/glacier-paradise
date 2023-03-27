@@ -4,9 +4,8 @@
     "tours": {
       "topOfTheDiamond": {
         "header": "Top of the Diamond tour",
-        "text": "Discover the mystical powers of the magnificent Snæfellsjökull. Come along on this fantastic tour of a glacier that sits on top of a 700-thousand-year-old stratovolcano. Snæfellsjökull is one of the most famous sites in Iceland both the glacier and the area around is believed to hold mystical energy, the feeling of standing on a glacier which sits above a mighty volcano is second to none.",
-        "additionalText": "The incredible views from the top of the glacier will provide fantastic photo opportunities and lasting memories. Those looking for an exciting adventure should not miss this excursion.",
-        "imageAlt": "Sunset from the top of Snaefellsjokull"
+        "text": "Experience the mystical powers of the magnificent Snæfellsjökull with our fantastic tour of the glacier that sits on top of a 700-thousand-year-old stratovolcano. This iconic site is one of the most famous in Iceland and is believed to hold a deep, mystical energy. Standing on the glacier above this mighty volcano is an unparalleled experience that cannot be missed.",
+        "additionalText": ""
       },
       "midnightSunTour": {
         "header": "Midnight-sun tour",
@@ -20,14 +19,14 @@
         "additionalText": "",
         "imageAlt": "Cozy cabin located in Arnarstapi",
         "airbnb": {
-          "before": "Available for bookings until July",
-          "after": "Available for bookings after June"
+          "old_cabin": "Available for bookings until June 30. 2023",
+          "new_cabin": "Available for bookings after July 1. 2023"
         }
       },
       "customTours": {
         "header": "Custom tours",
-        "text": "Experience the natural beauty of Snæfellsjökull glacier like never before with Glacier Paradise's custom-made tours. Our tours are tailored to meet your specific needs and skill level, whether you're looking for a private tour, skiing tour, tour for large groups, or a customized combination. With private tours available for individuals or small groups, and tours for larger groups, we offer a personalized experience for everyone. Discover the hidden secrets and breathtaking vistas of Snæfellsjökull with our experienced guides. Contact us today to start planning your Icelandic adventure!",
-        "additionalText": "Contact us for more information.",
+        "text": "Experience the natural beauty of Snæfellsjökull glacier with Glacier Paradise 's custom-made tours, tailored to your specific needs and desires. Our experienced guides will help you discover the hidden secrets and breath taking vistas of Snæfellsjökull. Contact us today to start planning your personalized Icelandic adventure!",
+        "additionalText": "For more information ",
         "linkText": "Contact us",
         "imageAlt": ""
       }
@@ -97,7 +96,7 @@
   "cards": {
     "snowCatTour": {
       "cardHeader": "Top of the Diamond tour",
-      "cardText": "Join this special sightseeing tour on the mystical Snæfellsjökull Glacier. Through a scenic mountain pass, we reach the foot of the glacier where you can jump aboard our very own orange snow-cat to start your adventure on Snæfellsjökull glacier.",
+      "cardText": "Join this special sightseeing tour on the mystical Snæfellsjökull Glacier. Through a scenic mountain pass, we reach the foot of the glacier where you will board our snow-cat to start your adventure on Snæfellsjökull glacier.",
       "linkText": "Read more",
       "imageAlt": "Sunset from the top of Snaefellsjokull"
     },

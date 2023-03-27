@@ -22,10 +22,12 @@
     >
       <h3>{{ card.header }}</h3>
       <p>{{ card.text }}</p>
-      <p v-if="card.additionalText">{{ card.additionalText }}</p>
-      <router-link v-if="link.href" class="router-link" :to="link.href">
-        {{ link.text ? link.text : $t("links.readMore") }}
-      </router-link>
+      <p>
+        <span v-if="card.additionalText">{{ card.additionalText }} </span>
+        <router-link v-if="link.href" class="router-link" :to="link.href">
+          {{ link.text ? link.text : $t("links.readMore") }}
+        </router-link>
+      </p>
       <slot></slot>
     </div>
   </div>
@@ -64,7 +66,6 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 @import "@/assets/base.scss";
-@import "@/assets/mixins.scss";
 
 .tour {
   width: 100%;
