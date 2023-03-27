@@ -3,29 +3,62 @@
     <div class="image">
       <img src="/images/toppur_panorama-resized.jpg" alt="" />
     </div>
-    <!-- <div class="header--container">
-      <h1>Top of the diamond</h1>
-    </div> -->
-    <div class="content--wrapper">
-      <p>Info content 1</p>
-      <p>Info content 2</p>
-      <p>Info content 3</p>
-    </div>
-    <aside class="sidebar--container">
-      <h2>{{ $t("topOfTheDiamond.header") }}</h2>
-      <p>{{ $t("topOfTheDiamond.p1") }}</p>
-      <p>{{ $t("topOfTheDiamond.p2") }}</p>
-      <p>{{ $t("topOfTheDiamond.p3") }}</p>
-      <p>{{ $t("topOfTheDiamond.p4") }}</p>
+    <div class="header--container">
+      <h1>{{ $t("topOfTheDiamond.content.header") }}</h1>
       <button
-        class="bokunButton"
+        class="bokunButton sticky"
         disabled
         id="bokun_b3447b9e_8bf3_4090_a58d_8b930ced9c1d"
         data-src="https://widgets.bokun.io/online-sales/a5fa0d8d-ffc2-431e-bece-86e5d8fa2d7c/experience-calendar/17979?partialView=1"
         data-testid="widget-book-button"
       >
-        Book now
+        {{ $t("bokun.buttons.book") }}
       </button>
+    </div>
+    <div class="content--wrapper">
+      <!-- TODO: add link to f-road explanation -->
+      <p>{{ $t("topOfTheDiamond.content.p1") }}</p>
+      <p>{{ $t("topOfTheDiamond.content.p2") }}</p>
+      <p>{{ $t("topOfTheDiamond.content.p3") }}</p>
+      <p>{{ $t("topOfTheDiamond.content.p4") }}</p>
+      <h2 class="tour-info-header">Info</h2>
+      <div class="tour-info">
+        <div>
+          <p>{{ $t("topOfTheDiamond.content.p5") }}</p>
+          <p>{{ $t("topOfTheDiamond.content.p6") }}</p>
+        </div>
+        <p>
+          {{ $t("topOfTheDiamond.content.p7") }}
+          <span
+            ><button class="small" @click="openDialog">
+              {{ $t("links.readMore") }}
+            </button></span
+          >
+        </p>
+      </div>
+    </div>
+    <aside class="sidebar--container">
+      <h2>{{ $t("topOfTheDiamond.sidebar.header") }}</h2>
+
+      <p>{{ $t("topOfTheDiamond.sidebar.p1") }}</p>
+      <div class="text__block">
+        <p>
+          {{ $t("topOfTheDiamond.sidebar.p2") }}
+        </p>
+        <p>
+          {{ $t("topOfTheDiamond.sidebar.p3") }}
+        </p>
+      </div>
+      <div class="text__block">
+        <p>
+          {{ $t("topOfTheDiamond.sidebar.p4") }}
+        </p>
+        <p>
+          {{ $t("topOfTheDiamond.sidebar.p5") }}
+        </p>
+      </div>
+      <!-- <p>{{ $t("topOfTheDiamond.sideBar.p3") }}</p>
+      <p>{{ $t("topOfTheDiamond.sideBar.p4") }}</p> -->
     </aside>
   </div>
 </template>
@@ -35,6 +68,14 @@ import { defineComponent } from "vue";
 
 export default defineComponent({
   name: "snowCatTour",
+  setup() {
+    const openDialog = () => {
+      (document.getElementById("essentials-dialog") as HTMLDialogElement).open =
+        true;
+    };
+
+    return { openDialog };
+  },
 });
 </script>
 
@@ -53,6 +94,22 @@ export default defineComponent({
     }
   }
 
+  .sticky {
+    grid-area: 1/1/-1/-1;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 100px;
+    z-index: 1;
+  }
+
+  h2 {
+    color: $yellow;
+  }
+
+  p {
+    color: $white;
+  }
+
   .header--container {
     grid-area: 1/1/-1/-1;
     color: $white;
@@ -61,31 +118,52 @@ export default defineComponent({
   }
 
   .content--wrapper {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    padding: 2rem;
-    justify-items: center;
+    margin-top: 1rem;
+    grid-template-columns: 1fr;
+    padding: 0.5rem 2rem;
     box-sizing: border-box;
+
+    p + p {
+      margin-top: 0.7rem;
+    }
+
+    .tour-info-header {
+      margin-top: 1rem;
+    }
+
+    .tour-info {
+      display: grid;
+      grid-template-columns: 3fr 3fr;
+
+      div {
+        margin-right: 2rem;
+      }
+
+      p {
+        font-weight: 600;
+      }
+    }
   }
 
   .sidebar--container {
-    display: grid;
     background-color: $dark_grey;
     box-sizing: border-box;
     padding: 2rem 2rem;
 
-    h2 {
-      color: $yellow;
-    }
-
     p {
-      color: $white;
       padding: 0.5rem 0;
+    }
+    .text__block {
+      padding: 0.5rem 0;
+      p {
+        padding: 0.1rem 0;
+      }
     }
   }
 
   @include for-tablet-landscape-up {
     $row1-height: 50vh;
+    @include white-blue-bg-gradient(60deg);
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: $row1-height;
 
@@ -129,43 +207,5 @@ export default defineComponent({
       margin-right: 5rem;
     }
   }
-}
-
-// BOKUN
-.bokunButton {
-  margin-top: 1rem;
-  display: inline-block;
-  padding: 10px 20px;
-  background: #d4af37;
-  border-radius: 5px;
-  box-shadow: none;
-  font-weight: 600;
-  font-size: 16px;
-  text-decoration: none;
-  text-align: center;
-  color: #43464e;
-  border: none;
-  cursor: pointer;
-  transition: background 0.2s ease;
-  margin: auto;
-  // height: 2rem;
-  // width: 10rem;
-}
-
-.bokunButton:hover {
-  background: #9d8022;
-}
-
-.bokunButton:active {
-  background: #b29126;
-}
-
-.widgetRoot {
-  background-color: yellow;
-}
-
-.bk-widget-container {
-  /* Change the font color to red */
-  color: red;
 }
 </style>

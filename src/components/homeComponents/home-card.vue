@@ -102,7 +102,7 @@ export default defineComponent({
     img {
       width: 100%;
       height: 100%;
-      border-radius: 25% 25% 0 0;
+      border-radius: 0 25% 0 0;
     }
   }
 
@@ -129,7 +129,7 @@ export default defineComponent({
 
     margin-left: 3%;
     margin-right: 3%;
-    border-radius: 0 0 25% 25%;
+    border-radius: 0 0 0 25%;
   }
 
   .router-link {

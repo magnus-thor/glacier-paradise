@@ -27,7 +27,6 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 @import "@/assets/base.scss";
-@import "@/assets/variables.scss";
 
 .info-wrapper {
   padding: 2rem;

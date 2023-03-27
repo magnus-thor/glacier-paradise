@@ -72,3 +72,39 @@ p {
 .overflow-hidden {
   overflow: hidden;
 }
+
+button {
+  margin-top: 1rem;
+  display: inline-block;
+  background: #d4af37;
+  border-radius: 5px;
+  box-shadow: none;
+  font-weight: 600;
+  font-size: 16px;
+  text-decoration: none;
+  text-align: center;
+  color: #43464e;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  margin: auto;
+  height: 2.5rem;
+  width: 10rem;
+  box-sizing: border-box;
+
+  &.small {
+    font-weight: 400;
+    font-size: 12px;
+    height: 1.5rem;
+    width: 8rem;
+  }
+}
+
+button:hover {
+  background: #9d8022;
+}
+
+button:active,
+button:focus {
+  background: #b29126;
+}

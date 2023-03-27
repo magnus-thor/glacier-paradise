@@ -66,6 +66,7 @@ export default defineComponent({
   a {
     color: $card_link_color;
     font-weight: bold;
+    padding: 0 0.5rem;
 
     &:hover {
       color: $card_link_color__hover;

@@ -17,6 +17,8 @@
       </router-view>
     </main>
 
+    <essentials-dialog />
+
     <footer class="footer">
       <my-footer />
     </footer>
@@ -31,6 +33,7 @@ import {
   ref,
 } from "vue";
 import MyFooter from "@/components/my-footer.vue";
+import EssentialsDialog from "@/components/shared/essentials.vue";
 import { useI18n } from "vue-i18n";
 
 export default defineComponent({
@@ -41,6 +44,7 @@ export default defineComponent({
     ),
     MyHeader: defineAsyncComponent(() => import("@/components/my-header.vue")),
     MyFooter,
+    EssentialsDialog,
   },
   setup() {
     const { t } = useI18n({ useScope: "global" });
@@ -85,18 +89,6 @@ div#preload {
   flex-direction: column;
   background-color: $white;
   @include white-blue-bg-gradient(180deg);
-
-  & :has(.tours) {
-    @include white-blue-bg-gradient(270deg);
-  }
-
-  & :has(.midnightSun--container) {
-    @include white-blue-bg-gradient(60deg);
-  }
-
-  & :has(.terms) {
-    @include white-blue-bg-gradient(180deg);
-  }
 
   @include for-tablet-landscape-up {
     @include white-blue-bg-gradient;

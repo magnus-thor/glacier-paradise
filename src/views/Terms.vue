@@ -14,7 +14,10 @@ export default defineComponent({
 });
 </script>
 <style lang="scss" scoped>
+@import "../assets/mixins.scss";
+
 .terms {
+  @include white-blue-bg-gradient(180deg);
   padding: 6rem 0 1rem 0;
 }
 </style>

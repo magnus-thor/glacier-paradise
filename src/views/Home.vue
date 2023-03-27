@@ -12,10 +12,9 @@
         <glacier-info v-if="loadInstagramComponent" />
       </div> -->
       <div class="instagram--container">
-        <!--
-          TODO: fix onExit function not running
-          <instagram v-if="loadInstagramComponent" /> -->
-        <instagram />
+        <!-- TODO: do same as loadCardsComponent -->
+        <!-- <instagram v-if="loadInstagramComponent" /> -->
+        <!-- <instagram /> -->
       </div>
     </div>
   </div>
@@ -108,7 +107,7 @@ export default defineComponent({
 @media (min-height: 800px) {
   .page {
     .full {
-      min-height: 46vh;
+      min-height: 50vh;
     }
   }
 }
@@ -116,7 +115,7 @@ export default defineComponent({
 @media (min-height: 1000px) {
   .page {
     .full {
-      min-height: 45vh;
+      min-height: 50vh;
     }
   }
 }
@@ -124,7 +123,7 @@ export default defineComponent({
 @media (min-height: 1300px) {
   .page {
     .full {
-      min-height: 58vh;
+      min-height: 60vh;
     }
   }
 }
