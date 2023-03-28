@@ -6,13 +6,13 @@
     <div class="header--container">
       <h1>{{ $t("topOfTheDiamond.content.header") }}</h1>
       <button
-        class="bokunButton sticky"
+        class="primary sticky"
         disabled
         id="bokun_b3447b9e_8bf3_4090_a58d_8b930ced9c1d"
         data-src="https://widgets.bokun.io/online-sales/a5fa0d8d-ffc2-431e-bece-86e5d8fa2d7c/experience-calendar/17979?partialView=1"
         data-testid="widget-book-button"
       >
-        {{ $t("bokun.buttons.book") }}
+        {{ $t("shared.bokun.buttons.book") }}
       </button>
     </div>
     <div class="content--wrapper">
@@ -30,8 +30,8 @@
         <p>
           {{ $t("topOfTheDiamond.content.p7") }}
           <span
-            ><button class="small" @click="openDialog">
-              {{ $t("links.readMore") }}
+            ><button class="primary small" @click="openDialog">
+              {{ $t("shared.links.readMore") }}
             </button></span
           >
         </p>
@@ -57,8 +57,6 @@
           {{ $t("topOfTheDiamond.sidebar.p5") }}
         </p>
       </div>
-      <!-- <p>{{ $t("topOfTheDiamond.sideBar.p3") }}</p>
-      <p>{{ $t("topOfTheDiamond.sideBar.p4") }}</p> -->
     </aside>
   </div>
 </template>
@@ -168,10 +166,8 @@ export default defineComponent({
     grid-template-rows: $row1-height;
 
     .image {
-      grid-area: 1/1/-1/-1;
       img {
         height: $row1-height;
-        display: block;
       }
     }
 
@@ -197,10 +193,6 @@ export default defineComponent({
         display: block;
         height: $row1-height;
       }
-    }
-
-    .content--wrapper {
-      // width: 75%;
     }
 
     .sidebar--container {

@@ -7,9 +7,17 @@
     "p4": "From here there is a vast and incredible panorama: Hellissandur, Rif, the wide bay Breiðafjörður, and as far as the West fjords (Látrabjarg cliffs). The mountain’s rugged terrain is also impressive, as is the view south encompassing all of the gulf of Faxaflói, to Reykjavík and even beyond to Keflavík. These excursions are always fascinating, and it is important for travellers to realize that views from the glacier are dependent upon local weather conditions at any given moment."
   },
   "info": {
+    "header": "Info",
+    "p1": "The departure is between 22:00-23:00 and the duration is around 3-4 hours.",
+    "p2": "Tour price is 25.000 ISK per person.",
+    "p3": "Please read our guide on what you need for this trip."
+  },
+  "sidebar": {
     "header": "",
-    "p1": "The departure is between 22:00-23:00 and the duration is around 3-4 hours. Tour price is 25.000 ISK per person.",
-    "p2": "Please read our guide on what you need for this trip.",
-    "p3": ""
+    "p1": "",
+    "p2": "",
+    "p3": "",
+    "p4": "",
+    "p5": ""
   }
 }

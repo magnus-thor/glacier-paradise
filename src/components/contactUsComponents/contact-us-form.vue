@@ -43,7 +43,7 @@
         >
         <textarea id="message" name="message"></textarea>
       </div>
-      <button class="submit" type="submit">
+      <button class="primary submit" type="submit">
         {{ $t("contactUs.buttons.send") }}
       </button>
     </form>

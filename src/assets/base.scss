@@ -73,7 +73,7 @@ p {
   overflow: hidden;
 }
 
-button {
+button.primary {
   margin-top: 1rem;
   display: inline-block;
   background: #d4af37;
@@ -100,11 +100,11 @@ button {
   }
 }
 
-button:hover {
+button.primary:hover {
   background: #9d8022;
 }
 
-button:active,
-button:focus {
+button.primary:active,
+button.primary:focus {
   background: #b29126;
 }
