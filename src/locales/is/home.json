@@ -1,0 +1,33 @@
+{
+  "header": "Upplifðu leyndardóma Snæfellsjökuls í ferð með okkur",
+  "tours": {
+    "topOfTheDiamond": {
+      "header": "Leyndardómar Snæfellsjökuls",
+      "text": "Komdu með í þessa magnþrungnu ferð um jökul sem að situr ofan á virkri eldstöð sem að á sér 700 þúsund ára sögu. Bæði jökullin og svæðið í kring er talið geyma orku og er tilfinningin að standa á jökli sem að situr ofan á voldugu eldfjalli óviðjafnanleg. Magnaða útsýnið af jöklinum veitir frábær ljósmynda tækifæri og minningar. Þeir sem að leita að spennandi ævintýrum ættu ekki láta þessa ferð fram hjá sér fara.",
+      "additionalText": "",
+      "imageAlt": "Útsýni frá toppi Snæfellsjökuls"
+    },
+    "midnightSunTour": {
+      "header": "Miðnætur ferð",
+      "text": "Miðnætur ferðirnar okkar eru einstök upplifun. Á meðan sólin sest og himininn litast af töfrum miðnætursólarinnar færð þú að njóta þess magnaða útsýni sem jökullinn hefur uppá að bjóða meðan miðnætursólin baðar allt rauðgulum bjarma. ",
+      "additionalText": "",
+      "imageAlt": "Útsýni frá toppi Snæfellsjökuls í miðnætursólinni"
+    },
+    "cabin": {
+      "header": "Hlýlegur bústaður",
+      "text": "Notalegur fullbúinn bústaður með sjávar- og fjallaútsýni sem að staðsettur er á Arnarstapa.",
+      "additionalText": "",
+      "imageAlt": "Cozy cabin located in Arnarstapi",
+      "airbnb": {
+        "old_cabin": "Bókanir til 30. Júní 2023",
+        "new_cabin": "Bókanir frá 1. Júlí 2023"
+      }
+    },
+    "customTours": {
+      "header": "Sérsniðnar ferðir",
+      "text": "Hvort sem það er fyrir einstaklinga eða hópa þá getum við aðlagað okkur að þínum óskum. Hafðu samband við okkur í dag og byrjum að skipuleggja þitt ævintýri.",
+      "additionalText": "Til að fá meiri upplýsingar ",
+      "imageAlt": ""
+    }
+  }
+}

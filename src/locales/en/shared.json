@@ -1,0 +1,11 @@
+{
+  "links": {
+    "readMore": "Read more",
+    "contactUs": "Contact Us"
+  },
+  "bokun": {
+    "buttons": {
+      "book": "Book now"
+    }
+  }
+}
