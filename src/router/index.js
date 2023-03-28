@@ -64,6 +64,7 @@ const routes = [
         path: "midnight-sun",
         name: "Midnight sun tour",
         component: MidnightSunTour,
+        props: true,
         meta: {
           index: 2,
           enterClass: "",

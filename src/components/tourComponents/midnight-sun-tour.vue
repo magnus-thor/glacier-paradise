@@ -50,14 +50,23 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref } from "vue";
+import { defineComponent, inject, ref } from "vue";
+import { IStore } from "@/interfaces/store";
 
 export default defineComponent({
   name: "midnightSunTour",
   setup() {
+    // const openDialog = () => {
+    //   (
+    //     document.getElementById("essentials-dialog") as HTMLDialogElement
+    //   ).show();
+    // };
+    const Store: IStore = inject("Store");
+
     const openDialog = () => {
-      (document.getElementById("essentials-dialog") as HTMLDialogElement).open =
-        true;
+      console.log("openDialog", Store.isDialogOpen);
+      Store.isDialogOpen = true;
+      console.log("openDialog", Store.isDialogOpen);
     };
 
     return { openDialog };

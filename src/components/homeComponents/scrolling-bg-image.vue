@@ -27,7 +27,7 @@ export default defineComponent({
   height: 100vh;
   background-size: 100% 100%;
 
-  background-image: url(/images/iskyunum1_tinified.avif);
+  background-image: url(/images/iskyunum1_tinified.avif); //TODO: Fix for edge
   animation: slide-small-screen 40s linear;
   translate: -80% 0;
 

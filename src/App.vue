@@ -13,6 +13,7 @@
           mode="out-in"
         >
           <component :is="Component" />
+          <!-- TODO: pass openDialog to corresponding component -->
         </transition>
       </router-view>
     </main>
@@ -31,6 +32,7 @@ import {
   defineAsyncComponent,
   onUnmounted,
   ref,
+  provide,
 } from "vue";
 import MyFooter from "@/components/my-footer.vue";
 import EssentialsDialog from "@/components/shared/essentials.vue";
@@ -70,7 +72,12 @@ export default defineComponent({
       return `${className}`;
     };
 
-    return { renderHeaderComponent, t, generateClassList, generateClassList2 };
+    return {
+      renderHeaderComponent,
+      t,
+      generateClassList,
+      generateClassList2,
+    };
   },
 });
 </script>
@@ -109,17 +116,9 @@ div#preload {
   z-index: 1;
 }
 
-body:has(dialog[open]) {
-  overflow: hidden;
-}
-
-dialog {
-  position: fixed;
-  width: 25rem;
-  z-index: 100;
-  border: 1px solid;
-  box-shadow: 2px 2px;
-}
+// body:has(dialog[open]) {
+//   overflow: hidden;
+// }
 
 .animate__animated.animate__fadeInRight,
 .animate__animated.animate__fadeInLeft,

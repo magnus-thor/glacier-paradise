@@ -43,11 +43,9 @@ export default defineComponent({
     const observer = ref({});
 
     const onEnterToursComponent = () => {
-      console.log("onEnter");
       loadCardsComponent.value = true;
     };
     const onExitToursComponent = () => {
-      console.log("onEXIT");
       loadInstagramComponent.value = true;
     };
 
@@ -68,7 +66,7 @@ export default defineComponent({
 });
 </script>
 <style lang="scss" scoped>
-@import "../assets/mixins.scss";
+@import "../assets/base.scss";
 
 .page {
   overflow-x: hidden;

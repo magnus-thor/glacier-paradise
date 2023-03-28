@@ -21,10 +21,6 @@ export default defineComponent({
   name: "weather",
   async setup() {
     onMounted(() => {
-      console.log(
-        "weather.value.wind_from_direction",
-        weather.value.wind_from_direction
-      );
       document.getElementById(
         "windIcon"
       ).style.rotate = `${weather.value.wind_from_direction}deg`;

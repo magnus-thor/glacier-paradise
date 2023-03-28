@@ -1,0 +1,24 @@
+{
+  "header": "Hvað þarf ég fyrir ferðina",
+  "description": "Jöklaferð er frábær en það getur skyggt á upplifunina ef maður mætir vanbúin. Hér er lítill listi sem að getur hjálpað við undirbúninginn:",
+  "clothing_section": {
+    "header": "Fatnaður",
+    "listItems": {
+      "one": "Klæddu þig í mörg lög svo þú getir bætt við eða fækkað fötum eftir hitastigi",
+      "two": "Hafðu vatnsheldan jakka eða úlpu meðferðis",
+      "three": "Vatnsheldan skófatnað(ekki strigaskó)",
+      "four": "Húfa og vettlingar"
+    }
+  },
+  "other_essentials_section": {
+    "header": "Annar búnaður ",
+    "listItems": {
+      "one": "Sólgleraugu og sólarvörn",
+      "two": "Lítill bakpoki með auka fatnaði",
+      "three": "Vatnsflaska eða brúsi með heitum drykk"
+    }
+  },
+  "disclaimer": "Vinsamlega athugið að jöklaferðir eru háðar veður skilyrðum hverju sinni. Ef þú ert í vafa hvort jöklaferðin sé við þitt hæfi, þá er þér velkomið að hafa samband. Með góðum undirbúningi og réttum klæðnaði getum við gert frábæra ferð enn nú betri.",
+  "closeButton": "Loka",
+  "closeIconAriaLabel": "Loka glugga"
+}
