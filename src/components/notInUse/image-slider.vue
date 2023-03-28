@@ -6,10 +6,14 @@
       </div>
     </transition>
     <div class="buttons">
-      <button class="button" @click="previous" :disabled="disablePrevious">
+      <button
+        class="primary button"
+        @click="previous"
+        :disabled="disablePrevious"
+      >
         <v-icon name="fc-previous" fill="green" scale="2" />
       </button>
-      <button class="button" @click="next" :disabled="disableNext">
+      <button class="primary button" @click="next" :disabled="disableNext">
         <v-icon name="fc-next" fill="green" scale="2" />
       </button>
     </div>

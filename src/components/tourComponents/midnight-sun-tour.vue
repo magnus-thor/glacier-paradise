@@ -1,35 +1,49 @@
 <template>
   <div class="midnightSun--container">
-    <div class="main-content-container">
+    <div class="image">
       <img src="/images/midnightsun.sida.jpg" alt="" />
-      <div class="content--wrapper">
-        <div class="p1">
-          <!-- TODO: Refactor header outside this div -->
-          <h1>{{ $t("midnightSun.info.header") }}</h1>
+    </div>
+    <h1 class="page-header">{{ $t("midnightSun.content.header") }}</h1>
+    <div class="content--wrapper">
+      <p>{{ $t("midnightSun.content.p1") }}</p>
+      <p>{{ $t("midnightSun.content.p2") }}</p>
+      <p>{{ $t("midnightSun.content.p3") }}</p>
+      <p>{{ $t("midnightSun.content.p4") }}</p>
+      <h2 class="tour-info-header">{{ $t("midnightSun.info.header") }}</h2>
+      <div class="tour-info">
+        <div>
           <p>{{ $t("midnightSun.info.p1") }}</p>
-        </div>
-        <div class="p2">
           <p>{{ $t("midnightSun.info.p2") }}</p>
-          <!-- <button>{{ $t("midnightSun.info.p2") }}</button> -->
         </div>
-        <div class="p3">
-          <p>{{ $t("midnightSun.info.p3") }}</p>
-        </div>
+        <p>
+          {{ $t("midnightSun.info.p3") }}
+          <span
+            ><button class="primary small" @click="openDialog">
+              {{ $t("shared.links.readMore") }}
+            </button></span
+          >
+        </p>
       </div>
     </div>
-    <aside class="info--container">
-      <div class="p1">
-        <h1>{{ $t("midnightSun.content.header") }}</h1>
-        <p>{{ $t("midnightSun.content.p1") }}</p>
+    <aside class="sidebar--container">
+      <h2>{{ $t("midnightSun.sidebar.header") }}</h2>
+
+      <p>{{ $t("midnightSun.sidebar.p1") }}</p>
+      <div class="text__block">
+        <p>
+          {{ $t("midnightSun.sidebar.p2") }}
+        </p>
+        <p>
+          {{ $t("midnightSun.sidebar.p3") }}
+        </p>
       </div>
-      <div class="p2">
-        <p>{{ $t("midnightSun.content.p2") }}</p>
-      </div>
-      <div class="p3">
-        <p>{{ $t("midnightSun.content.p3") }}</p>
-      </div>
-      <div class="p4">
-        <p>{{ $t("midnightSun.content.p4") }}</p>
+      <div class="text__block">
+        <p>
+          {{ $t("midnightSun.sidebar.p4") }}
+        </p>
+        <p>
+          {{ $t("midnightSun.sidebar.p5") }}
+        </p>
       </div>
     </aside>
   </div>
@@ -40,62 +54,96 @@ import { defineComponent, ref } from "vue";
 
 export default defineComponent({
   name: "midnightSunTour",
-  setup() {},
+  setup() {
+    const openDialog = () => {
+      (document.getElementById("essentials-dialog") as HTMLDialogElement).open =
+        true;
+    };
+
+    return { openDialog };
+  },
 });
 </script>
 
 <style lang="scss" scoped>
 @import "@/assets/base.scss";
 
-button {
-  grid-column: span 2;
-  border: none;
-  background-color: $yellow;
-  color: $dark_grey;
-  padding: 1rem;
-  border-radius: 4px;
-  font-weight: bold;
-  font-size: 1rem;
-  box-shadow: 4px 4px black;
-  transition: box-shadow 0.3s ease-out;
-  width: 60%;
-  margin: auto;
-
-  &:hover {
-    box-shadow: 2px 2px black;
-  }
-}
-
 .midnightSun--container {
-  margin: auto;
+  // margin: auto;
   display: grid;
-  grid-template-areas: "overLay";
-  min-height: calc(100vh - $header_height - $footer_height);
+  grid-template-columns: 1fr;
+  // min-height: calc(100vh - $header_height - $footer_height);
   @include white-blue-bg-gradient(60deg);
 
-  .content--wrapper {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    padding: 2rem;
+  .image {
+    grid-area: 1/1/-1/-1;
+    img {
+      display: block;
+      width: 100%;
+    }
   }
 
-  .info--container {
-    background-color: $dark_grey;
-  }
-
-  h1 {
+  .page-header {
+    grid-area: 1/1/-1/-1;
+    color: $white;
+    padding-top: 1.5rem;
     padding-left: 2rem;
-    color: $yellow;
+  }
+
+  .content--wrapper {
+    padding: 2rem;
+
+    p + p {
+      margin-top: 0.7rem;
+    }
+
+    .tour-info-header {
+      margin-top: 1rem;
+    }
+
+    .tour-info {
+      display: grid;
+      grid-template-columns: 3fr 3fr;
+
+      div {
+        margin-right: 2rem;
+      }
+
+      p {
+        font-weight: 600;
+      }
+    }
+  }
+
+  .sidebar--container {
+    background-color: $dark_grey;
+    box-sizing: border-box;
+    padding: 2rem 2rem;
+
+    p {
+      padding: 0.5rem 0;
+    }
+
+    .text__block {
+      padding: 0.5rem 0;
+      p {
+        padding: 0.1rem 0;
+      }
+    }
   }
 
   p {
     color: $white;
   }
 
-  img {
-    width: 100%;
-    height: 35rem;
+  h2 {
+    color: $yellow;
   }
+
+  // img {
+  //   width: 100%;
+  //   height: 35rem;
+  // }
 
   .p1,
   .p2,
@@ -109,31 +157,43 @@ button {
   }
 
   @include for-tablet-landscape-up {
-    .main-content-container {
-      grid-area: overLay;
-      .content--wrapper {
-        width: 60%;
+    $row1-height: 50vh;
+    grid-template-columns: 1fr 1fr 1.5fr;
+    grid-template-rows: $row1-height;
+    // grid-area: 1/1/-1/-1;
+
+    .image {
+      img {
+        height: $row1-height;
       }
     }
 
-    .info--container {
-      grid-area: overLay;
-      justify-self: end;
-      width: 30%;
-      margin-right: 2rem;
-      margin-bottom: 2rem;
-      margin-top: 2rem;
-      padding-bottom: 2rem;
-      border-radius: 5px;
+    .content--wrapper {
+      grid-area: 2/1/3/3;
+    }
 
-      h1 {
-        margin-top: 2rem;
-      }
+    .sidebar--container {
+      grid-area: 1/3/3/4;
+      align-self: center;
+      margin-right: 3rem;
+      margin: 1rem 2rem 1rem 0;
+      background-color: rgba($dark_grey, 0.9);
+    }
+  }
 
-      p {
-        margin-top: 2rem;
-        padding: 0 2rem;
+  @include for-medium-desktop-up {
+    $row1-height: 40vh;
+    // grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: $row1-height;
+    .image {
+      img {
+        display: block;
+        height: $row1-height;
       }
+    }
+
+    .sidebar--container {
+      margin-right: 5rem;
     }
   }
 }

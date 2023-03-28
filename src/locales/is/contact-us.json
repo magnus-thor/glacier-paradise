@@ -1,0 +1,30 @@
+{
+  "header": "Hafðu samband",
+  "preamble": "Fyrir nánari upplýsingar",
+  "inputFieldLabels": {
+    "name": "Nafn",
+    "email": "Netfang",
+    "subject": "Viðfangsefni",
+    "message": "Skilaboð"
+  },
+  "buttons": {
+    "send": "Senda"
+  },
+  "info": {
+    "address": {
+      "header": "Heimilisfang",
+      "paragraphs": "Samkomuhúsið á Stapa"
+    },
+    "phone": { "header": "Sími" },
+    "openingPeriod": {
+      "header": "Opnunartími",
+      "paragraph1": "Við erum með reglulegar ferðir frá Apríl til Águst.",
+      "paragraph2": "Restina af árinu getum við farið ferðir eftir samkomulagi."
+    }
+  },
+  "subject": {
+    "customTours": "Custom tours",
+    "giftCard": "Gjafabréf",
+    "midnightSunTour": "Midnight-sun tour"
+  }
+}

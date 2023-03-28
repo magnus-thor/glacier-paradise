@@ -68,12 +68,6 @@ export default defineComponent({
 .header-background {
   background-color: $blue;
   @include ellipse-bg-midnight_blue-gradient;
-
-  .header-logo img {
-    width: 100%;
-    height: auto;
-    transition: 2s;
-  }
 }
 
 .nav-routes {
@@ -115,12 +109,14 @@ export default defineComponent({
 }
 
 .header {
+  display: grid;
+  grid-template-columns: 1fr 6fr 1fr;
   position: fixed;
   width: 100%;
   height: $header_height;
   align-items: center;
-  display: flex;
   z-index: 100;
+  // box-sizing: border-box;
 }
 
 .hide-image {
@@ -128,13 +124,13 @@ export default defineComponent({
 }
 
 .header-logo {
-  padding-left: 1rem;
-  margin-right: auto;
   width: 6rem;
+  justify-self: center;
 
   img {
     width: 100%;
     height: auto;
+    transition: 2s; //TODO: Fix, image expands and pushes navlinks/locale to transition also.
   }
 }
 
@@ -149,8 +145,7 @@ export default defineComponent({
 }
 
 .locale-changer {
-  margin-left: auto;
-  width: 2rem;
+  justify-self: center;
 }
 
 .locale-button {
@@ -165,7 +160,6 @@ export default defineComponent({
 
 @include for-desktop-up {
   .header-logo {
-    padding-left: 2.5rem;
     width: 8rem;
   }
 
@@ -176,9 +170,6 @@ export default defineComponent({
     button.nav-button {
       font-size: 24px;
     }
-  }
-  .locale-changer {
-    width: 8rem;
   }
 }
 </style>

@@ -1,7 +1,9 @@
-import en from './en.json'
-import is from './is.json'
+import en from "./en";
+import is from "./is";
+
+console.log(en);
 
 export default {
-  'en': en,
-  'is': is,
-}
+  English: en,
+  Íslenska: is,
+};

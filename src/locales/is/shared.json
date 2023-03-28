@@ -1,0 +1,11 @@
+{
+  "links": {
+    "readMore": "Lestu meira",
+    "contactUs": "Hafðu samband"
+  },
+  "bokun": {
+    "buttons": {
+      "book": "Bóka"
+    }
+  }
+}
