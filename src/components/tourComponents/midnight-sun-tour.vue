@@ -158,7 +158,7 @@ export default defineComponent({
 
   @include for-tablet-landscape-up {
     $row1-height: 50vh;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1.5fr;
     grid-template-rows: $row1-height;
     // grid-area: 1/1/-1/-1;
 
@@ -183,6 +183,7 @@ export default defineComponent({
 
   @include for-medium-desktop-up {
     $row1-height: 40vh;
+    // grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: $row1-height;
     .image {
       img {
