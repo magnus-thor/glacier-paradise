@@ -53,7 +53,8 @@
       >
         <p v-if="submitStatus === 'success'">Form has been sent</p>
         <p v-if="submitStatus === 'error'">
-          Something went wrong please try again
+          Something went wrong please try again or use the facebook messenger
+          app to reach us
         </p>
       </div>
     </form>
