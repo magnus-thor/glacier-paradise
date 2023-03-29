@@ -1,15 +1,40 @@
 <template>
   <div class="image--container">
-    <link href="/images/iskyunum1_tinified.avif" rel="preload" as="image" />
-    <div ref="scrollingImage" id="image" class="scrolling-bg-image"></div>
+    <link
+      href="/images/iskyunum1_tinified.avif"
+      rel="preload"
+      as="image"
+      v-if="!loadPng"
+    />
+    <div
+      ref="scrollingImage"
+      id="image"
+      :class="[
+        'scrolling-bg-image',
+        {
+          pngBgImage: loadPng,
+        },
+      ]"
+    ></div>
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent, onMounted } from "vue";
+import { defineComponent, ref } from "vue";
 
 export default defineComponent({
   name: "scrollingBgImage",
+  setup() {
+    const loadPng = ref(false);
+    if (
+      navigator.userAgent.indexOf("MSIE") != -1 ||
+      navigator.userAgent.indexOf("Edg") != -1
+    ) {
+      loadPng.value = true;
+    }
+
+    return { loadPng };
+  },
 });
 </script>
 
@@ -28,7 +53,11 @@ export default defineComponent({
   height: 100vh;
   background-size: 100% 100%;
 
-  background-image: url(/images/iskyunum1_tinified.avif); //TODO: Fix for edge
+  background-image: url("/images/iskyunum1_tinified.avif");
+  &.pngBgImage {
+    background-image: url("/images/iskyunum1_tinified.png");
+  }
+
   animation: slide-small-screen 40s linear;
   translate: -80% 0;
 
