@@ -14,6 +14,7 @@
           id="header-image"
           src="/logos/logo-glacier-paradise-transparent.png"
           alt="Glacier paradise logo"
+          rel="preload"
         />
       </div>
 
@@ -154,7 +155,6 @@ export default defineComponent({
   border: none;
   padding: 0;
   cursor: pointer;
-  outline: inherit;
   font-size: large;
 }
 

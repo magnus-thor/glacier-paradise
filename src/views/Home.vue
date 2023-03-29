@@ -11,10 +11,8 @@
       <!-- <div class="glacier-info--container">
         <glacier-info v-if="loadInstagramComponent" />
       </div> -->
-      <div class="instagram--container">
-        <!-- TODO: do same as loadCardsComponent -->
-        <!-- <instagram v-if="loadInstagramComponent" /> -->
-        <!-- <instagram /> -->
+      <div ref="instagramRef" class="instagram--container">
+        <instagram v-if="loadInstagramComponent" />
       </div>
     </div>
   </div>
@@ -38,22 +36,31 @@ export default defineComponent({
   },
   setup() {
     const cardsRef = ref<HTMLElement>(null);
+    const instagramRef = ref<HTMLElement>(null);
     const loadCardsComponent = ref(false);
     const loadInstagramComponent = ref(false);
     const observer = ref({});
 
     const onEnterToursComponent = () => {
       loadCardsComponent.value = true;
+      console.log("onEnterToursComponent cardsRef: ", cardsRef.value);
+      console.log("onEnterToursComponent instagramRef: ", instagramRef.value);
     };
-    const onExitToursComponent = () => {
+
+    const onEnterInstagramComponent = () => {
       loadInstagramComponent.value = true;
+      console.log("onEnterInstagramComponent cardsRef: ", cardsRef.value);
+      console.log(
+        "onEnterInstagramComponent instagramRef: ",
+        instagramRef.value
+      );
     };
 
     onMounted(() => {
+      observer.value = onIntersect(cardsRef.value, onEnterToursComponent);
       observer.value = onIntersect(
-        cardsRef.value,
-        onEnterToursComponent,
-        onExitToursComponent
+        instagramRef.value,
+        onEnterInstagramComponent
       );
     });
 
@@ -61,6 +68,7 @@ export default defineComponent({
       loadCardsComponent,
       loadInstagramComponent,
       cardsRef,
+      instagramRef,
     };
   },
 });

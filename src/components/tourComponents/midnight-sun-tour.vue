@@ -56,17 +56,10 @@ import { IStore } from "@/interfaces/store";
 export default defineComponent({
   name: "midnightSunTour",
   setup() {
-    // const openDialog = () => {
-    //   (
-    //     document.getElementById("essentials-dialog") as HTMLDialogElement
-    //   ).show();
-    // };
     const Store: IStore = inject("Store");
 
     const openDialog = () => {
-      console.log("openDialog", Store.isDialogOpen);
       Store.isDialogOpen = true;
-      console.log("openDialog", Store.isDialogOpen);
     };
 
     return { openDialog };

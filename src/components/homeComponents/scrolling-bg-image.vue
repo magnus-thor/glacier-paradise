@@ -1,5 +1,6 @@
 <template>
   <div class="image--container">
+    <link href="/images/iskyunum1_tinified.avif" rel="preload" as="image" />
     <div ref="scrollingImage" id="image" class="scrolling-bg-image"></div>
   </div>
 </template>
