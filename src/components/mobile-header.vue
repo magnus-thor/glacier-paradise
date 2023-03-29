@@ -14,6 +14,7 @@
           id="header-image"
           src="/logos/logo-glacier-paradise-transparent.png"
           alt="Glacier paradise logo"
+          rel="preload"
         />
       </div>
       <div class="bm-overlay">
@@ -114,7 +115,6 @@ export default defineComponent({
   border: none;
   padding: 0;
   cursor: pointer;
-  outline: inherit;
   font-size: 24px;
   transform: translateY(-50px);
 }

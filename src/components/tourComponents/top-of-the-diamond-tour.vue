@@ -6,7 +6,7 @@
     <div class="header--container">
       <h1>{{ $t("topOfTheDiamond.content.header") }}</h1>
       <button
-        class="primary sticky"
+        class="bokunButton primary sticky"
         disabled
         id="bokun_b3447b9e_8bf3_4090_a58d_8b930ced9c1d"
         data-src="https://widgets.bokun.io/online-sales/a5fa0d8d-ffc2-431e-bece-86e5d8fa2d7c/experience-calendar/17979?partialView=1"
@@ -62,14 +62,16 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
+import { IStore } from "@/interfaces/store";
+import { defineComponent, inject } from "vue";
 
 export default defineComponent({
   name: "snowCatTour",
   setup() {
+    const Store: IStore = inject("Store");
+
     const openDialog = () => {
-      (document.getElementById("essentials-dialog") as HTMLDialogElement).open =
-        true;
+      Store.isDialogOpen = true;
     };
 
     return { openDialog };
