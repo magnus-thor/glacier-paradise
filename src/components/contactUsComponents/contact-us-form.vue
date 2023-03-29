@@ -8,6 +8,7 @@
       data-netlify="true"
       data-netlify-honeypot="bot-field"
       class="form-grid"
+      @submit.prevent="submitForm"
     >
       <input type="hidden" name="form-name" value="contact-us" />
       <div class="input-fields">
@@ -46,14 +47,55 @@
       <button class="primary submit" type="submit">
         {{ $t("contactUs.buttons.send") }}
       </button>
+      <div
+        :class="['notification', submitStatus]"
+        v-if="submitStatus !== 'loading'"
+      >
+        <p v-if="submitStatus === 'success'">Form has been sent</p>
+        <p v-if="submitStatus === 'error'">
+          Something went wrong please try again
+        </p>
+      </div>
     </form>
   </aside>
 </template>
 <script lang="ts">
-import { computed, defineComponent } from "vue";
+import { defineComponent, Ref, ref } from "vue";
+import MailService from "@sendgrid/mail";
+type statusType = "loading" | "success" | "error";
 
 export default defineComponent({
   name: "ContactUsForm",
+  setup() {
+    MailService.setApiKey(import.meta.env.VITE_SENDGRID_API);
+    const submitStatus: Ref<statusType> = ref("loading");
+
+    const submitForm = (event: { target: any }) => {
+      const msg = {
+        to: "info@glacierparadise.is",
+        from: "info@glacierparadise.is",
+        subject: event.target.subject.value,
+        text: `Nafn: ${event.target.name.value}, Email: ${event.target.email.value}, Skilaboð: ${event.target.message.value}`,
+        html: `<h3>Nafn: ${event.target.name.value}</h3>
+        <p>Email: ${event.target.email.value}</p> 
+        <p>Efni: ${event.target.subject.value}</p> 
+        <p>Skilaboð: ${event.target.message.value}</p>`,
+      };
+
+      (async () => {
+        try {
+          submitStatus.value = "loading";
+          const response = await MailService.send(msg);
+          submitStatus.value = "success";
+        } catch (error) {
+          console.error(error);
+          submitStatus.value = "error";
+        }
+      })();
+    };
+
+    return { submitForm, submitStatus };
+  },
 });
 </script>
 <style lang="scss" scoped>
@@ -142,6 +184,24 @@ export default defineComponent({
       margin: 1rem 0;
       padding: 0 1rem;
     }
+  }
+}
+
+.notification {
+  margin-top: 1rem;
+  padding: 8px;
+  font-size: 14px;
+  color: $white;
+  border-radius: 4px;
+
+  &.success {
+    border: 1px solid rgb(4, 87, 4);
+    background-color: green;
+  }
+
+  &.error {
+    border: 1px solid rgb(138, 1, 1);
+    background-color: red;
   }
 }
 </style>
