@@ -71,11 +71,9 @@ export default defineComponent({
 @import "@/assets/base.scss";
 
 .midnightSun--container {
-  // margin: auto;
   display: grid;
   grid-template-columns: 1fr;
-  // min-height: calc(100vh - $header_height - $footer_height);
-  @include white-blue-bg-gradient(60deg);
+  background-color: $sapphire_blue;
 
   .image {
     grid-area: 1/1/-1/-1;
@@ -142,11 +140,6 @@ export default defineComponent({
     color: $yellow;
   }
 
-  // img {
-  //   width: 100%;
-  //   height: 35rem;
-  // }
-
   .p1,
   .p2,
   .p3,
@@ -162,7 +155,7 @@ export default defineComponent({
     $row1-height: 50vh;
     grid-template-columns: 1fr 1fr 1.5fr;
     grid-template-rows: $row1-height;
-    // grid-area: 1/1/-1/-1;
+    @include white-blue-bg-gradient(60deg);
 
     .image {
       img {
@@ -185,7 +178,6 @@ export default defineComponent({
 
   @include for-medium-desktop-up {
     $row1-height: 40vh;
-    // grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: $row1-height;
     .image {
       img {

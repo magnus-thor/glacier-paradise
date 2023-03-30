@@ -27,14 +27,14 @@
           <p>{{ $t("topOfTheDiamond.content.p5") }}</p>
           <p>{{ $t("topOfTheDiamond.content.p6") }}</p>
         </div>
-        <p>
-          {{ $t("topOfTheDiamond.content.p7") }}
-          <span
-            ><button class="primary small" @click="openDialog">
-              {{ $t("shared.links.readMore") }}
-            </button></span
-          >
-        </p>
+        <div class="tour-info__guide">
+          <p>
+            {{ $t("topOfTheDiamond.content.p7") }}
+          </p>
+          <button class="primary small" @click="openDialog">
+            {{ $t("shared.links.readMore") }}
+          </button>
+        </div>
       </div>
     </div>
     <aside class="sidebar--container">
@@ -133,7 +133,7 @@ export default defineComponent({
 
     .tour-info {
       display: grid;
-      grid-template-columns: 3fr 3fr;
+      grid-template-columns: 1fr;
 
       div {
         margin-right: 2rem;
@@ -141,6 +141,10 @@ export default defineComponent({
 
       p {
         font-weight: 600;
+      }
+
+      &__guide button {
+        margin-top: 0.5rem;
       }
     }
   }
@@ -175,7 +179,10 @@ export default defineComponent({
 
     .content--wrapper {
       grid-area: 2/1/3/3;
-      // max-width: 60%;
+
+      .tour-info {
+        grid-template-columns: 1fr 1fr;
+      }
     }
 
     .sidebar--container {
