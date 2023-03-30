@@ -12,7 +12,7 @@ jobs:
     - name: Create env file
       run: |
             touch .env
-            echo VITE_SENDGRID_API="${{ secrets.VITE_SENDGRID_API }}" >> .env
+            echo VITE_SENDGRID_API=${{ secrets.VITE_SENDGRID_API }} >> .env
             echo "!.env" > .git-ftp-include # Add git untracked file
     - name: Install dependencies
       run: npm install
