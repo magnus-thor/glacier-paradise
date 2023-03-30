@@ -48,12 +48,6 @@ import { defineComponent, inject, Ref, ref, watchEffect } from "vue";
 
 export default defineComponent({
   name: "essentials",
-  // props: {
-  //   isDialogOpen: {
-  //     type: Boolean,
-  //     default: false,
-  //   },
-  // },
   setup() {
     const isOpen = ref(false);
     const dialogTop = ref<HTMLDialogElement>(null);

@@ -18,9 +18,11 @@ export default defineComponent({
   setup() {
     const { locale } = useI18n();
     const componentToRender = computed(() => {
-      const lang = locale.value;
+      const lang = locale.value === "English" ? "en" : "is";
       return `markdown-${lang}`;
     });
+
+    console.log(componentToRender.value);
 
     return { componentToRender };
   },
