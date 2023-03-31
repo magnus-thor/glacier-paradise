@@ -89,7 +89,6 @@ export default defineComponent({
           const response = await MailService.send(msg);
           submitStatus.value = "success";
         } catch (error) {
-          console.error(error);
           submitStatus.value = "error";
         }
       })();

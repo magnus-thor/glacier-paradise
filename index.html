@@ -33,38 +33,26 @@
     chatbox.setAttribute("attribution", "biz_inbox");
   </script>
 
-
-
-  <!-- Bokun -->
-  <!-- TODO: Load when user visits the page with the widget -->
-  <!-- <script type="text/javascript"
-    src="https://widgets.bokun.io/assets/javascripts/apps/build/BokunWidgetsLoader.js?bookingChannelUUID=a5fa0d8d-ffc2-431e-bece-86e5d8fa2d7c"
-    async></script>
-  <noscript>Please enable javascript in your browser to book</noscript> -->
-
-
-  <script type="text/javascript"
-    src="https://widgets.bokun.io/assets/javascripts/apps/build/BokunWidgetsLoader.js?bookingChannelUUID=a5fa0d8d-ffc2-431e-bece-86e5d8fa2d7c"
-    async></script>
-
-
   <!-- Facebook -->
   <!-- TODO: Load when user clicks on messenger icon -->
   <script defer>
-    window.fbAsyncInit = function () {
-      FB.init({
-        xfbml: true,
-        version: 'v15.0'
-      });
-    };
 
-    (function (d, s, id) {
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) return;
-      js = d.createElement(s); js.id = id;
-      js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
-      fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));
+    setTimeout(() => {
+      window.fbAsyncInit = function () {
+        FB.init({
+          xfbml: true,
+          version: 'v15.0'
+        });
+      };
+
+      (function (d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    }, 10000)
   </script>
 
   <!-- Clicky - Analytics -->
@@ -72,9 +60,6 @@
   <noscript>
     <p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/101385907ns.gif" /></p>
   </noscript>
-
-  <!-- Behold - Instagram feed -->
-  <script src="https://w.behold.so/widget.js" type="module"></script>
 
   <div id="app"></div>
   <script type="module" src="/src/main.js"></script>

@@ -63,11 +63,19 @@
 
 <script lang="ts">
 import { IStore } from "@/interfaces/store";
-import { defineComponent, inject } from "vue";
+import { defineComponent, inject, onBeforeMount } from "vue";
 
 export default defineComponent({
   name: "snowCatTour",
   setup() {
+    onBeforeMount(() => {
+      const tag = document.createElement("script");
+      tag.setAttribute(
+        "src",
+        "https://widgets.bokun.io/assets/javascripts/apps/build/BokunWidgetsLoader.js?bookingChannelUUID=a5fa0d8d-ffc2-431e-bece-86e5d8fa2d7c"
+      );
+      document.head.appendChild(tag);
+    });
     const Store: IStore = inject("Store");
 
     const openDialog = () => {

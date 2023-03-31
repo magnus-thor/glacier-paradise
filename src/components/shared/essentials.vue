@@ -54,8 +54,6 @@ export default defineComponent({
 
     const Store: IStore = inject("Store");
     const closeDialog = () => {
-      console.log("openDialog");
-
       Store.isDialogOpen = false;
     };
 

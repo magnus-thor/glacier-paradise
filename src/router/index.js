@@ -20,8 +20,9 @@ const routes = [
       index: 1,
       enterClass: "",
       leaveClass: "",
-      title: "Glacier paradise, special sightseing tours of Snæfellsjökull", // TODO Agnes: Update the sentence to use a few keywords to help with finding the page, max 55 chars  -> https://www.seobility.net/en/wiki/Meta_Title
-      description: "1", // TODO Agnes: add a description of the website/page -> https://www.seobility.net/en/wiki/Meta_Description
+      title: "Glacier paradise, special sightseing tours of Snæfellsjökull",
+      description:
+        "Discover the natural wonders of Snæfellsjökull with our exciting tours. Explore the stunning glacier and breathtaking landscapes of the peninsula. Book your adventure today!",
     },
   },
 
@@ -32,8 +33,9 @@ const routes = [
       index: 2,
       enterClass: "",
       leaveClass: "",
-      title: "",
-      description: "4",
+      title: "Explore Snæfellsjökull with our Exciting Tour Packages",
+      description:
+        "Choose from our carefully curated tour packages and experience the beauty and adventure of Snæfellsjökull. Our tours offer a variety of options, including glacier exploration, mountain passes, and more. Book your tour today and create unforgettable memories in one of Iceland's most stunning locations.",
     },
     children: [
       {
@@ -44,8 +46,9 @@ const routes = [
           index: 2,
           enterClass: "",
           leaveClass: "",
-          title: "",
-          description: "3",
+          title: "Explore Snæfellsjökull with our Exciting Tour Packages",
+          description:
+            "Choose from our carefully curated tour packages and experience the beauty and adventure of Snæfellsjökull. Our tours offer a variety of options, including glacier exploration, mountain passes, and more. Book your tour today and create unforgettable memories in one of Iceland's most stunning locations.",
         },
       },
       {
@@ -56,8 +59,10 @@ const routes = [
           index: 2,
           enterClass: "",
           leaveClass: "",
-          title: "",
-          description: "3",
+          title:
+            " Snæfellsjökull Glacier Tour: Explore the Energy of Iceland's Iconic Landmark",
+          description:
+            "Embark on a journey to the top of Snæfellsjökull Glacier and discover the breathtaking views of the gulf of Faxaflói, Reykjavík, and Keflavík. Learn about the inspiration behind literary works such as 'Christianity Under the Glacier' and 'Journey to the Center of the Earth.' Book your tour now for a chance to unearth the fantasy of Snæfellsjökull.",
         },
       },
       {
@@ -69,8 +74,10 @@ const routes = [
           index: 2,
           enterClass: "",
           leaveClass: "",
-          title: "",
-          description: "3",
+          title:
+            "Snæfellsjökull Midnight Sun Tour | Explore the Glacier by Snow-Cat",
+          description:
+            "Experience the magic of the midnight sun on our Snæfellsjökull “Midnight sun tour” departing from Anarstapi. Enjoy the spectacular views of the glacier and surrounding area on this 3-4 hour adventure. Snæfellsjökull is located on the western tip of the Snæfellsnes peninsula, where the warm summer air and never-ending daylight make for a unique and unforgettable experience. Take a snow-cat tour to explore the glacier and surrounding area for a truly memorable experience. As the sun dips low on the horizon, watch the sky turn pink and gold, casting a warm glow over the glacier. Book now for an unforgettable summer adventure in Snæfellsjökull.",
         },
       },
     ],
@@ -83,8 +90,9 @@ const routes = [
       index: 3,
       enterClass: "",
       leaveClass: "",
-      title: "",
-      description: "2",
+      title: "About Glacier Paradise | Our Story and Mission",
+      description:
+        "Learn about Glacier Paradise and our mission to provide unique and unforgettable experiences in Iceland. Discover our story, team, and commitment to sustainable tourism.",
     },
   },
   {
@@ -95,8 +103,9 @@ const routes = [
       index: 4,
       enterClass: "",
       leaveClass: "",
-      title: "",
-      description: "3",
+      title: "Contact Glacier Paradise | Get in Touch with Us",
+      description:
+        "Have a question or need help planning your Iceland adventure? Contact Glacier Paradise and our friendly team will be happy to assist you. Find our phone number, email, and address on this page.",
     },
   },
   {
@@ -107,8 +116,9 @@ const routes = [
       index: 5,
       enterClass: "",
       leaveClass: "",
-      title: "",
-      description: "5",
+      title: "Terms of Service | Glacier Paradise",
+      description:
+        "Read our Terms of Service to understand your rights and obligations when using our website. By accessing our site, you agree to be bound by these terms, so please read them carefully. Contact us if you have any questions or concerns.",
     },
   },
 ];

@@ -22,8 +22,6 @@ export default defineComponent({
       return `markdown-${lang}`;
     });
 
-    console.log(componentToRender.value);
-
     return { componentToRender };
   },
 });
