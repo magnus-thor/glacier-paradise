@@ -43,17 +43,10 @@ export default defineComponent({
 
     const onEnterToursComponent = () => {
       loadCardsComponent.value = true;
-      console.log("onEnterToursComponent cardsRef: ", cardsRef.value);
-      console.log("onEnterToursComponent instagramRef: ", instagramRef.value);
     };
 
     const onEnterInstagramComponent = () => {
       loadInstagramComponent.value = true;
-      console.log("onEnterInstagramComponent cardsRef: ", cardsRef.value);
-      console.log(
-        "onEnterInstagramComponent instagramRef: ",
-        instagramRef.value
-      );
     };
 
     onMounted(() => {
