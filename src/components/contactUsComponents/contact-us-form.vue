@@ -5,8 +5,7 @@
     <form
       name="contact-us"
       method="POST"
-      data-netlify="true"
-      data-netlify-honeypot="bot-field"
+      ref="form"
       class="form-grid"
       @submit.prevent="submitForm"
     >
@@ -30,6 +29,7 @@
             id="subject"
             type="text"
             name="subject"
+            required
             :value="
               $route.params.subject
                 ? $t(`contactUs.subject.${$route.params.subject}`)
@@ -42,7 +42,7 @@
         <label for="message"
           >{{ $t("contactUs.inputFieldLabels.message") }}:</label
         >
-        <textarea id="message" name="message"></textarea>
+        <textarea id="message" name="message" required></textarea>
       </div>
       <button class="primary submit" type="submit">
         {{ $t("contactUs.buttons.send") }}
@@ -62,39 +62,39 @@
 </template>
 <script lang="ts">
 import { defineComponent, Ref, ref } from "vue";
-import MailService from "@sendgrid/mail";
+import emailjs from "@emailjs/browser";
+
 type statusType = "loading" | "success" | "error";
 
 export default defineComponent({
   name: "ContactUsForm",
   setup() {
-    MailService.setApiKey(import.meta.env.VITE_SENDGRID_API);
     const submitStatus: Ref<statusType> = ref("loading");
+    const form = ref<HTMLFormElement>(null);
 
-    const submitForm = (event: { target: any }) => {
-      const msg = {
-        to: "info@glacierparadise.is",
-        from: "info@glacierparadise.is",
-        subject: event.target.subject.value,
-        text: `Nafn: ${event.target.name.value}, Email: ${event.target.email.value}, Skilaboð: ${event.target.message.value}`,
-        html: `<h3>Nafn: ${event.target.name.value}</h3>
-        <p>Email: ${event.target.email.value}</p> 
-        <p>Efni: ${event.target.subject.value}</p> 
-        <p>Skilaboð: ${event.target.message.value}</p>`,
-      };
+    const submitForm = () => {
+      submitStatus.value = "loading";
 
-      (async () => {
-        try {
-          submitStatus.value = "loading";
-          const response = await MailService.send(msg);
-          submitStatus.value = "success";
-        } catch (error) {
-          submitStatus.value = "error";
-        }
-      })();
+      emailjs
+        .sendForm(
+          import.meta.env.VITE_EMAILJS_SERVICE_ID,
+          import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+          form.value,
+          import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+        )
+        .then(
+          (result) => {
+            console.log("SUCCESS!", result.text);
+            submitStatus.value = "success";
+          },
+          (error) => {
+            console.log("FAILED...", error.text);
+            submitStatus.value = "error";
+          }
+        );
     };
 
-    return { submitForm, submitStatus };
+    return { submitForm, submitStatus, form };
   },
 });
 </script>

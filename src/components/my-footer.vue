@@ -17,9 +17,6 @@
       <img src="/logos/Map_Of_Iceland_clip_art_medium.png" alt="glacier" />
     </div>
     <div class="right-side">
-      <div class="certificates">
-        <img src="/images/day-tour-license.jpg" alt="Day tour license" />
-      </div>
       <div class="logos">
         <a class="logo" href="https://www.instagram.com/glacier.paradise/"
           ><img src="/logos/instagram-logo.png" alt="Instagram"
