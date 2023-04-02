@@ -1,5 +1,5 @@
 name: Deploy GlacierParadise to Netvoktun
-on: 
+on:
   push:
     branches:
       - main
@@ -7,22 +7,24 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
-    - name: Create env file
-      run: |
-            touch .env
-            echo VITE_SENDGRID_API=${{ secrets.VITE_SENDGRID_API }} >> .env
-            echo "!.env" > .git-ftp-include # Add git untracked file
-    - name: Install dependencies
-      run: npm install
-    - name: Build project
-      run: npm run build
-    - name: Upload to FTP
-      uses: SamKirkland/FTP-Deploy-Action@v4.3.4
-      with:
-        server: ${{ secrets.FTP_SERVER }}
-        username: ${{ secrets.FTP_USERNAME }}
-        password: ${{ secrets.FTP_PASSWORD }}
-        local-dir: ./dist/
-        server-dir: ./
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Create env file
+        run: |
+          touch .env
+          echo VITE_EMAILJS_SERVICE_ID=${{ secrets.VITE_EMAILJS_SERVICE_ID }} >> .env
+          echo VITE_EMAILJS_TEMPLATE_ID=${{ secrets.VITE_EMAILJS_TEMPLATE_ID }} >> .env
+          echo VITE_EMAILJS_PUBLIC_KEY=${{ secrets.VITE_EMAILJS_PUBLIC_KEY }} >> .env
+          echo "!.env" > .git-ftp-include # Add git untracked file
+      - name: Install dependencies
+        run: npm install
+      - name: Build project
+        run: npm run build
+      - name: Upload to FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: ./dist/
+          server-dir: ./

@@ -28,12 +28,17 @@
           <p>{{ $t("topOfTheDiamond.content.p6") }}</p>
         </div>
         <div class="tour-info__guide">
-          <p>
-            {{ $t("topOfTheDiamond.content.p7") }}
-          </p>
-          <button class="primary small" @click="openDialog">
-            {{ $t("shared.links.readMore") }}
-          </button>
+          <div>
+            <p>
+              {{ $t("topOfTheDiamond.content.p7") }}
+            </p>
+            <button class="primary small" @click="openDialog">
+              {{ $t("shared.links.readMore") }}
+            </button>
+          </div>
+          <div class="certificates">
+            <img src="/images/day-tour-license.jpg" alt="Day tour license" />
+          </div>
         </div>
       </div>
     </div>
@@ -155,6 +160,23 @@ export default defineComponent({
         margin-top: 0.5rem;
       }
     }
+
+    .tour-info__guide {
+      margin-top: 1rem;
+      display: flex;
+    }
+
+    .certificates {
+      img {
+        height: 150px;
+        transition: all 0.2s ease-in-out;
+
+        &:focus,
+        &:hover {
+          transform: scale(2) translateY(-40px);
+        }
+      }
+    }
   }
 
   .sidebar--container {
@@ -190,6 +212,15 @@ export default defineComponent({
 
       .tour-info {
         grid-template-columns: 1fr 1fr;
+      }
+
+      .tour-info__guide {
+        margin-top: unset;
+        flex-direction: column;
+
+        .certificates {
+          margin-top: 1rem;
+        }
       }
     }
 

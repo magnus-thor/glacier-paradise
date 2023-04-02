@@ -80,6 +80,10 @@ const routes = [
             "Experience the magic of the midnight sun on our Snæfellsjökull “Midnight sun tour” departing from Anarstapi. Enjoy the spectacular views of the glacier and surrounding area on this 3-4 hour adventure. Snæfellsjökull is located on the western tip of the Snæfellsnes peninsula, where the warm summer air and never-ending daylight make for a unique and unforgettable experience. Take a snow-cat tour to explore the glacier and surrounding area for a truly memorable experience. As the sun dips low on the horizon, watch the sky turn pink and gold, casting a warm glow over the glacier. Book now for an unforgettable summer adventure in Snæfellsjökull.",
         },
       },
+      {
+        path: "snaefellsjokull-glacier-snow-cat-tour",
+        redirect: "tours/snow-cat",
+      },
     ],
   },
   {
