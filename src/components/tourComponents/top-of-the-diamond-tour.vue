@@ -169,6 +169,12 @@ export default defineComponent({
     .certificates {
       img {
         height: 150px;
+        transition: all 0.2s ease-in-out;
+
+        &:focus,
+        &:hover {
+          transform: scale(2) translateY(-40px);
+        }
       }
     }
   }

@@ -15,14 +15,19 @@
           <p>{{ $t("midnightSun.info.p1") }}</p>
           <p>{{ $t("midnightSun.info.p2") }}</p>
         </div>
-        <p>
-          {{ $t("midnightSun.info.p3") }}
-          <span
+        <div class="tour-info__guide">
+          <div>
+            <p>
+              {{ $t("midnightSun.info.p3") }}
+            </p>
             ><button class="primary small" @click="openDialog">
               {{ $t("shared.links.readMore") }}
-            </button></span
-          >
-        </p>
+            </button>
+          </div>
+          <div class="certificates">
+            <img src="/images/day-tour-license.jpg" alt="Day tour license" />
+          </div>
+        </div>
       </div>
     </div>
     <aside class="sidebar--container">
@@ -103,7 +108,7 @@ export default defineComponent({
 
     .tour-info {
       display: grid;
-      grid-template-columns: 3fr 3fr;
+      grid-template-columns: 1fr;
 
       div {
         margin-right: 2rem;
@@ -111,6 +116,23 @@ export default defineComponent({
 
       p {
         font-weight: 600;
+      }
+    }
+
+    .tour-info__guide {
+      margin-top: 1rem;
+      display: flex;
+    }
+
+    .certificates {
+      img {
+        height: 150px;
+        transition: all 0.2s ease-in-out;
+
+        &:focus,
+        &:hover {
+          transform: scale(2) translateY(-40px);
+        }
       }
     }
   }
@@ -165,6 +187,19 @@ export default defineComponent({
 
     .content--wrapper {
       grid-area: 2/1/3/3;
+
+      .tour-info {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .tour-info__guide {
+        margin-top: unset;
+        flex-direction: column;
+
+        .certificates {
+          margin-top: 1rem;
+        }
+      }
     }
 
     .sidebar--container {
