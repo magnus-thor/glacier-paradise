@@ -16,22 +16,27 @@
       <p class="arnarstapi">Arnarstapi</p>
       <img src="/logos/Map_Of_Iceland_clip_art_medium.png" alt="glacier" />
     </div>
-    <div class="logos">
-      <a class="logo" href="https://www.instagram.com/glacier.paradise/"
-        ><img src="/logos/instagram-logo.png" alt="Instagram"
-      /></a>
-      <a class="logo" href="https://www.facebook.com/glacierparadise"
-        ><img src="/logos/facebook-logo.png" alt="Facebook"
-      /></a>
-      <a
-        class="logo clicky"
-        title="Privacy-friendly Web Analytics"
-        href="https://clicky.com/101385907"
-        ><img
-          alt="Clicky"
-          src="https://static.getclicky.com/media/links/badge.gif"
-          border="0"
-      /></a>
+    <div class="right-side">
+      <div class="certificates">
+        <img src="/images/day-tour-license.jpg" alt="Day tour license" />
+      </div>
+      <div class="logos">
+        <a class="logo" href="https://www.instagram.com/glacier.paradise/"
+          ><img src="/logos/instagram-logo.png" alt="Instagram"
+        /></a>
+        <a class="logo" href="https://www.facebook.com/glacierparadise"
+          ><img src="/logos/facebook-logo.png" alt="Facebook"
+        /></a>
+        <a
+          class="logo clicky"
+          title="Privacy-friendly Web Analytics"
+          href="https://clicky.com/101385907"
+          ><img
+            alt="Clicky"
+            src="https://static.getclicky.com/media/links/badge.gif"
+            border="0"
+        /></a>
+      </div>
     </div>
   </div>
 </template>
@@ -49,7 +54,8 @@ export default defineComponent({
   height: $footer_height;
   background-color: $sapphire_blue;
   align-items: center;
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   justify-content: space-between;
   box-sizing: border-box;
 
@@ -79,6 +85,7 @@ export default defineComponent({
 
 .iceland-map {
   position: relative;
+  justify-self: center;
   font-size: 0.6rem;
 
   .reykjavik {
@@ -117,34 +124,36 @@ export default defineComponent({
   }
 }
 
-.logos {
-  display: flex;
-  align-items: end;
-  justify-items: end;
-  flex-direction: column;
+.right-side {
+  display: grid;
+  grid-template-columns: 1fr;
+  min-height: 100%;
+  box-sizing: border-box;
+  padding: 1rem 1rem 3rem 0;
 
-  .logo {
-    padding-right: 1rem;
-
+  .certificates {
+    justify-self: end;
     img {
-      width: 20px;
+      width: 28px;
       height: auto;
-    }
-
-    &.clicky {
-      img {
-        width: 80px;
-        height: auto;
-      }
     }
   }
 
-  @include for-tablet-landscape-up {
+  .logos {
+    display: flex;
+    align-items: end;
+    justify-self: end;
+    flex-direction: row;
+
     .logo {
-      padding-right: 2rem;
+      padding-right: 1rem;
+
+      &:last-of-type {
+        padding-right: unset;
+      }
 
       img {
-        width: 30px;
+        width: 28px;
         height: auto;
       }
 
@@ -152,6 +161,24 @@ export default defineComponent({
         img {
           width: 80px;
           height: auto;
+        }
+      }
+    }
+
+    @include for-tablet-landscape-up {
+      .logo {
+        padding-right: 2rem;
+
+        img {
+          width: 34px;
+          height: auto;
+        }
+
+        &.clicky {
+          img {
+            width: 80px;
+            height: auto;
+          }
         }
       }
     }
