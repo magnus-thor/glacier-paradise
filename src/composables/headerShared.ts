@@ -64,6 +64,7 @@ export const setupHeader = () => {
   const changeLocale = (lang: string) => {
     locale.value = lang;
     document.documentElement.lang = lang;
+    (window as any).beam(`/custom-events/locale-swapped-${lang}`);
   };
 
   return {

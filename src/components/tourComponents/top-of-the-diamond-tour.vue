@@ -6,11 +6,12 @@
     <div class="header--container">
       <h1>{{ $t("topOfTheDiamond.content.header") }}</h1>
       <button
-        class="bokunButton primary sticky"
+        class="bokunButton primary sticky js-bokunButton"
         disabled
         id="bokun_b3447b9e_8bf3_4090_a58d_8b930ced9c1d"
         data-src="https://widgets.bokun.io/online-sales/a5fa0d8d-ffc2-431e-bece-86e5d8fa2d7c/experience-calendar/17979?partialView=1"
         data-testid="widget-book-button"
+        @click="trackBookNow"
       >
         {{ $t("shared.bokun.buttons.book") }}
       </button>
@@ -68,7 +69,7 @@
 
 <script lang="ts">
 import { IStore } from "@/interfaces/store";
-import { defineComponent, inject, onBeforeMount } from "vue";
+import { defineComponent, inject, onBeforeMount, onMounted } from "vue";
 
 export default defineComponent({
   name: "snowCatTour",
@@ -81,13 +82,19 @@ export default defineComponent({
       );
       document.head.appendChild(tag);
     });
+
+    const trackBookNow = () => {
+      (window as any).beam("/custom-events/snow-cat-tour-book-now");
+    };
+
     const Store: IStore = inject("Store");
 
     const openDialog = () => {
       Store.isDialogOpen = true;
+      (window as any).beam("/custom-events/snow-cat-tour-read-more");
     };
 
-    return { openDialog };
+    return { openDialog, trackBookNow };
   },
 });
 </script>

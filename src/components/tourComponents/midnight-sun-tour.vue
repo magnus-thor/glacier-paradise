@@ -65,6 +65,7 @@ export default defineComponent({
 
     const openDialog = () => {
       Store.isDialogOpen = true;
+      (window as any).beam("/custom-events/midnight-sun-tour-read-more");
     };
 
     return { openDialog };

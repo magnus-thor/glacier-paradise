@@ -1,7 +1,7 @@
 <template>
   <dialog id="essentials-dialog" :open="Store.isDialogOpen">
     <div class="dialog--container" ref="dialogTop">
-      <div class="icon">
+      <div class="header">
         <h2>{{ $t("essentials.header") }}</h2>
         <v-icon
           name="io-close"
@@ -9,6 +9,7 @@
           color="white"
           @click="closeDialog()"
           :aria-label="$t('essentials.closeIconAriaLabel')"
+          class="close-icon"
         />
       </div>
       <p>
@@ -109,13 +110,17 @@ button.dialog-button {
   margin-top: 1rem;
 }
 
-.icon {
+.header {
   display: grid;
   grid-template-columns: 6fr 1fr;
 
   svg {
     justify-self: end;
   }
+}
+
+.close-icon:hover {
+  cursor: pointer;
 }
 
 @include for-tablet-portrait-up {

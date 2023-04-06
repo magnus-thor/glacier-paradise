@@ -13,7 +13,6 @@
           mode="out-in"
         >
           <component :is="Component" />
-          <!-- TODO: pass openDialog to corresponding component -->
         </transition>
       </router-view>
     </main>
