@@ -1,7 +1,6 @@
 <template>
   <aside class="form-container">
-    <!-- TODO: Add translation -->
-    <h2>Contact Us</h2>
+    <h2>{{ $t("contactUs.header") }}</h2>
     <form
       name="contact-us"
       method="POST"
@@ -13,13 +12,25 @@
       <div class="input-fields">
         <div class="name">
           <label for="text">{{ $t("contactUs.inputFieldLabels.name") }}:</label>
-          <input id="text" type="text" name="name" required />
+          <input
+            id="text"
+            type="text"
+            name="name"
+            required
+            @focus="formFocussed"
+          />
         </div>
         <div class="email">
           <label for="email"
             >{{ $t("contactUs.inputFieldLabels.email") }}:</label
           >
-          <input id="email" type="email" name="email" required />
+          <input
+            id="email"
+            type="email"
+            name="email"
+            required
+            @focus="formFocussed"
+          />
         </div>
         <div class="subject">
           <label for="subject"
@@ -35,6 +46,7 @@
                 ? $t(`contactUs.subject.${$route.params.subject}`)
                 : ''
             "
+            @focus="formFocussed"
           />
         </div>
       </div>
@@ -42,7 +54,12 @@
         <label for="message"
           >{{ $t("contactUs.inputFieldLabels.message") }}:</label
         >
-        <textarea id="message" name="message" required></textarea>
+        <textarea
+          id="message"
+          name="message"
+          required
+          @focus="formFocussed"
+        ></textarea>
       </div>
       <button class="primary submit" type="submit">
         {{ $t("contactUs.buttons.send") }}
@@ -71,6 +88,13 @@ export default defineComponent({
   setup() {
     const submitStatus: Ref<statusType> = ref("loading");
     const form = ref<HTMLFormElement>(null);
+    const formInteracted = ref(false);
+
+    const formFocussed = (event: any) => {
+      if (!formInteracted.value && event.target.value > 1) {
+        (window as any).beam("/custom-events/contact-us-form-started");
+      }
+    };
 
     const submitForm = () => {
       submitStatus.value = "loading";
@@ -83,18 +107,18 @@ export default defineComponent({
           import.meta.env.VITE_EMAILJS_PUBLIC_KEY
         )
         .then(
-          (result) => {
-            console.log("SUCCESS!", result.text);
+          () => {
             submitStatus.value = "success";
+            form.value.reset();
+            (window as any).beam("/custom-events/contact-us-form-finished");
           },
-          (error) => {
-            console.log("FAILED...", error.text);
+          () => {
             submitStatus.value = "error";
           }
         );
     };
 
-    return { submitForm, submitStatus, form };
+    return { submitForm, submitStatus, form, formFocussed };
   },
 });
 </script>
