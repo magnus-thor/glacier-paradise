@@ -15,10 +15,12 @@ export default defineComponent({
       tag.setAttribute("src", "https://w.behold.so/widget.js");
       tag.setAttribute("type", "module");
       document.head.appendChild(tag);
-    }),
-      onMounted(() => {
-        window.beholdWidgets.initialize();
-      });
+    });
+    onMounted(() => {
+      setTimeout(() => {
+        (window as any).beholdWidgets.initialize();
+      }, 2);
+    });
   },
 });
 </script>

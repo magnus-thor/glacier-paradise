@@ -12,20 +12,20 @@
         :cardIndex="index"
       >
         <slot v-if="index == 3">
-          <p class="nav__link">
+          <div class="airbnb-links">
             <a
-              href="https://www.airbnb.com/rooms/17494078?adults=3&check_in=2023-04-17&check_out=2023-04-19&federated_search_id=a177861e-6862-4499-ab90-0bd2045a2195&source_impression_id=p3_1677417875_6lw21c%2FH2vQJH10H&fbclid=IwAR3Q02occ30Hwn50FZcTAFkWAxxFwARVhRmWct5q5llAa6E7VtIlBoWD7C0"
-              >Airbnb</a
-            >
-            ({{ $t("home.tours.cabin.airbnb.new_cabin") }})
-          </p>
-          <p class="nav__link">
-            <a
-              href="https://www.airbnb.com/rooms/806308046534973154?adults=3&check_in=2023-09-07&check_out=2023-09-09&federated_search_id=f9a5d80d-c13b-4711-9426-35098dd222cf&source_impression_id=p3_1677417924_fAlzO0bo2tdu1lUK&fbclid=IwAR0pkcm-p2rMY03bvNX18_x4hMixbJdBah6HJD95H7JoEwrkz9EvnoqavpU"
-              >Airbnb
+              class="nav__link"
+              href="https://www.airbnb.com/rooms/806308046534973154"
+              >{{ $t("home.tours.cabin.cottage1") }}
             </a>
-            ({{ $t("home.tours.cabin.airbnb.old_cabin") }})
-          </p>
+            <a
+              class="nav__link"
+              href="https://www.airbnb.co.uk/rooms/934605024384982028"
+            >
+              {{ $t("home.tours.cabin.cottage2") }}
+            </a>
+          </div>
+          <!-- <p>({{ $t("home.tours.cabin.cottage2") }})</p> -->
         </slot>
       </home-card>
     </template>
@@ -77,6 +77,16 @@ export default defineComponent({
     + .nav__link {
       margin-bottom: 3.5rem;
     }
+  }
+}
+
+.airbnb-links {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.2rem;
+
+  a + a {
+    margin-top: 0.8rem;
   }
 }
 </style>

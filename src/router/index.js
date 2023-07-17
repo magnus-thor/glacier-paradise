@@ -60,7 +60,7 @@ const routes = [
           enterClass: "",
           leaveClass: "",
           title:
-            " Snæfellsjökull Glacier Tour: Explore the Energy of Iceland's Iconic Landmark",
+            "Snæfellsjökull Glacier Tour: Explore the Energy of Iceland's Iconic Landmark",
           description:
             "Embark on a journey to the top of Snæfellsjökull Glacier and discover the breathtaking views of the gulf of Faxaflói, Reykjavík, and Keflavík. Learn about the inspiration behind literary works such as 'Christianity Under the Glacier' and 'Journey to the Center of the Earth.' Book your tour now for a chance to unearth the fantasy of Snæfellsjökull.",
         },
