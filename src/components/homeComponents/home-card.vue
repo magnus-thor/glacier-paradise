@@ -185,10 +185,6 @@ export default defineComponent({
       max-height: 22rem;
     }
 
-    // &.cabin {
-    //   max-height: 18rem;
-    // }
-
     .router-link {
       margin-bottom: 0;
     }
