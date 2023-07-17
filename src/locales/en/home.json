@@ -13,14 +13,12 @@
       "imageAlt": "333View from top of Snæfellsjökul in the midnight sun"
     },
     "cabin": {
-      "header": "Cosy cottage",
-      "text": "A cosy cottage in the charming village of Arnarstapi with beautiful ocean and mountain views. Fully equipped cosy getaway which is a great base to explore everything the spectacular Snæfellsnes peninsula has to offer.",
+      "header": "Cosy cottages",
+      "text": "Discover the enchanting landscapes of Snæfellsnes from the comfort of our well-equipped cottages, providing an idyllic retreat with captivating ocean and mountain views.",
+      "cottage1": "2-bedroom cottage with 4 beds and 1 bathroom",
+      "cottage2": "3-bedroom cottage with 4 beds and 2 bathrooms",
       "additionalText": "",
-      "imageAlt": "Cozy cabin located in Arnarstapi",
-      "airbnb": {
-        "old_cabin": "Available for bookings until June 30. 2023",
-        "new_cabin": "Available for bookings after July 1. 2023"
-      }
+      "imageAlt": "Cozy cabin located in Arnarstapi"
     },
     "customTours": {
       "header": "Custom tours",

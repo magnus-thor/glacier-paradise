@@ -14,14 +14,12 @@
       "imageAlt": "Útsýni frá toppi Snæfellsjökuls í miðnætursólinni"
     },
     "cabin": {
-      "header": "Hlýlegur bústaður",
-      "text": "Notalegur fullbúinn bústaður með sjávar- og fjallaútsýni sem að staðsettur er á Arnarstapa.",
+      "header": "Hlýlegir bústaðir",
+      "text": "Uppgötvaðu heillandi landslag Snæfellsness úr þægindum í vel búnum sumarhúsum okkar, sem býður upp á friðsælt athvarf með grípandi sjávar- og fjallaútsýni.",
+      "cottage1": "2ja herbergja sumarhús með 4 rúmum og 1 baðherbergi",
+      "cottage2": "3ja herbergja sumarhús með 4 rúmum og 2 baðherbergjum",
       "additionalText": "",
-      "imageAlt": "Cozy cabin located in Arnarstapi",
-      "airbnb": {
-        "old_cabin": "Bókanir til 30. Júní 2023",
-        "new_cabin": "Bókanir frá 1. Júlí 2023"
-      }
+      "imageAlt": "Cozy cabin located in Arnarstapi"
     },
     "customTours": {
       "header": "Sérsniðnar ferðir",

@@ -21,7 +21,7 @@ export default defineConfig(({ mode }) => {
       exclude: ["oh-vue-icons/icons"],
     },
     server: {
-      port: 8000,
+      port: 3001,
     },
     css: { preprocessorOptions: { css: { charset: false } } },
     build: {
