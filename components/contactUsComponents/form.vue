@@ -74,11 +74,11 @@
   </aside>
 </template>
 <script lang="ts" setup>
-import { Ref, ref } from "vue";
+import { ref } from "vue";
 
 type statusType = "loading" | "success" | "error";
 
-const submitStatus: Ref<statusType> = ref("loading");
+const submitStatus = ref<statusType>("loading");
 const form = ref<HTMLFormElement>();
 const formInteracted = ref(false);
 

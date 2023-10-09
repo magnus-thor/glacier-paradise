@@ -15,6 +15,11 @@ jobs:
           echo VITE_EMAILJS_SERVICE_ID=${{ secrets.VITE_EMAILJS_SERVICE_ID }} >> .env
           echo VITE_EMAILJS_TEMPLATE_ID=${{ secrets.VITE_EMAILJS_TEMPLATE_ID }} >> .env
           echo VITE_EMAILJS_PUBLIC_KEY=${{ secrets.VITE_EMAILJS_PUBLIC_KEY }} >> .env
+          echo NUXT_EMAIL_HOST=${{ secrets.NUXT_EMAIL_HOST }} >> .env
+          echo NUXT_EMAIL_PORT=${{ secrets.NUXT_EMAIL_PORT }} >> .env
+          echo NUXT_EMAIL_TO=${{ secrets.NUXT_EMAIL_TO }} >> .env
+          echo NUXT_EMAIL_USERNAME=${{ secrets.NUXT_EMAIL_USERNAME }} >> .env
+          echo NUXT_EMAIL_PASSWORD=${{ secrets.NUXT_EMAIL_PASSWORD }} >> .env
           echo "!.env" > .git-ftp-include # Add git untracked file
       - name: Install dependencies
         run: npm install
