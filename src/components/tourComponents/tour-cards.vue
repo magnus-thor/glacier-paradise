@@ -3,7 +3,8 @@
     <div class="cards">
       <template v-for="(card, index) in allTourCards">
         <card
-          :image="`url(${card.imageSrc})`"
+          :imageSrc="card.imageSrc"
+          :imageAlt="card.imageAlt"
           :card="{ header: $t(card.cardHeader), text: $t(card.cardText) }"
           :link="{ text: card.linkText, href: card.linkHref }"
           :info="{ duration: card.duration, departure: card.departure }"

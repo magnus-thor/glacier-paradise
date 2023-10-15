@@ -18,6 +18,9 @@ import {
   OiLocation,
 } from "oh-vue-icons/icons";
 
+import TwicPics from "@twicpics/components/vue3";
+import "@twicpics/components/style.css";
+
 addIcons(
   FaBus,
   FaRegularAddressCard,
@@ -39,6 +42,9 @@ const Store = reactive({
 const app = createApp(App);
 app.use(i18n);
 app.use(router);
+app.use(TwicPics, {
+  domain: "https://glacierparadise.twic.pics",
+});
 app.component("v-icon", OhVueIcon);
 app.provide("Store", Store);
 app.mount("#app");

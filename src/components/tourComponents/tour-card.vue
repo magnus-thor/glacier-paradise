@@ -1,25 +1,10 @@
 <template>
   <div class="card">
     <div class="card__wrapper">
-      <div class="card__image"></div>
+      <TwicImg class="card__image" :src="getImageSrc" :alt="$t(imageAlt)" />
       <div class="card__content">
         <h2>{{ card.header }}</h2>
         <p>{{ card.text }}</p>
-        <!-- TODO: Remove 
-          <div class="card__info">
-          <div>
-            <p><strong>Duration:</strong></p>
-            <p>
-              <strong>{{ info.duration }}</strong>
-            </p>
-          </div>
-          <div>
-            <p><strong>Departure:</strong></p>
-            <p>
-              <strong>{{ info.departure }}</strong>
-            </p>
-          </div>
-        </div> -->
         <nav class="nav__link">
           <router-link :to="link.href">{{ $t(link.text) }}</router-link>
         </nav>
@@ -33,11 +18,12 @@ import { CardText, CardLink, CardInfo } from "@/interfaces/props";
 import { computed, PropType } from "vue";
 
 const props = defineProps({
-  image: {
+  imageSrc: {
     required: true,
     type: String,
     default: "",
   },
+  imageAlt: { type: String, required: true },
   card: {
     required: true,
     type: Object as PropType<CardText>,
@@ -55,6 +41,10 @@ const props = defineProps({
 
 const reverseFlow = computed(() => {
   return props.cardIndex % 2 !== 0;
+});
+
+const getImageSrc = computed(() => {
+  return props.imageSrc.replace("/images/", "");
 });
 </script>
 
@@ -103,18 +93,20 @@ $card-height-lg-screen: 20rem;
 
 .card__image {
   width: 90%;
-  background-image: v-bind("props.image");
-  background-repeat: round;
+  // height: 100%;
+
   box-sizing: border-box;
+  --twic-ratio: calc(4 / 3);
 
   @include for-tablet-portrait-down {
-    height: 15rem;
+    // height: 15rem;
   }
 
   @include for-tablet-portrait-up {
-    width: 20rem;
+    width: 80%;
     height: $card-height-lg-screen;
     border-start-start-radius: 25%;
+    --twic-ratio: unset;
   }
 }
 

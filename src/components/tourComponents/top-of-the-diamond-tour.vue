@@ -1,7 +1,7 @@
 <template>
   <div class="top-of-the-diamond-tour--container">
     <div class="image">
-      <img src="/images/toppur_panorama-resized.jpg" alt="" />
+      <TwicImg class="twic-image" src="/toppur_panorama-resized.jpg" alt="" />
     </div>
     <div class="header--container">
       <h1>{{ $t("topOfTheDiamond.content.header") }}</h1>
@@ -108,8 +108,10 @@ export default defineComponent({
 
   .image {
     grid-area: 1/1/-1/-1;
-    img {
-      display: block;
+
+    .twic-image {
+      --twic-ratio: 3;
+      height: 100%;
       width: 100%;
     }
   }
@@ -135,6 +137,7 @@ export default defineComponent({
     color: $white;
     padding-top: 1.5rem;
     padding-left: 2rem;
+    z-index: 1;
   }
 
   .content--wrapper {
@@ -190,6 +193,7 @@ export default defineComponent({
     background-color: $dark_grey;
     box-sizing: border-box;
     padding: 2rem 2rem;
+    z-index: 1;
 
     p {
       padding: 0.5rem 0;
@@ -203,16 +207,8 @@ export default defineComponent({
   }
 
   @include for-tablet-landscape-up {
-    $row1-height: 50vh;
     @include white-blue-bg-gradient(60deg);
     grid-template-columns: 1fr 1fr 1.5fr;
-    grid-template-rows: $row1-height;
-
-    .image {
-      img {
-        height: $row1-height;
-      }
-    }
 
     .content--wrapper {
       grid-area: 2/1/3/3;
@@ -241,15 +237,6 @@ export default defineComponent({
   }
 
   @include for-medium-desktop-up {
-    $row1-height: 40vh;
-    grid-template-rows: $row1-height;
-    .image {
-      img {
-        display: block;
-        height: $row1-height;
-      }
-    }
-
     .sidebar--container {
       margin-right: 5rem;
     }

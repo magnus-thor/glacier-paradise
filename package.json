@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@emailjs/browser": "^3.10.0",
+    "@twicpics/components": "^0.23.1",
     "animate.css": "^4.1.1",
     "oh-vue-icons": "^1.0.0-rc3",
     "swiper": "^8.4.2",

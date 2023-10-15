@@ -4,13 +4,13 @@
 
     <div class="staff">
       <h2>Vignir</h2>
-      <img class="staff-image" src="/images/vignir.jpg" alt="" />
+      <TwicImg class="staff-image" src="/vignir.jpg" alt="" refit />
       <p>{{ $t("aboutUs.vignir") }}</p>
     </div>
 
     <div class="staff">
       <h2>Kolfinna</h2>
-      <img class="staff-image right" src="/images/kolfinna.jpg" alt="" />
+      <TwicImg class="staff-image" src="/kolfinna.jpg" alt="" zoom="1.5" />
       <p>{{ $t("aboutUs.kolfinna") }}</p>
     </div>
   </aside>
@@ -29,9 +29,11 @@ export default defineComponent({
 @import "@/assets/base.scss";
 
 .info-wrapper {
+  position: relative;
   padding: 2rem;
   background-color: $dark_grey;
   margin-top: 1rem;
+  z-index: 10;
 
   @include for-tablet-landscape-up {
     min-height: calc(100vh - $header_height - $footer_height - 3rem);

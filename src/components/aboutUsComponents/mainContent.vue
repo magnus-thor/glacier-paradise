@@ -1,6 +1,9 @@
 <template>
   <div>
-    <img src="/images/fra-breiduvik-cropped-2.jpg" alt="" />
+    <div class="twic-item landscape">
+      <TwicImg src="/fra-breiduvik-cropped-2.jpg" alt="" refit anchor="right" />
+    </div>
+
     <div class="content--wrapper">
       <div class="empty"></div>
       <div class="company-info">
@@ -12,15 +15,6 @@
   </div>
 </template>
 
-<script lang="ts">
-import { defineComponent, ref } from "vue";
-
-export default defineComponent({
-  name: "mainContent",
-  setup() {},
-});
-</script>
-
 <style lang="scss" scoped>
 @import "@/assets/base.scss";
 
@@ -28,12 +22,10 @@ export default defineComponent({
   width: 85%;
 }
 
-img {
-  height: auto;
-  width: 100%;
-  object-fit: cover;
-  display: block;
+.landscape {
+  --twic-ratio: calc(3 / 1);
 }
+
 h2,
 h3 {
   color: $yellow;
@@ -47,6 +39,12 @@ p {
 p {
   font-size: 0.8rem;
   color: $white;
+}
+
+@include for-tablet-portrait-up {
+  .landscape {
+    --twic-ratio: calc(4 / 1);
+  }
 }
 
 @include for-tablet-landscape-down {
