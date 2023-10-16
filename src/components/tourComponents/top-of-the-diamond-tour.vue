@@ -69,7 +69,7 @@
 
 <script lang="ts">
 import { IStore } from "@/interfaces/store";
-import { defineComponent, inject, onBeforeMount, onMounted } from "vue";
+import { defineComponent, inject, onBeforeMount } from "vue";
 
 export default defineComponent({
   name: "snowCatTour",

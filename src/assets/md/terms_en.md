@@ -27,7 +27,7 @@ Tour price can change with out notice.
 
 ## Taxes
 
-Price includes VSK(VAT) and invoces are issued with VSK(VAT)  
+Price includes VSK(VAT) and invoices are issued with VSK(VAT)  
 <br />
 
 ## Confidentiality

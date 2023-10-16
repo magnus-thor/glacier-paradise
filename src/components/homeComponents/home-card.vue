@@ -8,7 +8,7 @@
     ]"
   >
     <div :class="['tour--image', { 'border-reverse': reverseFlow }]">
-      <img :src="image.src" :alt="image.alt" />
+      <TwicImg class="twic-image" :src="getImageSrc" :alt="image.alt" />
     </div>
     <div
       :class="[
@@ -59,7 +59,11 @@ export default defineComponent({
       return props.cardIndex % 2 !== 0;
     });
 
-    return { reverseFlow };
+    const getImageSrc = computed(() => {
+      return props.image.src.replace("images/", "");
+    });
+
+    return { reverseFlow, getImageSrc };
   },
 });
 </script>
@@ -94,14 +98,13 @@ export default defineComponent({
   }
 
   .tour--image {
-    height: 20rem;
     width: 94%;
     margin: auto;
     margin-bottom: 0.4rem;
 
-    img {
+    .twic-image {
       width: 100%;
-      height: 100%;
+      --twic-ratio: 2;
       border-radius: 0 25% 0 0;
     }
   }
@@ -170,12 +173,13 @@ export default defineComponent({
       width: 40%;
       margin: 0;
 
-      img {
+      .twic-image {
+        --twic-ratio: 1;
         border-radius: 25% 0;
       }
 
       &.border-reverse {
-        img {
+        .twic-image {
           border-radius: 0 25%;
         }
       }

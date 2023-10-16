@@ -1,21 +1,12 @@
 <template>
   <div class="image--container">
-    <link
-      href="/images/iskyunum1_tinified.avif"
-      rel="preload"
-      as="image"
-      v-if="!loadPng"
-    />
-    <div
-      ref="scrollingImage"
-      id="image"
-      :class="[
-        'scrolling-bg-image',
-        {
-          pngBgImage: loadPng,
-        },
-      ]"
-    ></div>
+    <div class="scrolling-bg-image">
+      <img
+        src="https://glacierparadise.twic.pics/iskyunum1_tinified.avif?twic=v1/cover=5076"
+        alt=""
+        rel="preload"
+      />
+    </div>
   </div>
 </template>
 
@@ -50,13 +41,6 @@ export default defineComponent({
   top: 0;
   left: 0;
   width: 5076px;
-  height: 100vh;
-  background-size: 100% 100%;
-
-  background-image: url("/images/iskyunum1_tinified.avif");
-  &.pngBgImage {
-    background-image: url("/images/iskyunum1_tinified.png");
-  }
 
   animation: slide-small-screen 40s linear;
   translate: -80% 0;
