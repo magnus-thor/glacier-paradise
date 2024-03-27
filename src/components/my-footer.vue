@@ -3,7 +3,7 @@
     <div class="company-info">
       <h2>Glacier Paradise</h2>
       <div class="location">
-        <p>Samkomuhúsið á Stapa, 356 Snæfellsbær</p>
+        <p>Arnarstapavegur, 356 Snæfellsbær</p>
         <a href="https://goo.gl/maps/wJ1brAWbtDX9m1aD9" class="flip">
           <v-icon name="oi-location" scale="1.2" color="#d4af37" />
         </a>
