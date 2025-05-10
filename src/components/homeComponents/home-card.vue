@@ -1,28 +1,26 @@
 <template>
-  <div
-    :class="[
-      'tour',
-      { 'row-reverse': reverseFlow },
-      { 'custom-tours': cardIndex === 2 },
-      { cabin: cardIndex === 3 },
-    ]"
-  >
+  <div :class="[
+    'tour',
+    { 'row-reverse': reverseFlow },
+    { 'custom-tours': cardIndex === 2 },
+    { cabin: cardIndex === 3 },
+    { buggy: cardIndex === 4 },
+  ]">
     <div :class="['tour--image', { 'border-reverse': reverseFlow }]">
       <TwicImg class="twic-image" :src="getImageSrc" :alt="image.alt" />
     </div>
-    <div
-      :class="[
-        'tour--text',
-        { 'border-reverse': reverseFlow },
-        { gradient0: cardIndex === 0 },
-        { gradient1: cardIndex === 1 },
-        { gradient2: cardIndex === 2 },
-        { gradient3: cardIndex === 3 },
-      ]"
-    >
+    <div :class="[
+      'tour--text',
+      { 'border-reverse': reverseFlow },
+      { gradient0: cardIndex === 0 },
+      { gradient1: cardIndex === 1 },
+      { gradient2: cardIndex === 2 },
+      { gradient3: cardIndex === 3 },
+      { gradient4: cardIndex === 4 },
+    ]">
       <h3>{{ card.header }}</h3>
       <p>{{ card.text }}</p>
-      <p>
+      <p v-if="card.additionalText || link.href" class="additional">
         <span v-if="card.additionalText">{{ card.additionalText }} </span>
         <router-link v-if="link.href" class="router-link" :to="link.href">
           {{ link.text ? link.text : $t("shared.links.readMore") }}
@@ -76,7 +74,7 @@ export default defineComponent({
   display: flex;
   flex-direction: column;
 
-  + .tour {
+  +.tour {
     margin-top: 5rem;
   }
 
@@ -92,9 +90,16 @@ export default defineComponent({
     padding: 1rem;
     color: $card_text_color;
 
-    + p {
+    +p {
       padding-top: 0;
     }
+  }
+
+  .additional {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.2rem;
   }
 
   .tour--image {
@@ -119,6 +124,7 @@ export default defineComponent({
     &.gradient0 {
       @include gold-bg-gradient(20deg);
     }
+
     &.gradient1 {
       @include gold-bg-gradient;
     }
@@ -126,8 +132,13 @@ export default defineComponent({
     &.gradient2 {
       @include gold-bg-gradient(20deg);
     }
+
     &.gradient3 {
       @include gold-bg-gradient;
+    }
+
+    &.gradient4 {
+      @include gold-bg-gradient(20deg);
     }
 
     margin-left: 3%;
@@ -172,10 +183,12 @@ export default defineComponent({
       height: auto;
       width: 40%;
       margin: 0;
+      display: flex;
 
       .twic-image {
         --twic-ratio: 1;
         border-radius: 25% 0;
+        flex: 1;
       }
 
       &.border-reverse {
@@ -188,6 +201,7 @@ export default defineComponent({
     &.custom-tours {
       max-height: 22rem;
     }
+
 
     .router-link {
       margin-bottom: 0;
