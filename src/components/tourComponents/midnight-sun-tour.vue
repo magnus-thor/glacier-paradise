@@ -84,6 +84,7 @@ export default defineComponent({
 
   .image {
     grid-area: 1/1/-1/-1;
+
     .twic-image {
       --twic-ratio: 3;
     }
@@ -100,7 +101,7 @@ export default defineComponent({
   .content--wrapper {
     padding: 2rem;
 
-    p + p {
+    p+p {
       margin-top: 0.7rem;
     }
 
@@ -151,6 +152,7 @@ export default defineComponent({
 
     .text__block {
       padding: 0.5rem 0;
+
       p {
         padding: 0.1rem 0;
       }
