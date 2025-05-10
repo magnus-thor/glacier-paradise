@@ -6,7 +6,7 @@
         text: $t(card.cardText),
         additionalText: $t(card.cardAdditionalText),
       }" :link="{ text: $t(card.linkText), href: card.linkHref }" :cardIndex="index">
-        <slot v-if="index == 3">
+        <slot v-if="index == 4">
           <div class="airbnb-links">
             <a class="nav__link" href="https://www.airbnb.com/rooms/806308046534973154">{{
               $t("home.tours.cabin.cottage1") }}

@@ -1,8 +1,8 @@
 <template>
   <div class="buggy-tour--container">
     <div class="image">
-      <img src="/images/buggy_main_image_cropped.sida.jpg" alt="" />
-      <!-- <TwicImg class="twic-image" src="buggy_main_image_cropped.sida.jpg" alt="" /> -->
+      <!-- <img src="/images/buggy.sida.jpg" alt="" /> -->
+      <TwicImg class=" twic-image" src="buggy.sida.jpg" alt="" />
     </div>
     <h1 class="page-header">{{ $t("buggy.content.header") }}</h1>
     <div class="content--wrapper">
@@ -100,7 +100,7 @@ export default defineComponent({
 
   .page-header {
     grid-area: 1/1/-1/-1;
-    color: $white;
+    color: $sapphire_blue;
     padding-top: 1.5rem;
     padding-left: 2rem;
     z-index: 1;
@@ -214,7 +214,7 @@ export default defineComponent({
   @include for-medium-desktop-up {
     .image {
       .twic-image {
-        --twic-ratio: 1.6;
+        --twic-ratio: 3;
       }
     }
 

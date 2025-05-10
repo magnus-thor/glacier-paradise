@@ -1,6 +1,7 @@
 import { ICardInfo } from "@/interfaces/interfaces";
 
 export const cardsInfo: ICardInfo[] = [
+
   {
     imageSrc: "images/topoftthediamond-resized.card.jpg",
     imageAlt: "home.tours.topOfTheDiamond.imageAlt",
@@ -20,6 +21,15 @@ export const cardsInfo: ICardInfo[] = [
     linkHref: "/tours/midnight-sun",
   },
   {
+    imageSrc: "images/buggy_card_image_1.jpg", // Temporary image as specified in new-card.md
+    imageAlt: "home.tours.buggy.imageAlt",
+    cardHeader: "home.tours.buggy.header",
+    cardText: "home.tours.buggy.text",
+    cardAdditionalText: "home.tours.buggy.additionalText",
+    linkText: "shared.links.readMore",
+    linkHref: "/tours/buggy",
+  },
+  {
     imageSrc: "images/custom_card.png",
     imageAlt: "home.tours.customTours.imageAlt",
     cardHeader: "home.tours.customTours.header",
@@ -36,14 +46,5 @@ export const cardsInfo: ICardInfo[] = [
     cardAdditionalText: "home.tours.cabin.additionalText",
     linkText: "",
     linkHref: "",
-  },
-  {
-    imageSrc: "images/cabin_northern_lights-resized.jpg", // Temporary image as specified in new-card.md
-    imageAlt: "home.tours.buggy.imageAlt",
-    cardHeader: "home.tours.buggy.header",
-    cardText: "home.tours.buggy.text",
-    cardAdditionalText: "home.tours.buggy.additionalText",
-    linkText: "shared.links.readMore",
-    linkHref: "/tours/buggy",
   },
 ];
