@@ -1,0 +1,24 @@
+{
+  "header": "What to Bring for a Buggy Tour",
+  "description": "For an exciting buggy adventure in the Icelandic landscape, it's important to come prepared with the right gear. Here's what you need to bring:",
+  "clothing_section": {
+    "header": "Clothing",
+    "listItems": {
+      "one": "Warm and comfortable clothing (preferably in layers – wool underneath, wind/waterproof on top)",
+      "two": "Waterproof or sturdy hiking shoes",
+      "three": "Hat and gloves – even in summer, it can get chilly",
+      "four": "Buff or face covering – protects against dust and cold"
+    }
+  },
+  "other_essentials_section": {
+    "header": "Other Essential Items",
+    "listItems": {
+      "one": "Sunglasses – for sun glare, dust, and wind",
+      "two": "Reusable water bottle",
+      "three": "Camera or phone – to capture the adventure"
+    }
+  },
+  "disclaimer": "We provide helmets and protective overalls – just show up ready for an adventure in Icelandic nature! Remember that drivers must hold a valid driver's license, the minimum age for passengers is 8 years old, and there's a maximum weight limit of 140 kg (310 lbs) as specified by the manufacturer.",
+  "closeButton": "Close",
+  "closeIconAriaLabel": "Close dialog"
+}

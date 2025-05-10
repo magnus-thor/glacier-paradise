@@ -5,14 +5,9 @@
     </div>
     <div class="header--container">
       <h1>{{ $t("topOfTheDiamond.content.header") }}</h1>
-      <button
-        class="bokunButton primary sticky js-bokunButton"
-        disabled
-        id="bokun_b3447b9e_8bf3_4090_a58d_8b930ced9c1d"
+      <button class="bokunButton primary sticky js-bokunButton" disabled id="bokun_b3447b9e_8bf3_4090_a58d_8b930ced9c1d"
         data-src="https://widgets.bokun.io/online-sales/a5fa0d8d-ffc2-431e-bece-86e5d8fa2d7c/experience-calendar/17979?partialView=1"
-        data-testid="widget-book-button"
-        @click="trackBookNow"
-      >
+        data-testid="widget-book-button" @click="trackBookNow">
         {{ $t("shared.bokun.buttons.book") }}
       </button>
     </div>
@@ -91,6 +86,7 @@ export default defineComponent({
 
     const openDialog = () => {
       Store.isDialogOpen = true;
+      Store.currentDialog = "default";
       (window as any).beam("/custom-events/snow-cat-tour-read-more");
     };
 
@@ -146,7 +142,7 @@ export default defineComponent({
     padding: 0.5rem 2rem;
     box-sizing: border-box;
 
-    p + p {
+    p+p {
       margin-top: 0.7rem;
     }
 
@@ -198,8 +194,10 @@ export default defineComponent({
     p {
       padding: 0.5rem 0;
     }
+
     .text__block {
       padding: 0.5rem 0;
+
       p {
         padding: 0.1rem 0;
       }

@@ -12,6 +12,14 @@
     "p2": "Tour price is from 25.000 ISK per person.",
     "p3": "Please read our guide on what you need for this trip."
   },
+  "please_note": {
+    "header": "Please Note",
+    "p1": "Drivers must hold a valid driver's license.",
+    "p2": "Minimum age for passengers is 8 years old.",
+    "p3": "Maximum weight limit is 140 kg (310 lbs) – as specified by the manufacturer.",
+    "p4": "We provide protective overalls and helmets – just bring your sense of adventure!",
+    "p5": "We recommend wearing warm clothes and sturdy shoes – this is a real Icelandic outdoor experience!"
+  },
   "sidebar": {
     "header": "What to Bring",
     "p1": "For the buggy adventure tour, we recommend bringing the following items:",

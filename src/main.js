@@ -37,6 +37,7 @@ addIcons(
 
 const Store = reactive({
   isDialogOpen: false,
+  currentDialog: "default",
 });
 
 const app = createApp(App);

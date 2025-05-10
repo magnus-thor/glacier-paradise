@@ -5,19 +5,16 @@
     <main class="content">
       <router-view v-slot="{ Component, route }">
         <!-- TODO: fix height while transitioning -> https://markus.oberlehner.net/blog/vue-router-page-transitions/ -->
-        <transition
-          :enterActiveClass="generateClassList2((route.meta.enterClass as string))"
-          :leaveActiveClass="generateClassList2((route.meta.leaveClass as string))"
-          enter-to-class="pos-absolute"
-          leave-from-class="pos-absolute"
-          mode="out-in"
-        >
+        <transition :enterActiveClass="generateClassList2((route.meta.enterClass as string))"
+          :leaveActiveClass="generateClassList2((route.meta.leaveClass as string))" enter-to-class="pos-absolute"
+          leave-from-class="pos-absolute" mode="out-in">
           <component :is="Component" />
         </transition>
       </router-view>
     </main>
 
     <essentials-dialog />
+    <buggy-essentials-dialog />
 
     <footer class="footer">
       <my-footer />
@@ -35,6 +32,7 @@ import {
 } from "vue";
 import MyFooter from "@/components/my-footer.vue";
 import EssentialsDialog from "@/components/shared/essentials.vue";
+import BuggyEssentialsDialog from "@/components/shared/buggy-essentials.vue";
 import { useI18n } from "vue-i18n";
 
 export default defineComponent({
@@ -46,6 +44,7 @@ export default defineComponent({
     MyHeader: defineAsyncComponent(() => import("@/components/my-header.vue")),
     MyFooter,
     EssentialsDialog,
+    BuggyEssentialsDialog,
   },
   setup() {
     const { t } = useI18n({ useScope: "global" });
@@ -126,6 +125,7 @@ div#preload {
     transform: translate3d(0, 0, 0);
   }
 }
+
 @keyframes fadeInRight {
   from {
     opacity: 0;
@@ -158,6 +158,7 @@ div#preload {
     transform: translate3d(0, 0, 0);
   }
 }
+
 @keyframes fadeInLeft {
   from {
     opacity: 0;
@@ -171,6 +172,7 @@ div#preload {
     transform: translate3d(0, 0, 0);
   }
 }
+
 .animate__fadeInLeft {
   -webkit-animation-name: fadeInLeft;
   animation-name: fadeInLeft;
@@ -187,6 +189,7 @@ div#preload {
     transform: translate3d(-100%, 0, 0);
   }
 }
+
 @keyframes fadeOutLeft {
   from {
     opacity: 1;
@@ -198,6 +201,7 @@ div#preload {
     transform: translate3d(-100%, 0, 0);
   }
 }
+
 .animate__fadeOutLeft {
   -webkit-animation-name: fadeOutLeft;
   animation-name: fadeOutLeft;
@@ -214,6 +218,7 @@ div#preload {
     transform: translate3d(100%, 0, 0);
   }
 }
+
 @keyframes fadeOutRight {
   from {
     opacity: 1;
@@ -225,6 +230,7 @@ div#preload {
     transform: translate3d(100%, 0, 0);
   }
 }
+
 .animate__fadeOutRight {
   -webkit-animation-name: fadeOutRight;
   animation-name: fadeOutRight;

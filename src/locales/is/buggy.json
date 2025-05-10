@@ -12,6 +12,14 @@
     "p2": "Verð ferðar er frá 25.000 ISK á mann.",
     "p3": "Vinsamlegast lestu leiðbeiningarnar okkar um hvað þú þarft fyrir þessa ferð."
   },
+  "please_note": {
+    "header": "Vinsamlegast athugið",
+    "p1": "Ökumenn verða að hafa gilt ökuskírteini.",
+    "p2": "Lágmarksaldur farþega er 8 ára.",
+    "p3": "Hámarksþyngd er 140 kg (310 pund) - samkvæmt forskrift framleiðanda.",
+    "p4": "Við útvegum hlífðargalla og hjálma - þú þarft bara að koma með ævintýraþrána!",
+    "p5": "Við mælum með hlýjum fötum og traustum skóm - þetta er raunveruleg íslensk útivistupplifun!"
+  },
   "sidebar": {
     "header": "Hvað á að taka með",
     "p1": "Fyrir buggy ævintýraferðina mælum við með að taka eftirfarandi hluti með:",

@@ -1,36 +1,36 @@
 <template>
-  <dialog id="essentials-dialog" :open="Store.isDialogOpen && Store.currentDialog === 'default'">
+  <dialog id="buggy-essentials-dialog" :open="Store.isDialogOpen && Store.currentDialog === 'buggy'">
     <div class="dialog--container" ref="dialogTop">
       <div class="header">
-        <h2>{{ $t("essentials.header") }}</h2>
+        <h2>{{ $t("buggyEssentials.header") }}</h2>
         <v-icon name="io-close" scale="2" color="white" @click="closeDialog()"
-          :aria-label="$t('essentials.closeIconAriaLabel')" class="close-icon" />
+          :aria-label="$t('buggyEssentials.closeIconAriaLabel')" class="close-icon" />
       </div>
       <p>
-        {{ $t("essentials.description") }}
+        {{ $t("buggyEssentials.description") }}
       </p>
-      <h3>{{ $t("essentials.clothing_section.header") }}</h3>
+      <h3>{{ $t("buggyEssentials.clothing_section.header") }}</h3>
       <ul>
         <li>
-          {{ $t("essentials.clothing_section.listItems.one") }}
+          {{ $t("buggyEssentials.clothing_section.listItems.one") }}
         </li>
-        <li>{{ $t("essentials.clothing_section.listItems.two") }}</li>
-        <li>{{ $t("essentials.clothing_section.listItems.three") }}</li>
-        <li>{{ $t("essentials.clothing_section.listItems.four") }}</li>
+        <li>{{ $t("buggyEssentials.clothing_section.listItems.two") }}</li>
+        <li>{{ $t("buggyEssentials.clothing_section.listItems.three") }}</li>
+        <li>{{ $t("buggyEssentials.clothing_section.listItems.four") }}</li>
       </ul>
-      <h3>{{ $t("essentials.other_essentials_section.header") }}</h3>
+      <h3>{{ $t("buggyEssentials.other_essentials_section.header") }}</h3>
       <ul>
         <li>
-          {{ $t("essentials.other_essentials_section.listItems.one") }}
+          {{ $t("buggyEssentials.other_essentials_section.listItems.one") }}
         </li>
-        <li>{{ $t("essentials.other_essentials_section.listItems.two") }}</li>
-        <li>{{ $t("essentials.other_essentials_section.listItems.three") }}</li>
+        <li>{{ $t("buggyEssentials.other_essentials_section.listItems.two") }}</li>
+        <li>{{ $t("buggyEssentials.other_essentials_section.listItems.three") }}</li>
       </ul>
       <p>
-        {{ $t("essentials.disclaimer") }}
+        {{ $t("buggyEssentials.disclaimer") }}
       </p>
       <button class="primary dialog-button" @click="closeDialog">
-        {{ $t("essentials.closeButton") }}
+        {{ $t("buggyEssentials.closeButton") }}
       </button>
     </div>
   </dialog>
@@ -42,7 +42,7 @@ import { IStore } from "@/interfaces/store";
 import { defineComponent, inject, Ref, ref, watchEffect } from "vue";
 
 export default defineComponent({
-  name: "essentials",
+  name: "buggyEssentials",
   setup() {
     const isOpen = ref(false);
     const dialogTop = ref<HTMLDialogElement>(null);

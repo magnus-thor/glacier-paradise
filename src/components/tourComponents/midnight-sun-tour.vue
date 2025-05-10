@@ -21,7 +21,7 @@
             <p>
               {{ $t("midnightSun.info.p3") }}
             </p>
-            ><button class="primary small" @click="openDialog">
+            <button class="primary small" @click="openDialog">
               {{ $t("shared.links.readMore") }}
             </button>
           </div>
@@ -66,6 +66,7 @@ export default defineComponent({
 
     const openDialog = () => {
       Store.isDialogOpen = true;
+      Store.currentDialog = "default";
       (window as any).beam("/custom-events/midnight-sun-tour-read-more");
     };
 

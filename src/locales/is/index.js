@@ -8,6 +8,7 @@ import cards from "./tour-cards.json";
 import shared from "./shared.json";
 import header from "./header.json";
 import essentials from "./essentials.json";
+import buggyEssentials from "./buggy-essentials.json";
 
 export default {
   home,
@@ -20,4 +21,5 @@ export default {
   shared,
   header,
   essentials,
+  buggyEssentials,
 };

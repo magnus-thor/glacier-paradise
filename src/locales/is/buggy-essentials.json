@@ -1,0 +1,24 @@
+{
+  "header": "Hvað á að taka með í Buggy ferð",
+  "description": "Fyrir spennandi buggy ævintýri í íslenskri náttúru er mikilvægt að koma undirbúin/n með réttan búnað. Hér er það sem þú þarft að taka með:",
+  "clothing_section": {
+    "header": "Fatnaður",
+    "listItems": {
+      "one": "Hlý og þægileg föt (helst í lögum - ull undir, vind/vatnsheldar yfirhafnir)",
+      "two": "Vatnshelda eða trausta gönguskó",
+      "three": "Húfu og hanska - jafnvel á sumrin getur verið kalt",
+      "four": "Buff eða andlitshlíf - verndar gegn ryki og kulda"
+    }
+  },
+  "other_essentials_section": {
+    "header": "Aðrir nauðsynlegir hlutir",
+    "listItems": {
+      "one": "Sólgleraugu - fyrir sólarskin, ryk og vind",
+      "two": "Endurnýtanlega vatnsflösku",
+      "three": "Myndavél eða síma - til að fanga ævintýrið"
+    }
+  },
+  "disclaimer": "Við útvegum hjálma og hlífðargalla - mættu bara tilbúin/n fyrir ævintýri í íslenskri náttúru! Hafðu í huga að ökumenn verða að hafa gilt ökuskírteini, lágmarksaldur farþega er 8 ára og hámarksþyngd er 140 kg (310 pund) samkvæmt forskrift framleiðanda.",
+  "closeButton": "Loka",
+  "closeIconAriaLabel": "Loka glugga"
+}
