@@ -1,0 +1,25 @@
+{
+  "content": {
+    "header": "Buggy Adventure Tour",
+    "p1": "Experience the thrill of exploring the stunning landscapes around Snæfellsjökull in our powerful all-terrain buggies. Our guided buggy tours offer an exciting way to discover the diverse terrain of the Snæfellsnes peninsula, from volcanic fields to black sand beaches.",
+    "p2": "Starting from Arnarstapi, we'll provide you with all necessary safety equipment and a brief training session before heading out on your adventure. Our experienced guides will lead you through carefully selected routes that showcase the best views and most exciting terrain in the area.",
+    "p3": "The buggies are designed to handle Iceland's challenging landscapes, allowing you to access areas that would be difficult to reach by conventional vehicles. Feel the rush of adrenaline as you navigate through rough terrain while enjoying breathtaking views of the glacier, coastline, and surrounding mountains.",
+    "p4": "This tour is perfect for adventure seekers who want to combine the excitement of off-road driving with the opportunity to experience the natural beauty of the Snæfellsnes peninsula. No previous off-road driving experience is necessary, but participants must have a valid driver's license."
+  },
+  "info": {
+    "header": "Info",
+    "p1": "The tour duration is approximately 2-3 hours.",
+    "p2": "Tour price is 22.000 ISK per person.",
+    "p3": "Please read our guide on what you need for this trip."
+  },
+  "sidebar": {
+    "header": "What to Bring",
+    "p1": "For the buggy adventure tour, we recommend bringing the following items:",
+    "p2": "Warm, waterproof clothing - Iceland's weather can change quickly, even in summer.",
+    "p3": "Sturdy shoes or hiking boots - you may have opportunities to explore on foot.",
+    "p4": "Sunglasses - to protect your eyes from dust and sun.",
+    "p5": "Camera - to capture the amazing landscapes you'll encounter.",
+    "p6": "Valid driver's license - required for all drivers.",
+    "p7": "We provide helmets, gloves, and overalls for your safety and comfort during the tour."
+  }
+}

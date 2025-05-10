@@ -9,6 +9,7 @@ const TopOfTheDiamondTour = () =>
   import("@/components/tourComponents/top-of-the-diamond-tour.vue");
 const MidnightSunTour = () =>
   import("@/components/tourComponents/midnight-sun-tour.vue");
+const BuggyTour = () => import("@/components/tourComponents/buggy-tour.vue");
 const TourCards = () => import("@/components/tourComponents/tour-cards.vue");
 
 const routes = [
@@ -78,6 +79,20 @@ const routes = [
             "Snæfellsjökull Midnight Sun Tour | Explore the Glacier by Snow-Cat",
           description:
             "Experience the magic of the midnight sun on our Snæfellsjökull “Midnight sun tour” departing from Anarstapi. Enjoy the spectacular views of the glacier and surrounding area on this 3-4 hour adventure. Snæfellsjökull is located on the western tip of the Snæfellsnes peninsula, where the warm summer air and never-ending daylight make for a unique and unforgettable experience. Take a snow-cat tour to explore the glacier and surrounding area for a truly memorable experience. As the sun dips low on the horizon, watch the sky turn pink and gold, casting a warm glow over the glacier. Book now for an unforgettable summer adventure in Snæfellsjökull.",
+        },
+      },
+      {
+        path: "buggy",
+        name: "Buggy Adventure Tour",
+        component: BuggyTour,
+        meta: {
+          index: 2,
+          enterClass: "",
+          leaveClass: "",
+          title:
+            "Buggy Adventure Tour | Explore Snæfellsnes Peninsula Off-Road",
+          description:
+            "Experience the thrill of exploring the stunning landscapes around Snæfellsjökull in our powerful all-terrain buggies. Our guided buggy tours offer an exciting way to discover the diverse terrain of the Snæfellsnes peninsula, from volcanic fields to black sand beaches. Feel the rush of adrenaline as you navigate through rough terrain while enjoying breathtaking views of the glacier, coastline, and surrounding mountains.",
         },
       },
       {

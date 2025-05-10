@@ -20,6 +20,12 @@
     "cardText": "Gjafabréf Glacier Paradise er frábær gjöf til að geta notið þeirrar fegurðar sem Snæfellsjökull hefur að bjóða.  Gjafabréf frá Glacier Paradise er frábær upplifun fyrir alla aldurshópa. Gefðu gjöf sem að endist ævilangt.",
     "imageAlt": ""
   },
+  "buggyTour": {
+    "cardHeader": "Buggy Ævintýraferð",
+    "cardText": "Upplifðu ævintýri á fjórhjóladrifnum buggy-bílum í kringum Snæfellsjökul. Keyrðu yfir hrjúft landslag, svarta sandströnd og fjallastíga með stórkostlegu útsýni yfir jökulinn og strandlengjuna.",
+    "linkText": "Lesa meira",
+    "imageAlt": "Buggy ferð í kringum Snæfellsjökul"
+  },
   "shared": {
     "duration": "Lengd",
     "departure": "Brottfarastaður",

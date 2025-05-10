@@ -37,4 +37,13 @@ export const cardsInfo: ICardInfo[] = [
     linkText: "",
     linkHref: "",
   },
+  {
+    imageSrc: "images/cabin_northern_lights-resized.jpg", // Temporary image as specified in new-card.md
+    imageAlt: "home.tours.buggy.imageAlt",
+    cardHeader: "home.tours.buggy.header",
+    cardText: "home.tours.buggy.text",
+    cardAdditionalText: "home.tours.buggy.additionalText",
+    linkText: "shared.links.readMore",
+    linkHref: "/tours/buggy",
+  },
 ];

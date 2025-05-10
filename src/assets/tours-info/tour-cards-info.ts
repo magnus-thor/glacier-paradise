@@ -20,6 +20,16 @@ export const tourCards = [
     departure: "Arnarstapi",
   },
   {
+    imageSrc: "/images/buggy-card-image-1.jpg",
+    imageAlt: "cards.buggyTour.imageAlt",
+    cardHeader: "cards.buggyTour.cardHeader",
+    cardText: "cards.buggyTour.cardText",
+    linkText: "shared.links.readMore",
+    linkHref: "tours/buggy",
+    duration: "2-3",
+    departure: "Arnarstapi",
+  },
+  {
     imageSrc: "/images/custom_card.png",
     imageAlt: "cards.customTours.imageAlt",
     cardHeader: "cards.customTours.cardHeader",

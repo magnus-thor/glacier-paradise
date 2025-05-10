@@ -1,31 +1,20 @@
 <template>
   <div class="cards">
     <template v-for="(card, index) in allCards">
-      <home-card
-        :image="{ src: card.imageSrc, alt: $t(card.imageAlt) }"
-        :card="{
-          header: $t(card.cardHeader),
-          text: $t(card.cardText),
-          additionalText: $t(card.cardAdditionalText),
-        }"
-        :link="{ text: $t(card.linkText), href: card.linkHref }"
-        :cardIndex="index"
-      >
+      <home-card :image="{ src: card.imageSrc, alt: $t(card.imageAlt) }" :card="{
+        header: $t(card.cardHeader),
+        text: $t(card.cardText),
+        additionalText: $t(card.cardAdditionalText),
+      }" :link="{ text: $t(card.linkText), href: card.linkHref }" :cardIndex="index">
         <slot v-if="index == 3">
           <div class="airbnb-links">
-            <a
-              class="nav__link"
-              href="https://www.airbnb.com/rooms/806308046534973154"
-              >{{ $t("home.tours.cabin.cottage1") }}
+            <a class="nav__link" href="https://www.airbnb.com/rooms/806308046534973154">{{
+              $t("home.tours.cabin.cottage1") }}
             </a>
-            <a
-              class="nav__link"
-              href="https://www.airbnb.co.uk/rooms/934605024384982028"
-            >
+            <a class="nav__link" href="https://www.airbnb.co.uk/rooms/934605024384982028">
               {{ $t("home.tours.cabin.cottage2") }}
             </a>
           </div>
-          <!-- <p>({{ $t("home.tours.cabin.cottage2") }})</p> -->
         </slot>
       </home-card>
     </template>
@@ -74,7 +63,7 @@ export default defineComponent({
   }
 
   @include for-tablet-landscape-down {
-    + .nav__link {
+    +.nav__link {
       margin-bottom: 3.5rem;
     }
   }
@@ -84,8 +73,9 @@ export default defineComponent({
   display: flex;
   flex-direction: column;
   margin-bottom: 1.2rem;
+  padding-left: 1rem;
 
-  a + a {
+  a+a {
     margin-top: 0.8rem;
   }
 }

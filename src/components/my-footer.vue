@@ -3,7 +3,7 @@
     <div class="company-info">
       <h2>Glacier Paradise</h2>
       <div class="location">
-        <p>Arnarstapavegur, 356 Snæfellsbær</p>
+        <p>Arnarstapavegur 2, 356 Snæfellsbær</p>
         <a href="https://goo.gl/maps/wJ1brAWbtDX9m1aD9" class="flip">
           <v-icon name="oi-location" scale="1.2" color="#d4af37" />
         </a>
@@ -18,21 +18,12 @@
     </div>
     <div class="right-side">
       <div class="logos">
-        <a class="logo" href="https://www.instagram.com/glacier.paradise/"
-          ><img src="/logos/instagram-logo.png" alt="Instagram"
-        /></a>
-        <a class="logo" href="https://www.facebook.com/glacierparadise"
-          ><img src="/logos/facebook-logo.png" alt="Facebook"
-        /></a>
-        <a
-          class="logo clicky"
-          title="Privacy-friendly Web Analytics"
-          href="https://clicky.com/101385907"
-          ><img
-            alt="Clicky"
-            src="https://static.getclicky.com/media/links/badge.gif"
-            border="0"
-        /></a>
+        <a class="logo" href="https://www.instagram.com/glacier.paradise/"><img src="/logos/instagram-logo.png"
+            alt="Instagram" /></a>
+        <a class="logo" href="https://www.facebook.com/glacierparadise"><img src="/logos/facebook-logo.png"
+            alt="Facebook" /></a>
+        <a class="logo clicky" title="Privacy-friendly Web Analytics" href="https://clicky.com/101385907"><img
+            alt="Clicky" src="https://static.getclicky.com/media/links/badge.gif" border="0" /></a>
       </div>
     </div>
   </div>
@@ -114,6 +105,7 @@ export default defineComponent({
       top: 66px;
       left: 20px;
     }
+
     img {
       width: 200px;
       height: auto;
@@ -130,6 +122,7 @@ export default defineComponent({
 
   .certificates {
     justify-self: end;
+
     img {
       width: 28px;
       height: auto;

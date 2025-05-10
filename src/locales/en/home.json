@@ -26,6 +26,12 @@
       "additionalText": "For more information ",
       "linkText": "Contact us",
       "imageAlt": ""
+    },
+    "buggy": {
+      "header": "Buggy Adventure",
+      "text": "Join us for an exhilarating buggy adventure and discover Iceland's breathtaking nature like never before! Our thrilling off-road tours give you the chance to explore unparalleled landscapes and tackle challenging trails. Snæfellsnes is a region steeped in history and folklore—offers mesmerizing views that will captivate you throughout your ride.",
+      "additionalText": "Each tour lasts approximately 2 hours.",
+      "imageAlt": "Buggy tour in Snæfellsnes area"
     }
   }
 }

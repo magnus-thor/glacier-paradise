@@ -21,6 +21,12 @@
     "cardText": "Discover the beauty of Snæfellsjökull glacier with Glacier Paradise Snowcat Tour gift cards. Expert guides allow visitors to explore stunning landscapes and hidden gems. Perfect adventure gift for all ages and skill levels. ",
     "imageAlt": ""
   },
+  "buggyTour": {
+    "cardHeader": "Buggy Adventure Tour",
+    "cardText": "Explore the rugged terrain around Snæfellsjökull in our all-terrain buggies. Experience the thrill of driving across volcanic landscapes, black sand beaches, and mountain trails with breathtaking views of the glacier and coastline.",
+    "linkText": "Read more",
+    "imageAlt": "Buggy tour around Snaefellsjokull"
+  },
   "shared": {
     "duration": "Duration",
     "departure": "Departure",
