@@ -8,6 +8,7 @@
   ]">
     <div :class="['tour--image', { 'border-reverse': reverseFlow }]">
       <TwicImg class="twic-image" :src="getImageSrc" :alt="image.alt" />
+      <div v-if="cardIndex === 2" class="new-label">New</div>
     </div>
     <div :class="[
       'tour--text',
@@ -106,11 +107,78 @@ export default defineComponent({
     width: 94%;
     margin: auto;
     margin-bottom: 0.4rem;
+    position: relative;
 
     .twic-image {
       width: 100%;
       --twic-ratio: 2;
       border-radius: 0 25% 0 0;
+    }
+
+    .new-label {
+      position: absolute;
+      top: 30px;
+      right: -15px;
+      background: linear-gradient(to bottom, #ff5a5f, #e63946);
+      color: white;
+      font-weight: bold;
+      padding: 0.3rem 0;
+      width: 60px;
+      font-size: 0.7rem;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
+      transform-origin: top right;
+      transform: rotate(45deg);
+      z-index: 1;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      text-align: center;
+      animation: pulse 2s infinite;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      overflow: hidden;
+      border-top-left-radius: 40%;
+      border-top-right-radius: 40%;
+      border-bottom-left-radius: 10%;
+      border-bottom-right-radius: 12%;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 100%;
+        width: 10px;
+        height: 0;
+        border-style: solid;
+        border-width: 0 0 10px 10px;
+        border-color: transparent transparent #b52c37 transparent;
+        z-index: -1;
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 100%;
+        left: 0;
+        width: 0;
+        height: 10px;
+        border-style: solid;
+        border-width: 10px 10px 0 0;
+        border-color: transparent #b52c37 transparent transparent;
+        z-index: -1;
+      }
+
+      @keyframes pulse {
+        0% {
+          box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        50% {
+          box-shadow: 0 3px 15px rgba(230, 57, 70, 0.8);
+        }
+
+        100% {
+          box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
+        }
+      }
     }
   }
 
@@ -194,6 +262,34 @@ export default defineComponent({
       &.border-reverse {
         .twic-image {
           border-radius: 0 25%;
+        }
+
+        .new-label {
+          left: -15px;
+          right: auto;
+          top: 30px;
+          transform-origin: top left;
+          transform: rotate(-45deg);
+          background: linear-gradient(to bottom, #ff5a5f, #e63946);
+          border-top-left-radius: 40%;
+          border-top-right-radius: 40%;
+          border-bottom-left-radius: 10%;
+          border-bottom-right-radius: 12%;
+
+          &::before {
+            right: auto;
+            left: 100%;
+            border-width: 0 10px 10px 0;
+            border-color: transparent transparent #b52c37 transparent;
+          }
+
+          &::after {
+            bottom: 100%;
+            left: auto;
+            right: 0;
+            border-width: 10px 0 0 10px;
+            border-color: transparent transparent transparent #b52c37;
+          }
         }
       }
     }
