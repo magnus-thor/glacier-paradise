@@ -10,19 +10,19 @@ imageAlt: "home.tours.cabin.imageAlt",
 ## Copy for the card
 
 English Version
-Join us for an exhilarating buggy adventure and discover Iceland's breathtaking nature like never before! Our thrilling off-road tours give you the chance to explore unparalleled landscapes and tackle challenging trails. Snæfellsnes is a region steeped in history and folklore—offers mesmerizing views that will captivate you throughout your ride.
 
-Embrace the spirit of adventure as you journey along the south side of the glacier, starting from Jökulháls, where rugged terrain unfolds into an expansive glacier plateau offering a unique perspective on Iceland's natural beauty. Depending on seasonal variations and weather conditions, we will also strive to venture into the serene wilderness of Eysteinsdalur, celebrated for its unmatched scenery and peaceful atmosphere.
+Join us on a buggy adventure in the extraordinary nature of Snæfellsnes, where the mystique of Icelandic nature blends with the strong Icelandic Saga culture.
+On a buggy ride to the root of Snæfellsjökull you will experience the power from the glacier mixed with a one-of-a-kind view of Faxaflói bay where the sea, mountains and sky meet in spectacular view.
+Eysteinsdalur is a magical place where the peacefulness of the Icelandic nature surrounds the area. It is a special experience to drive around in the beautiful scenery and enjoy the unique quietness of the Icelandic nature.
 
-Feel the surge of adrenaline as you navigate challenging tracks and experience the glacier’s raw power, all while enjoying unforgettable panoramic views over Faxaflói Bay, where sea, mountain, and sky merge in a majestic display.
-
-Please note that each tour lasts approximately 2 hours, covering the areas accessible at the time—ensuring that every journey is as dynamic as the seasons. Secure your spot on a buggy tour today, and let us help you create memories that last a lifetime!
+The buggy ride with us takes about 2 1/2 hours. It depends on the weather and road condition which area will be covered on each trip.
+Secure yourself a seat for a magical buggy ride with us where we will make memories that last a lifetime.
 
 Icelandic Version
-Komdu með okkur í spennandi buggyævintýri og upplifðu tignarlegt íslenskt landslag á nýjan hátt! Ökutúrar okkar um off-road veita þér tækifæri til að kanna einstök landslag og takast á við krefjandi slóðir. Snæfellsnes, rík af sögu og þjóðsögum, býður upp á töfrandi útsýni sem munu heilla þig á ökunni.
+Viltu upplifa stórbrotna náttúru Íslands á skemmtilegan hátt.
+Komdu í buggy bíla ferð með okkur og upplifðu þá einstöku náttúru sem Snæfellsnesið hefur að upp á að bjóða. Íslensk náttúrufegurð og sterk sögu arfleið blandast saman á Snæfellsnesi sem gerir það að dularfullu og töfrandi svæði.
+Buggy ferð upp á jökulhálsinn er ævintýri sem að gefur þér spennandi akstursupplifun í fallegu landslagi. Kraftar Snæfellsjökuls eru einstakir og ferð yfir jökulsléttuna blandast einstöku útsýni yfir Faxaflóann þar sem sjór, fjöll og himinn mætast í ógleymanlegri sýn.
+Eysteinsdalur er yndislegur staður undir jökli sem hefur að geyma friðsælt og afskekkt svæði. Þar er gaman að keyra um og njóta allrar þeirra fallegu náttúru sem svæðið hefur upp á að bjóða ásamt því að finna fyrir kyrrðinni sem einkennir íslenska náttúru.
 
-Leyfðu þér að upplifa ævintýrið þegar þú ferð meðfram suðurhlið jökulsins frá Jökulháls, þar sem grófur terrenið umbreytist í stórkostlegt jökullsvæði með einstöku sjónarhorni á íslenska náttúru. Ef aðstæður leyfa, miðað við árstímabundnar sveiflur og veður, reynum við einnig að fara inn í friðsæla náttúru Eysteinsdals, þekkt fyrir óviðjafnanlegt landslag og róandi andrúmsloft.
-
-Fáðu adrenalíninn upp þegar þú keppir á krefjandi slóðum og finnur cruxkraft jökulsins, allt á meðan þú nýtur ógleymanlegra útútsýnis yfir Faxaflóa, þar sem sjór, fjöll og himinn mætast í stórkostlegri sýn.
-
-Athugið að ferðalagið varir um það bil 2 klukkustundir og nær yfir þau svæði sem aðgengileg eru á hverjum tíma—sem tryggir að hvert ferðalag er eins sveigjanlegt og árstíðirnar. Tryggðu þér sæti á buggyferð í dag og leyfðu okkur að hjálpa þér að skapa ógleymanlegar minningar!
+Buggy bílaferð með okkar tekur um 2 1/2 klukkustundir. Svæði sem farið er yfir hverju sinni getur verið misjafnt en farið er yfir það svæði sem er fært bílunum í hvert skipti.
+Tryggðu þér sæti í buggy ferð með okkur og sköpum saman ógleymanlegar minningar.
