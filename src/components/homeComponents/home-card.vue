@@ -122,7 +122,8 @@ export default defineComponent({
     .new-label {
       position: absolute;
       top: 30px;
-      right: -15px;
+      left: -15px;
+      /* Default position for small screens */
       background: linear-gradient(to bottom, #ff5a5f, #e63946);
       color: white;
       font-weight: bold;
@@ -130,8 +131,8 @@ export default defineComponent({
       width: 60px;
       font-size: 0.7rem;
       box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
-      transform-origin: top right;
-      transform: rotate(45deg);
+      transform-origin: top left;
+      transform: rotate(-45deg);
       z-index: 1;
       text-transform: uppercase;
       letter-spacing: 1px;
@@ -261,6 +262,29 @@ export default defineComponent({
         --twic-ratio: 1;
         border-radius: 25% 0;
         flex: 1;
+      }
+
+      /* For large screens, position the label on the right for even cards */
+      .new-label {
+        left: auto;
+        right: -15px;
+        transform-origin: top right;
+        transform: rotate(45deg);
+
+        &::before {
+          right: 100%;
+          left: auto;
+          border-width: 0 0 10px 10px;
+          border-color: transparent transparent #b52c37 transparent;
+        }
+
+        &::after {
+          bottom: 100%;
+          left: 0;
+          right: auto;
+          border-width: 10px 10px 0 0;
+          border-color: transparent #b52c37 transparent transparent;
+        }
       }
 
       &.border-reverse {
