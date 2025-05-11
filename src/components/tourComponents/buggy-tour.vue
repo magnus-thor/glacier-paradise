@@ -13,10 +13,6 @@
       </button>
     </div>
     <div class="content--wrapper">
-      <p>{{ $t("buggy.content.p1") }}</p>
-      <p>{{ $t("buggy.content.p2") }}</p>
-      <p>{{ $t("buggy.content.p3") }}</p>
-      <p>{{ $t("buggy.content.p4") }}</p>
       <h2 class="tour-info-header">{{ $t("buggy.info.header") }}</h2>
       <div class="tour-info">
         <div>
@@ -25,8 +21,6 @@
           <p>{{ $t("buggy.please_note.p1") }}</p>
           <p>{{ $t("buggy.please_note.p2") }}</p>
           <p>{{ $t("buggy.please_note.p3") }}</p>
-          <p>{{ $t("buggy.please_note.p4") }}</p>
-          <p>{{ $t("buggy.please_note.p5") }}</p>
         </div>
         <div class="tour-info__guide">
           <div>
@@ -44,33 +38,10 @@
       </div>
     </div>
     <aside class="sidebar--container">
-      <h2>{{ $t("buggy.sidebar.header") }}</h2>
-
-      <p>{{ $t("buggy.sidebar.p1") }}</p>
-      <div class="text__block">
-        <p>
-          {{ $t("buggy.sidebar.p2") }}
-        </p>
-        <p>
-          {{ $t("buggy.sidebar.p3") }}
-        </p>
-      </div>
-      <div class="text__block">
-        <p>
-          {{ $t("buggy.sidebar.p4") }}
-        </p>
-        <p>
-          {{ $t("buggy.sidebar.p5") }}
-        </p>
-      </div>
-      <div class="text__block">
-        <p>
-          {{ $t("buggy.sidebar.p6") }}
-        </p>
-        <p>
-          {{ $t("buggy.sidebar.p7") }}
-        </p>
-      </div>
+      <p>{{ $t("buggy.content.p1") }}</p>
+      <p>{{ $t("buggy.content.p2") }}</p>
+      <p>{{ $t("buggy.content.p3") }}</p>
+      <p>{{ $t("buggy.content.p4") }}</p>
     </aside>
   </div>
 </template>
@@ -197,15 +168,8 @@ export default defineComponent({
     z-index: 1;
 
     p {
-      padding: 0.5rem 0;
-    }
-
-    .text__block {
-      padding: 0.5rem 0;
-
-      p {
-        padding: 0.1rem 0;
-      }
+      padding: 0.7rem 0;
+      line-height: 1.5;
     }
   }
 

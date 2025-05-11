@@ -4,7 +4,8 @@
     "topOfTheDiamond": {
       "header": "Top of the Diamond tour",
       "text": "Experience the mystical powers of the magnificent Snæfellsjökull with our fantastic tour of the glacier that sits on top of a 700-thousand-year-old stratovolcano. This iconic site is one of the most famous in Iceland and is believed to hold a deep, mystical energy. Standing on the glacier above this mighty volcano is an unparalleled experience that cannot be missed.",
-      "additionalText": ""
+      "additionalText": "",
+      "imageAlt": "View from top of Snæfellsjökul glacier"
     },
     "midnightSunTour": {
       "header": "Midnight-sun tour",
@@ -29,8 +30,8 @@
     },
     "buggy": {
       "header": "Buggy Adventure",
-      "text": "Join us for an exhilarating buggy adventure and discover Iceland's breathtaking nature! Our thrilling off-road tours give you the chance to explore unparalleled landscapes and tackle challenging trails. Snæfellsnes is a region steeped in history and folklore that offers mesmerizing views that will captivate you throughout your ride.",
-      "additionalText": "Each tour lasts approximately 2 hours.",
+      "text": "Join us on a buggy adventure in the extraordinary nature of Snæfellsnes, where the mystique of Icelandic nature blends with the strong Icelandic Saga culture. On a buggy ride to the root of Snæfellsjökull you will experience the power from the glacier mixed with a one-of-a-kind view of Faxaflói bay where the sea, mountains and sky meet in spectacular view.",
+      "additionalText": "",
       "imageAlt": "Buggy tour in Snæfellsnes area"
     }
   }

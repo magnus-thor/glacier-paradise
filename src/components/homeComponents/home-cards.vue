@@ -4,7 +4,7 @@
       <home-card :image="{ src: card.imageSrc, alt: $t(card.imageAlt) }" :card="{
         header: $t(card.cardHeader),
         text: $t(card.cardText),
-        additionalText: $t(card.cardAdditionalText),
+        additionalText: card.cardAdditionalText ? $t(card.cardAdditionalText) : '',
       }" :link="{ text: $t(card.linkText), href: card.linkHref }" :cardIndex="index" :isNew="card.isNew">
         <slot v-if="index == 4">
           <div class="airbnb-links">

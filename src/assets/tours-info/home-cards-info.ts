@@ -23,7 +23,7 @@ export const cardsInfo: ICardInfo[] = [
     isNew: false,
   },
   {
-    imageSrc: "images/buggy_card_image_1.jpg", // Temporary image as specified in new-card.md
+    imageSrc: "images/buggy_card_image_1.jpg",
     imageAlt: "home.tours.buggy.imageAlt",
     cardHeader: "home.tours.buggy.header",
     cardText: "home.tours.buggy.text",
