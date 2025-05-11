@@ -10,7 +10,7 @@ export const cardsInfo: ICardInfo[] = [
     cardAdditionalText: "home.tours.topOfTheDiamond.additionalText",
     linkText: "shared.links.readMore",
     linkHref: "/tours/snow-cat",
-    isNew: true,
+    isNew: false,
   },
   {
     imageSrc: "images/midnightsun-resized.card.jpg",
@@ -20,7 +20,7 @@ export const cardsInfo: ICardInfo[] = [
     cardAdditionalText: "home.tours.midnightSunTour.additionalText",
     linkText: "shared.links.readMore",
     linkHref: "/tours/midnight-sun",
-    isNew: true,
+    isNew: false,
   },
   {
     imageSrc: "images/buggy_card_image_1.jpg", // Temporary image as specified in new-card.md
@@ -40,7 +40,7 @@ export const cardsInfo: ICardInfo[] = [
     cardAdditionalText: "home.tours.customTours.additionalText",
     linkText: "shared.links.contactUs",
     linkHref: "/contactUs/customTours",
-    isNew: true,
+    isNew: false,
   },
   {
     imageSrc: "images/cabin_northern_lights-resized.jpg",
@@ -50,6 +50,6 @@ export const cardsInfo: ICardInfo[] = [
     cardAdditionalText: "home.tours.cabin.additionalText",
     linkText: "",
     linkHref: "",
-    isNew: true,
+    isNew: false,
   },
 ];
