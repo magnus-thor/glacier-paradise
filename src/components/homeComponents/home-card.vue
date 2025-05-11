@@ -8,7 +8,7 @@
   ]">
     <div :class="['tour--image', { 'border-reverse': reverseFlow }]">
       <TwicImg class="twic-image" :src="getImageSrc" :alt="image.alt" />
-      <div v-if="cardIndex === 2" class="new-label">New</div>
+      <div v-if="isNew" class="new-label">New</div>
     </div>
     <div :class="[
       'tour--text',
@@ -52,6 +52,10 @@ export default defineComponent({
       type: Object as PropType<TourLink>,
     },
     cardIndex: Number,
+    isNew: {
+      type: Boolean,
+      default: false,
+    },
   },
   setup(props) {
     const reverseFlow = computed(() => {

@@ -5,7 +5,7 @@
         header: $t(card.cardHeader),
         text: $t(card.cardText),
         additionalText: $t(card.cardAdditionalText),
-      }" :link="{ text: $t(card.linkText), href: card.linkHref }" :cardIndex="index">
+      }" :link="{ text: $t(card.linkText), href: card.linkHref }" :cardIndex="index" :isNew="card.isNew">
         <slot v-if="index == 4">
           <div class="airbnb-links">
             <a class="nav__link" href="https://www.airbnb.com/rooms/806308046534973154">{{

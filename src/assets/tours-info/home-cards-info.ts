@@ -28,6 +28,7 @@ export const cardsInfo: ICardInfo[] = [
     cardAdditionalText: "home.tours.buggy.additionalText",
     linkText: "shared.links.readMore",
     linkHref: "/tours/buggy",
+    isNew: true,
   },
   {
     imageSrc: "images/custom_card.png",

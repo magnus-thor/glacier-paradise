@@ -6,4 +6,5 @@ export interface ICardInfo {
   cardAdditionalText?: string;
   linkText: string;
   linkHref: string;
+  isNew?: boolean;
 }
