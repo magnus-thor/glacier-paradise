@@ -40,7 +40,7 @@ export default defineComponent({
       {
         iconName: "fa-regular-address-card",
         header: "contactUs.info.address.header",
-        paragraphs: ["Samkomuhúsið á Stapa", "356 Snæfellsbær"],
+        paragraphs: ["Arnarstapavegur 2", "356 Snæfellsbær"],
       },
       {
         iconName: "fc-phone-android",
